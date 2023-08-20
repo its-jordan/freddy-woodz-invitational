@@ -1,5 +1,4 @@
 import { PokemonClient } from 'pokenode-ts';
-import { getTypeWeaknesses } from '../../pokemon-types/index';
 import Link from 'next/link';
 
 export default async function JordansPage() {

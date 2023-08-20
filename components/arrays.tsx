@@ -258,9 +258,9 @@ export default async function PlayerTeam({
                 <div className="abilities-container">
                   <div>Potential Abilities: </div>
                   <div className="abilities">
-                    {values.abilities?.map((value) => {
+                    {values.abilities?.map((value, index) => {
                       return (
-                        <div className={value.ability.name}>
+                        <div className={value.ability.name} key={index}>
                           {value.ability.name}
                         </div>
                       );
