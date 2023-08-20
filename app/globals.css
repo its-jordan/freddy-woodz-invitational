@@ -81,6 +81,36 @@ nav li:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1rem;
+  transition: background-color 300ms ease;
+}
+
+.pokemon-info-itsjordan {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  min-width: max-content;
+  gap: 1rem;
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
+  transition: background-color 300ms ease;
+}
+
+.pokemon-info-itsjordan:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pokemon-info:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pokemon-jordan-container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
 }
 
 .pokemon-data {

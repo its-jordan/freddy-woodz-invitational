@@ -1,20 +1,46 @@
-import Link from 'next/link';
 import { PokemonClient } from 'pokenode-ts';
-import { getTypeWeaknesses, getTypeStrengths } from '../pokemon-types/index';
+import { getTypeWeaknesses } from '../pokemon-types/index';
+import Link from 'next/link';
 
-export default async function SeanBoyQ() {
+interface Pokemon {
+  player: string;
+  p1: string;
+  p2: string;
+  p3: string;
+  p4: string;
+  p5: string;
+  p6: string;
+  p7: string;
+  p8: string;
+  p9: string;
+  p0: string;
+}
+
+export default async function PlayerTeam({
+  player,
+  p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6,
+  p7,
+  p8,
+  p9,
+  p0,
+}: Pokemon) {
   const api = new PokemonClient();
-  let playerName = 'SeanBoyQ';
-  let pok1 = await api.getPokemonByName('pinsir-mega');
-  let pok2 = await api.getPokemonByName('slowking-galar');
-  let pok3 = await api.getPokemonByName('zygarde-50');
-  let pok4 = await api.getPokemonByName('raikou');
-  let pok5 = await api.getPokemonByName('jellicent');
-  let pok6 = await api.getPokemonByName('arcanine');
-  let pok7 = await api.getPokemonByName('cloyster');
-  let pok8 = await api.getPokemonByName('forretress');
-  let pok9 = await api.getPokemonByName('tropius');
-  let pok0 = await api.getPokemonByName('regigigas');
+  let playerName = player;
+  let pok1 = await api.getPokemonByName(p1);
+  let pok2 = await api.getPokemonByName(p2);
+  let pok3 = await api.getPokemonByName(p3);
+  let pok4 = await api.getPokemonByName(p4);
+  let pok5 = await api.getPokemonByName(p5);
+  let pok6 = await api.getPokemonByName(p6);
+  let pok7 = await api.getPokemonByName(p7);
+  let pok8 = await api.getPokemonByName(p8);
+  let pok9 = await api.getPokemonByName(p9);
+  let pok0 = await api.getPokemonByName(p0);
 
   const pok1weakness = getTypeWeaknesses(
     pok1.types[0].type.name,
@@ -205,7 +231,7 @@ export default async function SeanBoyQ() {
         {pokearray.map((values, index) => {
           return (
             <Link
-              href={`https://www.smogon.com/dex/xy/pokemon/${values.species.name}`}
+              href={`https://www.smogon.com/dex/sv/pokemon/${values.species.name}`}
               target="_blank"
               className={`pokemon-info flex flex-row`}
               key={index}>
@@ -233,11 +259,14 @@ export default async function SeanBoyQ() {
                   <div>Potential Abilities: </div>
                   <div className="abilities">
                     {values.abilities?.map((value) => {
-                      return <div className="">{value.ability.name}</div>;
+                      return (
+                        <div className={value.ability.name}>
+                          {value.ability.name}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
-
                 <div className="damage-relations-container">
                   {values.weakness?.map((value, index) => {
                     return (
