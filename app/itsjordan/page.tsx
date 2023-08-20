@@ -25,6 +25,7 @@ export default async function JordansPage() {
   return (
     <main>
       <Link href="./">Home</Link>
+      <div className="heading">Potential Pickups</div>
       <div className="pokemon-jordan-container">
         {pokemonArray.map((values, index) => {
           return (
