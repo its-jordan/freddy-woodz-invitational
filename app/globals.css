@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --base: #121212;
   /* Pokemon Type Colors */
   --normal: #a8a77a;
   --fire: #ee8130;
@@ -45,7 +46,7 @@ svg {
 }
 
 body {
-  background-color: rgb(12, 5, 40);
+  background-color: var(--base);
   color: white;
 }
 
