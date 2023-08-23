@@ -22,6 +22,26 @@
   --dark: #705746;
   --steel: #b7b7ce;
   --fairy: #d685ad;
+  --col-width: calc(50% - 2rem);
+}
+
+@media only screen and (max-width: 2000px) {
+  :root {
+    --col-width: 100%;
+    --content-width: 70%;
+  }
+}
+
+@media only screen and (min-width: 2005px) {
+  :root {
+    --col-width: calc(50% - 2rem);
+    --content-width: 80%;
+  }
+}
+
+svg {
+  max-width: 20px !important;
+  object-fit: contain !important;
 }
 
 body {
@@ -63,7 +83,7 @@ nav li:hover {
 }
 
 .content-container {
-  width: 80%;
+  width: var(--content-width);
   margin-inline: auto;
   display: flex;
   flex-flow: row wrap;
@@ -79,7 +99,7 @@ nav li:hover {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: calc(50% - 2rem);
+  width: var(--col-width);
   gap: 1rem;
   text-transform: capitalize;
   background-color: rgba(255, 255, 255, 0.1);
@@ -220,72 +240,11 @@ nav li:hover {
   background-color: rgb(255, 0, 0);
   color: white;
 }
-/* .relations-type[data-type*='0x']::before {
-  filter: invert(0);
-}
-.relations-type[data-type*='2x']::before {
-  filter: invert(1);
-}
-.relations-type[data-type*='4x']::before {
-  filter: invert(1);
-}
-.relations-type[data-type*='.5x']::before {
-  filter: invert(1);
-}
-.relations-type[data-type*='.25x']::before {
-  filter: invert(0);
-} */
 
 /* Ferrothorn bug fix */
 
 .ferrothorn-img {
   object-position: 0 15px;
-}
-
-/* Standings */
-
-.standings {
-  display: flex;
-  flex-flow: column nowrap;
-  max-width: max-content;
-  gap: 1rem;
-}
-
-.standings-row {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-}
-.standings-row:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.standings-row:nth-child(odd) {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.standings-column-1 {
-  width: 500px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: start;
-  align-items: start;
-}
-.standings-team {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.standings-wins,
-.standings-losses {
-  font-size: 1.5rem;
-}
-
-.standings-wins::after {
-  content: '-';
-  padding-left: 1rem;
 }
 
 /* Type Color Backgrounds */

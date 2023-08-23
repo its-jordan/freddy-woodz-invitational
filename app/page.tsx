@@ -1,3 +1,5 @@
+'use client';
+
 import PlayerTeam from '@/components/arrays';
 // import PokemonInput from '@/components/ui/pokemon';
 
