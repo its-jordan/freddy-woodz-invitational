@@ -188,6 +188,11 @@ nav li:hover {
 .damage-relations-container > .relations-type {
   padding: 0.25rem 0.375rem;
   border-radius: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
 }
 
 .relations-type[data-type*='0x'] {
@@ -215,6 +220,21 @@ nav li:hover {
   background-color: rgb(255, 0, 0);
   color: white;
 }
+/* .relations-type[data-type*='0x']::before {
+  filter: invert(0);
+}
+.relations-type[data-type*='2x']::before {
+  filter: invert(1);
+}
+.relations-type[data-type*='4x']::before {
+  filter: invert(1);
+}
+.relations-type[data-type*='.5x']::before {
+  filter: invert(1);
+}
+.relations-type[data-type*='.25x']::before {
+  filter: invert(0);
+} */
 
 /* Ferrothorn bug fix */
 
@@ -328,4 +348,103 @@ nav li:hover {
 }
 .fairy {
   background-color: var(--fairy);
+}
+
+.relations-type::before {
+  content: var(--typeurl);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  background-color: var(--typecolor);
+  padding: 0.25rem;
+  border-radius: 100%;
+}
+
+.relations-type[data-type*='bug']::before {
+  --typeurl: url('../public/icons/bug.svg');
+  --typecolor: var(--bug);
+}
+
+.relations-type[data-type*='dark']::before {
+  --typeurl: url('../public/icons/dark.svg');
+  --typecolor: var(--dark);
+}
+
+.relations-type[data-type*='dragon']::before {
+  --typeurl: url('../public/icons/dragon.svg');
+
+  --typecolor: var(--dragon);
+}
+
+.relations-type[data-type*='electric']::before {
+  --typeurl: url('../public/icons/electric.svg');
+  --typecolor: var(--electric);
+}
+.relations-type[data-type*='fairy']::before {
+  --typeurl: url('../public/icons/fairy.svg');
+  --typecolor: var(--fairy);
+}
+
+.relations-type[data-type*='fighting']::before {
+  --typeurl: url('../public/icons/fighting.svg');
+  --typecolor: var(--fighting);
+}
+
+.relations-type[data-type*='fire']::before {
+  --typeurl: url('../public/icons/fire.svg');
+  --typecolor: var(--fire);
+}
+
+.relations-type[data-type*='flying']::before {
+  --typeurl: url('../public/icons/flying.svg');
+  --typecolor: var(--flying);
+}
+
+.relations-type[data-type*='ghost']::before {
+  --typeurl: url('../public/icons/ghost.svg');
+  --typecolor: var(--ghost);
+}
+
+.relations-type[data-type*='grass']::before {
+  --typeurl: url('../public/icons/grass.svg');
+  --typecolor: var(--grass);
+}
+
+.relations-type[data-type*='ground']::before {
+  --typeurl: url('../public/icons/ground.svg');
+  --typecolor: var(--ground);
+}
+
+.relations-type[data-type*='ice']::before {
+  --typeurl: url('../public/icons/ice.svg');
+  --typecolor: var(--ice);
+}
+.relations-type[data-type*='normal']::before {
+  --typeurl: url('../public/icons/normal.svg');
+  --typecolor: var(--normal);
+}
+
+.relations-type[data-type*='poison']::before {
+  --typeurl: url('../public/icons/poison.svg');
+  --typecolor: var(--poison);
+}
+
+.relations-type[data-type*='psychic']::before {
+  --typeurl: url('../public/icons/psychic.svg');
+  --typecolor: var(--psychic);
+}
+
+.relations-type[data-type*='rock']::before {
+  --typeurl: url('../public/icons/rock.svg');
+  --typecolor: var(--rock);
+}
+
+.relations-type[data-type*='steel']::before {
+  --typeurl: url('../public/icons/steel.svg');
+  --typecolor: var(--steel);
+}
+
+.relations-type[data-type*='water']::before {
+  --typeurl: url('../public/icons/water.svg');
+  --typecolor: var(--water);
 }
