@@ -142,6 +142,12 @@ export default async function PlayerTeam({
     .map((i) => i + 'x')
     .sort();
 
+  async function displayAbility(e: string) {
+    const abilityInfo = await api.getAbilityByName(e);
+    const abilityEffect = abilityInfo.effect_entries[1]?.short_effect;
+    return <div className="ability-effect">{abilityEffect}</div>;
+  }
+
   let pokearray = [
     {
       name: pok1.name,
@@ -257,12 +263,16 @@ export default async function PlayerTeam({
                     </div>
                   </div>
                   <div className="abilities-container">
-                    <div>Potential Abilities: </div>
                     <div className="abilities">
                       {values.abilities?.map((value, index) => {
                         return (
-                          <div className={value.ability.name} key={index}>
-                            {value.ability.name}
+                          <div
+                            className={`ability-box ${value.ability.name}`}
+                            key={index}>
+                            <div className="ability-name">
+                              {value.ability.name}
+                            </div>
+                            {displayAbility(value.ability.name)}
                           </div>
                         );
                       })}
