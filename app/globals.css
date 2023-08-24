@@ -418,3 +418,11 @@ nav li:hover {
     content: '';
   }
 }
+
+@-moz-document url-prefix() {
+  @supports (animation: calc(0s)) {
+    .relations-type::before {
+      content: var(--typeurl);
+    }
+  }
+}
