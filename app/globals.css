@@ -410,3 +410,9 @@ nav li:hover {
   --typeurl: url('../public/icons/water.svg');
   --typecolor: var(--water);
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .relations-type::before {
+    content: '';
+  }
+}
