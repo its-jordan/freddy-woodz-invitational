@@ -413,7 +413,7 @@ nav li:hover {
 
 /* Temporary bug fix due to Webkit svg bug */
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .relations-type::before {
     content: '';
   }
