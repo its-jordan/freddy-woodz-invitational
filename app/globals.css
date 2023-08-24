@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --base: #121212;
+  --base: #ffffff;
+  --primary: #121212;
+  --bg: var(--base);
   /* Pokemon Type Colors */
   --normal: #a8a77a;
   --fire: #ee8130;
@@ -40,14 +42,32 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base: #ffffff;
+    --primary: #000000;
+    --bg: color-mix(in srgb, var(--primary) 85%, rgb(0, 242, 255));
+    --heading: var(--base);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --base: #ffffff;
+    --primary: #121212;
+    --bg: var(--base);
+    --heading: var(--primary);
+  }
+}
+
 svg {
   max-width: 20px !important;
   object-fit: contain !important;
 }
 
 body {
-  background-color: var(--base);
-  color: white;
+  background-color: var(--bg);
+  color: var(--primary);
 }
 
 html,
@@ -57,6 +77,10 @@ html,
 
 main {
   margin-top: 5rem;
+}
+
+nav a {
+  color: var(--heading);
 }
 
 nav {
@@ -78,8 +102,12 @@ nav li {
 }
 
 nav li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-left: 0.5rem solid rgba(255, 255, 255, 1);
+  background-color: color-mix(
+    in srgb,
+    var(--primary) 20%,
+    rgba(255, 255, 255, 0.3)
+  );
+  border-left: 0.5rem solid color-mix(in srgb, var(--primary) 50%, white);
   padding-inline-start: 1.75rem;
 }
 
@@ -93,21 +121,67 @@ nav li:hover {
 .player-team {
   display: flex;
   flex-flow: row wrap;
-  gap: 0.25rem;
+  gap: 1rem;
 }
 
 .pokemon-info {
+  --_border-clr: var(--border-color, var(--base));
+  position: relative;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
   width: var(--col-width);
   gap: 1rem;
   text-transform: capitalize;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+  background-color: color-mix(in srgb, var(--_border-clr) 50%, white);
+  border: 3px solid var(--primary);
+  border-radius: 0.5rem;
   padding: 1rem;
-  transition: background-color 300ms ease;
+  transition: background-color 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
+.upper-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pokemon-info img {
+  align-self: start;
+}
+
+.pokemon-info:hover {
+  background-color: color-mix(in srgb, var(--_border-clr) 85%, white);
+}
+
+.pokemon-info:hover::before {
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+}
+
+.pokemon-info::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  border-radius: inherit;
+  z-index: -1;
+  top: 15px;
+  left: 15px;
+  transition: width 300ms ease, height 300ms ease;
+}
+
+img {
+  background-color: var(--base);
+  border-radius: 0.375rem;
+  border: 2px solid var(--primary);
+}
+
 .heading {
   font-size: 2rem;
   font-weight: 700;
@@ -132,10 +206,6 @@ nav li:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-.pokemon-info:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
 .pokemon-jordan-container {
   display: flex;
   gap: 1rem;
@@ -157,7 +227,8 @@ nav li:hover {
 .pokemon-type {
   display: flex;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--primary);
 }
 
 .pokemon-name {
@@ -166,9 +237,25 @@ nav li:hover {
   line-height: 1;
 }
 
+.teams-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  flex-grow: 1;
+  gap: 3rem;
+}
+
+.team {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
 .teamname {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
+  color: var(--heading);
 }
 
 .stats-container {
@@ -193,11 +280,25 @@ nav li:hover {
 .abilities {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
   gap: 0.25rem;
 }
 
-.abilities div:not(:last-child)::after {
-  content: ',';
+.abilities-container div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.abilities div {
+  display: flex;
+  align-items: center;
+  background-color: var(--base);
+  color: var(--primary);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--primary);
 }
 
 .damage-relations-container {
@@ -208,12 +309,13 @@ nav li:hover {
 
 .damage-relations-container > .relations-type {
   padding: 0.25rem 0.375rem;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   gap: 0.375rem;
+  border: 2px solid var(--primary);
 }
 
 .relations-type[data-type*='0x'] {
@@ -249,6 +351,10 @@ nav li:hover {
 }
 
 /* Type Color Backgrounds */
+
+.pokemon-type {
+  color: white;
+}
 
 .normal {
   background-color: var(--normal);
@@ -317,9 +423,10 @@ nav li:hover {
   display: flex;
   background-color: var(--typecolor);
   padding: 0.25rem;
-  border-radius: 100%;
+  border-radius: 0.25rem;
   max-height: 20px;
   max-width: 20px;
+  fill: black;
 }
 
 .relations-type[data-type*='bug']::before {
@@ -334,7 +441,6 @@ nav li:hover {
 
 .relations-type[data-type*='dragon']::before {
   --typeurl: url('../public/icons/dragon.svg');
-
   --typecolor: var(--dragon);
 }
 
@@ -409,6 +515,61 @@ nav li:hover {
 .relations-type[data-type*='water']::before {
   --typeurl: url('../public/icons/water.svg');
   --typecolor: var(--water);
+}
+
+.pokemon-info:has(.pokemon-type:first-of-type.normal) {
+  --_border-clr: var(--normal);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.fire) {
+  --_border-clr: var(--fire);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.water) {
+  --_border-clr: var(--water);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.electric) {
+  --_border-clr: var(--electric);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.grass) {
+  --_border-clr: var(--grass);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.ice) {
+  --_border-clr: var(--ice);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.fighting) {
+  --_border-clr: var(--fighting);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.poison) {
+  --_border-clr: var(--poison);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.ground) {
+  --_border-clr: var(--ground);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.flying) {
+  --_border-clr: var(--flying);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.psychic) {
+  --_border-clr: var(--psychic);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.bug) {
+  --_border-clr: var(--bug);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.rock) {
+  --_border-clr: var(--rock);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.ghost) {
+  --_border-clr: var(--ghost);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.dragon) {
+  --_border-clr: var(--dragon);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.dark) {
+  --_border-clr: var(--dark);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.steel) {
+  --_border-clr: var(--steel);
+}
+.pokemon-info:has(.pokemon-type:first-of-type.fairy) {
+  --_border-clr: var(--fairy);
 }
 
 /* Temporary bug fix due to Webkit svg bug */

@@ -4,7 +4,7 @@ import PlayerTeam from '@/components/arrays';
 export default function Home() {
   return (
     <main className="mb-16">
-      <div className="flex flex-col gap-4">
+      <div className="teams-container">
         <PlayerTeam
           player={'SeanBoyQ'}
           p1={'pinsir-mega'}

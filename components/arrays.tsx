@@ -233,52 +233,54 @@ export default async function PlayerTeam({
             <Link
               href={`https://www.smogon.com/dex/sv/pokemon/${values.species.name}`}
               target="_blank"
-              className={`pokemon-info flex flex-row`}
+              className={`pokemon-info`}
               key={index}>
-              <img
-                className={`${values.name}-img`}
-                src={values.sprite.front_default?.toString()}
-                alt={`Default front sprite for ${values.name}`}
-              />
-              <div className="pokemon-data">
-                <div className="name-container">
-                  <div className="pokemon-name">{values.name}</div>
-                  <div className="pokemon-types">
-                    {values.types.map((value) => {
-                      return (
-                        <div
-                          className={`pokemon-type ${value.type.name}`}
-                          key={value.slot}>
-                          {value.type.name}
-                        </div>
-                      );
-                    })}
+              <div className="upper-container">
+                <img
+                  className={`${values.name}-img`}
+                  src={values.sprite.front_default?.toString()}
+                  alt={`Default front sprite for ${values.name}`}
+                />
+                <div className="pokemon-data">
+                  <div className="name-container">
+                    <div className="pokemon-name">{values.name}</div>
+                    <div className="pokemon-types">
+                      {values.types.map((value) => {
+                        return (
+                          <div
+                            className={`pokemon-type ${value.type.name}`}
+                            key={value.slot}>
+                            {value.type.name}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <div className="abilities-container">
+                    <div>Potential Abilities: </div>
+                    <div className="abilities">
+                      {values.abilities?.map((value, index) => {
+                        return (
+                          <div className={value.ability.name} key={index}>
+                            {value.ability.name}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-                <div className="abilities-container">
-                  <div>Potential Abilities: </div>
-                  <div className="abilities">
-                    {values.abilities?.map((value, index) => {
-                      return (
-                        <div className={value.ability.name} key={index}>
-                          {value.ability.name}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="damage-relations-container">
-                  {values.weakness?.map((value, index) => {
-                    return (
-                      <div
-                        key={index}
-                        data-type={value}
-                        className="relations-type">
-                        {value}
-                      </div>
-                    );
-                  })}
-                </div>
+              </div>
+              <div className="damage-relations-container">
+                {values.weakness?.map((value, index) => {
+                  return (
+                    <div
+                      key={index}
+                      data-type={value}
+                      className="relations-type">
+                      {value}
+                    </div>
+                  );
+                })}
               </div>
             </Link>
           );
