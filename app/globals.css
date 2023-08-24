@@ -411,6 +411,8 @@ nav li:hover {
   --typecolor: var(--water);
 }
 
+/* Temporary bug fix due to Webkit svg bug */
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .relations-type::before {
     content: '';
