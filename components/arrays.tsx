@@ -147,6 +147,9 @@ export default async function PlayerTeam({
     if (abilityInfo.id == 261) {
       const abilityEffect = abilityInfo.flavor_text_entries[7]?.flavor_text;
       return <div className="ability-effect">{abilityEffect}</div>;
+    } else if (abilityInfo.id == 202) {
+      const abilityEffect = abilityInfo.effect_entries[0]?.short_effect;
+      return <div className="ability-effect">{abilityEffect}</div>;
     } else {
       const abilityEffect = abilityInfo.effect_entries[1]?.short_effect;
       return <div className="ability-effect">{abilityEffect}</div>;
