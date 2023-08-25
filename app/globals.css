@@ -672,7 +672,7 @@ nav li:hover {
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   :root {
     --col-width: 1;
-    --content-width: 100%;
+    --content-width: 98%;
   }
   .relations-type::before {
     content: '';
