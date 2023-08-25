@@ -144,8 +144,13 @@ export default async function PlayerTeam({
 
   async function displayAbility(e: string) {
     const abilityInfo = await api.getAbilityByName(e);
-    const abilityEffect = abilityInfo.effect_entries[1]?.short_effect;
-    return <div className="ability-effect">{abilityEffect}</div>;
+    if (abilityInfo.id == 261) {
+      const abilityEffect = abilityInfo.flavor_text_entries[7]?.flavor_text;
+      return <div className="ability-effect">{abilityEffect}</div>;
+    } else {
+      const abilityEffect = abilityInfo.effect_entries[0]?.short_effect;
+      return <div className="ability-effect">{abilityEffect}</div>;
+    }
   }
 
   let pokearray = [
