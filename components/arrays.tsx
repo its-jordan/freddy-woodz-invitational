@@ -148,7 +148,7 @@ export default async function PlayerTeam({
       const abilityEffect = abilityInfo.flavor_text_entries[7]?.flavor_text;
       return <div className="ability-effect">{abilityEffect}</div>;
     } else {
-      const abilityEffect = abilityInfo.effect_entries[0]?.short_effect;
+      const abilityEffect = abilityInfo.effect_entries[1]?.short_effect;
       return <div className="ability-effect">{abilityEffect}</div>;
     }
   }
