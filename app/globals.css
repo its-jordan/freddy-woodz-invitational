@@ -680,4 +680,7 @@ nav li:hover {
   nav {
     display: none;
   }
+  body {
+    overflow-x: hidden;
+  }
 }
