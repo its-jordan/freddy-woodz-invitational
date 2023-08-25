@@ -153,7 +153,7 @@ export default async function PlayerTeam({
       name: pok1.name,
       abilities: pok1.abilities,
       types: pok1.types,
-      sprite: pok1.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok1.name}.gif`,
       species: pok1.species,
       weakness: pok1Array,
     },
@@ -161,7 +161,7 @@ export default async function PlayerTeam({
       name: pok2.name,
       abilities: pok2.abilities,
       types: pok2.types,
-      sprite: pok2.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok2.name}.gif`,
       species: pok2.species,
       weakness: pok2Array,
     },
@@ -169,7 +169,9 @@ export default async function PlayerTeam({
       name: pok3.name,
       abilities: pok3.abilities,
       types: pok3.types,
-      sprite: pok3.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok3.name
+        ?.replace('-incarnate', '')
+        .replace('-50', '')}.gif`,
       species: pok3.species,
       weakness: pok3Array,
     },
@@ -177,7 +179,9 @@ export default async function PlayerTeam({
       name: pok4.name,
       abilities: pok4.abilities,
       types: pok4.types,
-      sprite: pok4.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok4.name
+        ?.replace('-incarnate', '')
+        .replace('-50', '')}.gif`,
       species: pok4.species,
       weakness: pok4Array,
     },
@@ -185,7 +189,9 @@ export default async function PlayerTeam({
       name: pok5.name,
       abilities: pok5.abilities,
       types: pok5.types,
-      sprite: pok5.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok5.name
+        ?.replace('-incarnate', '')
+        .replace('-hisui', '')}.gif`,
       species: pok5.species,
       weakness: pok5Array,
     },
@@ -193,7 +199,7 @@ export default async function PlayerTeam({
       name: pok6.name,
       abilities: pok6.abilities,
       types: pok6.types,
-      sprite: pok6.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok6.name}.gif`,
       species: pok6.species,
       weakness: pok6Array,
     },
@@ -201,7 +207,7 @@ export default async function PlayerTeam({
       name: pok7.name,
       abilities: pok7.abilities,
       types: pok7.types,
-      sprite: pok7.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok7.name}.gif`,
       species: pok7.species,
       weakness: pok7Array,
     },
@@ -209,7 +215,7 @@ export default async function PlayerTeam({
       name: pok8.name,
       abilities: pok8.abilities,
       types: pok8.types,
-      sprite: pok8.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok8.name}.gif`,
       species: pok8.species,
       weakness: pok8Array,
     },
@@ -217,7 +223,9 @@ export default async function PlayerTeam({
       name: pok9.name,
       abilities: pok9.abilities,
       types: pok9.types,
-      sprite: pok9.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok9.name
+        ?.replace('-incarnate', '')
+        .replace('-hisui', '')}.gif`,
       species: pok9.species,
       weakness: pok9Array,
     },
@@ -225,7 +233,7 @@ export default async function PlayerTeam({
       name: pok0.name,
       abilities: pok0.abilities,
       types: pok0.types,
-      sprite: pok0.sprites,
+      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok0.name}.gif`,
       species: pok0.species,
       weakness: pok0Array,
     },
@@ -244,7 +252,7 @@ export default async function PlayerTeam({
               <div className="upper-container">
                 <img
                   className={`${values.name}-img`}
-                  src={values.sprite.front_default?.toString()}
+                  src={values.sprite}
                   alt={`Default front sprite for ${values.name}`}
                 />
                 <div className="pokemon-data">
