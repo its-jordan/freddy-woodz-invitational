@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const navLinks = [
   {
     name: 'Teams',
-    path: '/teams',
+    path: '/',
   },
   {
     name: 'SeanBoyQ',

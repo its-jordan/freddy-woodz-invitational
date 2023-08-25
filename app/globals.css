@@ -317,6 +317,8 @@ nav li:hover {
   display: flex !important;
   flex-flow: row wrap;
   width: max-content;
+  word-wrap: break-word;
+  max-width: 400px;
   align-items: center;
   background-color: var(--base);
   color: var(--primary);
@@ -325,6 +327,7 @@ nav li:hover {
   border: 2px solid var(--primary);
   top: -10px;
   margin-left: 10px;
+  box-shadow: 5px 5px var(--primary);
 }
 
 .damage-relations-container {
