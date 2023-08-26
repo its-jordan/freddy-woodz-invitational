@@ -41,6 +41,10 @@ export const navLinks = [
     name: 'its_jordan',
     path: '#its_jordan',
   },
+  {
+    name: 'Discord Tiers',
+    path: '/meme',
+  },
 ];
 
 function Nav() {

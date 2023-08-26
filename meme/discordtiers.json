@@ -1,0 +1,96 @@
+{
+  "players": [
+    {
+      "name": "Johnny Dougs",
+      "tier": "AG"
+    },
+    {
+      "name": "John Shaw",
+      "tier": "AG"
+    },
+    {
+      "name": "crookedcooker",
+      "tier": "AG"
+    },
+    {
+      "name": "edjr",
+      "tier": "Ubers"
+    },
+    {
+      "name": "kishilite",
+      "tier": "Ubers"
+    },
+    {
+      "name": "Jmacattack",
+      "tier": "Ubers"
+    },
+    {
+      "name": "Dank (Drunk Form)",
+      "tier": "OU"
+    },
+    {
+      "name": "Antonz",
+      "tier": "OU"
+    },
+    {
+      "name": "Max",
+      "tier": "OU"
+    },
+    {
+      "name": "Jordan",
+      "tier": "OU"
+    },
+    {
+      "name": "Lil Sis",
+      "tier": "OUBL"
+    },
+    {
+      "name": "Tylo (Drunk Form)",
+      "tier": "UU"
+    },
+    {
+      "name": "Dom (Drunk Form)",
+      "tier": "UU"
+    },
+    {
+      "name": "Dank",
+      "tier": "UU"
+    },
+    {
+      "name": "Gregg",
+      "tier": "UU"
+    },
+    {
+      "name": "Furgat",
+      "tier": "RUBL"
+    },
+    {
+      "name": "Dom",
+      "tier": "RUBL"
+    },
+    {
+      "name": "Tylo",
+      "tier": "RUBL"
+    },
+    {
+      "name": "Sam",
+      "tier": "RU"
+    },
+    {
+      "name": "Balloony",
+      "tier": "RU"
+    },
+    {
+      "name": "Sean",
+      "tier": "NU"
+    },
+    {
+      "name": "Krame",
+      "tier": "NU"
+    },
+    {
+      "name": "MikeyOG",
+      "tier": "NU"
+    }
+  ]
+}
