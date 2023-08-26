@@ -41,16 +41,24 @@
       "tier": "OU"
     },
     {
+      "name": "Gregg (Drunk)",
+      "tier": "OU"
+    },
+    {
       "name": "Lil Sis",
       "tier": "OUBL"
     },
     {
+      "name": "Gregg",
+      "tier": "OUBL"
+    },
+    {
       "name": "Tylo (Drunk Form)",
-      "tier": "UU"
+      "tier": "OUBL"
     },
     {
       "name": "Dom (Drunk Form)",
-      "tier": "UU"
+      "tier": "OUBL"
     },
     {
       "name": "Dank",
@@ -62,6 +70,14 @@
     },
     {
       "name": "Furgat",
+      "tier": "UU"
+    },
+    {
+      "name": "Furgat (Kramer Debuff)",
+      "tier": "RUBL"
+    },
+    {
+      "name": "Ricky",
       "tier": "RUBL"
     },
     {
@@ -81,15 +97,15 @@
       "tier": "RU"
     },
     {
+      "name": "MikeyOG",
+      "tier": "RU"
+    },
+    {
       "name": "Sean",
       "tier": "NU"
     },
     {
-      "name": "Krame",
-      "tier": "NU"
-    },
-    {
-      "name": "MikeyOG",
+      "name": "Kramer",
       "tier": "NU"
     }
   ]
