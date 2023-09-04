@@ -2,6 +2,27 @@ import PlayerTeam from '@/components/arrays';
 // import PokemonInput from '@/components/ui/pokemon';
 
 export default function Home() {
+  const fs = require('fs');
+
+  function uberStats() {
+    fs.readFile('ubers-stats.txt', 'utf8', (err: any, data: any) => {
+      if (err) {
+        console.error(err);
+        return;
+      } else {
+        let stats = data
+          .toString()
+          .split('+----------------------------------------+')
+          .toString()
+          .split(',');
+        let statsFormatted = stats;
+        console.log(statsFormatted);
+      }
+    });
+  }
+
+  uberStats();
+
   return (
     <main className="mb-16">
       <div className="teams-container">

@@ -7,39 +7,39 @@ export const navLinks = [
   },
   {
     name: 'SeanBoyQ',
-    path: '#SeanBoyQ',
+    path: './#SeanBoyQ',
   },
   {
     name: 'resolamxxy',
-    path: '#resolamxxy',
+    path: './#resolamxxy',
   },
   {
     name: 'dtbaggins',
-    path: '#dtbaggins',
+    path: './#dtbaggins',
   },
   {
     name: 'castleflutes',
-    path: '#castleflutes',
+    path: './#castleflutes',
   },
   {
     name: 'Tokotoro',
-    path: '#Tokotoro',
+    path: './#Tokotoro',
   },
   {
     name: 'danknett',
-    path: '#danknett',
+    path: '/#danknett',
   },
   {
     name: 'ifurgat',
-    path: '#ifurgat',
+    path: '/#ifurgat',
   },
   {
     name: 'foxish',
-    path: '#foxish',
+    path: '/#foxish',
   },
   {
     name: 'its_jordan',
-    path: '#its_jordan',
+    path: '/#its_jordan',
   },
   {
     name: 'Discord Tiers',
