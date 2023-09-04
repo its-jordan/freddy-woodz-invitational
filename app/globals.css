@@ -101,6 +101,7 @@ nav a {
   font-size: 1.25rem;
   border: 3px solid var(--primary);
   background-color: var(--base);
+  color: var(--primary);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 5px 5px var(--primary);
