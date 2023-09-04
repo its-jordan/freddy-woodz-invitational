@@ -160,13 +160,6 @@ export default async function PlayerTeam({
     }
   }
 
-  function useRegex(input: any) {
-    let regex = /^.*[A-Za-z0-9]+.*:.*\..*%.*$/i;
-    return regex.test(input);
-  }
-
-  console.log(useRegex('xx'));
-
   let pokearray = [
     {
       name: pok1.name,
