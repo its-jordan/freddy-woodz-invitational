@@ -157,7 +157,12 @@ export default async function Standings() {
 
     console.log(currentStandings);
 
-    let sortedStandings = currentStandings.sort((a, b) => b.wins - a.wins);
+    let sortedStandings = currentStandings.sort(
+      (a, b) =>
+        b.wins / (b.wins + b.losses) - a.wins / (a.wins + a.losses) ||
+        b.wins - a.wins ||
+        a.losses - b.losses
+    );
 
     return (
       <div className="standings-container">
