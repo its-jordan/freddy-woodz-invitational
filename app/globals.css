@@ -239,7 +239,6 @@ nav > a:nth-child(10) {
   display: flex;
   flex-flow: column nowrap;
   gap: 0.5rem;
-  text-transform: capitalize;
 }
 
 .pokemon-types {
@@ -1040,6 +1039,17 @@ main {
   border-radius: 0.5rem;
   background-color: var(--base);
   border: 2px solid var(--primary);
+}
+
+.move-name {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.move-type {
+  text-transform: capitalize;
 }
 
 .move-hover-box {
