@@ -478,16 +478,21 @@ export default async function PlayerTeam({
                 </div>
               </Link>
               <div className="damage-relations-container">
-                {values.weakness?.map((value, index) => {
-                  return (
-                    <div
-                      key={index}
-                      data-type={value}
-                      className="relations-type">
-                      {value}
-                    </div>
-                  );
-                })}
+                <div className="damage-relations-header">
+                  Type Effectiveness
+                </div>
+                <div className="damage-relation-types">
+                  {values.weakness?.map((value, index) => {
+                    return (
+                      <div
+                        key={index}
+                        data-type={value}
+                        className="relations-type">
+                        {value}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
               {displayMoves(values.name)}
             </div>
