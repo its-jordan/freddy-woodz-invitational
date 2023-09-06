@@ -1,7 +1,6 @@
 import PlayerTeam from '@/components/arrays';
-import Standings from '@/components/standingsArrays';
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="mb-16">
       <div className="teams-container">

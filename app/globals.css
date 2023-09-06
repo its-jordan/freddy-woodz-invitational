@@ -46,8 +46,8 @@
   :root {
     --base: #ffffff;
     --primary: #121212;
-    --bg: var(--base);
-    --heading: var(--primary);
+    --bg: #2b2a33;
+    --heading: var(--base);
   }
 }
 
@@ -1011,4 +1011,8 @@ main {
   justify-content: start;
   align-items: center;
   padding: 1rem;
+}
+
+.standings-header {
+  color: var(--heading);
 }
