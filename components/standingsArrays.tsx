@@ -168,7 +168,10 @@ export default async function Standings() {
         </div>
         {sortedStandings.map((player) => {
           return (
-            <div data-player={player.id} className="standings-record">
+            <div
+              data-player={player.id}
+              className="standings-record"
+              key={player.id}>
               <div className="standings-name">{player.name.toString()}</div>
               <div className="standings-wins">{player.wins.toString()}</div>
               <div className="standings-losses">{player.losses.toString()}</div>
