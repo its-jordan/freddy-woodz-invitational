@@ -55,3 +55,7 @@
 //     </main>
 //   );
 // }
+
+export default function Replays() {
+  return <div></div>;
+}
