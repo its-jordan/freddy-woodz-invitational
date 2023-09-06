@@ -1042,7 +1042,7 @@ main {
 }
 
 .move-name {
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
