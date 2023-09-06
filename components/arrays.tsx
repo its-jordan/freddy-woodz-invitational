@@ -1,5 +1,7 @@
 import { PokemonClient } from 'pokenode-ts';
+import { MoveClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
+import UberStats from '../ubers-stats.json';
 import Link from 'next/link';
 
 interface Pokemon {
@@ -160,12 +162,134 @@ export default async function PlayerTeam({
     }
   }
 
-  let pokearray = [
+  function displayMoves(e: string) {
+    const statsArray = UberStats;
+    const pokemon = e;
+    // @ts-ignore
+    let stats = statsArray[pokemon];
+    console.log(stats);
+
+    if (stats !== undefined)
+      return (
+        <div className="moves-wrapper">
+          <div className="moves-header">Most Common Moves</div>
+          <div className="moves-container">
+            {stats?.map((value: any) => {
+              return (
+                <>
+                  <Link
+                    href={`https://www.smogon.com/dex/sv/moves/${value}`}
+                    target="_blank"
+                    className="move"
+                    data-move={value}
+                    data-key={value.index}>
+                    {value?.replace('-', ' ')}
+                    {moveTypes(value)}
+                  </Link>
+                </>
+              );
+            })}
+          </div>
+        </div>
+      );
+  }
+
+  async function moveTypes(e: string) {
+    const moveApi = new MoveClient();
+    let move = await moveApi.getMoveByName(e);
+    if (move.damage_class?.name === 'status') {
+      return (
+        <div className="move-hover-box" data-move-name={move.name}>
+          <div className="move-hover-upper-container">
+            <div className="move-name-container">
+              <div className={`move-hover-name`} data-move={move.name}>
+                {move.name}
+              </div>
+              <div className={`move-type ${move.type.name}`}>
+                {move.type.name}
+              </div>
+            </div>
+            <div className="move-hover-info">
+              <div
+                className={`move-damage-type`}
+                data-damage-type={move.damage_class?.name}>
+                {move.damage_class?.name}
+              </div>
+              <div className={`move-pp`} data-pp={move.pp}>
+                {move.pp}pp
+              </div>
+              <div
+                className="move-type-change"
+                data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
+                {move.stat_changes[0]?.change}x{' '}
+                {move.stat_changes[0]?.stat.name}
+              </div>
+              <div className={`move-priority`} data-priority={move.priority}>
+                Priority: {move.priority}
+              </div>
+            </div>
+          </div>
+          <div className="move-hover-lower-container">
+            <div className="move-effect">
+              {move.effect_entries[0]?.short_effect}
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="move-hover-box">
+          <div className="move-hover-upper-container">
+            <div className="move-name-container">
+              <div className={`move-hover-name`} data-move={move.name}>
+                {move.name}
+              </div>
+              <div className={`move-type ${move.type.name}`}>
+                {move.type.name}
+              </div>
+            </div>
+            <div className="move-hover-info">
+              <div
+                className={`move-damage-type`}
+                data-damage-type={move.damage_class?.name}>
+                {move.damage_class?.name}
+              </div>
+
+              <div className={`move-accuracy`} data-accuracy={move.accuracy}>
+                {move.accuracy}% acc
+              </div>
+              <div className={`move-pp`} data-pp={move.pp}>
+                {move.pp}pp
+              </div>
+              <div className={`move-power`} data-power={move.power}>
+                {move.power}bp
+              </div>
+              <div className={`move-priority`} data-priority={move.priority}>
+                Priority: {move.priority}
+              </div>
+            </div>
+          </div>
+          <div className="move-hover-lower-container">
+            <div className="move-effect">
+              {move.effect_entries[0]?.short_effect?.replace(
+                '$effect_chance%',
+                `${move.effect_chance?.toString()}%`
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+
+  var pokearray = [
     {
       name: pok1.name,
       abilities: pok1.abilities,
       types: pok1.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok1.name}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok1.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok1.species,
       weakness: pok1Array,
     },
@@ -173,7 +297,9 @@ export default async function PlayerTeam({
       name: pok2.name,
       abilities: pok2.abilities,
       types: pok2.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok2.name}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok2.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok2.species,
       weakness: pok2Array,
     },
@@ -181,9 +307,9 @@ export default async function PlayerTeam({
       name: pok3.name,
       abilities: pok3.abilities,
       types: pok3.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok3.name
-        ?.replace('-incarnate', '')
-        .replace('-50', '')}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok3.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok3.species,
       weakness: pok3Array,
     },
@@ -191,9 +317,9 @@ export default async function PlayerTeam({
       name: pok4.name,
       abilities: pok4.abilities,
       types: pok4.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok4.name
-        ?.replace('-incarnate', '')
-        .replace('-50', '')}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok4.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok4.species,
       weakness: pok4Array,
     },
@@ -201,9 +327,9 @@ export default async function PlayerTeam({
       name: pok5.name,
       abilities: pok5.abilities,
       types: pok5.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok5.name
-        ?.replace('-incarnate', '')
-        .replace('-hisui', '')}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok5.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok5.species,
       weakness: pok5Array,
     },
@@ -211,7 +337,9 @@ export default async function PlayerTeam({
       name: pok6.name,
       abilities: pok6.abilities,
       types: pok6.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok6.name}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok6.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok6.species,
       weakness: pok6Array,
     },
@@ -219,7 +347,9 @@ export default async function PlayerTeam({
       name: pok7.name,
       abilities: pok7.abilities,
       types: pok7.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok7.name}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok7.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok7.species,
       weakness: pok7Array,
     },
@@ -227,7 +357,9 @@ export default async function PlayerTeam({
       name: pok8.name,
       abilities: pok8.abilities,
       types: pok8.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok8.name}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok8.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok8.species,
       weakness: pok8Array,
     },
@@ -235,9 +367,9 @@ export default async function PlayerTeam({
       name: pok9.name,
       abilities: pok9.abilities,
       types: pok9.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok9.name
-        ?.replace('-incarnate', '')
-        .replace('-hisui', '')}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok9.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok9.species,
       weakness: pok9Array,
     },
@@ -245,23 +377,68 @@ export default async function PlayerTeam({
       name: pok0.name,
       abilities: pok0.abilities,
       types: pok0.types,
-      sprite: `https://play.pokemonshowdown.com/sprites/ani/${pok0.name}.gif`,
+      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok0.name
+        ?.replace('-50', '')
+        ?.replace('-incarnate', '')}.gif`,
       species: pok0.species,
       weakness: pok0Array,
     },
   ];
+
+  if (pok1.name === 'lilligant-hisui') {
+    var editedArray = {
+      name: pok1.name,
+      abilities: pok1.abilities,
+      types: pok1.types,
+      sprite: `https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/56ce70c8-7180-4823-ad03-5f29f2594215/dfptijp-3a860015-8842-4067-9126-711d52512397.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU2Y2U3MGM4LTcxODAtNDgyMy1hZDAzLTVmMjlmMjU5NDIxNVwvZGZwdGlqcC0zYTg2MDAxNS04ODQyLTQwNjctOTEyNi03MTFkNTI1MTIzOTcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.bQKwQwMio-YJACXsO411cdd2JRTh7PJDuXDtQ9rGxp4`,
+      species: pok1.species,
+      weakness: pok1Array,
+    };
+    pokearray = pokearray.map((u) =>
+      u.name !== editedArray.name ? u : editedArray
+    );
+  }
+
+  function nameSplit(e: string) {
+    // values.name.split('-')[1]?.concat('ian')}
+    // {' ' + values.name.split('-')[0].charAt(0).toUpperCase() + values.name.split('-')[0].slice(1)}
+    if (e.includes('galar') == true) {
+      return `${e.split('-')[1]?.concat('ian')} ${
+        ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
+    } else if (e.includes('50')) {
+      return `${e.replace('-50', '')}`;
+    } else if (e.includes('mega') == true) {
+      return `${e.split('-')[1]} ${
+        ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
+    } else if (e.includes('alola') == true) {
+      return `${e.split('-')[1]?.concat('n')} ${
+        ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
+    } else if (e.includes('hisui') == true) {
+      return `${e.split('-')[1]?.concat('an')} ${
+        ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
+    } else {
+      return e;
+    }
+  }
+
   return (
     <div className="team" id={`${playerName}`}>
       <div className="teamname">{playerName}</div>
       <div className="player-team">
         {pokearray.map((values, index) => {
           return (
-            <Link
-              href={`https://www.smogon.com/dex/sv/pokemon/${values.species.name}`}
-              target="_blank"
-              className={`pokemon-info`}
-              key={index}>
-              <div className="upper-container">
+            <div className={`pokemon-info`} key={index}>
+              <Link
+                href={`https://www.smogon.com/dex/sv/pokemon/${values.name
+                  ?.replace('-mega', '')
+                  ?.replace('-incarnate', '')
+                  ?.replace('-50', '')}`}
+                target="_blank"
+                className="upper-container">
                 <img
                   className={`${values.name}-img`}
                   src={values.sprite}
@@ -269,7 +446,7 @@ export default async function PlayerTeam({
                 />
                 <div className="pokemon-data">
                   <div className="name-container">
-                    <div className="pokemon-name">{values.name}</div>
+                    <div className="pokemon-name">{nameSplit(values.name)}</div>
                     <div className="pokemon-types">
                       {values.types.map((value) => {
                         return (
@@ -299,7 +476,7 @@ export default async function PlayerTeam({
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
               <div className="damage-relations-container">
                 {values.weakness?.map((value, index) => {
                   return (
@@ -312,7 +489,8 @@ export default async function PlayerTeam({
                   );
                 })}
               </div>
-            </Link>
+              {displayMoves(values.name)}
+            </div>
           );
         })}
       </div>

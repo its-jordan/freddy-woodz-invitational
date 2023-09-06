@@ -191,6 +191,7 @@ nav > a:nth-child(10) {
   justify-content: start;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .pokemon-info img {
@@ -1020,4 +1021,110 @@ main {
 
 .standings-header {
   color: var(--heading);
+}
+
+/* Moves */
+
+.moves-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 0.5rem;
+}
+
+.moves-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.moves-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.move {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  width: max-content;
+  border-radius: 0.5rem;
+  background-color: var(--base);
+  border: 2px solid var(--primary);
+}
+
+.move-hover-box {
+  display: none;
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  min-width: max-content;
+  background-color: var(--base);
+  border: 3px solid var(--primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 0 var(--primary);
+  z-index: 100;
+}
+
+.move:hover .move-hover-box {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.move-hover-upper-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+}
+.move-hover-lower-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.move-hover-info {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
+.move-hover-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.move-effect {
+  max-width: 35ch;
+}
+
+.move-name-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.move-type {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--primary);
+}
+
+.move-hover-info > div:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 0.5rem;
 }

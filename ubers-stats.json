@@ -1,0 +1,82 @@
+{
+  "pinsir-mega": [
+    "quick-attack",
+    "swords-dance",
+    "return",
+    "earthquake",
+    "x-scissor",
+    "close-combat"
+  ],
+  "slowking-galar": [
+    "sludge-bomb",
+    "future-sight",
+    "chilly-reception",
+    "flamethrower",
+    "slack-off",
+    "eerie-spell"
+  ],
+  "zygarde-50": [
+    "thousand-arrows",
+    "dragon-dance",
+    "coil",
+    "extreme-speed",
+    "rest",
+    "substitute"
+  ],
+  "raikou": [
+    "scald",
+    "thunderbolt",
+    "aura-sphere",
+    "volt-switch",
+    "calm-mind",
+    "thunder"
+  ],
+  "jellicent": [
+    "scald",
+    "recover",
+    "hex",
+    "strength-sap",
+    "will-o-wisp",
+    "taunt"
+  ],
+  "arcanine": [
+    "extreme-speed",
+    "flare-blitz",
+    "morning-sun",
+    "will-o-wisp",
+    "wild-charge",
+    "close-combat"
+  ],
+  "cloyster": [
+    "icicle-spear",
+    "shell-smash",
+    "rock-blast",
+    "liquidation",
+    "ice-shard",
+    "rapid-spin"
+  ],
+  "forretress": [
+    "stealth-rock",
+    "rapid-spin",
+    "toxic-spikes",
+    "spikes",
+    "gyro-ball",
+    "explosion"
+  ],
+  "tropius": [
+    "leech-seed",
+    "protect",
+    "substitute",
+    "air-slash",
+    "hurricane",
+    "sunny-day"
+  ],
+  "regigigas": [
+    "protect",
+    "substitute",
+    "drain-punch",
+    "return",
+    "thunder-wave",
+    "knock-off"
+  ]
+}
