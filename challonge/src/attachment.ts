@@ -1,4 +1,10 @@
-import { ChallongeBase, MatchAttachmentAdapter, MatchAttachmentInterfaces } from './';
+// @ts-nocheck
+
+import {
+  ChallongeBase,
+  MatchAttachmentAdapter,
+  MatchAttachmentInterfaces,
+} from './';
 
 export default class Attachment extends ChallongeBase {
   user_id: number;
@@ -12,10 +18,16 @@ export default class Attachment extends ChallongeBase {
   asset_file_size?: number;
   asset_url?: string;
 
-  constructor(public api_key: string, public baseUrl: string, public match_id: number, public id: number, data?: MatchAttachmentInterfaces.matchAttachmentResponseObject) {
+  constructor(
+    public api_key: string,
+    public baseUrl: string,
+    public match_id: number,
+    public id: number,
+    data?: MatchAttachmentInterfaces.matchAttachmentResponseObject
+  ) {
     super(api_key);
 
-    if(data){
+    if (data) {
       Object.assign(this, data);
     }
   }
@@ -23,30 +35,58 @@ export default class Attachment extends ChallongeBase {
   /** Retrieve a single match attachment record. */
   public get(): Promise<Attachment> {
     return new Promise((resolve, reject) => {
-      MatchAttachmentAdapter.show(this.api_key, this.baseUrl, this.match_id, this.id).then(res => {
-        Object.assign(this, res.match_attachment);
-        resolve(this);
-      }).catch(err => reject(err));
+      MatchAttachmentAdapter.show(
+        this.api_key,
+        this.baseUrl,
+        this.match_id,
+        this.id
+      )
+        .then((res) => {
+          Object.assign(this, res.match_attachment);
+          resolve(this);
+        })
+        .catch((err) => reject(err));
     });
   }
 
   /** Update the attributes of a match attachment. */
-  public update(params?: MatchAttachmentInterfaces.matchAttachmentRequestObject): Promise<Attachment> {
+  public update(
+    params?: MatchAttachmentInterfaces.matchAttachmentRequestObject
+  ): Promise<Attachment> {
     return new Promise((resolve, reject) => {
-      MatchAttachmentAdapter.update(this.api_key, this.baseUrl, this.match_id, this.id, { match_attachment: params }).then(res => {
-        Object.assign(this, res.match_attachment);
-        resolve(this);
-      }).catch(err => reject(err));
+      MatchAttachmentAdapter.update(
+        this.api_key,
+        this.baseUrl,
+        this.match_id,
+        this.id,
+        { match_attachment: params }
+      )
+        .then((res) => {
+          Object.assign(this, res.match_attachment);
+          resolve(this);
+        })
+        .catch((err) => reject(err));
     });
   }
 
   /** Delete a match attachment. */
   public delete(): Promise<boolean> {
     return new Promise((resolve, reject) => {
-      MatchAttachmentAdapter.destroy(this.api_key, this.baseUrl, this.match_id, this.id).then(res => {
-        if(res.status = 200) { this.api_key = undefined; resolve(true); }
-        else { reject({error: 'Challonge did not return 200'}) }
-      }).catch(err => reject(err));
+      MatchAttachmentAdapter.destroy(
+        this.api_key,
+        this.baseUrl,
+        this.match_id,
+        this.id
+      )
+        .then((res) => {
+          if ((res.status = 200)) {
+            this.api_key = undefined;
+            resolve(true);
+          } else {
+            reject({ error: 'Challonge did not return 200' });
+          }
+        })
+        .catch((err) => reject(err));
     });
   }
 }

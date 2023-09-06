@@ -1,5 +1,5 @@
-export { BaseInterfaces as BaseInterfaces } from './base.interface';
-export { MatchInterfaces as MatchInterfaces } from './match.interface';
-export { MatchAttachmentInterfaces as MatchAttachmentInterfaces } from './matchAttachment.interface';
-export { ParticipantInterfaces as ParticipantInterfaces } from './participant.interface';
-export { TournamentInterfaces as TournamentInterfaces } from './tournament.interface';
+export type { BaseInterfaces as BaseInterfaces } from './base.interface';
+export type { MatchInterfaces as MatchInterfaces } from './match.interface';
+export type { MatchAttachmentInterfaces as MatchAttachmentInterfaces } from './matchAttachment.interface';
+export type { ParticipantInterfaces as ParticipantInterfaces } from './participant.interface';
+export type { TournamentInterfaces as TournamentInterfaces } from './tournament.interface';

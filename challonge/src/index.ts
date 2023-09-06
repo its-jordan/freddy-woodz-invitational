@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // Interfaces
 export {
   MatchInterfaces as MatchInterfaces,
