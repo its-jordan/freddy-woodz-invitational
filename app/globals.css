@@ -373,6 +373,7 @@ nav > a:nth-child(10) {
   top: -10px;
   margin-left: 10px;
   box-shadow: 5px 5px var(--primary);
+  text-wrap: balance;
 }
 
 .damage-relations-container {
@@ -1105,6 +1106,7 @@ main {
 
 .move-effect {
   max-width: 35ch;
+  text-wrap: balance;
 }
 
 .move-name-container {
