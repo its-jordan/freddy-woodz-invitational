@@ -4,8 +4,8 @@ export default async function Home() {
   return (
     <main className="mb-16">
       <div className="text-base">
-        &#40;Will add rest of the common pokemon moves later, for now just got
-        it set up with Sean's pokemon&#41;
+        Will add rest of the common pokemon moves later, for now just got
+        it set up with Sean's pokemon
       </div>
       <div className="teams-container">
         <PlayerTeam
