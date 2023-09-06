@@ -400,8 +400,6 @@ export default async function PlayerTeam({
   }
 
   function nameSplit(e: string) {
-    // values.name.split('-')[1]?.concat('ian')}
-    // {' ' + values.name.split('-')[0].charAt(0).toUpperCase() + values.name.split('-')[0].slice(1)}
     if (e.includes('galar') == true) {
       return `${e.split('-')[1]?.concat('ian')} ${
         ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
