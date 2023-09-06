@@ -45,6 +45,10 @@ export const navLinks = [
     name: 'Scores',
     path: '/scores',
   },
+  // {
+  //   name: 'Replays',
+  //   path: '/replays',
+  // },
   {
     name: 'Discord Tiers',
     path: '/meme',
