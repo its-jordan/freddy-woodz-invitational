@@ -3,6 +3,7 @@ import { MoveClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
 import UberStats from '../ubers-stats.json';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Pokemon {
   player: string;
@@ -167,7 +168,6 @@ export default async function PlayerTeam({
     const pokemon = e;
     // @ts-ignore
     let stats = statsArray[pokemon];
-    console.log(stats);
 
     if (stats !== undefined)
       return (
@@ -478,8 +478,28 @@ export default async function PlayerTeam({
                 </div>
               </Link>
               <div className="damage-relations-container">
-                <div className="damage-relations-header">
-                  Type Effectiveness
+                <div className="damage-relations-header-container">
+                  <div className="damage-relations-header">
+                    Type Effectiveness
+                  </div>
+                  <div className="damage-relation-label">
+                    {[
+                      'Immune to',
+                      'Very Resistant to',
+                      'Resistant to',
+                      'Weak to',
+                      'Very Weak to',
+                    ].map((value, index) => {
+                      return (
+                        <div
+                          className="relation-label"
+                          key={index}
+                          data-label={value}>
+                          {value}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
                 <div className="damage-relation-types">
                   {values.weakness?.map((value, index) => {
@@ -488,7 +508,7 @@ export default async function PlayerTeam({
                         key={index}
                         data-type={value}
                         className="relations-type">
-                        {value}
+                        {value.split(':')[0]}
                       </div>
                     );
                   })}

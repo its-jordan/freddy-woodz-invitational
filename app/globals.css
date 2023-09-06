@@ -383,6 +383,71 @@ nav > a:nth-child(10) {
   text-transform: capitalize;
 }
 
+.damage-relations-header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.relation-label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-label]::before {
+  position: relative;
+  display: flex;
+  left: 0;
+  content: '';
+  border-radius: 0.175rem;
+  margin-right: 0.25rem;
+  padding-inline: 0.25rem;
+  height: 15px;
+  min-width: 15px;
+  font-size: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-label='Immune to']::before {
+  content: '0x';
+  background-color: black;
+  color: white;
+}
+
+[data-label='Very Resistant to']::before {
+  content: '.25x';
+  background-color: red;
+  color: white;
+}
+[data-label='Resistant to']::before {
+  content: '.5x';
+  background-color: rgb(255, 119, 119);
+  color: black;
+}
+[data-label='Very Weak to']::before {
+  content: '4x';
+  background-color: rgb(0, 209, 21);
+  color: black;
+}
+[data-label='Weak to']::before {
+  content: '2x';
+  background-color: rgb(129, 228, 129);
+  color: black;
+}
+
+.damage-relation-label {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
 .damage-relations-header {
   font-size: 0.75rem;
   font-weight: 600;
