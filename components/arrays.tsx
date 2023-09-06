@@ -242,10 +242,10 @@ export default async function PlayerTeam({
           <div className="move-hover-upper-container">
             <div className="move-name-container">
               <div className={`move-hover-name`} data-move={move.name}>
-                {move.name}
+                {move.name?.replace('-', ' ')?.replace('-', ' ')}
               </div>
               <div className={`move-type ${move.type.name}`}>
-                {move.type.name?.replace('-', ' ')?.replace('-', ' ')}
+                {move.type.name}
               </div>
             </div>
             <div className="move-hover-info">
