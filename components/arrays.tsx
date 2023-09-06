@@ -183,7 +183,9 @@ export default async function PlayerTeam({
                     className="move"
                     data-move={value}
                     data-key={value.index}>
-                    <div className="move-name">{value?.replace('-', ' ')}</div>
+                    <div className="move-name">
+                      {value?.replace('-', ' ')?.replace('-', ' ')}
+                    </div>
                     {moveTypes(value)}
                   </Link>
                 </>
