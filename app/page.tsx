@@ -1,4 +1,5 @@
 import PlayerTeam from '@/components/arrays';
+import Standings from '@/components/standingsArrays';
 
 export default function Home() {
   return (

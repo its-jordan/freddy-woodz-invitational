@@ -45,9 +45,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --base: #ffffff;
-    --primary: #000000;
-    --bg: color-mix(in srgb, var(--primary) 85%, rgb(0, 242, 255));
-    --heading: var(--base);
+    --primary: #121212;
+    --bg: var(--base);
+    --heading: var(--primary);
   }
 }
 
@@ -818,4 +818,197 @@ nav > a:nth-child(10) {
   body {
     overflow-x: hidden;
   }
+}
+
+/* Scores */
+
+.match-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 0.5rem;
+}
+
+.match-data {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 3px solid var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 0 var(--primary);
+  transition: box-shadow 300ms ease;
+}
+
+.match-data:hover {
+  box-shadow: 3px 3px 0 var(--primary);
+}
+
+.match-data:nth-of-type(4n - 3)::before {
+  content: 'Week ' attr(data-week);
+  position: absolute;
+  top: -1.75rem;
+}
+
+.player {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-container {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  line-height: 1;
+  gap: 0.25rem;
+  padding: 1rem;
+}
+
+.player-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.player-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+  padding-inline: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.score[data-score=''] {
+  display: none;
+}
+
+.player-1 {
+  background-color: color-mix(in srgb, var(--player-color) 25%, white);
+  border-radius: calc(0.5rem * 0.5) 0 0 calc(0.5rem * 0.5);
+}
+
+.player-2 {
+  background-color: color-mix(in srgb, var(--player-color) 25%, white);
+  border-radius: 0 calc(0.5rem * 0.5) calc(0.5rem * 0.5) 0;
+}
+
+/* Player Colors */
+
+[data-player='208943657'] {
+  /* Toko */
+  --player-color: var(--psychic);
+}
+
+[data-player='208943647'] {
+  /* Max */
+  --player-color: var(--grass);
+}
+
+[data-player='208943681'] {
+  /* Jordan */
+  --player-color: var(--dragon);
+}
+
+[data-player='208943656'] {
+  /* Dom */
+  --player-color: var(--electric);
+}
+
+[data-player='208943645'] {
+  /* Sean */
+  --player-color: var(--water);
+}
+
+[data-player='208943679'] {
+  /* Ricky */
+  --player-color: var(--fairy);
+}
+
+[data-player='208943648'] {
+  /* J Dougs */
+  --player-color: var(--fire);
+}
+
+[data-player='208943635'] {
+  /* Furgat */
+  --player-color: var(--ice);
+}
+
+[data-player='208943667'] {
+  /* Dank */
+  --player-color: var(--ghost);
+}
+
+.player[data-score='2'] .score {
+  color: color-mix(in srgb, var(--grass) 85%, black);
+}
+
+.player[data-score='1'] .score,
+.player[data-score='0'] .score {
+  color: color-mix(in srgb, var(--fire) 85%, black);
+}
+
+/* Standings */
+
+main {
+  width: 100%;
+}
+
+.score-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4rem;
+}
+
+.standings-container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 5rem;
+  gap: 1rem;
+  min-width: 20%;
+  max-width: 80%;
+  flex-grow: 1;
+  padding-inline-end: 4rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.standings-record,
+.standings-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.standings-record {
+  background-color: color-mix(in srgb, var(--player-color) 25%, white);
+  border: 3px solid var(--primary);
+  box-shadow: 5px 5px 0 var(--primary);
+  border-radius: 0.5rem;
+  transition: box-shadow 300ms ease;
+}
+
+.standings-record:hover {
+  box-shadow: 3px 3px 0 var(--primary);
+}
+
+.standings-losses,
+.standings-wins {
+  padding: 1rem;
+}
+
+.standings-name,
+.standings-title {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
 }
