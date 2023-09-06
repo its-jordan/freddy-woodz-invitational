@@ -1,0 +1,535 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ParticipantAdapter | challonge-ts</title>
+	<meta name="description" content="Documentation for challonge-ts">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">challonge-ts</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">challonge-ts</a>
+				</li>
+				<li>
+					<a href="participantadapter.html">ParticipantAdapter</a>
+				</li>
+			</ul>
+			<h1>Namespace ParticipantAdapter</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Namespace for all of the Participant routes</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#bulkadd" class="tsd-kind-icon">bulk<wbr>Add</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#checkin" class="tsd-kind-icon">check<wbr>In</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#destroy" class="tsd-kind-icon">destroy</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#index" class="tsd-kind-icon">index</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#randomize" class="tsd-kind-icon">randomize</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#show" class="tsd-kind-icon">show</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#undocheckin" class="tsd-kind-icon">undo<wbr>Check<wbr>In</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="participantadapter.html#update" class="tsd-kind-icon">update</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="bulkadd" class="tsd-anchor"></a>
+					<h3>bulk<wbr>Add</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">bulk<wbr>Add<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/participantinterfaces.bulkaddparticipantsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">bulkAddParticipantsRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.bulkaddparticipantsresposne.html" class="tsd-signature-type" data-tsd-kind="Interface">bulkAddParticipantsResposne</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L32">adapter/participants.ts:32</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Bulk add participants to a tournament (up until it is started). If an
+										invalid participant is detected, bulk participant creation will halt and
+										any previously added participants (from this API request) will be rolled
+									back.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>params: <a href="../interfaces/participantinterfaces.bulkaddparticipantsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">bulkAddParticipantsRequest</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.bulkaddparticipantsresposne.html" class="tsd-signature-type" data-tsd-kind="Interface">bulkAddParticipantsResposne</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="checkin" class="tsd-anchor"></a>
+					<h3>check<wbr>In</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>In<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, participant_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.checkinparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">checkInParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L64">adapter/participants.ts:64</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks a participant in, setting checked_in_at to the current time.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>participant_id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.checkinparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">checkInParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.clearparticipantsresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">clearParticipantsResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L100">adapter/participants.ts:100</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes all participants in a tournament. (Only allowed if tournament
+									hasn&#39;t started yet)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.clearparticipantsresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">clearParticipantsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="create" class="tsd-anchor"></a>
+					<h3>create</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/participantinterfaces.createparticipantrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">createParticipantRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.createparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">createParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L18">adapter/participants.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add a participant to a tournament (up until it is started).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>params: <a href="../interfaces/participantinterfaces.createparticipantrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">createParticipantRequest</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.createparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">createParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="destroy" class="tsd-anchor"></a>
+					<h3>destroy</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">destroy<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, participant_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.destroyparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">destroyParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L88">adapter/participants.ts:88</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If the tournament has not started, delete a participant, automatically
+										filling in the abandoned seed number. If tournament is underway, mark a
+									participant inactive, automatically forfeiting his/her remaining matches.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>participant_id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.destroyparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">destroyParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="index" class="tsd-anchor"></a>
+					<h3>index</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">index<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.indexparticipantsresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">indexParticipantsResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L7">adapter/participants.ts:7</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieve a tournament&#39;s participant list.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.indexparticipantsresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">indexParticipantsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="randomize" class="tsd-anchor"></a>
+					<h3>randomize</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">randomize<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.randomizeparticipantsresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">randomizeParticipantsResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L111">adapter/participants.ts:111</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Randomize seeds among participants. Only applicable before a tournament has started.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.randomizeparticipantsresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">randomizeParticipantsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="show" class="tsd-anchor"></a>
+					<h3>show</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">show<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, participant_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.showparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">showParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L42">adapter/participants.ts:42</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieve a single participant record for a tournament.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>participant_id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.showparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">showParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="undocheckin" class="tsd-anchor"></a>
+					<h3>undo<wbr>Check<wbr>In</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">undo<wbr>Check<wbr>In<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, participant_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.checkinparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">checkInParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L75">adapter/participants.ts:75</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Marks a participant as having not checked in, setting checked_in_at to nil.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>participant_id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.checkinparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">checkInParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>api_key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tournament_url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, participant_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/participantinterfaces.updateparticipantrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">updateParticipantRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.updateparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">updateParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/EdwardJFox/challonge-ts/blob/7292861/src/adapter/participants.ts#L53">adapter/participants.ts:53</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update the attributes of a tournament participant.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>api_key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tournament_url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>participant_id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>params: <a href="../interfaces/participantinterfaces.updateparticipantrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">updateParticipantRequest</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/participantinterfaces.updateparticipantresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">updateParticipantResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="matchadapter.html">Match<wbr>Adapter</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="matchattachmentadapter.html">Match<wbr>Attachment<wbr>Adapter</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="matchattachmentinterfaces.html">Match<wbr>Attachment<wbr>Interfaces</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="matchinterfaces.html">Match<wbr>Interfaces</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="participantadapter.html">Participant<wbr>Adapter</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="participantinterfaces.html">Participant<wbr>Interfaces</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="tournamentadapter.html">Tournament<wbr>Adapter</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="tournamentinterfaces.html">Tournament<wbr>Interfaces</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#bulkadd" class="tsd-kind-icon">bulk<wbr>Add</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#checkin" class="tsd-kind-icon">check<wbr>In</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#clear" class="tsd-kind-icon">clear</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#create" class="tsd-kind-icon">create</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#destroy" class="tsd-kind-icon">destroy</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#index" class="tsd-kind-icon">index</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#randomize" class="tsd-kind-icon">randomize</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#show" class="tsd-kind-icon">show</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#undocheckin" class="tsd-kind-icon">undo<wbr>Check<wbr>In</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="participantadapter.html#update" class="tsd-kind-icon">update</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
