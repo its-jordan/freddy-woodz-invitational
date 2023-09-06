@@ -820,6 +820,10 @@ nav > a:nth-child(10) {
   }
 }
 
+.discord-header {
+  color: var(--heading);
+}
+
 /* Scores */
 
 .match-container {
