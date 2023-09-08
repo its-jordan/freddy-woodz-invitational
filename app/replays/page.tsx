@@ -49,7 +49,8 @@ export default function Replays() {
                 <iframe
                   src={`./${element.player1}-${element.player2}-${element.game}.html`}
                   width="900px"
-                  height="900px"></iframe>
+                  height="900px"
+                  loading="lazy"></iframe>
               </div>
             </div>
           );
