@@ -3,7 +3,9 @@ import PlayerTeam from '@/components/arrays';
 export default async function Home() {
   return (
     <main className="mb-16">
-      <div className="notice">Will add move information on hover soon!</div>
+      <div className="notice">
+        Teams accurate as of 09&#8722;08&#8722;2023 at 1&#58;20am EST.
+      </div>
       <div className="teams-container">
         <PlayerTeam
           player={'SeanBoyQ'}
@@ -33,15 +35,15 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'dtbaggins'}
-          p1={'sableye-mega'}
+          p1={'aegislash-blade'}
           p2={'rotom-wash'}
           p3={'blissey'}
           p4={'togekiss'}
-          p5={'chansey'}
-          p6={'dragalge'}
+          p5={'amoonguss'}
+          p6={'aggron-mega'}
           p7={'bronzong'}
           p8={'ditto'}
-          p9={'shedinja'}
+          p9={'bellossom'}
           p0={'shuckle'}
         />
         <PlayerTeam
@@ -76,12 +78,12 @@ export default async function Home() {
           p2={'excadrill'}
           p3={'rotom-heat'}
           p4={'skarmory'}
-          p5={'marowak-alola'}
+          p5={'serperior'}
           p6={'vaporeon'}
           p7={'toxicroak'}
           p8={'gardevoir'}
           p9={'altaria'}
-          p0={'sandslash-alola'}
+          p0={'articuno'}
         />
         <PlayerTeam
           player={'ifurgat'}
@@ -111,15 +113,15 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'its_jordan'}
-          p1={'scizor-mega'}
+          p1={'lilligant-hisui'}
           p2={'blaziken'}
-          p3={'infernape'}
+          p3={'venusaur-mega'}
           p4={'torkoal'}
           p5={'quagsire'}
           p6={'sableye'}
           p7={'flygon'}
           p8={'mismagius'}
-          p9={'kecleon'}
+          p9={'rotom-frost'}
           p0={'probopass'}
         />
       </div>

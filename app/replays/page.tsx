@@ -32,6 +32,7 @@ export default function Replays() {
 
   return (
     <main className="mb-16">
+      <div className="notice">Games may not be in actual play order.</div>
       <div className="replays-wrapper">
         {PlayerArray.map((element, index) => {
           return (

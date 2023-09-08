@@ -424,6 +424,8 @@ export default async function PlayerTeam({
       return `${e.split('-')[1]?.concat('an')} ${
         ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
       }`;
+    } else if (e.includes('blade') == true) {
+      return `${e.split('-')[0]}`;
     } else {
       return e;
     }
