@@ -1,9 +1,10 @@
 import { PokemonClient } from 'pokenode-ts';
-import { MoveClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
 import UberStats from '../ubers-stats.json';
+import Moves from '../moves.json';
+import TypeIds from '../typeIds.json';
+import Effects from '../moveEffects.json';
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface Pokemon {
   player: string;
@@ -196,97 +197,95 @@ export default async function PlayerTeam({
       );
   }
 
-  // async function moveTypes(e: string) {
-  //   try {
-  //     const moveApi = new MoveClient();
-  //     let move = await moveApi?.getMoveByName(e);
-  //     if (move.damage_class?.name === 'status') {
-  //       return (
-  //         <div className="move-hover-box" data-move-name={move.name}>
-  //           <div className="move-hover-upper-container">
-  //             <div className="move-name-container">
-  //               <div className={`move-hover-name`} data-move={move.name}>
-  //                 {move.name?.replace('-', ' ')?.replace('-', ' ')}
-  //               </div>
-  //               <div className={`move-type ${move.type.name}`}>
-  //                 {move.type.name}
-  //               </div>
-  //             </div>
-  //             <div className="move-hover-info">
-  //               <div
-  //                 className={`move-damage-type`}
-  //                 data-damage-type={move.damage_class?.name}>
-  //                 {move.damage_class?.name}
-  //               </div>
-  //               <div className={`move-pp`} data-pp={move.pp}>
-  //                 {move.pp}pp
-  //               </div>
-  //               <div
-  //                 className="move-type-change"
-  //                 data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
-  //                 {move.stat_changes[0]?.change}x{' '}
-  //                 {move.stat_changes[0]?.stat.name}
-  //               </div>
-  //               <div className={`move-priority`} data-priority={move.priority}>
-  //                 Priority: {move.priority}
-  //               </div>
-  //             </div>
+  // function moveTypes(e: string) {
+  //   const move = Moves;
+  //   const type = TypeIds;
+  //   const effect = Effects;
+  //   const moveName = e;
+  //   console.log();
+  // if (move.damage_class?.name === 'status') {
+  //   return (
+  //     <div className="move-hover-box" data-move-name={move.name}>
+  //       <div className="move-hover-upper-container">
+  //         <div className="move-name-container">
+  //           <div className={`move-hover-name`} data-move={move.name}>
+  //             {move.name?.replace('-', ' ')?.replace('-', ' ')}
   //           </div>
-  //           <div className="move-hover-lower-container">
-  //             <div className="move-effect">
-  //               {move.effect_entries[0]?.short_effect}
-  //             </div>
+  //           <div className={`move-type ${move.type.name}`}>
+  //             {move.type.name}
   //           </div>
   //         </div>
-  //       );
-  //     } else {
-  //       return (
-  //         <div className="move-hover-box">
-  //           <div className="move-hover-upper-container">
-  //             <div className="move-name-container">
-  //               <div className={`move-hover-name`} data-move={move.name}>
-  //                 {move.name?.replace('-', ' ')?.replace('-', ' ')}
-  //               </div>
-  //               <div className={`move-type ${move.type.name}`}>
-  //                 {move.type.name}
-  //               </div>
-  //             </div>
-  //             <div className="move-hover-info">
-  //               <div
-  //                 className={`move-damage-type`}
-  //                 data-damage-type={move.damage_class?.name}>
-  //                 {move.damage_class?.name}
-  //               </div>
+  //         <div className="move-hover-info">
+  //           <div
+  //             className={`move-damage-type`}
+  //             data-damage-type={move.damage_class?.name}>
+  //             {move.damage_class?.name}
+  //           </div>
+  //           <div className={`move-pp`} data-pp={move.pp}>
+  //             {move.pp}pp
+  //           </div>
+  //           <div
+  //             className="move-type-change"
+  //             data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
+  //             {move.stat_changes[0]?.change}x{' '}
+  //             {move.stat_changes[0]?.stat.name}
+  //           </div>
+  //           <div className={`move-priority`} data-priority={move.priority}>
+  //             Priority: {move.priority}
+  //           </div>
+  //         </div>
+  //       </div>
+  //       <div className="move-hover-lower-container">
+  //         <div className="move-effect">
+  //           {move.effect_entries[0]?.short_effect}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // } else {
+  //   return (
+  //     <div className="move-hover-box">
+  //       <div className="move-hover-upper-container">
+  //         <div className="move-name-container">
+  //           <div className={`move-hover-name`} data-move={move.name}>
+  //             {move.name?.replace('-', ' ')?.replace('-', ' ')}
+  //           </div>
+  //           <div className={`move-type ${move.type.name}`}>
+  //             {move.type.name}
+  //           </div>
+  //         </div>
+  //         <div className="move-hover-info">
+  //           <div
+  //             className={`move-damage-type`}
+  //             data-damage-type={move.damage_class?.name}>
+  //             {move.damage_class?.name}
+  //           </div>
 
-  //               <div className={`move-accuracy`} data-accuracy={move.accuracy}>
-  //                 {move.accuracy}% acc
-  //               </div>
-  //               <div className={`move-pp`} data-pp={move.pp}>
-  //                 {move.pp}pp
-  //               </div>
-  //               <div className={`move-power`} data-power={move.power}>
-  //                 {move.power}bp
-  //               </div>
-  //               <div className={`move-priority`} data-priority={move.priority}>
-  //                 Priority: {move.priority}
-  //               </div>
-  //             </div>
+  //           <div className={`move-accuracy`} data-accuracy={move.accuracy}>
+  //             {move.accuracy}% acc
   //           </div>
-  //           <div className="move-hover-lower-container">
-  //             <div className="move-effect">
-  //               {move.effect_entries[0]?.short_effect?.replace(
-  //                 '$effect_chance%',
-  //                 `${move.effect_chance?.toString()}%`
-  //               )}
-  //             </div>
+  //           <div className={`move-pp`} data-pp={move.pp}>
+  //             {move.pp}pp
+  //           </div>
+  //           <div className={`move-power`} data-power={move.power}>
+  //             {move.power}bp
+  //           </div>
+  //           <div className={`move-priority`} data-priority={move.priority}>
+  //             Priority: {move.priority}
   //           </div>
   //         </div>
-  //       );
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //     return <></>;
-  //   }
+  //       </div>
+  //       <div className="move-hover-lower-container">
+  //         <div className="move-effect">
+  //           {move.effect_entries[0]?.short_effect?.replace(
+  //             '$effect_chance%',
+  //             `${move.effect_chance?.toString()}%`
+  //           )}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
   // }
 
   var pokearray = [

@@ -1222,3 +1222,32 @@ main {
   font-size: 1rem;
   padding-right: 0.5rem;
 }
+
+iframe {
+  background-color: var(--base);
+  overflow-x: hidden;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.replays-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.replay-container {
+  background-color: var(--base);
+  border: 3px solid var(--primary);
+  box-shadow: 5px 5px 0 var(--primary);
+  border-radius: 0.5rem;
+}
+
+.replay-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 1rem 2rem 0;
+}
