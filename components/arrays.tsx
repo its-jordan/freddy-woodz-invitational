@@ -150,17 +150,17 @@ export default async function PlayerTeam({
     const abilityInfo = await api.getAbilityByName(e);
     if (abilityInfo.id == 261) {
       const abilityEffect = abilityInfo.flavor_text_entries[7]?.flavor_text;
-      return <div className="ability-effect">{abilityEffect}</div>;
+      return <div className='ability-effect'>{abilityEffect}</div>;
     } else if (
       abilityInfo.id == 202 ||
       abilityInfo.id == 65 ||
       abilityInfo.id == 206
     ) {
       const abilityEffect = abilityInfo.effect_entries[0]?.short_effect;
-      return <div className="ability-effect">{abilityEffect}</div>;
+      return <div className='ability-effect'>{abilityEffect}</div>;
     } else {
       const abilityEffect = abilityInfo.effect_entries[1]?.short_effect;
-      return <div className="ability-effect">{abilityEffect}</div>;
+      return <div className='ability-effect'>{abilityEffect}</div>;
     }
   }
 
@@ -172,22 +172,23 @@ export default async function PlayerTeam({
 
     if (stats !== undefined)
       return (
-        <div className="moves-wrapper">
-          <div className="moves-header">Most Common Moves</div>
-          <div className="moves-container">
+        <div className='moves-wrapper'>
+          <div className='moves-header'>Most Common Moves</div>
+          <div className='moves-container'>
             {stats?.map((value: any) => {
               return (
                 <>
                   <Link
                     href={`https://www.smogon.com/dex/sv/moves/${value}`}
-                    target="_blank"
-                    className="move"
+                    target='_blank'
+                    className='move'
                     data-move={value}
-                    data-key={value.index}>
-                    <div className="move-name">
+                    data-key={value.index}
+                    data-move-id={value}>
+                    <div className='move-name'>
                       {value?.replace('-', ' ')?.replace('-', ' ')}
                     </div>
-                    {/* {moveTypes(value)} */}
+                    {/* {moves()} */}
                   </Link>
                 </>
               );
@@ -197,95 +198,108 @@ export default async function PlayerTeam({
       );
   }
 
-  // function moveTypes(e: string) {
+  // const MovesArray = [];
+
+  // function moves() {
   //   const move = Moves;
   //   const type = TypeIds;
   //   const effect = Effects;
-  //   const moveName = e;
-  //   console.log();
-  // if (move.damage_class?.name === 'status') {
-  //   return (
-  //     <div className="move-hover-box" data-move-name={move.name}>
-  //       <div className="move-hover-upper-container">
-  //         <div className="move-name-container">
-  //           <div className={`move-hover-name`} data-move={move.name}>
-  //             {move.name?.replace('-', ' ')?.replace('-', ' ')}
-  //           </div>
-  //           <div className={`move-type ${move.type.name}`}>
-  //             {move.type.name}
-  //           </div>
-  //         </div>
-  //         <div className="move-hover-info">
-  //           <div
-  //             className={`move-damage-type`}
-  //             data-damage-type={move.damage_class?.name}>
-  //             {move.damage_class?.name}
-  //           </div>
-  //           <div className={`move-pp`} data-pp={move.pp}>
-  //             {move.pp}pp
-  //           </div>
-  //           <div
-  //             className="move-type-change"
-  //             data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
-  //             {move.stat_changes[0]?.change}x{' '}
-  //             {move.stat_changes[0]?.stat.name}
-  //           </div>
-  //           <div className={`move-priority`} data-priority={move.priority}>
-  //             Priority: {move.priority}
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div className="move-hover-lower-container">
-  //         <div className="move-effect">
-  //           {move.effect_entries[0]?.short_effect}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // } else {
-  //   return (
-  //     <div className="move-hover-box">
-  //       <div className="move-hover-upper-container">
-  //         <div className="move-name-container">
-  //           <div className={`move-hover-name`} data-move={move.name}>
-  //             {move.name?.replace('-', ' ')?.replace('-', ' ')}
-  //           </div>
-  //           <div className={`move-type ${move.type.name}`}>
-  //             {move.type.name}
-  //           </div>
-  //         </div>
-  //         <div className="move-hover-info">
-  //           <div
-  //             className={`move-damage-type`}
-  //             data-damage-type={move.damage_class?.name}>
-  //             {move.damage_class?.name}
-  //           </div>
+  //   // @ts-ignore
+  //   let mergedMoves = move.map((move: any) => {
+  //     let effects = effect.find(
+  //       (element) => element.move_effect_id === move?.effect_id
+  //     );
+  //     return { ...move, ...effects };
+  //   });
 
-  //           <div className={`move-accuracy`} data-accuracy={move.accuracy}>
-  //             {move.accuracy}% acc
-  //           </div>
-  //           <div className={`move-pp`} data-pp={move.pp}>
-  //             {move.pp}pp
-  //           </div>
-  //           <div className={`move-power`} data-power={move.power}>
-  //             {move.power}bp
-  //           </div>
-  //           <div className={`move-priority`} data-priority={move.priority}>
-  //             Priority: {move.priority}
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div className="move-hover-lower-container">
-  //         <div className="move-effect">
-  //           {move.effect_entries[0]?.short_effect?.replace(
-  //             '$effect_chance%',
-  //             `${move.effect_chance?.toString()}%`
-  //           )}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
+  //   let finalMoves = mergedMoves?.map((move: any) => {
+  //     let types = type.find((element) => element.type_id === move.type_id);
+  //     return { ...move, ...types };
+  //   });
+
+  //   console.log(finalMoves);
+  //   return <></>;
   // }
+
+  // function moveTypes(e: string) {
+  //   const ele = finalMoves[0];
+  //   if (ele.damage_class === 'status') {
+  //     return (
+  //       <div className='move-hover-box' data-move-name={ele.name}>
+  //         <div className='move-hover-upper-container'>
+  //           <div className='move-name-container'>
+  //             <div className={`move-hover-name`} data-move={ele.name}>
+  //               {ele.name?.replace('-', ' ')?.replace('-', ' ')}
+  //             </div>
+  //             <div className={`move-type ${ele.name}`}>{ele.type}</div>
+  //           </div>
+  //           <div className='move-hover-info'>
+  //             <div
+  //               className={`move-damage-type`}
+  //               data-damage-type={ele.damage_class?.name}>
+  //               {ele.damage_class?.name}
+  //             </div>
+  //             <div className={`move-pp`} data-pp={ele.pp}>
+  //               {ele.pp}pp
+  //             </div>
+  //             {/* <div
+  //                 className='move-type-change'
+  //                 data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
+  //                 {move.stat_changes[0]?.change}x{' '}
+  //                 {move.stat_changes[0]?.stat.name}
+  //               </div> */}
+  //             <div className={`move-priority`} data-priority={ele.priority}>
+  //               Priority: {ele.priority}
+  //             </div>
+  //           </div>
+  //         </div>
+  //         <div className='move-hover-lower-container'>
+  //           <div className='move-effect'>{ele.short_effect}</div>
+  //         </div>
+  //       </div>
+  //     );
+  //   } else {
+  //     return (
+  //       <div className='move-hover-box'>
+  //         <div className='move-hover-upper-container'>
+  //           <div className='move-name-container'>
+  //             <div className={`move-hover-name`} data-move={ele?.name}>
+  //               {ele?.name?.replace('-', ' ')?.replace('-', ' ')}
+  //             </div>
+  //             <div className={`move-type ${ele?.type}`}>{ele?.type}</div>
+  //           </div>
+  //           <div className='move-hover-info'>
+  //             <div
+  //               className={`move-damage-type`}
+  //               data-damage-type={ele?.damage_class}>
+  //               {ele?.damage_class}
+  //             </div>
+
+  //             <div className={`move-accuracy`} data-accuracy={ele?.accuracy}>
+  //               {ele?.accuracy}% acc
+  //             </div>
+  //             <div className={`move-pp`} data-pp={ele?.pp}>
+  //               {ele?.pp}pp
+  //             </div>
+  //             <div className={`move-power`} data-power={ele?.power}>
+  //               {ele?.power}bp
+  //             </div>
+  //             <div className={`move-priority`} data-priority={ele?.priority}>
+  //               Priority: {ele?.priority}
+  //             </div>
+  //           </div>
+  //         </div>
+  //         <div className='move-hover-lower-container'>
+  //           <div className='move-effect'>
+  //             {ele?.short_effect?.replace(
+  //               '$effect_chance%',
+  //               `${ele?.effect_chance?.toString()}%`
+  //             )}
+  //           </div>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
   // }
 
   var pokearray = [
@@ -432,9 +446,9 @@ export default async function PlayerTeam({
   }
 
   return (
-    <div className="team" id={`${playerName}`}>
-      <div className="teamname">{playerName}</div>
-      <div className="player-team">
+    <div className='team' id={`${playerName}`}>
+      <div className='teamname'>{playerName}</div>
+      <div className='player-team'>
         {pokearray.map((values, index) => {
           return (
             <div className={`pokemon-info`} key={index}>
@@ -443,17 +457,17 @@ export default async function PlayerTeam({
                   ?.replace('-mega', '')
                   ?.replace('-incarnate', '')
                   ?.replace('-50', '')}`}
-                target="_blank"
-                className="upper-container">
+                target='_blank'
+                className='upper-container'>
                 <img
                   className={`${values.name}-img`}
                   src={values.sprite}
                   alt={`Default front sprite for ${values.name}`}
                 />
-                <div className="pokemon-data">
-                  <div className="name-container">
-                    <div className="pokemon-name">{nameSplit(values.name)}</div>
-                    <div className="pokemon-types">
+                <div className='pokemon-data'>
+                  <div className='name-container'>
+                    <div className='pokemon-name'>{nameSplit(values.name)}</div>
+                    <div className='pokemon-types'>
                       {values.types.map((value) => {
                         return (
                           <div
@@ -465,14 +479,14 @@ export default async function PlayerTeam({
                       })}
                     </div>
                   </div>
-                  <div className="abilities-container">
-                    <div className="abilities">
+                  <div className='abilities-container'>
+                    <div className='abilities'>
                       {values.abilities?.map((value, index) => {
                         return (
                           <div
                             className={`ability-box ${value.ability.name}`}
                             key={index}>
-                            <div className="ability-name">
+                            <div className='ability-name'>
                               {value.ability.name}
                             </div>
                             {displayAbility(value.ability.name)}
@@ -483,12 +497,12 @@ export default async function PlayerTeam({
                   </div>
                 </div>
               </Link>
-              <div className="damage-relations-container">
-                <div className="damage-relations-header-container">
-                  <div className="damage-relations-header">
+              <div className='damage-relations-container'>
+                <div className='damage-relations-header-container'>
+                  <div className='damage-relations-header'>
                     Type Effectiveness
                   </div>
-                  <div className="damage-relation-label">
+                  <div className='damage-relation-label'>
                     {[
                       'Immune to',
                       'Very Resistant to',
@@ -498,7 +512,7 @@ export default async function PlayerTeam({
                     ].map((value, index) => {
                       return (
                         <div
-                          className="relation-label"
+                          className='relation-label'
                           key={index}
                           data-label={value}>
                           {value}
@@ -507,13 +521,13 @@ export default async function PlayerTeam({
                     })}
                   </div>
                 </div>
-                <div className="damage-relation-types">
+                <div className='damage-relation-types'>
                   {values.weakness?.map((value, index) => {
                     return (
                       <div
                         key={index}
                         data-type={value}
-                        className="relations-type">
+                        className='relations-type'>
                         {value.split(':')[0]}
                       </div>
                     );

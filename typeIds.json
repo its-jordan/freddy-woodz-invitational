@@ -1,122 +1,74 @@
 [
   {
-    "id": 1,
-    "identifier": "normal",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 1,
+    "type": "normal"
   },
   {
-    "id": 2,
-    "identifier": "fighting",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 2,
+    "type": "fighting"
   },
   {
-    "id": 3,
-    "identifier": "flying",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 3,
+    "type": "flying"
   },
   {
-    "id": 4,
-    "identifier": "poison",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 4,
+    "type": "poison"
   },
   {
-    "id": 5,
-    "identifier": "ground",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 5,
+    "type": "ground"
   },
   {
-    "id": 6,
-    "identifier": "rock",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 6,
+    "type": "rock"
   },
   {
-    "id": 7,
-    "identifier": "bug",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 7,
+    "type": "bug"
   },
   {
-    "id": 8,
-    "identifier": "ghost",
-    "generation_id": 1,
-    "damage_class_id": 2
+    "type_id": 8,
+    "type": "ghost"
   },
   {
-    "id": 9,
-    "identifier": "steel",
-    "generation_id": 2,
-    "damage_class_id": 2
+    "type_id": 9,
+    "type": "steel"
   },
   {
-    "id": 10,
-    "identifier": "fire",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 10,
+    "type": "fire"
   },
   {
-    "id": 11,
-    "identifier": "water",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 11,
+    "type": "water"
   },
   {
-    "id": 12,
-    "identifier": "grass",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 12,
+    "type": "grass"
   },
   {
-    "id": 13,
-    "identifier": "electric",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 13,
+    "type": "electric"
   },
   {
-    "id": 14,
-    "identifier": "psychic",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 14,
+    "type": "psychic"
   },
   {
-    "id": 15,
-    "identifier": "ice",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 15,
+    "type": "ice"
   },
   {
-    "id": 16,
-    "identifier": "dragon",
-    "generation_id": 1,
-    "damage_class_id": 3
+    "type_id": 16,
+    "type": "dragon"
   },
   {
-    "id": 17,
-    "identifier": "dark",
-    "generation_id": 2,
-    "damage_class_id": 3
+    "type_id": 17,
+    "type": "dark"
   },
   {
-    "id": 18,
-    "identifier": "fairy",
-    "generation_id": 6,
-    "damage_class_id": ""
-  },
-  {
-    "id": 10001,
-    "identifier": "unknown",
-    "generation_id": 2,
-    "damage_class_id": ""
-  },
-  {
-    "id": 10002,
-    "identifier": "shadow",
-    "generation_id": 3,
-    "damage_class_id": ""
+    "type_id": 18,
+    "type": "fairy"
   }
 ]

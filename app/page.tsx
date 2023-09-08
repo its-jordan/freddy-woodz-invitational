@@ -2,11 +2,11 @@ import PlayerTeam from '@/components/arrays';
 
 export default async function Home() {
   return (
-    <main className="mb-16">
-      <div className="notice">
+    <main className='mb-16'>
+      <div className='notice'>
         Teams accurate as of 09&#8722;08&#8722;2023 at 1&#58;20am EST.
       </div>
-      <div className="teams-container">
+      <div className='teams-container'>
         <PlayerTeam
           player={'SeanBoyQ'}
           p1={'pinsir-mega'}
@@ -67,10 +67,10 @@ export default async function Home() {
           p4={'thundurus-incarnate'}
           p5={'goodra-hisui'}
           p6={'diancie'}
-          p7={'umbreon'}
+          p7={'hoopa'}
           p8={'primeape'}
           p9={'qwilfish'}
-          p0={'drifblim'}
+          p0={'beartic'}
         />
         <PlayerTeam
           player={'danknett'}
@@ -102,13 +102,13 @@ export default async function Home() {
           player={'foxish'}
           p1={'gliscor'}
           p2={'alakazam-mega'}
-          p3={'tornadus-incarnate'}
+          p3={'infernape'}
           p4={'zoroark-hisui'}
           p5={'chesnaught'}
           p6={'kingdra'}
           p7={'porygon2'}
           p8={'slowking'}
-          p9={'avalugg-hisui'}
+          p9={'beedrill'}
           p0={'luxray'}
         />
         <PlayerTeam

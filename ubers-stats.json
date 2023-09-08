@@ -734,5 +734,60 @@
     "earth-power",
     "smack-down",
     "volt-switch"
+  ],
+  "aegislash-blade": [
+    "kings-shield",
+    "shadow-sneak",
+    "swords-dance",
+    "iron-head",
+    "sacred-sword",
+    "close-combat"
+  ],
+  "bellossom": [
+    "leech-seed",
+    "giga-drain",
+    "safeguard",
+    "strength-sap",
+    "quiver-dance"
+  ],
+  "amoonguss": [
+    "spore",
+    "giga-drain",
+    "sludge-bomb",
+    "foul-play",
+    "clear-smog",
+    "toxic"
+  ],
+  "aggron-mega": [
+    "body-press",
+    "Stealth-Rock",
+    "Iron-Defense",
+    "Heavy-Slam",
+    "Rest",
+    "Roar"
+  ],
+  "lilligant-hisui": [
+    "close-combat",
+    "victory-dance",
+    "leaf-blade",
+    "ice-spinner",
+    "tera-blast",
+    "sleep-powder"
+  ],
+  "venusaur-mega": [
+    "giga-drain",
+    "sludge-bomb",
+    "synthesis",
+    "leech-seed",
+    "earth-power",
+    "toxic"
+  ],
+  "rotom-frost": [
+    "will-o-wisp",
+    "nasty-plot",
+    "thunderbolt",
+    "discharge",
+    "blizzard",
+    "volt-switch"
   ]
 }

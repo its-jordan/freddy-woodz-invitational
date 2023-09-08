@@ -1,10 +1,4 @@
 export default function Replays() {
-  function ReplayParser(a: string, b: string, c: string) {
-    let player1 = a;
-    let player2 = b;
-    let game = c;
-  }
-
   const PlayerArray = [
     { player1: 'castleflutes', player2: 'its_jordan', game: '1' },
     { player1: 'castleflutes', player2: 'seanboyq', game: '1' },

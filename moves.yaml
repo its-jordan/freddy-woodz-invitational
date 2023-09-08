@@ -1,0 +1,9883 @@
+
+pound:
+  - id: 1
+    type_id: 1
+    power: 40
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+karate-chop:
+  - id: 2
+    type_id: 2
+    power: 50
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+double-slap:
+  - id: 3
+    type_id: 1
+    power: 15
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+comet-punch:
+  - id: 4
+    type_id: 1
+    power: 18
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+mega-punch:
+  - id: 5
+    type_id: 1
+    power: 80
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+pay-day:
+  - id: 6
+    type_id: 1
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 35
+    effect_chance: ''
+
+fire-punch:
+  - id: 7
+    type_id: 10
+    power: 75
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 5
+    effect_chance: 10
+
+ice-punch:
+  - id: 8
+    type_id: 15
+    power: 75
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 6
+    effect_chance: 10
+
+thunder-punch:
+  - id: 9
+    type_id: 13
+    power: 75
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 7
+    effect_chance: 10
+
+scratch:
+  - id: 10
+    type_id: 1
+    power: 40
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+vice-grip:
+  - id: 11
+    type_id: 1
+    power: 55
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+guillotine:
+  - id: 12
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: 30
+    priority: 0
+    damage_class: physical
+    effect_id: 39
+    effect_chance: ''
+
+razor-wind:
+  - id: 13
+    type_id: 1
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 40
+    effect_chance: ''
+
+swords-dance:
+  - id: 14
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 51
+    effect_chance: ''
+
+cut:
+  - id: 15
+    type_id: 1
+    power: 50
+    pp: 30
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+gust:
+  - id: 16
+    type_id: 3
+    power: 40
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 150
+    effect_chance: ''
+
+wing-attack:
+  - id: 17
+    type_id: 3
+    power: 60
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+whirlwind:
+  - id: 18
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: -6
+    damage_class: status
+    effect_id: 29
+    effect_chance: ''
+
+fly:
+  - id: 19
+    type_id: 3
+    power: 90
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 156
+    effect_chance: ''
+
+bind:
+  - id: 20
+    type_id: 1
+    power: 15
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 43
+    effect_chance: 100
+
+slam:
+  - id: 21
+    type_id: 1
+    power: 80
+    pp: 20
+    accuracy: 75
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+vine-whip:
+  - id: 22
+    type_id: 12
+    power: 45
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+stomp:
+  - id: 23
+    type_id: 1
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 151
+    effect_chance: 30
+
+double-kick:
+  - id: 24
+    type_id: 2
+    power: 30
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 45
+    effect_chance: ''
+
+mega-kick:
+  - id: 25
+    type_id: 1
+    power: 120
+    pp: 5
+    accuracy: 75
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+jump-kick:
+  - id: 26
+    type_id: 2
+    power: 100
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 46
+    effect_chance: ''
+
+rolling-kick:
+  - id: 27
+    type_id: 2
+    power: 60
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+sand-attack:
+  - id: 28
+    type_id: 5
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 24
+    effect_chance: ''
+
+headbutt:
+  - id: 29
+    type_id: 1
+    power: 70
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+horn-attack:
+  - id: 30
+    type_id: 1
+    power: 65
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+fury-attack:
+  - id: 31
+    type_id: 1
+    power: 15
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+horn-drill:
+  - id: 32
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: 30
+    priority: 0
+    damage_class: physical
+    effect_id: 39
+    effect_chance: ''
+
+tackle:
+  - id: 33
+    type_id: 1
+    power: 40
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+body-slam:
+  - id: 34
+    type_id: 1
+    power: 85
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 7
+    effect_chance: 30
+
+wrap:
+  - id: 35
+    type_id: 1
+    power: 15
+    pp: 20
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 43
+    effect_chance: 100
+
+take-down:
+  - id: 36
+    type_id: 1
+    power: 90
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 49
+    effect_chance: ''
+
+thrash:
+  - id: 37
+    type_id: 1
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 28
+    effect_chance: ''
+
+double-edge:
+  - id: 38
+    type_id: 1
+    power: 120
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 199
+    effect_chance: ''
+
+tail-whip:
+  - id: 39
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 20
+    effect_chance: ''
+
+poison-sting:
+  - id: 40
+    type_id: 4
+    power: 15
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 3
+    effect_chance: 30
+
+twineedle:
+  - id: 41
+    type_id: 7
+    power: 25
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 78
+    effect_chance: 20
+
+pin-missile:
+  - id: 42
+    type_id: 7
+    power: 25
+    pp: 20
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+leer:
+  - id: 43
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 20
+    effect_chance: 100
+
+bite:
+  - id: 44
+    type_id: 17
+    power: 60
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+growl:
+  - id: 45
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 19
+    effect_chance: ''
+
+roar:
+  - id: 46
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: -6
+    damage_class: status
+    effect_id: 29
+    effect_chance: ''
+
+sing:
+  - id: 47
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 55
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+supersonic:
+  - id: 48
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 55
+    priority: 0
+    damage_class: status
+    effect_id: 50
+    effect_chance: ''
+
+sonic-boom:
+  - id: 49
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 131
+    effect_chance: ''
+
+disable:
+  - id: 50
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 87
+    effect_chance: ''
+
+acid:
+  - id: 51
+    type_id: 4
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+ember:
+  - id: 52
+    type_id: 10
+    power: 40
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 10
+
+flamethrower:
+  - id: 53
+    type_id: 10
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 10
+
+mist:
+  - id: 54
+    type_id: 15
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 47
+    effect_chance: ''
+
+water-gun:
+  - id: 55
+    type_id: 11
+    power: 40
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+hydro-pump:
+  - id: 56
+    type_id: 11
+    power: 110
+    pp: 5
+    accuracy: 80
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+surf:
+  - id: 57
+    type_id: 11
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 258
+    effect_chance: ''
+
+ice-beam:
+  - id: 58
+    type_id: 15
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 6
+    effect_chance: 10
+
+blizzard:
+  - id: 59
+    type_id: 15
+    power: 110
+    pp: 5
+    accuracy: 70
+    priority: 0
+    damage_class: special
+    effect_id: 261
+    effect_chance: 10
+
+psybeam:
+  - id: 60
+    type_id: 14
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 77
+    effect_chance: 10
+
+bubble-beam:
+  - id: 61
+    type_id: 11
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 71
+    effect_chance: 10
+
+aurora-beam:
+  - id: 62
+    type_id: 15
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 69
+    effect_chance: 10
+
+hyper-beam:
+  - id: 63
+    type_id: 1
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+peck:
+  - id: 64
+    type_id: 3
+    power: 35
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+drill-peck:
+  - id: 65
+    type_id: 3
+    power: 80
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+submission:
+  - id: 66
+    type_id: 2
+    power: 80
+    pp: 20
+    accuracy: 80
+    priority: 0
+    damage_class: physical
+    effect_id: 49
+    effect_chance: ''
+
+low-kick:
+  - id: 67
+    type_id: 2
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 197
+    effect_chance: ''
+
+counter:
+  - id: 68
+    type_id: 2
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: -5
+    damage_class: physical
+    effect_id: 90
+    effect_chance: ''
+
+seismic-toss:
+  - id: 69
+    type_id: 2
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 88
+    effect_chance: ''
+
+strength:
+  - id: 70
+    type_id: 1
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+absorb:
+  - id: 71
+    type_id: 12
+    power: 20
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 4
+    effect_chance: ''
+
+mega-drain:
+  - id: 72
+    type_id: 12
+    power: 40
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 4
+    effect_chance: ''
+
+leech-seed:
+  - id: 73
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: status
+    effect_id: 85
+    effect_chance: ''
+
+growth:
+  - id: 74
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 317
+    effect_chance: ''
+
+razor-leaf:
+  - id: 75
+    type_id: 12
+    power: 55
+    pp: 25
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+solar-beam:
+  - id: 76
+    type_id: 12
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 152
+    effect_chance: ''
+
+poison-powder:
+  - id: 77
+    type_id: 4
+    power: ''
+    pp: 35
+    accuracy: 75
+    priority: 0
+    damage_class: status
+    effect_id: 67
+    effect_chance: ''
+
+stun-spore:
+  - id: 78
+    type_id: 12
+    power: ''
+    pp: 30
+    accuracy: 75
+    priority: 0
+    damage_class: status
+    effect_id: 68
+    effect_chance: ''
+
+sleep-powder:
+  - id: 79
+    type_id: 12
+    power: ''
+    pp: 15
+    accuracy: 75
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+petal-dance:
+  - id: 80
+    type_id: 12
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 28
+    effect_chance: ''
+
+string-shot:
+  - id: 81
+    type_id: 7
+    power: ''
+    pp: 40
+    accuracy: 95
+    priority: 0
+    damage_class: status
+    effect_id: 61
+    effect_chance: ''
+
+dragon-rage:
+  - id: 82
+    type_id: 16
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 42
+    effect_chance: ''
+
+fire-spin:
+  - id: 83
+    type_id: 10
+    power: 35
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 43
+    effect_chance: 100
+
+thunder-shock:
+  - id: 84
+    type_id: 13
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 7
+    effect_chance: 10
+
+thunderbolt:
+  - id: 85
+    type_id: 13
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 7
+    effect_chance: 10
+
+thunder-wave:
+  - id: 86
+    type_id: 13
+    power: ''
+    pp: 20
+    accuracy: 90
+    priority: 0
+    damage_class: status
+    effect_id: 68
+    effect_chance: ''
+
+thunder:
+  - id: 87
+    type_id: 13
+    power: 110
+    pp: 10
+    accuracy: 70
+    priority: 0
+    damage_class: special
+    effect_id: 153
+    effect_chance: 30
+
+rock-throw:
+  - id: 88
+    type_id: 6
+    power: 50
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+earthquake:
+  - id: 89
+    type_id: 5
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 148
+    effect_chance: ''
+
+fissure:
+  - id: 90
+    type_id: 5
+    power: ''
+    pp: 5
+    accuracy: 30
+    priority: 0
+    damage_class: physical
+    effect_id: 39
+    effect_chance: ''
+
+dig:
+  - id: 91
+    type_id: 5
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 257
+    effect_chance: ''
+
+toxic:
+  - id: 92
+    type_id: 4
+    power: ''
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: status
+    effect_id: 34
+    effect_chance: ''
+
+confusion:
+  - id: 93
+    type_id: 14
+    power: 50
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 77
+    effect_chance: 10
+
+psychic:
+  - id: 94
+    type_id: 14
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+hypnosis:
+  - id: 95
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: 60
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+meditate:
+  - id: 96
+    type_id: 14
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 11
+    effect_chance: ''
+
+agility:
+  - id: 97
+    type_id: 14
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 53
+    effect_chance: ''
+
+quick-attack:
+  - id: 98
+    type_id: 1
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+rage:
+  - id: 99
+    type_id: 1
+    power: 20
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 82
+    effect_chance: ''
+
+teleport:
+  - id: 100
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: -6
+    damage_class: status
+    effect_id: 154
+    effect_chance: ''
+
+night-shade:
+  - id: 101
+    type_id: 8
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 88
+    effect_chance: ''
+
+mimic:
+  - id: 102
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 83
+    effect_chance: ''
+
+screech:
+  - id: 103
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: 85
+    priority: 0
+    damage_class: status
+    effect_id: 60
+    effect_chance: ''
+
+double-team:
+  - id: 104
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 17
+    effect_chance: ''
+
+recover:
+  - id: 105
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 33
+    effect_chance: ''
+
+harden:
+  - id: 106
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 12
+    effect_chance: ''
+
+minimize:
+  - id: 107
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 109
+    effect_chance: ''
+
+smokescreen:
+  - id: 108
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 24
+    effect_chance: ''
+
+confuse-ray:
+  - id: 109
+    type_id: 8
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 50
+    effect_chance: ''
+
+withdraw:
+  - id: 110
+    type_id: 11
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 12
+    effect_chance: ''
+
+defense-curl:
+  - id: 111
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 157
+    effect_chance: ''
+
+barrier:
+  - id: 112
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 52
+    effect_chance: ''
+
+light-screen:
+  - id: 113
+    type_id: 14
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 36
+    effect_chance: ''
+
+haze:
+  - id: 114
+    type_id: 15
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 26
+    effect_chance: ''
+
+reflect:
+  - id: 115
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 66
+    effect_chance: ''
+
+focus-energy:
+  - id: 116
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 48
+    effect_chance: ''
+
+bide:
+  - id: 117
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 1
+    damage_class: physical
+    effect_id: 27
+    effect_chance: ''
+
+metronome:
+  - id: 118
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 84
+    effect_chance: ''
+
+mirror-move:
+  - id: 119
+    type_id: 3
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 10
+    effect_chance: ''
+
+self-destruct:
+  - id: 120
+    type_id: 1
+    power: 200
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 8
+    effect_chance: ''
+
+egg-bomb:
+  - id: 121
+    type_id: 1
+    power: 100
+    pp: 10
+    accuracy: 75
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+lick:
+  - id: 122
+    type_id: 8
+    power: 30
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 7
+    effect_chance: 30
+
+smog:
+  - id: 123
+    type_id: 4
+    power: 30
+    pp: 20
+    accuracy: 70
+    priority: 0
+    damage_class: special
+    effect_id: 3
+    effect_chance: 40
+
+sludge:
+  - id: 124
+    type_id: 4
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 3
+    effect_chance: 30
+
+bone-club:
+  - id: 125
+    type_id: 5
+    power: 65
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 10
+
+fire-blast:
+  - id: 126
+    type_id: 10
+    power: 110
+    pp: 5
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 10
+
+waterfall:
+  - id: 127
+    type_id: 11
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 20
+
+clamp:
+  - id: 128
+    type_id: 11
+    power: 35
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 43
+    effect_chance: 100
+
+swift:
+  - id: 129
+    type_id: 1
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 18
+    effect_chance: ''
+
+skull-bash:
+  - id: 130
+    type_id: 1
+    power: 130
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 146
+    effect_chance: 100
+
+spike-cannon:
+  - id: 131
+    type_id: 1
+    power: 20
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+constrict:
+  - id: 132
+    type_id: 1
+    power: 10
+    pp: 35
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 71
+    effect_chance: 10
+
+amnesia:
+  - id: 133
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 55
+    effect_chance: ''
+
+kinesis:
+  - id: 134
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: 80
+    priority: 0
+    damage_class: status
+    effect_id: 24
+    effect_chance: ''
+
+soft-boiled:
+  - id: 135
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 33
+    effect_chance: ''
+
+high-jump-kick:
+  - id: 136
+    type_id: 2
+    power: 130
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 46
+    effect_chance: ''
+
+glare:
+  - id: 137
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 68
+    effect_chance: ''
+
+dream-eater:
+  - id: 138
+    type_id: 14
+    power: 100
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 9
+    effect_chance: ''
+
+poison-gas:
+  - id: 139
+    type_id: 4
+    power: ''
+    pp: 40
+    accuracy: 90
+    priority: 0
+    damage_class: status
+    effect_id: 67
+    effect_chance: ''
+
+barrage:
+  - id: 140
+    type_id: 1
+    power: 15
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+leech-life:
+  - id: 141
+    type_id: 7
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 4
+    effect_chance: ''
+
+lovely-kiss:
+  - id: 142
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: 75
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+sky-attack:
+  - id: 143
+    type_id: 3
+    power: 140
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 76
+    effect_chance: 30
+
+transform:
+  - id: 144
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 58
+    effect_chance: ''
+
+bubble:
+  - id: 145
+    type_id: 11
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 71
+    effect_chance: 10
+
+dizzy-punch:
+  - id: 146
+    type_id: 1
+    power: 70
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 77
+    effect_chance: 20
+
+spore:
+  - id: 147
+    type_id: 12
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+flash:
+  - id: 148
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 24
+    effect_chance: ''
+
+psywave:
+  - id: 149
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 89
+    effect_chance: ''
+
+splash:
+  - id: 150
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 86
+    effect_chance: ''
+
+acid-armor:
+  - id: 151
+    type_id: 4
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 52
+    effect_chance: ''
+
+crabhammer:
+  - id: 152
+    type_id: 11
+    power: 100
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+explosion:
+  - id: 153
+    type_id: 1
+    power: 250
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 8
+    effect_chance: ''
+
+fury-swipes:
+  - id: 154
+    type_id: 1
+    power: 18
+    pp: 15
+    accuracy: 80
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+bonemerang:
+  - id: 155
+    type_id: 5
+    power: 50
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 45
+    effect_chance: ''
+
+rest:
+  - id: 156
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 38
+    effect_chance: ''
+
+rock-slide:
+  - id: 157
+    type_id: 6
+    power: 75
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+hyper-fang:
+  - id: 158
+    type_id: 1
+    power: 80
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 10
+
+sharpen:
+  - id: 159
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 11
+    effect_chance: ''
+
+conversion:
+  - id: 160
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 31
+    effect_chance: ''
+
+tri-attack:
+  - id: 161
+    type_id: 1
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 37
+    effect_chance: 20
+
+super-fang:
+  - id: 162
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 41
+    effect_chance: ''
+
+slash:
+  - id: 163
+    type_id: 1
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+substitute:
+  - id: 164
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 80
+    effect_chance: ''
+
+struggle:
+  - id: 165
+    type_id: 1
+    power: 50
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 255
+    effect_chance: ''
+
+sketch:
+  - id: 166
+    type_id: 1
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 96
+    effect_chance: ''
+
+triple-kick:
+  - id: 167
+    type_id: 2
+    power: 10
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 105
+    effect_chance: ''
+
+thief:
+  - id: 168
+    type_id: 17
+    power: 60
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 106
+    effect_chance: ''
+
+spider-web:
+  - id: 169
+    type_id: 7
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 107
+    effect_chance: ''
+
+mind-reader:
+  - id: 170
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 95
+    effect_chance: ''
+
+nightmare:
+  - id: 171
+    type_id: 8
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 108
+    effect_chance: ''
+
+flame-wheel:
+  - id: 172
+    type_id: 10
+    power: 60
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 126
+    effect_chance: 10
+
+snore:
+  - id: 173
+    type_id: 1
+    power: 50
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 93
+    effect_chance: 30
+
+curse:
+  - id: 174
+    type_id: 8
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 110
+    effect_chance: ''
+
+flail:
+  - id: 175
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 100
+    effect_chance: ''
+
+conversion-2:
+  - id: 176
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 94
+    effect_chance: ''
+
+aeroblast:
+  - id: 177
+    type_id: 3
+    power: 100
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 44
+    effect_chance: ''
+
+cotton-spore:
+  - id: 178
+    type_id: 12
+    power: ''
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 61
+    effect_chance: ''
+
+reversal:
+  - id: 179
+    type_id: 2
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 100
+    effect_chance: ''
+
+spite:
+  - id: 180
+    type_id: 8
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 101
+    effect_chance: ''
+
+powder-snow:
+  - id: 181
+    type_id: 15
+    power: 40
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 6
+    effect_chance: 10
+
+protect:
+  - id: 182
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 112
+    effect_chance: ''
+
+mach-punch:
+  - id: 183
+    type_id: 2
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+scary-face:
+  - id: 184
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 61
+    effect_chance: ''
+
+feint-attack:
+  - id: 185
+    type_id: 17
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 18
+    effect_chance: ''
+
+sweet-kiss:
+  - id: 186
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: 75
+    priority: 0
+    damage_class: status
+    effect_id: 50
+    effect_chance: ''
+
+belly-drum:
+  - id: 187
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 143
+    effect_chance: ''
+
+sludge-bomb:
+  - id: 188
+    type_id: 4
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 3
+    effect_chance: 30
+
+mud-slap:
+  - id: 189
+    type_id: 5
+    power: 20
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 100
+
+octazooka:
+  - id: 190
+    type_id: 11
+    power: 65
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 50
+
+spikes:
+  - id: 191
+    type_id: 5
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 113
+    effect_chance: ''
+
+zap-cannon:
+  - id: 192
+    type_id: 13
+    power: 120
+    pp: 5
+    accuracy: 50
+    priority: 0
+    damage_class: special
+    effect_id: 7
+    effect_chance: 100
+
+foresight:
+  - id: 193
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 114
+    effect_chance: ''
+
+destiny-bond:
+  - id: 194
+    type_id: 8
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 99
+    effect_chance: ''
+
+perish-song:
+  - id: 195
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 115
+    effect_chance: ''
+
+icy-wind:
+  - id: 196
+    type_id: 15
+    power: 55
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 71
+    effect_chance: 100
+
+detect:
+  - id: 197
+    type_id: 2
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 112
+    effect_chance: ''
+
+bone-rush:
+  - id: 198
+    type_id: 5
+    power: 25
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+lock-on:
+  - id: 199
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 95
+    effect_chance: ''
+
+outrage:
+  - id: 200
+    type_id: 16
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 28
+    effect_chance: ''
+
+sandstorm:
+  - id: 201
+    type_id: 6
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 116
+    effect_chance: ''
+
+giga-drain:
+  - id: 202
+    type_id: 12
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 4
+    effect_chance: ''
+
+endure:
+  - id: 203
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 117
+    effect_chance: ''
+
+charm:
+  - id: 204
+    type_id: 18
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 59
+    effect_chance: ''
+
+rollout:
+  - id: 205
+    type_id: 6
+    power: 30
+    pp: 20
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 118
+    effect_chance: ''
+
+false-swipe:
+  - id: 206
+    type_id: 1
+    power: 40
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 102
+    effect_chance: ''
+
+swagger:
+  - id: 207
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: status
+    effect_id: 119
+    effect_chance: ''
+
+milk-drink:
+  - id: 208
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 33
+    effect_chance: ''
+
+spark:
+  - id: 209
+    type_id: 13
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 7
+    effect_chance: 30
+
+fury-cutter:
+  - id: 210
+    type_id: 7
+    power: 40
+    pp: 20
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 120
+    effect_chance: ''
+
+steel-wing:
+  - id: 211
+    type_id: 9
+    power: 70
+    pp: 25
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 139
+    effect_chance: 10
+
+mean-look:
+  - id: 212
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 107
+    effect_chance: ''
+
+attract:
+  - id: 213
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 121
+    effect_chance: ''
+
+sleep-talk:
+  - id: 214
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 98
+    effect_chance: ''
+
+heal-bell:
+  - id: 215
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 103
+    effect_chance: ''
+
+return:
+  - id: 216
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 122
+    effect_chance: ''
+
+present:
+  - id: 217
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 123
+    effect_chance: ''
+
+frustration:
+  - id: 218
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 124
+    effect_chance: ''
+
+safeguard:
+  - id: 219
+    type_id: 1
+    power: ''
+    pp: 25
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 125
+    effect_chance: ''
+
+pain-split:
+  - id: 220
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 92
+    effect_chance: ''
+
+sacred-fire:
+  - id: 221
+    type_id: 10
+    power: 100
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 126
+    effect_chance: 50
+
+magnitude:
+  - id: 222
+    type_id: 5
+    power: ''
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 127
+    effect_chance: ''
+
+dynamic-punch:
+  - id: 223
+    type_id: 2
+    power: 100
+    pp: 5
+    accuracy: 50
+    priority: 0
+    damage_class: physical
+    effect_id: 77
+    effect_chance: 100
+
+megahorn:
+  - id: 224
+    type_id: 7
+    power: 120
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+dragon-breath:
+  - id: 225
+    type_id: 16
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 7
+    effect_chance: 30
+
+baton-pass:
+  - id: 226
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 128
+    effect_chance: ''
+
+encore:
+  - id: 227
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 91
+    effect_chance: ''
+
+pursuit:
+  - id: 228
+    type_id: 17
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 129
+    effect_chance: ''
+
+rapid-spin:
+  - id: 229
+    type_id: 1
+    power: 50
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 130
+    effect_chance: 100
+
+sweet-scent:
+  - id: 230
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 25
+    effect_chance: ''
+
+iron-tail:
+  - id: 231
+    type_id: 9
+    power: 100
+    pp: 15
+    accuracy: 75
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 30
+
+metal-claw:
+  - id: 232
+    type_id: 9
+    power: 50
+    pp: 35
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 140
+    effect_chance: 10
+
+vital-throw:
+  - id: 233
+    type_id: 2
+    power: 70
+    pp: 10
+    accuracy: ''
+    priority: -1
+    damage_class: physical
+    effect_id: 79
+    effect_chance: ''
+
+morning-sun:
+  - id: 234
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 133
+    effect_chance: ''
+
+synthesis:
+  - id: 235
+    type_id: 12
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 133
+    effect_chance: ''
+
+moonlight:
+  - id: 236
+    type_id: 18
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 133
+    effect_chance: ''
+
+hidde power:
+  - id: 237
+    type_id: 1
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 136
+    effect_chance: ''
+
+cross-chop:
+  - id: 238
+    type_id: 2
+    power: 100
+    pp: 5
+    accuracy: 80
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+twister:
+  - id: 239
+    type_id: 16
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 147
+    effect_chance: 20
+
+rain-dance:
+  - id: 240
+    type_id: 11
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 137
+    effect_chance: ''
+
+sunny-day:
+  - id: 241
+    type_id: 10
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 138
+    effect_chance: ''
+
+crunch:
+  - id: 242
+    type_id: 17
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 20
+
+mirror-coat:
+  - id: 243
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: -5
+    damage_class: special
+    effect_id: 145
+    effect_chance: ''
+
+psych-up:
+  - id: 244
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 144
+    effect_chance: ''
+
+extreme-speed:
+  - id: 245
+    type_id: 1
+    power: 80
+    pp: 5
+    accuracy: 100
+    priority: 2
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+ancien  power:
+  - id: 246
+    type_id: 6
+    power: 60
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 141
+    effect_chance: 10
+
+shadow-ball:
+  - id: 247
+    type_id: 8
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 20
+
+future-sight:
+  - id: 248
+    type_id: 14
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 149
+    effect_chance: ''
+
+rock-smash:
+  - id: 249
+    type_id: 2
+    power: 40
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 50
+
+whirlpool:
+  - id: 250
+    type_id: 11
+    power: 35
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 262
+    effect_chance: 100
+
+beat-up:
+  - id: 251
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 155
+    effect_chance: ''
+
+fake-out:
+  - id: 252
+    type_id: 1
+    power: 40
+    pp: 10
+    accuracy: 100
+    priority: 3
+    damage_class: physical
+    effect_id: 159
+    effect_chance: 100
+
+uproar:
+  - id: 253
+    type_id: 1
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 160
+    effect_chance: ''
+
+stockpile:
+  - id: 254
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 161
+    effect_chance: ''
+
+spit-up:
+  - id: 255
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 162
+    effect_chance: ''
+
+swallow:
+  - id: 256
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 163
+    effect_chance: ''
+
+heat-wave:
+  - id: 257
+    type_id: 10
+    power: 95
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 10
+
+hail:
+  - id: 258
+    type_id: 15
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 165
+    effect_chance: ''
+
+torment:
+  - id: 259
+    type_id: 17
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 166
+    effect_chance: ''
+
+flatter:
+  - id: 260
+    type_id: 17
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 167
+    effect_chance: ''
+
+will-o-wisp:
+  - id: 261
+    type_id: 10
+    power: ''
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: status
+    effect_id: 168
+    effect_chance: ''
+
+memento:
+  - id: 262
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 169
+    effect_chance: ''
+
+facade:
+  - id: 263
+    type_id: 1
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 170
+    effect_chance: ''
+
+focus-punch:
+  - id: 264
+    type_id: 2
+    power: 150
+    pp: 20
+    accuracy: 100
+    priority: -3
+    damage_class: physical
+    effect_id: 171
+    effect_chance: ''
+
+smelling-salts:
+  - id: 265
+    type_id: 1
+    power: 70
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 172
+    effect_chance: ''
+
+follow-me:
+  - id: 266
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 2
+    damage_class: status
+    effect_id: 173
+    effect_chance: ''
+
+natur power:
+  - id: 267
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 174
+    effect_chance: ''
+
+charge:
+  - id: 268
+    type_id: 13
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 175
+    effect_chance: ''
+
+taunt:
+  - id: 269
+    type_id: 17
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 176
+    effect_chance: ''
+
+helping-hand:
+  - id: 270
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 5
+    damage_class: status
+    effect_id: 177
+    effect_chance: ''
+
+trick:
+  - id: 271
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 178
+    effect_chance: ''
+
+role-play:
+  - id: 272
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 179
+    effect_chance: ''
+
+wish:
+  - id: 273
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 180
+    effect_chance: ''
+
+assist:
+  - id: 274
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 181
+    effect_chance: ''
+
+ingrain:
+  - id: 275
+    type_id: 12
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 182
+    effect_chance: ''
+
+sup power:
+  - id: 276
+    type_id: 2
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 183
+    effect_chance: 100
+
+magic-coat:
+  - id: 277
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 184
+    effect_chance: ''
+
+recycle:
+  - id: 278
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 185
+    effect_chance: ''
+
+revenge:
+  - id: 279
+    type_id: 2
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: -4
+    damage_class: physical
+    effect_id: 186
+    effect_chance: ''
+
+brick-break:
+  - id: 280
+    type_id: 2
+    power: 75
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 187
+    effect_chance: ''
+
+yawn:
+  - id: 281
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 188
+    effect_chance: ''
+
+knock-off:
+  - id: 282
+    type_id: 17
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 189
+    effect_chance: ''
+
+endeavor:
+  - id: 283
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 190
+    effect_chance: ''
+
+eruption:
+  - id: 284
+    type_id: 10
+    power: 150
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 191
+    effect_chance: ''
+
+skill-swap:
+  - id: 285
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 192
+    effect_chance: ''
+
+imprison:
+  - id: 286
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 193
+    effect_chance: ''
+
+refresh:
+  - id: 287
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 194
+    effect_chance: ''
+
+grudge:
+  - id: 288
+    type_id: 8
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 195
+    effect_chance: ''
+
+snatch:
+  - id: 289
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 196
+    effect_chance: ''
+
+secre power:
+  - id: 290
+    type_id: 1
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 198
+    effect_chance: 30
+
+dive:
+  - id: 291
+    type_id: 11
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 256
+    effect_chance: ''
+
+arm-thrust:
+  - id: 292
+    type_id: 2
+    power: 15
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+camouflage:
+  - id: 293
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 214
+    effect_chance: ''
+
+tail-glow:
+  - id: 294
+    type_id: 7
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 322
+    effect_chance: ''
+
+luster-purge:
+  - id: 295
+    type_id: 14
+    power: 70
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 50
+
+mist-ball:
+  - id: 296
+    type_id: 14
+    power: 70
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 72
+    effect_chance: 50
+
+feather-dance:
+  - id: 297
+    type_id: 3
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 59
+    effect_chance: ''
+
+teeter-dance:
+  - id: 298
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 200
+    effect_chance: ''
+
+blaze-kick:
+  - id: 299
+    type_id: 10
+    power: 85
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 201
+    effect_chance: 10
+
+mud-sport:
+  - id: 300
+    type_id: 5
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 202
+    effect_chance: ''
+
+ice-ball:
+  - id: 301
+    type_id: 15
+    power: 30
+    pp: 20
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 118
+    effect_chance: ''
+
+needle-arm:
+  - id: 302
+    type_id: 12
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+slack-off:
+  - id: 303
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 33
+    effect_chance: ''
+
+hyper-voice:
+  - id: 304
+    type_id: 1
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+poison-fang:
+  - id: 305
+    type_id: 4
+    power: 50
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 203
+    effect_chance: 50
+
+crush-claw:
+  - id: 306
+    type_id: 1
+    power: 75
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 50
+
+blast-burn:
+  - id: 307
+    type_id: 10
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+hydro-cannon:
+  - id: 308
+    type_id: 11
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+meteor-mash:
+  - id: 309
+    type_id: 9
+    power: 90
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 140
+    effect_chance: 20
+
+astonish:
+  - id: 310
+    type_id: 8
+    power: 30
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+weather-ball:
+  - id: 311
+    type_id: 1
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 204
+    effect_chance: ''
+
+aromatherapy:
+  - id: 312
+    type_id: 12
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 103
+    effect_chance: ''
+
+fake-tears:
+  - id: 313
+    type_id: 17
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 63
+    effect_chance: ''
+
+air-cutter:
+  - id: 314
+    type_id: 3
+    power: 60
+    pp: 25
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 44
+    effect_chance: ''
+
+overheat:
+  - id: 315
+    type_id: 10
+    power: 130
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 205
+    effect_chance: 100
+
+odor-sleuth:
+  - id: 316
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 114
+    effect_chance: ''
+
+rock-tomb:
+  - id: 317
+    type_id: 6
+    power: 60
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 71
+    effect_chance: 100
+
+silver-wind:
+  - id: 318
+    type_id: 7
+    power: 60
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 141
+    effect_chance: 10
+
+metal-sound:
+  - id: 319
+    type_id: 9
+    power: ''
+    pp: 40
+    accuracy: 85
+    priority: 0
+    damage_class: status
+    effect_id: 63
+    effect_chance: ''
+
+grass-whistle:
+  - id: 320
+    type_id: 12
+    power: ''
+    pp: 15
+    accuracy: 55
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+tickle:
+  - id: 321
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 206
+    effect_chance: ''
+
+cosmi power:
+  - id: 322
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 207
+    effect_chance: ''
+
+water-spout:
+  - id: 323
+    type_id: 11
+    power: 150
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 191
+    effect_chance: ''
+
+signal-beam:
+  - id: 324
+    type_id: 7
+    power: 75
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 77
+    effect_chance: 10
+
+shadow-punch:
+  - id: 325
+    type_id: 8
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 18
+    effect_chance: ''
+
+extrasensory:
+  - id: 326
+    type_id: 14
+    power: 80
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 32
+    effect_chance: 10
+
+sky ppercut:
+  - id: 327
+    type_id: 2
+    power: 85
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 208
+    effect_chance: ''
+
+sand-tomb:
+  - id: 328
+    type_id: 5
+    power: 35
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 43
+    effect_chance: 100
+
+sheer-cold:
+  - id: 329
+    type_id: 15
+    power: ''
+    pp: 5
+    accuracy: 30
+    priority: 0
+    damage_class: special
+    effect_id: 39
+    effect_chance: ''
+
+muddy-water:
+  - id: 330
+    type_id: 11
+    power: 90
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 30
+
+bullet-seed:
+  - id: 331
+    type_id: 12
+    power: 25
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+aerial-ace:
+  - id: 332
+    type_id: 3
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 18
+    effect_chance: ''
+
+icicle-spear:
+  - id: 333
+    type_id: 15
+    power: 25
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+iron-defense:
+  - id: 334
+    type_id: 9
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 52
+    effect_chance: ''
+
+block:
+  - id: 335
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 107
+    effect_chance: ''
+
+howl:
+  - id: 336
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 11
+    effect_chance: ''
+
+dragon-claw:
+  - id: 337
+    type_id: 16
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+frenzy-plant:
+  - id: 338
+    type_id: 12
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+bulk-up:
+  - id: 339
+    type_id: 2
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 209
+    effect_chance: ''
+
+bounce:
+  - id: 340
+    type_id: 3
+    power: 85
+    pp: 5
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 264
+    effect_chance: 30
+
+mud-shot:
+  - id: 341
+    type_id: 5
+    power: 55
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 71
+    effect_chance: 100
+
+poison-tail:
+  - id: 342
+    type_id: 4
+    power: 50
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 210
+    effect_chance: 10
+
+covet:
+  - id: 343
+    type_id: 1
+    power: 60
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 106
+    effect_chance: ''
+
+volt-tackle:
+  - id: 344
+    type_id: 13
+    power: 120
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 263
+    effect_chance: 10
+
+magical-leaf:
+  - id: 345
+    type_id: 12
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 18
+    effect_chance: ''
+
+water-sport:
+  - id: 346
+    type_id: 11
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 211
+    effect_chance: ''
+
+calm-mind:
+  - id: 347
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 212
+    effect_chance: ''
+
+leaf-blade:
+  - id: 348
+    type_id: 12
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+dragon-dance:
+  - id: 349
+    type_id: 16
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 213
+    effect_chance: ''
+
+rock-blast:
+  - id: 350
+    type_id: 6
+    power: 25
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+shock-wave:
+  - id: 351
+    type_id: 13
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 18
+    effect_chance: ''
+
+water-pulse:
+  - id: 352
+    type_id: 11
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 77
+    effect_chance: 20
+
+doom-desire:
+  - id: 353
+    type_id: 9
+    power: 140
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 149
+    effect_chance: ''
+
+psycho-boost:
+  - id: 354
+    type_id: 14
+    power: 140
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 205
+    effect_chance: 100
+
+roost:
+  - id: 355
+    type_id: 3
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 215
+    effect_chance: ''
+
+gravity:
+  - id: 356
+    type_id: 14
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 216
+    effect_chance: ''
+
+miracle-eye:
+  - id: 357
+    type_id: 14
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 217
+    effect_chance: ''
+
+wake-up-slap:
+  - id: 358
+    type_id: 2
+    power: 70
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 218
+    effect_chance: ''
+
+hammer-arm:
+  - id: 359
+    type_id: 2
+    power: 100
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 219
+    effect_chance: 100
+
+gyro-ball:
+  - id: 360
+    type_id: 9
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 220
+    effect_chance: ''
+
+healing-wish:
+  - id: 361
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 221
+    effect_chance: ''
+
+brine:
+  - id: 362
+    type_id: 11
+    power: 65
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 222
+    effect_chance: ''
+
+natural-gift:
+  - id: 363
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 223
+    effect_chance: ''
+
+feint:
+  - id: 364
+    type_id: 1
+    power: 30
+    pp: 10
+    accuracy: 100
+    priority: 2
+    damage_class: physical
+    effect_id: 224
+    effect_chance: ''
+
+pluck:
+  - id: 365
+    type_id: 3
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 225
+    effect_chance: ''
+
+tailwind:
+  - id: 366
+    type_id: 3
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 226
+    effect_chance: ''
+
+acupressure:
+  - id: 367
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 227
+    effect_chance: ''
+
+metal-burst:
+  - id: 368
+    type_id: 9
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 228
+    effect_chance: ''
+
+u-turn:
+  - id: 369
+    type_id: 7
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 229
+    effect_chance: ''
+
+close-combat:
+  - id: 370
+    type_id: 2
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 230
+    effect_chance: 100
+
+payback:
+  - id: 371
+    type_id: 17
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 231
+    effect_chance: ''
+
+assurance:
+  - id: 372
+    type_id: 17
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 232
+    effect_chance: ''
+
+embargo:
+  - id: 373
+    type_id: 17
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 233
+    effect_chance: ''
+
+fling:
+  - id: 374
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 234
+    effect_chance: ''
+
+psycho-shift:
+  - id: 375
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 235
+    effect_chance: ''
+
+trump-card:
+  - id: 376
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 236
+    effect_chance: ''
+
+heal-block:
+  - id: 377
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 237
+    effect_chance: ''
+
+wring-out:
+  - id: 378
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 238
+    effect_chance: '' power-trick:
+  - id: 379
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 239
+    effect_chance: ''
+
+gastro-acid:
+  - id: 380
+    type_id: 4
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 240
+    effect_chance: ''
+
+lucky-chant:
+  - id: 381
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 241
+    effect_chance: ''
+
+me-first:
+  - id: 382
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 242
+    effect_chance: ''
+
+copycat:
+  - id: 383
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 243
+    effect_chance: '' power-swap:
+  - id: 384
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 244
+    effect_chance: ''
+
+guard-swap:
+  - id: 385
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 245
+    effect_chance: ''
+
+punishment:
+  - id: 386
+    type_id: 17
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 246
+    effect_chance: ''
+
+last-resort:
+  - id: 387
+    type_id: 1
+    power: 140
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 247
+    effect_chance: ''
+
+worry-seed:
+  - id: 388
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 248
+    effect_chance: ''
+
+sucker-punch:
+  - id: 389
+    type_id: 17
+    power: 70
+    pp: 5
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 249
+    effect_chance: ''
+
+toxic-spikes:
+  - id: 390
+    type_id: 4
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 250
+    effect_chance: ''
+
+heart-swap:
+  - id: 391
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 251
+    effect_chance: ''
+
+aqua-ring:
+  - id: 392
+    type_id: 11
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 252
+    effect_chance: ''
+
+magnet-rise:
+  - id: 393
+    type_id: 13
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 253
+    effect_chance: ''
+
+flare-blitz:
+  - id: 394
+    type_id: 10
+    power: 120
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 254
+    effect_chance: 10
+
+force-palm:
+  - id: 395
+    type_id: 2
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 7
+    effect_chance: 30
+
+aura-sphere:
+  - id: 396
+    type_id: 2
+    power: 80
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 18
+    effect_chance: ''
+
+rock-polish:
+  - id: 397
+    type_id: 6
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 53
+    effect_chance: ''
+
+poison-jab:
+  - id: 398
+    type_id: 4
+    power: 80
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 3
+    effect_chance: 30
+
+dark-pulse:
+  - id: 399
+    type_id: 17
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 32
+    effect_chance: 20
+
+night-slash:
+  - id: 400
+    type_id: 17
+    power: 70
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+aqua-tail:
+  - id: 401
+    type_id: 11
+    power: 90
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+seed-bomb:
+  - id: 402
+    type_id: 12
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+air-slash:
+  - id: 403
+    type_id: 3
+    power: 75
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 32
+    effect_chance: 30
+
+x-scissor:
+  - id: 404
+    type_id: 7
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+bug-buzz:
+  - id: 405
+    type_id: 7
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+dragon-pulse:
+  - id: 406
+    type_id: 16
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+dragon-rush:
+  - id: 407
+    type_id: 16
+    power: 100
+    pp: 10
+    accuracy: 75
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 20 power-gem:
+  - id: 408
+    type_id: 6
+    power: 80
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+drain-punch:
+  - id: 409
+    type_id: 2
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 4
+    effect_chance: ''
+
+vacuum-wave:
+  - id: 410
+    type_id: 2
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: special
+    effect_id: 104
+    effect_chance: ''
+
+focus-blast:
+  - id: 411
+    type_id: 2
+    power: 120
+    pp: 5
+    accuracy: 70
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+energy-ball:
+  - id: 412
+    type_id: 12
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+brave-bird:
+  - id: 413
+    type_id: 3
+    power: 120
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 199
+    effect_chance: ''
+
+eart  power:
+  - id: 414
+    type_id: 5
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+switcheroo:
+  - id: 415
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 178
+    effect_chance: ''
+
+giga-impact:
+  - id: 416
+    type_id: 1
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 81
+    effect_chance: ''
+
+nasty-plot:
+  - id: 417
+    type_id: 17
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 54
+    effect_chance: ''
+
+bullet-punch:
+  - id: 418
+    type_id: 9
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+avalanche:
+  - id: 419
+    type_id: 15
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: -4
+    damage_class: physical
+    effect_id: 186
+    effect_chance: ''
+
+ice-shard:
+  - id: 420
+    type_id: 15
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+shadow-claw:
+  - id: 421
+    type_id: 8
+    power: 70
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+thunder-fang:
+  - id: 422
+    type_id: 13
+    power: 65
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 276
+    effect_chance: 10
+
+ice-fang:
+  - id: 423
+    type_id: 15
+    power: 65
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 275
+    effect_chance: 10
+
+fire-fang:
+  - id: 424
+    type_id: 10
+    power: 65
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 274
+    effect_chance: 10
+
+shadow-sneak:
+  - id: 425
+    type_id: 8
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+mud-bomb:
+  - id: 426
+    type_id: 5
+    power: 65
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 30
+
+psycho-cut:
+  - id: 427
+    type_id: 14
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+zen-headbutt:
+  - id: 428
+    type_id: 14
+    power: 80
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 20
+
+mirror-shot:
+  - id: 429
+    type_id: 9
+    power: 65
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 30
+
+flash-cannon:
+  - id: 430
+    type_id: 9
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 73
+    effect_chance: 10
+
+rock-climb:
+  - id: 431
+    type_id: 1
+    power: 90
+    pp: 20
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 77
+    effect_chance: 20
+
+defog:
+  - id: 432
+    type_id: 3
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 259
+    effect_chance: ''
+
+trick-room:
+  - id: 433
+    type_id: 14
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: -7
+    damage_class: status
+    effect_id: 260
+    effect_chance: ''
+
+draco-meteor:
+  - id: 434
+    type_id: 16
+    power: 130
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 205
+    effect_chance: 100
+
+discharge:
+  - id: 435
+    type_id: 13
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 7
+    effect_chance: 30
+
+lava-plume:
+  - id: 436
+    type_id: 10
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 30
+
+leaf-storm:
+  - id: 437
+    type_id: 12
+    power: 130
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 205
+    effect_chance: 100  power-whip:
+  - id: 438
+    type_id: 12
+    power: 120
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+rock-wrecker:
+  - id: 439
+    type_id: 6
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 81
+    effect_chance: ''
+
+cross-poison:
+  - id: 440
+    type_id: 4
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 210
+    effect_chance: 10
+
+gunk-shot:
+  - id: 441
+    type_id: 4
+    power: 120
+    pp: 5
+    accuracy: 80
+    priority: 0
+    damage_class: physical
+    effect_id: 3
+    effect_chance: 30
+
+iron-head:
+  - id: 442
+    type_id: 9
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+magnet-bomb:
+  - id: 443
+    type_id: 9
+    power: 60
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 18
+    effect_chance: ''
+
+stone-edge:
+  - id: 444
+    type_id: 6
+    power: 100
+    pp: 5
+    accuracy: 80
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+captivate:
+  - id: 445
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 266
+    effect_chance: ''
+
+stealth-rock:
+  - id: 446
+    type_id: 6
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 267
+    effect_chance: ''
+
+grass-knot:
+  - id: 447
+    type_id: 12
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 197
+    effect_chance: ''
+
+chatter:
+  - id: 448
+    type_id: 3
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 268
+    effect_chance: 100
+
+judgment:
+  - id: 449
+    type_id: 1
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 269
+    effect_chance: ''
+
+bug-bite:
+  - id: 450
+    type_id: 7
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 225
+    effect_chance: ''
+
+charge-beam:
+  - id: 451
+    type_id: 13
+    power: 50
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 277
+    effect_chance: 70
+
+wood-hammer:
+  - id: 452
+    type_id: 12
+    power: 120
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 199
+    effect_chance: ''
+
+aqua-jet:
+  - id: 453
+    type_id: 11
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+attack-order:
+  - id: 454
+    type_id: 7
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+defend-order:
+  - id: 455
+    type_id: 7
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 207
+    effect_chance: ''
+
+heal-order:
+  - id: 456
+    type_id: 7
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 33
+    effect_chance: ''
+
+head-smash:
+  - id: 457
+    type_id: 6
+    power: 150
+    pp: 5
+    accuracy: 80
+    priority: 0
+    damage_class: physical
+    effect_id: 270
+    effect_chance: ''
+
+double-hit:
+  - id: 458
+    type_id: 1
+    power: 35
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 45
+    effect_chance: ''
+
+roar-of-time:
+  - id: 459
+    type_id: 16
+    power: 150
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+spacial-rend:
+  - id: 460
+    type_id: 16
+    power: 100
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 44
+    effect_chance: ''
+
+lunar-dance:
+  - id: 461
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 271
+    effect_chance: ''
+
+crush-grip:
+  - id: 462
+    type_id: 1
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 238
+    effect_chance: ''
+
+magma-storm:
+  - id: 463
+    type_id: 10
+    power: 100
+    pp: 5
+    accuracy: 75
+    priority: 0
+    damage_class: special
+    effect_id: 43
+    effect_chance: 100
+
+dark-void:
+  - id: 464
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: 50
+    priority: 0
+    damage_class: status
+    effect_id: 2
+    effect_chance: ''
+
+seed-flare:
+  - id: 465
+    type_id: 12
+    power: 120
+    pp: 5
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 272
+    effect_chance: 40
+
+ominous-wind:
+  - id: 466
+    type_id: 8
+    power: 60
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 141
+    effect_chance: 10
+
+shadow-force:
+  - id: 467
+    type_id: 8
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 273
+    effect_chance: ''
+
+hone-claws:
+  - id: 468
+    type_id: 17
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 278
+    effect_chance: ''
+
+wide-guard:
+  - id: 469
+    type_id: 6
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 3
+    damage_class: status
+    effect_id: 279
+    effect_chance: ''
+
+guard-split:
+  - id: 470
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 280
+    effect_chance: '' power-split:
+  - id: 471
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 281
+    effect_chance: ''
+
+wonder-room:
+  - id: 472
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 282
+    effect_chance: ''
+
+psyshock:
+  - id: 473
+    type_id: 14
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 283
+    effect_chance: ''
+
+venoshock:
+  - id: 474
+    type_id: 4
+    power: 65
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 284
+    effect_chance: ''
+
+autotomize:
+  - id: 475
+    type_id: 9
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 285
+    effect_chance: ''
+
+rage-powder:
+  - id: 476
+    type_id: 7
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 2
+    damage_class: status
+    effect_id: 173
+    effect_chance: ''
+
+telekinesis:
+  - id: 477
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 286
+    effect_chance: ''
+
+magic-room:
+  - id: 478
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 287
+    effect_chance: ''
+
+smack-down:
+  - id: 479
+    type_id: 6
+    power: 50
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 288
+    effect_chance: 100
+
+storm-throw:
+  - id: 480
+    type_id: 2
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 289
+    effect_chance: ''
+
+flame-burst:
+  - id: 481
+    type_id: 10
+    power: 70
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 290
+    effect_chance: ''
+
+sludge-wave:
+  - id: 482
+    type_id: 4
+    power: 95
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 3
+    effect_chance: 10
+
+quiver-dance:
+  - id: 483
+    type_id: 7
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 291
+    effect_chance: ''
+
+heavy-slam:
+  - id: 484
+    type_id: 9
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 292
+    effect_chance: ''
+
+synchronoise:
+  - id: 485
+    type_id: 14
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 293
+    effect_chance: ''
+
+electro-ball:
+  - id: 486
+    type_id: 13
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 294
+    effect_chance: ''
+
+soak:
+  - id: 487
+    type_id: 11
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 295
+    effect_chance: ''
+
+flame-charge:
+  - id: 488
+    type_id: 10
+    power: 50
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 296
+    effect_chance: 100
+
+coil:
+  - id: 489
+    type_id: 4
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 323
+    effect_chance: ''
+
+low-sweep:
+  - id: 490
+    type_id: 2
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 21
+    effect_chance: 100
+
+acid-spray:
+  - id: 491
+    type_id: 4
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 297
+    effect_chance: 100
+
+foul-play:
+  - id: 492
+    type_id: 17
+    power: 95
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 298
+    effect_chance: ''
+
+simple-beam:
+  - id: 493
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 299
+    effect_chance: ''
+
+entrainment:
+  - id: 494
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 300
+    effect_chance: ''
+
+after-you:
+  - id: 495
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 301
+    effect_chance: ''
+
+round:
+  - id: 496
+    type_id: 1
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 302
+    effect_chance: ''
+
+echoed-voice:
+  - id: 497
+    type_id: 1
+    power: 40
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 303
+    effect_chance: ''
+
+chip-away:
+  - id: 498
+    type_id: 1
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 304
+    effect_chance: ''
+
+clear-smog:
+  - id: 499
+    type_id: 4
+    power: 50
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 305
+    effect_chance: ''
+
+store power:
+  - id: 500
+    type_id: 14
+    power: 20
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 306
+    effect_chance: ''
+
+quick-guard:
+  - id: 501
+    type_id: 2
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 3
+    damage_class: status
+    effect_id: 307
+    effect_chance: ''
+
+ally-switch:
+  - id: 502
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 2
+    damage_class: status
+    effect_id: 308
+    effect_chance: ''
+
+scald:
+  - id: 503
+    type_id: 11
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 30
+
+shell-smash:
+  - id: 504
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 309
+    effect_chance: ''
+
+heal-pulse:
+  - id: 505
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 310
+    effect_chance: ''
+
+hex:
+  - id: 506
+    type_id: 8
+    power: 65
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 311
+    effect_chance: ''
+
+sky-drop:
+  - id: 507
+    type_id: 3
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 312
+    effect_chance: ''
+
+shift-gear:
+  - id: 508
+    type_id: 9
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 313
+    effect_chance: ''
+
+circle-throw:
+  - id: 509
+    type_id: 2
+    power: 60
+    pp: 10
+    accuracy: 90
+    priority: -6
+    damage_class: physical
+    effect_id: 314
+    effect_chance: ''
+
+incinerate:
+  - id: 510
+    type_id: 10
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 315
+    effect_chance: ''
+
+quash:
+  - id: 511
+    type_id: 17
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 316
+    effect_chance: ''
+
+acrobatics:
+  - id: 512
+    type_id: 3
+    power: 55
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 318
+    effect_chance: ''
+
+reflect-type:
+  - id: 513
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 319
+    effect_chance: ''
+
+retaliate:
+  - id: 514
+    type_id: 1
+    power: 70
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 320
+    effect_chance: ''
+
+final-gambit:
+  - id: 515
+    type_id: 2
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 321
+    effect_chance: ''
+
+bestow:
+  - id: 516
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 324
+    effect_chance: ''
+
+inferno:
+  - id: 517
+    type_id: 10
+    power: 100
+    pp: 5
+    accuracy: 50
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 100
+
+water-pledge:
+  - id: 518
+    type_id: 11
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 325
+    effect_chance: ''
+
+fire-pledge:
+  - id: 519
+    type_id: 10
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 326
+    effect_chance: ''
+
+grass-pledge:
+  - id: 520
+    type_id: 12
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 327
+    effect_chance: ''
+
+volt-switch:
+  - id: 521
+    type_id: 13
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 229
+    effect_chance: ''
+
+struggle-bug:
+  - id: 522
+    type_id: 7
+    power: 50
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 72
+    effect_chance: 100
+
+bulldoze:
+  - id: 523
+    type_id: 5
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 71
+    effect_chance: 100
+
+frost-breath:
+  - id: 524
+    type_id: 15
+    power: 60
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 289
+    effect_chance: 100
+
+dragon-tail:
+  - id: 525
+    type_id: 16
+    power: 60
+    pp: 10
+    accuracy: 90
+    priority: -6
+    damage_class: physical
+    effect_id: 314
+    effect_chance: ''
+
+work-up:
+  - id: 526
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 328
+    effect_chance: ''
+
+electroweb:
+  - id: 527
+    type_id: 13
+    power: 55
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 21
+    effect_chance: 100
+
+wild-charge:
+  - id: 528
+    type_id: 13
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 49
+    effect_chance: ''
+
+drill-run:
+  - id: 529
+    type_id: 5
+    power: 80
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 44
+    effect_chance: ''
+
+dual-chop:
+  - id: 530
+    type_id: 16
+    power: 40
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 45
+    effect_chance: ''
+
+heart-stamp:
+  - id: 531
+    type_id: 14
+    power: 60
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+horn-leech:
+  - id: 532
+    type_id: 12
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 4
+    effect_chance: ''
+
+sacred-sword:
+  - id: 533
+    type_id: 2
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 304
+    effect_chance: ''
+
+razor-shell:
+  - id: 534
+    type_id: 11
+    power: 75
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 50
+
+heat-crash:
+  - id: 535
+    type_id: 10
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 292
+    effect_chance: ''
+
+leaf-tornado:
+  - id: 536
+    type_id: 12
+    power: 65
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 50
+
+steamroller:
+  - id: 537
+    type_id: 7
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 151
+    effect_chance: 30
+
+cotton-guard:
+  - id: 538
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 329
+    effect_chance: ''
+
+night-daze:
+  - id: 539
+    type_id: 17
+    power: 85
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 74
+    effect_chance: 40
+
+psystrike:
+  - id: 540
+    type_id: 14
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 283
+    effect_chance: ''
+
+tail-slap:
+  - id: 541
+    type_id: 1
+    power: 25
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 30
+    effect_chance: ''
+
+hurricane:
+  - id: 542
+    type_id: 3
+    power: 110
+    pp: 10
+    accuracy: 70
+    priority: 0
+    damage_class: special
+    effect_id: 334
+    effect_chance: 30
+
+head-charge:
+  - id: 543
+    type_id: 1
+    power: 120
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 49
+    effect_chance: ''
+
+gear-grind:
+  - id: 544
+    type_id: 9
+    power: 50
+    pp: 15
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 45
+    effect_chance: ''
+
+searing-shot:
+  - id: 545
+    type_id: 10
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 30
+
+techno-blast:
+  - id: 546
+    type_id: 1
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 269
+    effect_chance: ''
+
+relic-song:
+  - id: 547
+    type_id: 1
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 330
+    effect_chance: 10
+
+secret-sword:
+  - id: 548
+    type_id: 2
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 283
+    effect_chance: ''
+
+glaciate:
+  - id: 549
+    type_id: 15
+    power: 65
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 331
+    effect_chance: 100
+
+bolt-strike:
+  - id: 550
+    type_id: 13
+    power: 130
+    pp: 5
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 7
+    effect_chance: 20
+
+blue-flare:
+  - id: 551
+    type_id: 10
+    power: 130
+    pp: 5
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 20
+
+fiery-dance:
+  - id: 552
+    type_id: 10
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 277
+    effect_chance: 50
+
+freeze-shock:
+  - id: 553
+    type_id: 15
+    power: 140
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 332
+    effect_chance: 30
+
+ice-burn:
+  - id: 554
+    type_id: 15
+    power: 140
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 333
+    effect_chance: 30
+
+snarl:
+  - id: 555
+    type_id: 17
+    power: 55
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 72
+    effect_chance: 100
+
+icicle-crash:
+  - id: 556
+    type_id: 15
+    power: 85
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+v-create:
+  - id: 557
+    type_id: 10
+    power: 180
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 335
+    effect_chance: 100
+
+fusion-flare:
+  - id: 558
+    type_id: 10
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 336
+    effect_chance: ''
+
+fusion-bolt:
+  - id: 559
+    type_id: 13
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 337
+    effect_chance: ''
+
+flying-press:
+  - id: 560
+    type_id: 2
+    power: 100
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 338
+    effect_chance: ''
+
+mat-block:
+  - id: 561
+    type_id: 2
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 377
+    effect_chance: ''
+
+belch:
+  - id: 562
+    type_id: 4
+    power: 120
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 339
+    effect_chance: ''
+
+rototiller:
+  - id: 563
+    type_id: 5
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 340
+    effect_chance: 100
+
+sticky-web:
+  - id: 564
+    type_id: 7
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 341
+    effect_chance: ''
+
+fell-stinger:
+  - id: 565
+    type_id: 7
+    power: 50
+    pp: 25
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 342
+    effect_chance: ''
+
+phantom-force:
+  - id: 566
+    type_id: 8
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 273
+    effect_chance: ''
+
+trick-or-treat:
+  - id: 567
+    type_id: 8
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 343
+    effect_chance: ''
+
+noble-roar:
+  - id: 568
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 344
+    effect_chance: 100
+
+ion-deluge:
+  - id: 569
+    type_id: 13
+    power: ''
+    pp: 25
+    accuracy: ''
+    priority: 1
+    damage_class: status
+    effect_id: 345
+    effect_chance: ''
+
+parabolic-charge:
+  - id: 570
+    type_id: 13
+    power: 65
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 346
+    effect_chance: ''
+
+forests-curse:
+  - id: 571
+    type_id: 12
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 376
+    effect_chance: ''
+
+petal-blizzard:
+  - id: 572
+    type_id: 12
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 379
+    effect_chance: ''
+
+freeze-dry:
+  - id: 573
+    type_id: 15
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 380
+    effect_chance: 10
+
+disarming-voice:
+  - id: 574
+    type_id: 18
+    power: 40
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 381
+    effect_chance: ''
+
+parting-shot:
+  - id: 575
+    type_id: 17
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 347
+    effect_chance: 100
+
+topsy-turvy:
+  - id: 576
+    type_id: 17
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 348
+    effect_chance: ''
+
+draining-kiss:
+  - id: 577
+    type_id: 18
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 349
+    effect_chance: ''
+
+crafty-shield:
+  - id: 578
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 3
+    damage_class: status
+    effect_id: 350
+    effect_chance: ''
+
+flower-shield:
+  - id: 579
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 351
+    effect_chance: 100
+
+grassy-terrain:
+  - id: 580
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 352
+    effect_chance: ''
+
+misty-terrain:
+  - id: 581
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 353
+    effect_chance: ''
+
+electrify:
+  - id: 582
+    type_id: 13
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 354
+    effect_chance: ''
+
+play-rough:
+  - id: 583
+    type_id: 18
+    power: 90
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 69
+    effect_chance: 10
+
+fairy-wind:
+  - id: 584
+    type_id: 18
+    power: 40
+    pp: 30
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+moonblast:
+  - id: 585
+    type_id: 18
+    power: 95
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 72
+    effect_chance: 30
+
+boomburst:
+  - id: 586
+    type_id: 1
+    power: 140
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 379
+    effect_chance: ''
+
+fairy-lock:
+  - id: 587
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 355
+    effect_chance: ''
+
+kings-shield:
+  - id: 588
+    type_id: 9
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 356
+    effect_chance: ''
+
+play-nice:
+  - id: 589
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 357
+    effect_chance: 100
+
+confide:
+  - id: 590
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 358
+    effect_chance: 100
+
+diamond-storm:
+  - id: 591
+    type_id: 6
+    power: 100
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 359
+    effect_chance: 50
+
+steam-eruption:
+  - id: 592
+    type_id: 11
+    power: 110
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 5
+    effect_chance: 30
+
+hyperspace-hole:
+  - id: 593
+    type_id: 14
+    power: 80
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 360
+    effect_chance: ''
+
+water-shuriken:
+  - id: 594
+    type_id: 11
+    power: 15
+    pp: 20
+    accuracy: 100
+    priority: 1
+    damage_class: special
+    effect_id: 361
+    effect_chance: ''
+
+mystical-fire:
+  - id: 595
+    type_id: 10
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 72
+    effect_chance: 100
+
+spiky-shield:
+  - id: 596
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 362
+    effect_chance: ''
+
+aromatic-mist:
+  - id: 597
+    type_id: 18
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 363
+    effect_chance: ''
+
+eerie-impulse:
+  - id: 598
+    type_id: 13
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 62
+    effect_chance: ''
+
+venom-drench:
+  - id: 599
+    type_id: 4
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 364
+    effect_chance: 100
+
+powder:
+  - id: 600
+    type_id: 7
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 1
+    damage_class: status
+    effect_id: 378
+    effect_chance: ''
+
+geomancy:
+  - id: 601
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 366
+    effect_chance: ''
+
+magnetic-flux:
+  - id: 602
+    type_id: 13
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 367
+    effect_chance: ''
+
+  ppy-hour:
+  - id: 603
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 368
+    effect_chance: ''
+
+electric-terrain:
+  - id: 604
+    type_id: 13
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 369
+    effect_chance: ''
+
+dazzling-gleam:
+  - id: 605
+    type_id: 18
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+celebrate:
+  - id: 606
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 370
+    effect_chance: ''
+
+hold-hands:
+  - id: 607
+    type_id: 1
+    power: ''
+    pp: 40
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 371
+    effect_chance: ''
+
+baby-doll-eyes:
+  - id: 608
+    type_id: 18
+    power: ''
+    pp: 30
+    accuracy: 100
+    priority: 1
+    damage_class: status
+    effect_id: 365
+    effect_chance: ''
+
+nuzzle:
+  - id: 609
+    type_id: 13
+    power: 20
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 372
+    effect_chance: 100
+
+hold-back:
+  - id: 610
+    type_id: 1
+    power: 40
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 102
+    effect_chance: ''
+
+infestation:
+  - id: 611
+    type_id: 7
+    power: 20
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 43
+    effect_chance: 100  power-up-punch:
+  - id: 612
+    type_id: 2
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 375
+    effect_chance: 100
+
+oblivion-wing:
+  - id: 613
+    type_id: 3
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 349
+    effect_chance: ''
+
+thousand-arrows:
+  - id: 614
+    type_id: 5
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 373
+    effect_chance: 100
+
+thousand-waves:
+  - id: 615
+    type_id: 5
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 374
+    effect_chance: ''
+
+lands-wrath:
+  - id: 616
+    type_id: 5
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+light-of-ruin:
+  - id: 617
+    type_id: 18
+    power: 140
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 270
+    effect_chance: ''
+
+origin-pulse:
+  - id: 618
+    type_id: 11
+    power: 110
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+precipice-blades:
+  - id: 619
+    type_id: 5
+    power: 120
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+dragon-ascent:
+  - id: 620
+    type_id: 3
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 230
+    effect_chance: 100
+
+hyperspace-fury:
+  - id: 621
+    type_id: 17
+    power: 100
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 360
+    effect_chance: 100
+
+breakneck-blitz--physical:
+  - id: 622
+    type_id: 1
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+breakneck-blitz--special:
+  - id: 623
+    type_id: 1
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+all-out-pummeling--physical:
+  - id: 624
+    type_id: 2
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+all-out-pummeling--special:
+  - id: 625
+    type_id: 2
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+supersonic-skystrike--physical:
+  - id: 626
+    type_id: 3
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+supersonic-skystrike--special:
+  - id: 627
+    type_id: 3
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+acid-downpour--physical:
+  - id: 628
+    type_id: 4
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+acid-downpour--special:
+  - id: 629
+    type_id: 4
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+tectonic-rage--physical:
+  - id: 630
+    type_id: 5
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+tectonic-rage--special:
+  - id: 631
+    type_id: 5
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+continental-crush--physical:
+  - id: 632
+    type_id: 6
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+continental-crush--special:
+  - id: 633
+    type_id: 6
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+savage-spin-out--physical:
+  - id: 634
+    type_id: 7
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+savage-spin-out--special:
+  - id: 635
+    type_id: 7
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+never-ending-nightmare--physical:
+  - id: 636
+    type_id: 8
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+never-ending-nightmare--special:
+  - id: 637
+    type_id: 8
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+corkscrew-crash--physical:
+  - id: 638
+    type_id: 9
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+corkscrew-crash--special:
+  - id: 639
+    type_id: 9
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+inferno-overdrive--physical:
+  - id: 640
+    type_id: 10
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+inferno-overdrive--special:
+  - id: 641
+    type_id: 10
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+hydro-vortex--physical:
+  - id: 642
+    type_id: 11
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+hydro-vortex--special:
+  - id: 643
+    type_id: 11
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+bloom-doom--physical:
+  - id: 644
+    type_id: 12
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+bloom-doom--special:
+  - id: 645
+    type_id: 12
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+gigavolt-havoc--physical:
+  - id: 646
+    type_id: 13
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+gigavolt-havoc--special:
+  - id: 647
+    type_id: 13
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+shattered-psyche--physical:
+  - id: 648
+    type_id: 14
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+shattered-psyche--special:
+  - id: 649
+    type_id: 14
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+subzero-slammer--physical:
+  - id: 650
+    type_id: 15
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+subzero-slammer--special:
+  - id: 651
+    type_id: 15
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+devastating-drake--physical:
+  - id: 652
+    type_id: 16
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+devastating-drake--special:
+  - id: 653
+    type_id: 16
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+black-hole-eclipse--physical:
+  - id: 654
+    type_id: 17
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+black-hole-eclipse--special:
+  - id: 655
+    type_id: 17
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+twinkle-tackle--physical:
+  - id: 656
+    type_id: 18
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+twinkle-tackle--special:
+  - id: 657
+    type_id: 18
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+catastropika:
+  - id: 658
+    type_id: 13
+    power: 210
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+shore-up:
+  - id: 659
+    type_id: 5
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 382
+    effect_chance: ''
+
+first-impression:
+  - id: 660
+    type_id: 7
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 2
+    damage_class: physical
+    effect_id: 383
+    effect_chance: ''
+
+baneful-bunker:
+  - id: 661
+    type_id: 4
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 384
+    effect_chance: ''
+
+spirit-shackle:
+  - id: 662
+    type_id: 8
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 385
+    effect_chance: ''
+
+darkest-lariat:
+  - id: 663
+    type_id: 17
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 304
+    effect_chance: ''
+
+sparkling-aria:
+  - id: 664
+    type_id: 11
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 386
+    effect_chance: ''
+
+ice-hammer:
+  - id: 665
+    type_id: 15
+    power: 100
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 219
+    effect_chance: 100
+
+floral-healing:
+  - id: 666
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 387
+    effect_chance: ''
+
+high-hor  power:
+  - id: 667
+    type_id: 5
+    power: 95
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+strength-sap:
+  - id: 668
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 388
+    effect_chance: 100
+
+solar-blade:
+  - id: 669
+    type_id: 12
+    power: 125
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 152
+    effect_chance: ''
+
+leafage:
+  - id: 670
+    type_id: 12
+    power: 40
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+spotlight:
+  - id: 671
+    type_id: 1
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 3
+    damage_class: status
+    effect_id: 389
+    effect_chance: ''
+
+toxic-thread:
+  - id: 672
+    type_id: 4
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 390
+    effect_chance: 100
+
+laser-focus:
+  - id: 673
+    type_id: 1
+    power: ''
+    pp: 30
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 391
+    effect_chance: ''
+
+gear-up:
+  - id: 674
+    type_id: 9
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 392
+    effect_chance: ''
+
+throat-chop:
+  - id: 675
+    type_id: 17
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 393
+    effect_chance: 100
+
+pollen-puff:
+  - id: 676
+    type_id: 7
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 394
+    effect_chance: ''
+
+anchor-shot:
+  - id: 677
+    type_id: 9
+    power: 80
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 385
+    effect_chance: ''
+
+psychic-terrain:
+  - id: 678
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 395
+    effect_chance: ''
+
+lunge:
+  - id: 679
+    type_id: 7
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 396
+    effect_chance: 100
+
+fire-lash:
+  - id: 680
+    type_id: 10
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 397
+    effect_chance: 100  power-trip:
+  - id: 681
+    type_id: 17
+    power: 20
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 306
+    effect_chance: ''
+
+burn-up:
+  - id: 682
+    type_id: 10
+    power: 130
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 398
+    effect_chance: ''
+
+speed-swap:
+  - id: 683
+    type_id: 14
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 399
+    effect_chance: ''
+
+smart-strike:
+  - id: 684
+    type_id: 9
+    power: 70
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 18
+    effect_chance: ''
+
+purify:
+  - id: 685
+    type_id: 4
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 400
+    effect_chance: ''
+
+revelation-dance:
+  - id: 686
+    type_id: 1
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 401
+    effect_chance: ''
+
+core-enforcer:
+  - id: 687
+    type_id: 16
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 402
+    effect_chance: ''
+
+trop-kick:
+  - id: 688
+    type_id: 12
+    power: 70
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 396
+    effect_chance: 100
+
+instruct:
+  - id: 689
+    type_id: 14
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 403
+    effect_chance: ''
+
+beak-blast:
+  - id: 690
+    type_id: 3
+    power: 100
+    pp: 15
+    accuracy: 100
+    priority: -3
+    damage_class: physical
+    effect_id: 404
+    effect_chance: ''
+
+clanging-scales:
+  - id: 691
+    type_id: 16
+    power: 110
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 405
+    effect_chance: 100
+
+dragon-hammer:
+  - id: 692
+    type_id: 16
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+brutal-swing:
+  - id: 693
+    type_id: 17
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 406
+    effect_chance: ''
+
+aurora-veil:
+  - id: 694
+    type_id: 15
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 407
+    effect_chance: ''
+
+sinister-arrow-raid:
+  - id: 695
+    type_id: 8
+    power: 180
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+malicious-moonsault:
+  - id: 696
+    type_id: 17
+    power: 180
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+oceanic-operetta:
+  - id: 697
+    type_id: 11
+    power: 195
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+guardian-of-alola:
+  - id: 698
+    type_id: 18
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 413
+    effect_chance: ''
+
+soul-stealing-7-star-strike:
+  - id: 699
+    type_id: 8
+    power: 195
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+stoked-sparksurfer:
+  - id: 700
+    type_id: 13
+    power: 175
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 7
+    effect_chance: 100
+
+pulverizing-pancake:
+  - id: 701
+    type_id: 1
+    power: 210
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+extreme-evoboost:
+  - id: 702
+    type_id: 1
+    power: ''
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 414
+    effect_chance: 100
+
+genesis-supernova:
+  - id: 703
+    type_id: 14
+    power: 185
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 415
+    effect_chance: ''
+
+shell-trap:
+  - id: 704
+    type_id: 10
+    power: 150
+    pp: 5
+    accuracy: 100
+    priority: -3
+    damage_class: special
+    effect_id: 408
+    effect_chance: ''
+
+fleur-cannon:
+  - id: 705
+    type_id: 18
+    power: 130
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 205
+    effect_chance: 100
+
+psychic-fangs:
+  - id: 706
+    type_id: 14
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 187
+    effect_chance: ''
+
+stomping-tantrum:
+  - id: 707
+    type_id: 5
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 409
+    effect_chance: ''
+
+shadow-bone:
+  - id: 708
+    type_id: 8
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 20
+
+accelerock:
+  - id: 709
+    type_id: 6
+    power: 40
+    pp: 20
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: 104
+    effect_chance: ''
+
+liquidation:
+  - id: 710
+    type_id: 11
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 70
+    effect_chance: 20
+
+prismatic-laser:
+  - id: 711
+    type_id: 14
+    power: 160
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+spectral-thief:
+  - id: 712
+    type_id: 8
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 410
+    effect_chance: ''
+
+sunsteel-strike:
+  - id: 713
+    type_id: 9
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 411
+    effect_chance: ''
+
+moongeist-beam:
+  - id: 714
+    type_id: 8
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 411
+    effect_chance: ''
+
+tearful-look:
+  - id: 715
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 412
+    effect_chance: 100
+
+zing-zap:
+  - id: 716
+    type_id: 13
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 32
+    effect_chance: 30
+
+natures-madness:
+  - id: 717
+    type_id: 18
+    power: ''
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 41
+    effect_chance: ''
+
+multi-attack:
+  - id: 718
+    type_id: 1
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 269
+    effect_chance: ''
+
+10-000-000-volt-thunderbolt:
+  - id: 719
+    type_id: 13
+    power: 195
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+mind-blown:
+  - id: 720
+    type_id: 10
+    power: 150
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 420
+    effect_chance: ''
+
+plasma-fists:
+  - id: 721
+    type_id: 13
+    power: 100
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+photon-geyser:
+  - id: 722
+    type_id: 14
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+light-that-burns-the-sky:
+  - id: 723
+    type_id: 14
+    power: 200
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 416
+    effect_chance: ''
+
+searing-sunraze-smash:
+  - id: 724
+    type_id: 9
+    power: 200
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 411
+    effect_chance: ''
+
+menacing-moonraze-maelstrom:
+  - id: 725
+    type_id: 8
+    power: 200
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 411
+    effect_chance: ''
+
+lets-snuggle-forever:
+  - id: 726
+    type_id: 18
+    power: 190
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 417
+    effect_chance: ''
+
+splintered-stormshards:
+  - id: 727
+    type_id: 6
+    power: 190
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 418
+    effect_chance: ''
+
+clangorous-soulblaze:
+  - id: 728
+    type_id: 16
+    power: 185
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 419
+    effect_chance: 100
+
+  ppy-zap:
+  - id: 729
+    type_id: 13
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 2
+    damage_class: physical
+    effect_id: 1
+    effect_chance: 100
+
+splishy-splash:
+  - id: 730
+    type_id: 11
+    power: 90
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 30
+
+floaty-fall:
+  - id: 731
+    type_id: 3
+    power: 90
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: 30
+
+pika-papow:
+  - id: 732
+    type_id: 13
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+bouncy-bubble:
+  - id: 733
+    type_id: 11
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+buzzy-buzz:
+  - id: 734
+    type_id: 13
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 100
+
+sizzly-slide:
+  - id: 735
+    type_id: 10
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: 100
+
+glitzy-glow:
+  - id: 736
+    type_id: 14
+    power: 80
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+baddy-bad:
+  - id: 737
+    type_id: 17
+    power: 80
+    pp: 15
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+  ppy-seed:
+  - id: 738
+    type_id: 12
+    power: 100
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: 100
+
+freezy-frost:
+  - id: 739
+    type_id: 15
+    power: 100
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+sparkly-swirl:
+  - id: 740
+    type_id: 18
+    power: 120
+    pp: 5
+    accuracy: 85
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+veevee-volley:
+  - id: 741
+    type_id: 1
+    power: ''
+    pp: 20
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+double-iron-bash:
+  - id: 742
+    type_id: 9
+    power: 60
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 45
+    effect_chance: 30
+
+max-guard:
+  - id: 743
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: 112
+    effect_chance: ''
+
+dynamax-cannon:
+  - id: 744
+    type_id: 16
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 421
+    effect_chance: ''
+
+snipe-shot:
+  - id: 745
+    type_id: 11
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 422
+    effect_chance: ''
+
+jaw-lock:
+  - id: 746
+    type_id: 17
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 423
+    effect_chance: ''
+
+stuff-cheeks:
+  - id: 747
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 424
+    effect_chance: 100
+
+no-retreat:
+  - id: 748
+    type_id: 2
+    power: ''
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 425
+    effect_chance: 100
+
+tar-shot:
+  - id: 749
+    type_id: 6
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 426
+    effect_chance: 100
+
+magic-powder:
+  - id: 750
+    type_id: 14
+    power: ''
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 427
+    effect_chance: ''
+
+dragon-darts:
+  - id: 751
+    type_id: 16
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 428
+    effect_chance: ''
+
+teatime:
+  - id: 752
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 429
+    effect_chance: ''
+
+octolock:
+  - id: 753
+    type_id: 2
+    power: ''
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 430
+    effect_chance: ''
+
+bolt-beak:
+  - id: 754
+    type_id: 13
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 431
+    effect_chance: ''
+
+fishious-rend:
+  - id: 755
+    type_id: 11
+    power: 85
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 431
+    effect_chance: ''
+
+court-change:
+  - id: 756
+    type_id: 1
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 432
+    effect_chance: ''
+
+max-flare:
+  - id: 757
+    type_id: 10
+    power: 100
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-flutterby:
+  - id: 758
+    type_id: 7
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-lightning:
+  - id: 759
+    type_id: 13
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-strike:
+  - id: 760
+    type_id: 1
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-knuckle:
+  - id: 761
+    type_id: 2
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-phantasm:
+  - id: 762
+    type_id: 8
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-hailstorm:
+  - id: 763
+    type_id: 15
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-ooze:
+  - id: 764
+    type_id: 4
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-geyser:
+  - id: 765
+    type_id: 11
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-airstream:
+  - id: 766
+    type_id: 3
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-starfall:
+  - id: 767
+    type_id: 18
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-wyrmwind:
+  - id: 768
+    type_id: 16
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-mindstorm:
+  - id: 769
+    type_id: 14
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-rockfall:
+  - id: 770
+    type_id: 6
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-quake:
+  - id: 771
+    type_id: 5
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-darkness:
+  - id: 772
+    type_id: 17
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-overgrowth:
+  - id: 773
+    type_id: 12
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+max-steelspike:
+  - id: 774
+    type_id: 9
+    power: 10
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+clangorous-soul:
+  - id: 775
+    type_id: 16
+    power: ''
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 433
+    effect_chance: 100
+
+body-press:
+  - id: 776
+    type_id: 2
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 434
+    effect_chance: ''
+
+decorate:
+  - id: 777
+    type_id: 18
+    power: ''
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 435
+    effect_chance: 100
+
+drum-beating:
+  - id: 778
+    type_id: 12
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 71
+    effect_chance: 100
+
+snap-trap:
+  - id: 779
+    type_id: 12
+    power: 35
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 43
+    effect_chance: 100
+
+pyro-ball:
+  - id: 780
+    type_id: 10
+    power: 120
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 5
+    effect_chance: 10
+
+behemoth-blade:
+  - id: 781
+    type_id: 9
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 436
+    effect_chance: ''
+
+behemoth-bash:
+  - id: 782
+    type_id: 9
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 436
+    effect_chance: ''
+
+aura-wheel:
+  - id: 783
+    type_id: 13
+    power: 110
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 437
+    effect_chance: 100
+
+breaking-swipe:
+  - id: 784
+    type_id: 16
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 396
+    effect_chance: 100
+
+branch-poke:
+  - id: 785
+    type_id: 12
+    power: 40
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+overdrive:
+  - id: 786
+    type_id: 13
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 439
+    effect_chance: ''
+  pple-acid:
+  - id: 787
+    type_id: 12
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 440
+    effect_chance: 100
+
+grav  pple:
+  - id: 788
+    type_id: 12
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 397
+    effect_chance: 100
+
+spirit-break:
+  - id: 789
+    type_id: 18
+    power: 75
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 72
+    effect_chance: 100
+
+strange-steam:
+  - id: 790
+    type_id: 18
+    power: 90
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 77
+    effect_chance: 20
+
+life-dew:
+  - id: 791
+    type_id: 11
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 441
+    effect_chance: ''
+
+obstruct:
+  - id: 792
+    type_id: 17
+    power: ''
+    pp: 10
+    accuracy: 100
+    priority: 4
+    damage_class: status
+    effect_id: 442
+    effect_chance: ''
+
+false-surrender:
+  - id: 793
+    type_id: 17
+    power: 80
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: 18
+    effect_chance: ''
+
+meteor-assault:
+  - id: 794
+    type_id: 2
+    power: 150
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 81
+    effect_chance: ''
+
+eternabeam:
+  - id: 795
+    type_id: 16
+    power: 160
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 81
+    effect_chance: ''
+
+steel-beam:
+  - id: 796
+    type_id: 9
+    power: 140
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: 420
+    effect_chance: ''
+
+expanding-force:
+  - id: 797
+    type_id: 14
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+steel-roller:
+  - id: 798
+    type_id: 9
+    power: 130
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+scale-shot:
+  - id: 799
+    type_id: 16
+    power: 25
+    pp: 20
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 443
+    effect_chance: ''
+
+meteor-beam:
+  - id: 800
+    type_id: 6
+    power: 120
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 100
+
+shell-side-arm:
+  - id: 801
+    type_id: 4
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 20
+
+misty-explosion:
+  - id: 802
+    type_id: 18
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+grassy-glide:
+  - id: 803
+    type_id: 12
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+rising-voltage:
+  - id: 804
+    type_id: 13
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+terrain-pulse:
+  - id: 805
+    type_id: 1
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+skitter-smack:
+  - id: 806
+    type_id: 7
+    power: 70
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: 100
+
+burning-jealousy:
+  - id: 807
+    type_id: 10
+    power: 70
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 100
+
+lash-out:
+  - id: 808
+    type_id: 17
+    power: 75
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+poltergeist:
+  - id: 809
+    type_id: 8
+    power: 110
+    pp: 5
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+corrosive-gas:
+  - id: 810
+    type_id: 4
+    power: ''
+    pp: 40
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: 1
+    effect_chance: ''
+
+coaching:
+  - id: 811
+    type_id: 2
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 1
+    effect_chance: 100
+
+flip-turn:
+  - id: 812
+    type_id: 11
+    power: 60
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+triple-axel:
+  - id: 813
+    type_id: 15
+    power: 20
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+dual-wingbeat:
+  - id: 814
+    type_id: 3
+    power: 40
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+scorching-sands:
+  - id: 815
+    type_id: 5
+    power: 70
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 30
+
+jungle-healing:
+  - id: 816
+    type_id: 12
+    power: ''
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: 1
+    effect_chance: ''
+
+wicked-blow:
+  - id: 817
+    type_id: 17
+    power: 80
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+surging-strikes:
+  - id: 818
+    type_id: 11
+    power: 25
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+thunder-cage:
+  - id: 819
+    type_id: 13
+    power: 80
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 100
+
+dragon-energy:
+  - id: 820
+    type_id: 16
+    power: 150
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+freezing-glare:
+  - id: 821
+    type_id: 14
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 10
+
+fiery-wrath:
+  - id: 822
+    type_id: 17
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: 20
+
+thunderous-kick:
+  - id: 823
+    type_id: 2
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: 100
+
+glacial-lance:
+  - id: 824
+    type_id: 15
+    power: 130
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: 1
+    effect_chance: ''
+
+astral-barrage:
+  - id: 825
+    type_id: 8
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+eerie-spell:
+  - id: 826
+    type_id: 14
+    power: 80
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: 1
+    effect_chance: ''
+
+dire-claw:
+  - id: 827
+    type_id: 4
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+psyshield-bash:
+  - id: 828
+    type_id: 14
+    power: 70
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: '' power-shift:
+  - id: 829
+    type_id: 1
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+stone-axe:
+  - id: 830
+    type_id: 6
+    power: 65
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+springtide-storm:
+  - id: 831
+    type_id: 18
+    power: 100
+    pp: 5
+    accuracy: 80
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+mystica power:
+  - id: 832
+    type_id: 14
+    power: 70
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+raging-fury:
+  - id: 833
+    type_id: 10
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+wave-crash:
+  - id: 834
+    type_id: 11
+    power: 120
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+chloroblast:
+  - id: 835
+    type_id: 12
+    power: 150
+    pp: 5
+    accuracy: 95
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+mountain-gale:
+  - id: 836
+    type_id: 15
+    power: 100
+    pp: 10
+    accuracy: 85
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+victory-dance:
+  - id: 837
+    type_id: 2
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+headlong-rush:
+  - id: 838
+    type_id: 5
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+barb-barrage:
+  - id: 839
+    type_id: 4
+    power: 60
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+esper-wing:
+  - id: 840
+    type_id: 14
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+bitter-malice:
+  - id: 841
+    type_id: 8
+    power: 75
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+shelter:
+  - id: 842
+    type_id: 9
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+triple-arrows:
+  - id: 843
+    type_id: 2
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+infernal-parade:
+  - id: 844
+    type_id: 8
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+ceaseless-edge:
+  - id: 845
+    type_id: 17
+    power: 65
+    pp: 15
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+bleakwind-storm:
+  - id: 846
+    type_id: 3
+    power: 100
+    pp: 10
+    accuracy: 80
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+wildbolt-storm:
+  - id: 847
+    type_id: 13
+    power: 100
+    pp: 10
+    accuracy: 80
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+sandsear-storm:
+  - id: 848
+    type_id: 5
+    power: 100
+    pp: 10
+    accuracy: 80
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+lunar-blessing:
+  - id: 849
+    type_id: 14
+    power: 0
+    pp: 5
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+take-heart:
+  - id: 850
+    type_id: 14
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+tera-blast:
+  - id: 851
+    type_id: 1
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+silk-trap:
+  - id: 852
+    type_id: 7
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 4
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+axe-kick:
+  - id: 853
+    type_id: 2
+    power: 120
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+last-respects:
+  - id: 854
+    type_id: 8
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+lumina-crash:
+  - id: 855
+    type_id: 14
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+order-up:
+  - id: 856
+    type_id: 16
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+jet-punch:
+  - id: 857
+    type_id: 11
+    power: 60
+    pp: 15
+    accuracy: 100
+    priority: 1
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+spicy-extract:
+  - id: 858
+    type_id: 12
+    power: 0
+    pp: 15
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+spin-out:
+  - id: 859
+    type_id: 9
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+population-bomb:
+  - id: 860
+    type_id: 1
+    power: 20
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+ice-spinner:
+  - id: 861
+    type_id: 15
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+glaive-rush:
+  - id: 862
+    type_id: 16
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+revival-blessing:
+  - id: 863
+    type_id: 1
+    power: 0
+    pp: 1
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+salt-cure:
+  - id: 864
+    type_id: 6
+    power: 40
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+triple-dive:
+  - id: 865
+    type_id: 11
+    power: 30
+    pp: 10
+    accuracy: 95
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+mortal-spin:
+  - id: 866
+    type_id: 4
+    power: 30
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+doodle:
+  - id: 867
+    type_id: 1
+    power: 0
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+fillet-away:
+  - id: 868
+    type_id: 1
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+kowtow-cleave:
+  - id: 869
+    type_id: 17
+    power: 85
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+flower-trick:
+  - id: 870
+    type_id: 12
+    power: 70
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+torch-song:
+  - id: 871
+    type_id: 10
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+aqua-step:
+  - id: 872
+    type_id: 11
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+raging-bull:
+  - id: 873
+    type_id: 1
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+make-it-rain:
+  - id: 874
+    type_id: 9
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+psyblade:
+  - id: 875
+    type_id: 14
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+hydro-steam:
+  - id: 876
+    type_id: 11
+    power: 80
+    pp: 15
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+ruination:
+  - id: 877
+    type_id: 17
+    power: 1
+    pp: 10
+    accuracy: 90
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+collision-course:
+  - id: 878
+    type_id: 2
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+electro-drift:
+  - id: 879
+    type_id: 13
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+shed-tail:
+  - id: 880
+    type_id: 1
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+chilly-reception:
+  - id: 881
+    type_id: 15
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+tidy-up:
+  - id: 882
+    type_id: 1
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+snowscape:
+  - id: 883
+    type_id: 15
+    power: 0
+    pp: 10
+    accuracy: ''
+    priority: 0
+    damage_class: status
+    effect_id: ''
+    effect_chance: ''
+
+pounce:
+  - id: 884
+    type_id: 7
+    power: 50
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+trailblaze:
+  - id: 885
+    type_id: 12
+    power: 50
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+chilling-water:
+  - id: 886
+    type_id: 11
+    power: 50
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+hyper-drill:
+  - id: 887
+    type_id: 1
+    power: 100
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+twin-beam:
+  - id: 888
+    type_id: 14
+    power: 40
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+rage-fist:
+  - id: 889
+    type_id: 8
+    power: 50
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+armor-cannon:
+  - id: 890
+    type_id: 10
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: special
+    effect_id: ''
+    effect_chance: ''
+
+bitter-blade:
+  - id: 891
+    type_id: 10
+    power: 90
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+double-shock:
+  - id: 892
+    type_id: 13
+    power: 120
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+gigaton-hammer:
+  - id: 893
+    type_id: 9
+    power: 160
+    pp: 5
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+com ppance:
+  - id: 894
+    type_id: 17
+    power: 1
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+aqua-cutter:
+  - id: 895
+    type_id: 11
+    power: 70
+    pp: 20
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+blazing-torque:
+  - id: 896
+    type_id: 10
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+wicked-torque:
+  - id: 897
+    type_id: 17
+    power: 80
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+noxious-torque:
+  - id: 898
+    type_id: 4
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+combat-torque:
+  - id: 899
+    type_id: 2
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
+
+magical-torque:
+  - id: 900
+    type_id: 18
+    power: 100
+    pp: 10
+    accuracy: 100
+    priority: 0
+    damage_class: physical
+    effect_id: ''
+    effect_chance: ''
