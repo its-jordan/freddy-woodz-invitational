@@ -4,7 +4,7 @@ export default async function Home() {
   return (
     <main className='mb-16'>
       <div className='notice'>
-        Teams accurate as of 09&#8722;08&#8722;2023 at 1&#58;20am EST.
+        Teams accurate as of 09&#8722;08&#8722;2023 at 7&#58;38pm EST.
       </div>
       <div className='teams-container'>
         <PlayerTeam
