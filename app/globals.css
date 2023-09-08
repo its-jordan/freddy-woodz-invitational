@@ -1201,3 +1201,24 @@ main {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 0.5rem;
 }
+
+.notice {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--base);
+  border: 3px solid var(--primary);
+  box-shadow: 5px 5px 0 var(--primary);
+  font-size: 0.875rem;
+  color: var(--primary);
+}
+
+.notice::before {
+  content: '!';
+  font-weight: bold;
+  color: var(--fire);
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
