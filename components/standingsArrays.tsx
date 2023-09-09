@@ -174,14 +174,15 @@ export default async function Standings() {
         </div>
         {sortedStandings.map((player) => {
           return (
-            <div
+            <Link
+              href={`./#${player.id}`}
               data-player={player.id}
               className='standings-record'
               key={player.id}>
               <div className='standings-name'>{player.name.toString()}</div>
               <div className='standings-wins'>{player.wins.toString()}</div>
               <div className='standings-losses'>{player.losses.toString()}</div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -200,16 +201,6 @@ export default async function Standings() {
           participants.participant.name.slice(1)}
       </div>
     );
-  }
-
-  async function displayNameValue(e: string) {
-    let participants = await ParticipantAdapter.show(
-      'ojemCQBOix3jaZ8ALVKrxupf6f3gKdQTaGZ8h1kB',
-      'freddywoodz',
-      `208943635`
-    );
-    let name = participants.participant.name.toString();
-    return name;
   }
 
   return (

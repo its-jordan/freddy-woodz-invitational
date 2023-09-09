@@ -9,6 +9,7 @@ export default async function Home() {
       <div className='teams-container'>
         <PlayerTeam
           player={'SeanBoyQ'}
+          playerId={208943645}
           p1={'pinsir-mega'}
           p2={'slowking-galar'}
           p3={'zygarde-50'}
@@ -22,6 +23,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'resolamxxy'}
+          playerId={208943647}
           p1={'manaphy'}
           p2={'garchomp'}
           p3={'azelf'}
@@ -35,6 +37,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'dtbaggins'}
+          playerId={208943648}
           p1={'aegislash-blade'}
           p2={'rotom-wash'}
           p3={'blissey'}
@@ -48,6 +51,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'castleflutes'}
+          playerId={208943656}
           p1={'kangaskhan-mega'}
           p2={'volcarona'}
           p3={'jirachi'}
@@ -61,6 +65,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'Tokotoro'}
+          playerId={208943657}
           p1={'swampert-mega'}
           p2={'ferrothorn'}
           p3={'pelipper'}
@@ -74,6 +79,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'danknett'}
+          playerId={208943667}
           p1={'tyranitar-mega'}
           p2={'excadrill'}
           p3={'rotom-heat'}
@@ -87,6 +93,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'ifurgat'}
+          playerId={208943635}
           p1={'lopunny-mega'}
           p2={'landorus-therian'}
           p3={'starmie'}
@@ -100,6 +107,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'foxish'}
+          playerId={208943679}
           p1={'gliscor'}
           p2={'alakazam-mega'}
           p3={'infernape'}
@@ -113,6 +121,7 @@ export default async function Home() {
         />
         <PlayerTeam
           player={'its_jordan'}
+          playerId={208943681}
           p1={'lilligant-hisui'}
           p2={'blaziken'}
           p3={'venusaur-mega'}

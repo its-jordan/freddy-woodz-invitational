@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 interface Pokemon {
   player: string;
+  playerId: number;
   p1: string;
   p2: string;
   p3: string;
@@ -22,6 +23,7 @@ interface Pokemon {
 
 export default async function PlayerTeam({
   player,
+  playerId,
   p1,
   p2,
   p3,
@@ -446,7 +448,7 @@ export default async function PlayerTeam({
   }
 
   return (
-    <div className='team' id={`${playerName}`}>
+    <div className='team' id={playerId.toString()} data-player={playerId}>
       <div className='teamname'>{playerName}</div>
       <div className='player-team'>
         {pokearray.map((values, index) => {
