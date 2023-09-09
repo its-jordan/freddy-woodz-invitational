@@ -1,9 +1,10 @@
 import { PokemonClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
-import UberStats from '../ubers-stats.json';
-import Moves from '../moves.json';
-import TypeIds from '../typeIds.json';
-import Effects from '../moveEffects.json';
+// @ts-ignore
+import Data from '../data/uber-stats.yaml';
+import Moves from '../data/moves.json';
+import TypeIds from '../data/typeIds.json';
+import Effects from '../data/moveEffects.json';
 import Link from 'next/link';
 
 interface Pokemon {
@@ -167,7 +168,7 @@ export default async function PlayerTeam({
   }
 
   function displayMoves(e: string) {
-    const statsArray = UberStats;
+    const statsArray = Data;
     const pokemon = e;
     // @ts-ignore
     let stats = statsArray[pokemon];
@@ -314,6 +315,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok1.species,
       weakness: pok1Array,
+      weight: pok1.weight,
     },
     {
       name: pok2.name,
@@ -324,6 +326,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok2.species,
       weakness: pok2Array,
+      weight: pok2.weight,
     },
     {
       name: pok3.name,
@@ -334,6 +337,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok3.species,
       weakness: pok3Array,
+      weight: pok3.weight,
     },
     {
       name: pok4.name,
@@ -344,6 +348,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok4.species,
       weakness: pok4Array,
+      weight: pok4.weight,
     },
     {
       name: pok5.name,
@@ -354,6 +359,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok5.species,
       weakness: pok5Array,
+      weight: pok5.weight,
     },
     {
       name: pok6.name,
@@ -364,6 +370,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok6.species,
       weakness: pok6Array,
+      weight: pok6.weight,
     },
     {
       name: pok7.name,
@@ -374,6 +381,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok7.species,
       weakness: pok7Array,
+      weight: pok7.weight,
     },
     {
       name: pok8.name,
@@ -384,6 +392,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok8.species,
       weakness: pok8Array,
+      weight: pok8.weight,
     },
     {
       name: pok9.name,
@@ -394,6 +403,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok9.species,
       weakness: pok9Array,
+      weight: pok9.weight,
     },
     {
       name: pok0.name,
@@ -404,6 +414,7 @@ export default async function PlayerTeam({
         ?.replace('-incarnate', '')}.gif`,
       species: pok0.species,
       weakness: pok0Array,
+      weight: pok0.weight,
     },
   ];
 
@@ -415,7 +426,9 @@ export default async function PlayerTeam({
       sprite: `https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/56ce70c8-7180-4823-ad03-5f29f2594215/dfptijp-3a860015-8842-4067-9126-711d52512397.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU2Y2U3MGM4LTcxODAtNDgyMy1hZDAzLTVmMjlmMjU5NDIxNVwvZGZwdGlqcC0zYTg2MDAxNS04ODQyLTQwNjctOTEyNi03MTFkNTI1MTIzOTcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.bQKwQwMio-YJACXsO411cdd2JRTh7PJDuXDtQ9rGxp4`,
       species: pok1.species,
       weakness: pok1Array,
+      weight: pok1.weight,
     };
+
     pokearray = pokearray.map((u) =>
       u.name !== editedArray.name ? u : editedArray
     );
@@ -447,6 +460,18 @@ export default async function PlayerTeam({
     }
   }
 
+  function returnType(e: string) {
+    if (e == undefined) {
+      return <></>;
+    }
+    return (
+      <img
+        className={`type-icon ${e}-type`}
+        src={`icons/${e}.svg`}
+        alt={`Type icon for ${e}.`}></img>
+    );
+  }
+
   return (
     <div className='team' id={playerId.toString()} data-player={playerId}>
       <div className='teamname'>{playerName}</div>
@@ -454,6 +479,10 @@ export default async function PlayerTeam({
         {pokearray.map((values, index) => {
           return (
             <div className={`pokemon-info`} key={index}>
+              <div className='type-icon-container'>
+                {returnType(values.types[0]?.type.name)}
+                {returnType(values.types[1]?.type.name)}
+              </div>
               <Link
                 href={`https://www.smogon.com/dex/sv/pokemon/${values.name
                   ?.replace('-mega', '')
@@ -481,24 +510,23 @@ export default async function PlayerTeam({
                       })}
                     </div>
                   </div>
-                  <div className='abilities-container'>
-                    <div className='abilities'>
-                      {values.abilities?.map((value, index) => {
-                        return (
-                          <div
-                            className={`ability-box ${value.ability.name}`}
-                            key={index}>
-                            <div className='ability-name'>
-                              {value.ability.name}
-                            </div>
-                            {displayAbility(value.ability.name)}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
                 </div>
               </Link>
+              <div className='abilities-container'>
+                <div className='abilities-header'>Abilities</div>
+                <div className='abilities'>
+                  {values.abilities?.map((value, index) => {
+                    return (
+                      <div
+                        className={`ability-box ${value.ability.name}`}
+                        key={index}>
+                        <div className='ability-name'>{value.ability.name}</div>
+                        {displayAbility(value.ability.name)}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
               <div className='damage-relations-container'>
                 <div className='damage-relations-header-container'>
                   <div className='damage-relations-header'>

@@ -1,0 +1,815 @@
+pinsir-mega:
+  - quick-attack
+  - swords-dance
+  - return
+  - earthquake
+  - x-scissor
+  - close-combat
+slowking-galar:
+  - sludge-bomb
+  - future-sight
+  - chilly-reception
+  - flamethrower
+  - slack-off
+  - eerie-spell
+zygarde-50:
+  - thousand-arrows
+  - dragon-dance
+  - coil
+  - extreme-speed
+  - rest
+  - substitute
+raikou:
+  - scald
+  - thunderbolt
+  - aura-sphere
+  - volt-switch
+  - calm-mind
+  - thunder
+jellicent:
+  - scald
+  - recover
+  - hex
+  - strength-sap
+  - will-o-wisp
+  - taunt
+arcanine:
+  - extreme-speed
+  - flare-blitz
+  - morning-sun
+  - will-o-wisp
+  - wild-charge
+  - close-combat
+cloyster:
+  - icicle-spear
+  - shell-smash
+  - rock-blast
+  - liquidation
+  - ice-shard
+  - rapid-spin
+forretress:
+  - stealth-rock
+  - rapid-spin
+  - toxic-spikes
+  - spikes
+  - gyro-ball
+  - explosion
+tropius:
+  - leech-seed
+  - protect
+  - substitute
+  - air-slash
+  - hurricane
+  - sunny-day
+regigigas:
+  - protect
+  - substitute
+  - drain-punch
+  - return
+  - thunder-wave
+  - knock-off
+manaphy:
+  - tail-glow
+  - ice-beam
+  - surf
+  - heart-swap
+  - energy-ball
+  - scald
+garchomp:
+  - earthquake
+  - swords-dance
+  - scale-shot
+  - stone-edge
+  - iron-head
+  - stealth-rock
+azelf:
+  - stealth-rock
+  - taunt
+  - explosion
+  - knock-off
+  - magic-coat
+  - reflect
+breloom:
+  - spore
+  - mach-punch
+  - rock-tomb
+  - bullet-seed
+  - bulldoze
+  - swords-dance
+salamence:
+  - dragon-dance
+  - dragon-claw
+  - earthquake
+  - dual-wingbeat
+  - roost
+  - outrage
+ditto:
+  - transform
+chansey:
+  - seismic-toss
+  - soft-boiled
+  - heal-bell
+  - confide
+  - toxic
+  - wish
+ferrothorn:
+  - leech-seed
+  - gyro-ball
+  - protect
+  - spikes
+  - stealth-rock
+  - knock-off
+blaziken-mega:
+  - protect
+  - flare-blitz
+  - close-combat
+  - swords-dance
+  - blaze-kick
+  - earthquake
+landorus-therian:
+  - earthquake
+  - u-turn
+  - stealth-rock
+  - defog
+  - stone-edge
+  - knock-off
+excadrill:
+  - rapid-spin
+  - stealth-rock
+  - earthquake
+  - toxic
+  - bulldoze
+  - iron-head
+shuckle:
+  - sticky-web
+  - stealth-rock
+  - encore
+  - toxic
+  - final-gambit
+  - infestation
+diancie-mega:
+  - moonblast
+  - earth-power
+  - diamond-storm
+  - stealth-rock
+  - power-gem
+  - calm-mind
+kangaskhan-mega:
+  - fake-out
+  - power-up-punch
+  - sucker-punch
+  - seismic-toss
+  - body-slam
+  - earthquake
+  - return
+sableye-mega:
+  - recover
+  - foul-play
+  - will-o-wisp
+  - fake-out
+  - knock-off
+  - toxic
+porygon2:
+  - trick-room
+  - teleport
+  - recover
+  - ice-beam
+  - foul-play
+  - thunderbolt
+blissey:
+  - seismic-toss
+  - soft-boiled
+  - toxic
+  - wish
+  - heal-bell
+  - stealth-rock
+gliscor:
+  - earthquake
+  - toxic
+  - defog
+  - roost
+  - protect
+  - stealth-rock
+volcarona:
+  - quiver-dance
+  - fiery-dance
+  - bug-buzz
+  - giga-drain
+  - roost
+  - flamethrower
+swampert-mega:
+  - earthquake
+  - ice-punch
+  - liquidation
+  - bulk-up
+  - flip-turn
+  - waterfall
+blaziken:
+  - swords-dance
+  - close-combat
+  - protect
+  - reversal
+  - endure
+  - blaze-kick
+lopunny-mega:
+  - fake-out
+  - return
+  - close-combat
+  - high-jump-kick
+  - u-turn
+  - triple-axel
+alakazam-mega:
+  - psychic
+  - shadow-ball
+  - dazzling-gleam
+  - focus-blast
+  - nasty-plot
+  - psyshock
+pelipper:
+  - u-turn
+  - hurricane
+  - defog
+  - roost
+  - scald
+  - weather-ball
+gengar:
+  - shadow-ball
+  - sludge-wave
+  - nasty-plot
+  - giga-drain
+  - sludge-bomb
+  - focus-blast
+zoroark-hisui:
+  - bitter-malice
+  - hyper-voice
+  - flamethrower
+  - shadow-ball
+  - nasty-plot
+  - will-o-wisp
+quagsire:
+  - recover
+  - earthquake
+  - toxic
+  - scald
+  - stealth-rock
+  - curse
+rotom-wash:
+  - volt-switch
+  - will-o-wisp
+  - hydro-pump
+  - defog
+  - trick
+  - pain-split
+tyranitar-mega:
+  - earthquake
+  - crunch
+  - stone-edge
+  - pursuit
+  - stealth-rock
+  - rock-tomb
+marowak-alola:
+  - flare-blitz
+  - poltergeist
+  - swords-dance
+  - bonemerang
+  - earthquake
+  - low-kick
+skarmory:
+  - roost
+  - spikes
+  - stealth-rock
+  - whirlwind
+  - defog
+  - toxic
+gastrodon:
+  - recover
+  - earth-power
+  - toxic
+  - scald
+  - mirror-coat
+  - amnesia
+accelgor:
+  - toxic-spikes
+  - encore
+  - spikes
+  - final-gambit
+  - bug-buzz
+  - mud-shot
+torkoal:
+  - rapid-spin
+  - stealth-rock
+  - lava-plume
+  - yawn
+  - clear-smog
+  - body-press
+togekiss:
+  - air-slash
+  - dazzling-gleam
+  - flamethrower
+  - roost
+  - nasty-plot
+  - aura-sphere
+  - trick
+goodra-hisui:
+  - flash-cannon
+  - draco-meteor
+  - body-press
+  - ice-beam
+  - shelter
+  - life-dew
+umbreon:
+  - foul-play
+  - protect
+  - wish
+  - heal-bell
+  - toxic
+  - moonlight
+gardevoir-mega:
+  - hyper-voice
+  - mystical-fire
+  - psyshock
+  - taunt
+  - calm-mind
+  - psychic
+hippowdon:
+  - earthquake
+  - slack-off
+  - stealth-rock
+  - yawn
+  - toxic
+  - whirlwind
+sableye:
+  - will-o-wisp
+  - recover
+  - encore
+  - taunt
+  - reflect
+  - thunder-wave
+jirachi:
+  - iron-head
+  - u-turn
+  - healing-wish
+  - zen-headbutt
+  - ancient-power
+  - heart-stamp
+moltres:
+  - roost
+  - defog
+  - mystical-fire
+  - hurricane
+  - u-turn
+  - flamethrower
+avalugg-hisui:
+  - rapid-spin
+  - avalanche
+  - stealth-rock
+  - stone-edge
+  - earthquake
+  - crunch
+infernape:
+  - close-combat
+  - thunder-punch
+  - mach-punch
+  - fire-punch
+  - u-turn
+  - stealth-rock
+haxorus:
+  - earthquake
+  - dragon-dance
+  - outrage
+  - iron-head
+  - close-combat
+  - dragon-claw
+carbink:
+  - trick-room
+  - power-gem
+  - spikes
+  - misty-explosion
+  - stealth-rock
+  - explosion
+chandelure:
+  - shadow-ball
+  - energy-ball
+  - flamethrower
+  - psychic
+  - fire-blast
+  - trick
+gardevoir:
+  - moonblast
+  - psychic
+  - mystical-fire
+  - psyshock
+  - calm-mind
+  - destiny-bond
+kingdra:
+  - ice-beam
+  - draco-meteor
+  - hydro-pump
+  - hurricane
+  - surf
+  - dragon-pulse
+rotom-heat:
+  - overheat
+  - volt-switch
+  - trick
+  - defog
+  - tera-blast
+  - will-o-wisp
+altaria:
+  - roost
+  - will-o-wisp
+  - perish-song
+  - defog
+  - brave-bird
+  - hurricane
+bronzong:
+  - stealth-rock
+  - gyro-ball
+  - trick-room
+  - protect
+  - toxic
+  - body-press
+tentacruel:
+  - rapid-spin
+  - scald
+  - toxic-spikes
+  - haze
+  - knock-off
+  - sludge-bomb
+moltres-galar:
+  - fiery-wrath
+  - nasty-plot
+  - air-slash
+  - agility
+  - hurricane
+  - shadow-ball
+conkeldurr:
+  - mach-punch
+  - drain-punch
+  - knock-off
+  - ice-punch
+  - facade
+  - earthquake
+dragalge:
+  - draco-meteor
+  - focus-blast
+  - sludge-wave
+  - dragon-pulse
+  - sludge-bomb
+  - toxic
+slowking:
+  - scald
+  - chilly-reception
+  - future-sight
+  - slack-off
+  - teleport
+  - ice-beam
+claydol:
+  - stealth-rock
+  - rapid-spin
+  - toxic
+  - earth-power
+  - trick-room
+  - teleport
+ampharos-mega:
+  - dragon-pulse
+  - thunderbolt
+  - focus-blast
+  - dazzling-gleam
+  - volt-switch
+  - agility
+vaporeon:
+  - scald
+  - wish
+  - protect
+  - toxic
+  - ice-beam
+  - calm-mind
+flygon:
+  - earthquake
+  - dragon-dance
+  - dragon-claw
+  - outrage
+  - dual-wingbeat
+  - stone-edge
+politoed:
+  - scald
+  - toxic
+  - encore
+  - ice-beam
+  - perish-song
+  - focus-blast
+starmie:
+  - ice-beam
+  - surf
+  - psychic
+  - rapid-spin
+  - rest
+  - thunderbolt
+diancie:
+  - stealth-rock
+  - misty-explosion
+  - draining-kiss
+  - trick-room
+  - endeavor
+  - moonblast
+heliolisk:
+  - weather-ball
+  - hyper-voice
+  - volt-switch
+  - thunderbolt
+  - grass-knot
+  - focus-blast
+chesnaught:
+  - drain-punch
+  - leech-seed
+  - spiky-shield
+  - seed-bomb
+  - wood-hammer
+  - body-press
+persian-alola:
+  - parting-shot
+  - taunt
+  - knock-off
+  - foul-play
+  - thunder-wave
+  - dark-pulse
+drifblim:
+  - will-o-wisp
+  - defog
+  - destiny-bond
+  - toxic
+  - strength-sap
+  - air-slash
+toxicroak:
+  - sucker-punch
+  - gunk-shot
+  - drain-punch
+  - close-combat
+  - bulk-up
+  - poison-jab
+qwilfish:
+  - spikes
+  - toxic
+  - waterfall
+  - surf
+  - protect
+  - taunt
+sandslash-alola:
+  - triple-axel
+  - swords-dance
+  - rapid-spin
+  - leech-life
+  - iron-head
+  - earthquake
+golem-alola:
+  - explosion
+  - counter
+  - rock-slide
+  - gyro-ball
+  - earthquake
+  - stone-edge
+primeape:
+  - rage-fist
+  - drain-punch
+  - bulk-up
+  - close-combat
+  - u-turn
+  - gunk-shot
+mismagius:
+  - mystical-fire
+  - dazzling-gleam
+  - shadow-ball
+  - thunderbolt
+  - power-gem
+  - nasty-plot
+cobalion:
+  - iron-head
+  - close-combat
+  - sacred-sword
+  - stone-edge
+  - stealth-rock
+  - megahorn
+kabutops:
+  - swords-dance
+  - liquidation
+  - waterfall
+  - stone-edge
+  - superpower
+  - aqua-jet
+shedinja:
+  - will-o-wisp
+  - protect
+  - baton-pass
+  - shadow-sneak
+  - toxic
+  - poltergeist
+zangoose:
+  - facade
+  - close-combat
+  - night-slash
+  - quick-attack
+  - swords-dance
+  - knock-off
+tornadus-incarnate:
+  - heat-wave
+  - hurricane
+  - focus-plot
+  - grass-knot
+  - rain-dance
+  - nasty-plot
+luxray:
+  - facade
+  - wild-charge
+  - superpower
+  - crunch
+  - volt-switch
+  - ice-fang
+scizor-mega:
+  - swords-dance
+  - bullet-punch
+  - roost
+  - knock-off
+  - superpower
+  - u-turn
+kecleon:
+  - knock-off
+  - drain-punch
+  - shadow-sneak
+  - sucker-punch
+  - power-up-punch
+  - fake-out
+probopass:
+  - stealth-rock
+  - flash-cannon
+  - taunt
+  - earth-power
+  - smack-down
+  - volt-switch
+aegislash-blade:
+  - kings-shield
+  - shadow-sneak
+  - swords-dance
+  - iron-head
+  - sacred-sword
+  - close-combat
+bellossom:
+  - leech-seed
+  - giga-drain
+  - safeguard
+  - strength-sap
+  - quiver-dance
+amoonguss:
+  - spore
+  - giga-drain
+  - sludge-bomb
+  - foul-play
+  - clear-smog
+  - toxic
+aggron-mega:
+  - body-press
+  - Stealth-Rock
+  - Iron-Defense
+  - Heavy-Slam
+  - Rest
+  - Roar
+lilligant-hisui:
+  - close-combat
+  - victory-dance
+  - leaf-blade
+  - ice-spinner
+  - tera-blast
+  - sleep-powder
+venusaur-mega:
+  - giga-drain
+  - sludge-bomb
+  - synthesis
+  - leech-seed
+  - earth-power
+  - toxic
+rotom-frost:
+  - will-o-wisp
+  - nasty-plot
+  - thunderbolt
+  - discharge
+  - blizzard
+  - volt-switch
+serperior:
+  - Leaf Storm
+  - Glare
+  - Substitute
+  - Dragon Pulse
+  - Hidden Power Fire
+  - Leech Seed
+articuno:
+  - Freeze-Dry
+  - Roost
+  - Ice Beam
+  - Hurricane
+  - Defog
+  - Blizzard
+beedrill:
+  - u-turn
+  - gunk-shot
+  - drill-run
+  - pursuit
+  - knock-off
+  - toxic-spikes
+hoopa:
+  - nasty-plot
+  - shadow-ball
+  - focus-blast
+  - substitute
+  - thunderbolt
+  - psyshock
+beartic:
+  - swords-dance
+  - icicle-crash
+  - close-combat
+  - aqua-jet
+  - liquidation
+  - superpower
+empoleon:
+  - Scald
+  - Stealth Rock
+  - Defog
+  - Ice Beam
+  - Flash Cannon
+  - Toxic
+exeggutor-alola:
+  - Trick Room
+  - Leaf Storm
+  - Teleport
+  - Sleep Powder
+  - Leech Seed
+  - Energy Ball
+zapdos:
+  - Roost
+  - Hurricane
+  - Volt Switch
+  - Defog
+  - Thunderbolt
+  - Heat Wave
+latias-mega:
+  - Recover
+  - Defog
+  - Refresh
+  - Dragon Pulse
+  - Calm Mind
+  - Ice Beam
+spiritomb:
+  - Will-O-Wisp
+  - Sucker Punch
+  - Dark Pulse
+  - Destiny Bond
+  - Memento
+  - Pain Split
+drapion:
+  - Knock Off
+  - Night Slash
+  - Acupressure
+  - Rest
+  - Sleep Talk
+  - Toxic Spikes
+kyurem:
+  - Freeze-Dry
+  - Roost
+  - Earth Power
+  - Ice Beam
+  - Draco Meteor
+  - Substitute
+mienshao:
+  - U-turn
+  - Close Combat
+  - Knock Off
+  - Rock Slide
+  - Fake Out
+  - High Jump Kick
+golduck:
+  - Ice Beam
+  - Surf
+  - Counter
+  - Hydro Pump
+  - Grass Knot
+  - Aqua Jet
+terrakion:
+  - swords-dance
+  - stone-edge
+  - close-combat
+  - earthquake
+  - stealth-rock
+  - poison-jab
+ninetales-alola:
+  - Aurora Veil
+  - Moonblast
+  - Freeze-Dry
+  - Blizzard
+  - Safeguard
+  - Icy Wind
+mantine:
+  - Scald
+  - Roost
+  - Toxic
+  - Defog
+  - Haze
+  - Ice Beam

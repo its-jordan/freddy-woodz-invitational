@@ -174,7 +174,7 @@ export default function Replays() {
               </div>
               <div>
                 <iframe
-                  src={`./${element.player1}-${element.player2}-${element.game}.html`}
+                  src={`./replays/${element.player1}-${element.player2}-${element.game}.html`}
                   width='900px'
                   height='900px'
                   loading='lazy'></iframe>
