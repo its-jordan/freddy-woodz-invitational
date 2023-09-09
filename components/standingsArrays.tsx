@@ -3,6 +3,7 @@
 import { TournamentAdapter } from '../challonge';
 import { MatchAdapter } from '../challonge';
 import { ParticipantAdapter } from '../challonge';
+import Link from 'next/link';
 
 export default async function Standings() {
   let match = await MatchAdapter.index(
@@ -165,21 +166,21 @@ export default async function Standings() {
     );
 
     return (
-      <div className="standings-container">
-        <div className="standings-header">
-          <div className="standings-title">Standings</div>
-          <div className="standings-wins">W</div>
-          <div className="standings-losses">L</div>
+      <div className='standings-container'>
+        <div className='standings-header'>
+          <div className='standings-title'>Standings</div>
+          <div className='standings-wins'>W</div>
+          <div className='standings-losses'>L</div>
         </div>
         {sortedStandings.map((player) => {
           return (
             <div
               data-player={player.id}
-              className="standings-record"
+              className='standings-record'
               key={player.id}>
-              <div className="standings-name">{player.name.toString()}</div>
-              <div className="standings-wins">{player.wins.toString()}</div>
-              <div className="standings-losses">{player.losses.toString()}</div>
+              <div className='standings-name'>{player.name.toString()}</div>
+              <div className='standings-wins'>{player.wins.toString()}</div>
+              <div className='standings-losses'>{player.losses.toString()}</div>
             </div>
           );
         })}
@@ -194,54 +195,65 @@ export default async function Standings() {
       `${e}`
     );
     return (
-      <div className="player-name" data-player={participants.participant.id}>
+      <div className='player-name' data-player={participants.participant.id}>
         {participants.participant.name.charAt(0).toUpperCase() +
           participants.participant.name.slice(1)}
       </div>
     );
   }
 
+  async function displayNameValue(e: string) {
+    let participants = await ParticipantAdapter.show(
+      'ojemCQBOix3jaZ8ALVKrxupf6f3gKdQTaGZ8h1kB',
+      'freddywoodz',
+      `208943635`
+    );
+    let name = participants.participant.name.toString();
+    return name;
+  }
+
   return (
-    <div className="score-container">
+    <div className='score-container'>
       {DisplayWinners()}
-      <div className="match-container">
+      <div className='match-container'>
         {eachMatch.map((value) => {
           return (
-            <div
+            <Link
+              href={`./replays#${value.match.player1_id}-${value.match.player2_id}-1`}
               key={value.match.id}
               data-match={value.match.id}
               data-winner={value.match.winner_id}
               data-week={value.match.round}
               class={`match-data`}>
               <div
-                className="player player-1"
+                className='player player-1'
                 data-player={value.match.player1_id}
                 data-score={value.match.scores_csv.charAt(0)}>
-                <div className="player-container">
-                  <div className="player-heading">Player 1</div>
+                <div className='player-container'>
+                  <div className='player-heading'>Player 1</div>
                   {displayName(value.match.player1_id)}
                 </div>
                 <div
-                  className="score"
+                  className='score'
                   data-score={value.match.scores_csv.charAt(0)}>
                   {value.match.scores_csv.charAt(0).toString()}
                 </div>
               </div>
               <div
-                className="player player-2"
+                className='player player-2'
                 data-player={value.match.player2_id}
                 data-score={value.match.scores_csv.charAt(2)}>
-                <div className="player-container">
-                  <div className="player-heading">Player 2</div>
+                <div className='player-container'>
+                  <div className='player-heading'>Player 2</div>
                   {displayName(value.match.player2_id)}
                 </div>
                 <div
-                  className="score"
+                  className='score'
                   data-score={value.match.scores_csv.charAt(2)}>
                   {value.match.scores_csv.charAt(2).toString()}
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
