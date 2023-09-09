@@ -186,7 +186,7 @@ export default async function PlayerTeam({
                     target='_blank'
                     className='move'
                     data-move={value}
-                    data-key={value.index}
+                    key={value.index}
                     data-move-id={value}>
                     <div className='move-name'>
                       {value?.replace('-', ' ')?.replace('-', ' ')}

@@ -10,6 +10,7 @@ export default async function Home() {
         {Players.map((player: any) => {
           return (
             <PlayerTeam
+              key={player.index}
               player={player.player}
               playerId={player.playerId}
               p1={player.p1}
