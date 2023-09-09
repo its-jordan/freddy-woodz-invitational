@@ -472,6 +472,26 @@ export default async function PlayerTeam({
     );
   }
 
+  function weightCalculation(e: number) {
+    var str = e.toString();
+    var len = str.length;
+    var x = str.substring(0, len - 1) + '.' + str.substring(len - 1);
+    var weight = Math.round(parseFloat(x));
+    if (weight! <= 1) {
+      return (
+        <div className='pokemon-weight' data-weight={`${x} kg`}>
+          Weight: {x}&nbsp;kg
+        </div>
+      );
+    } else {
+      return (
+        <div className='pokemon-weight' data-weight={`${weight} kg`}>
+          Weight: {weight}&nbsp;kg
+        </div>
+      );
+    }
+  }
+
   return (
     <div className='team' id={playerId.toString()} data-player={playerId}>
       <div className='teamname'>{playerName}</div>
@@ -498,18 +518,19 @@ export default async function PlayerTeam({
                 <div className='pokemon-data'>
                   <div className='name-container'>
                     <div className='pokemon-name'>{nameSplit(values.name)}</div>
-                    <div className='pokemon-types'>
-                      {values.types.map((value) => {
-                        return (
-                          <div
-                            className={`pokemon-type ${value.type.name}`}
-                            key={value.slot}>
-                            {value.type.name}
-                          </div>
-                        );
-                      })}
-                    </div>
+                    {weightCalculation(values.weight)}
                   </div>
+                </div>
+                <div className='pokemon-types'>
+                  {values.types.map((value) => {
+                    return (
+                      <div
+                        className={`pokemon-type ${value.type.name}`}
+                        key={value.slot}>
+                        {value.type.name}
+                      </div>
+                    );
+                  })}
                 </div>
               </Link>
               <div className='abilities-container'>

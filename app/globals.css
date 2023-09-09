@@ -263,9 +263,14 @@ nav > a:nth-child(10) {
 
 .pokemon-data {
   display: flex;
-  flex-flow: column nowrap;
-  gap: 0.5rem;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
   z-index: 10;
+}
+
+.pokemon-weight {
+  color: color-mix(in srgb, var(--primary) 70%, rgba(255, 255, 255, 0.1) 30%);
 }
 
 .pokemon-types {
@@ -318,9 +323,9 @@ nav > a:nth-child(10) {
 
 .name-container {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 1rem;
+  flex-flow: column nowrap;
+  align-items: start;
+  gap: 0.25rem;
 }
 
 .abilities-container {
