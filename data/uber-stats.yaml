@@ -668,11 +668,11 @@ amoonguss:
   - toxic
 aggron-mega:
   - body-press
-  - Stealth-Rock
-  - Iron-Defense
-  - Heavy-Slam
-  - Rest
-  - Roar
+  - stealth-rock
+  - iron-defense
+  - heavy-slam
+  - rest
+  - roar
 lilligant-hisui:
   - close-combat
   - victory-dance
@@ -695,19 +695,19 @@ rotom-frost:
   - blizzard
   - volt-switch
 serperior:
-  - Leaf Storm
-  - Glare
-  - Substitute
-  - Dragon Pulse
-  - Hidden Power Fire
-  - Leech Seed
+  - leaf storm
+  - glare
+  - substitute
+  - dragon pulse
+  - hidden power fire
+  - leech seed
 articuno:
-  - Freeze-Dry
-  - Roost
-  - Ice Beam
-  - Hurricane
-  - Defog
-  - Blizzard
+  - freeze-dry
+  - roost
+  - ice beam
+  - hurricane
+  - defog
+  - blizzard
 beedrill:
   - u-turn
   - gunk-shot
@@ -730,68 +730,68 @@ beartic:
   - liquidation
   - superpower
 empoleon:
-  - Scald
-  - Stealth Rock
-  - Defog
-  - Ice Beam
-  - Flash Cannon
-  - Toxic
+  - scald
+  - stealth-rock
+  - defog
+  - ice-beam
+  - flash-cannon
+  - toxic
 exeggutor-alola:
-  - Trick Room
-  - Leaf Storm
-  - Teleport
-  - Sleep Powder
-  - Leech Seed
-  - Energy Ball
+  - trick-room
+  - leaf-storm
+  - teleport
+  - sleep-powder
+  - leech-seed
+  - energy-ball
 zapdos:
-  - Roost
-  - Hurricane
-  - Volt Switch
-  - Defog
-  - Thunderbolt
-  - Heat Wave
+  - roost
+  - hurricane
+  - volt-switch
+  - defog
+  - thunderbolt
+  - heat-wave
 latias-mega:
-  - Recover
-  - Defog
-  - Refresh
-  - Dragon Pulse
-  - Calm Mind
-  - Ice Beam
+  - recover
+  - defog
+  - refresh
+  - dragon-pulse
+  - calm-mind
+  - ice-beam
 spiritomb:
-  - Will-O-Wisp
-  - Sucker Punch
-  - Dark Pulse
-  - Destiny Bond
-  - Memento
-  - Pain Split
+  - will-o-wisp
+  - sucker-punch
+  - dark-pulse
+  - destiny-bond
+  - memento
+  - pain-split
 drapion:
-  - Knock Off
-  - Night Slash
-  - Acupressure
-  - Rest
-  - Sleep Talk
-  - Toxic Spikes
+  - knock-off
+  - night-slash
+  - acupressure
+  - rest
+  - sleep-talk
+  - toxic-spikes
 kyurem:
-  - Freeze-Dry
-  - Roost
-  - Earth Power
-  - Ice Beam
-  - Draco Meteor
-  - Substitute
+  - freeze-dry
+  - roost
+  - earth-power
+  - ice-beam
+  - draco-meteor
+  - substitute
 mienshao:
-  - U-turn
-  - Close Combat
-  - Knock Off
-  - Rock Slide
-  - Fake Out
-  - High Jump Kick
+  - u-turn
+  - close-combat
+  - knock-off
+  - rock-slide
+  - fake-out
+  - high-jump-kick
 golduck:
-  - Ice Beam
-  - Surf
-  - Counter
-  - Hydro Pump
-  - Grass Knot
-  - Aqua Jet
+  - ice-beam
+  - surf
+  - counter
+  - hydro-pump
+  - grass-knot
+  - aqua-jet
 terrakion:
   - swords-dance
   - stone-edge
@@ -800,16 +800,16 @@ terrakion:
   - stealth-rock
   - poison-jab
 ninetales-alola:
-  - Aurora Veil
-  - Moonblast
-  - Freeze-Dry
-  - Blizzard
-  - Safeguard
-  - Icy Wind
+  - aurora-veil
+  - moonblast
+  - freeze-dry
+  - blizzard
+  - safeguard
+  - icy-wind
 mantine:
-  - Scald
-  - Roost
-  - Toxic
-  - Defog
-  - Haze
-  - Ice Beam
+  - scald
+  - roost
+  - toxic
+  - defog
+  - haze
+  - ice-beam
