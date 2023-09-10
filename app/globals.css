@@ -387,7 +387,7 @@ nav > a:nth-child(10) {
   padding: 0.125rem 0.375rem;
   border-radius: 0.375rem;
   border: 2px solid var(--primary);
-  top: -10px;
+  bottom: 10px;
   margin-left: 10px;
   box-shadow: 5px 5px var(--primary);
   text-wrap: balance;
