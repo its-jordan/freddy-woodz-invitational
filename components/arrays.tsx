@@ -1,10 +1,12 @@
+// @ts-nocheck
 import { PokemonClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
 // @ts-ignore
 import Data from '../data/uber-stats.yaml';
-import Moves from '../data/moves.json';
-import TypeIds from '../data/typeIds.json';
-import Effects from '../data/moveEffects.json';
+// @ts-ignore
+import Moves from '../data/moves.yaml';
+// @ts-ignore
+import Effects from '../data/moveEffects.yaml';
 import Link from 'next/link';
 
 interface Pokemon {
@@ -157,7 +159,8 @@ export default async function PlayerTeam({
     } else if (
       abilityInfo.id == 202 ||
       abilityInfo.id == 65 ||
-      abilityInfo.id == 206
+      abilityInfo.id == 206 ||
+      abilityInfo.id == 119
     ) {
       const abilityEffect = abilityInfo.effect_entries[0]?.short_effect;
       return <div className='ability-effect'>{abilityEffect}</div>;
@@ -191,7 +194,7 @@ export default async function PlayerTeam({
                     <div className='move-name'>
                       {value?.replace('-', ' ')?.replace('-', ' ')}
                     </div>
-                    {/* {moves()} */}
+                    {moveTypes(value)}
                   </Link>
                 </>
               );
@@ -201,109 +204,105 @@ export default async function PlayerTeam({
       );
   }
 
-  // const MovesArray = [];
+  const move = Moves;
 
-  // function moves() {
-  //   const move = Moves;
-  //   const type = TypeIds;
-  //   const effect = Effects;
-  //   // @ts-ignore
-  //   let mergedMoves = move.map((move: any) => {
-  //     let effects = effect.find(
-  //       (element) => element.move_effect_id === move?.effect_id
-  //     );
-  //     return { ...move, ...effects };
-  //   });
+  function mergeMoves(e: string) {
+    const moveArray = move[e];
+    const effectArray = Effects[moveArray?.effect_id];
+    const mergedArrays = [moveArray].map((m1: any) => ({
+      ...m1,
+      ...[effectArray].find((m2: any) => m2?.move_effect_id === m1?.effect_id),
+    }));
+    console.log(mergedArrays);
+    return (
+      <div className='move-effect'>
+        {mergedArrays[e]?.short_effect?.replace(
+          '$effect_chance%',
+          `${mergedArrays[e]?.effect_chance?.toString()}%`
+        )}
+      </div>
+    );
+  }
 
-  //   let finalMoves = mergedMoves?.map((move: any) => {
-  //     let types = type.find((element) => element.type_id === move.type_id);
-  //     return { ...move, ...types };
-  //   });
+  function moveTypes(e: string) {
+    const ele = move[e];
+    if (ele?.damage_class === 'status') {
+      return (
+        <div className='move-hover-box' data-move-name={ele.name}>
+          <div className='move-hover-upper-container'>
+            <div className='move-name-container'>
+              <div className={`move-hover-name`} data-move={ele.name}>
+                {ele.name?.replace('-', ' ')?.replace('-', ' ')}
+              </div>
+              <div className={`move-type ${ele.type_id}`}>{ele.type_id}</div>
+            </div>
+            <div className='move-hover-info'>
+              <div className={`move-damage-type`} data-damage-type='status'>
+                Status
+              </div>
+              <div className={`move-pp`} data-pp={ele.pp}>
+                {ele.pp}pp
+              </div>
+              {/* <div
+                  className='move-type-change'
+                  data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
+                  {move.stat_changes[0]?.change}x{' '}
+                  {move.stat_changes[0]?.stat.name}
+                </div> */}
+              <div className={`move-priority`} data-priority={ele.priority}>
+                Priority: {ele.priority}
+              </div>
+            </div>
+          </div>
+          <div className='move-hover-lower-container'>
+            {mergeMoves(ele.name)}
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className='move-hover-box'>
+          <div className='move-hover-upper-container'>
+            <div className='move-name-container'>
+              <div className={`move-hover-name`} data-move={ele?.name}>
+                {ele?.name?.replace('-', ' ')?.replace('-', ' ')}
+              </div>
+              <div className={`move-type ${ele?.type_id}`}>{ele?.type_id}</div>
+            </div>
+            <div className='move-hover-info'>
+              <div
+                className={`move-damage-type`}
+                data-damage-type={ele?.damage_class}>
+                {ele?.damage_class}
+              </div>
 
-  //   console.log(finalMoves);
-  //   return <></>;
-  // }
-
-  // function moveTypes(e: string) {
-  //   const ele = finalMoves[0];
-  //   if (ele.damage_class === 'status') {
-  //     return (
-  //       <div className='move-hover-box' data-move-name={ele.name}>
-  //         <div className='move-hover-upper-container'>
-  //           <div className='move-name-container'>
-  //             <div className={`move-hover-name`} data-move={ele.name}>
-  //               {ele.name?.replace('-', ' ')?.replace('-', ' ')}
-  //             </div>
-  //             <div className={`move-type ${ele.name}`}>{ele.type}</div>
-  //           </div>
-  //           <div className='move-hover-info'>
-  //             <div
-  //               className={`move-damage-type`}
-  //               data-damage-type={ele.damage_class?.name}>
-  //               {ele.damage_class?.name}
-  //             </div>
-  //             <div className={`move-pp`} data-pp={ele.pp}>
-  //               {ele.pp}pp
-  //             </div>
-  //             {/* <div
-  //                 className='move-type-change'
-  //                 data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
-  //                 {move.stat_changes[0]?.change}x{' '}
-  //                 {move.stat_changes[0]?.stat.name}
-  //               </div> */}
-  //             <div className={`move-priority`} data-priority={ele.priority}>
-  //               Priority: {ele.priority}
-  //             </div>
-  //           </div>
-  //         </div>
-  //         <div className='move-hover-lower-container'>
-  //           <div className='move-effect'>{ele.short_effect}</div>
-  //         </div>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div className='move-hover-box'>
-  //         <div className='move-hover-upper-container'>
-  //           <div className='move-name-container'>
-  //             <div className={`move-hover-name`} data-move={ele?.name}>
-  //               {ele?.name?.replace('-', ' ')?.replace('-', ' ')}
-  //             </div>
-  //             <div className={`move-type ${ele?.type}`}>{ele?.type}</div>
-  //           </div>
-  //           <div className='move-hover-info'>
-  //             <div
-  //               className={`move-damage-type`}
-  //               data-damage-type={ele?.damage_class}>
-  //               {ele?.damage_class}
-  //             </div>
-
-  //             <div className={`move-accuracy`} data-accuracy={ele?.accuracy}>
-  //               {ele?.accuracy}% acc
-  //             </div>
-  //             <div className={`move-pp`} data-pp={ele?.pp}>
-  //               {ele?.pp}pp
-  //             </div>
-  //             <div className={`move-power`} data-power={ele?.power}>
-  //               {ele?.power}bp
-  //             </div>
-  //             <div className={`move-priority`} data-priority={ele?.priority}>
-  //               Priority: {ele?.priority}
-  //             </div>
-  //           </div>
-  //         </div>
-  //         <div className='move-hover-lower-container'>
-  //           <div className='move-effect'>
-  //             {ele?.short_effect?.replace(
-  //               '$effect_chance%',
-  //               `${ele?.effect_chance?.toString()}%`
-  //             )}
-  //           </div>
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  // }
+              <div className={`move-accuracy`} data-accuracy={ele?.accuracy}>
+                {ele?.accuracy}% acc
+              </div>
+              <div className={`move-pp`} data-pp={ele?.pp}>
+                {ele?.pp}pp
+              </div>
+              <div className={`move-power`} data-power={ele?.power}>
+                {ele?.power}bp
+              </div>
+              <div className={`move-priority`} data-priority={ele?.priority}>
+                Priority: {ele?.priority}
+              </div>
+            </div>
+          </div>
+          <div className='move-hover-lower-container'>
+            <div className='move-effect'>
+              {ele?.short_effect?.replace(
+                '$effect_chance%',
+                `${ele?.effect_chance?.toString()}%`
+              )}
+              {mergeMoves(ele?.name)}
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
 
   var pokearray = [
     {
