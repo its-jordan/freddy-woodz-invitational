@@ -242,7 +242,17 @@ export default async function PlayerTeam({
           ?.replace('[Water Pledge]{move:water-pledge}', 'Water Pledge')
           ?.replace('[Fire Pledge]{move:fire-pledge}', 'Fire Pledge')
           ?.replace('[Fusion Bolt]{move:fusion-bolt}', 'Fusion Bolt')
-          ?.replace('[Fusion Flare]{move:fusion-flare}', 'Fusion Flare')}
+          ?.replace('[Fusion Flare]{move:fusion-flare}', 'Fusion Flare')
+          ?.replace('[]{type:water}', 'water')
+          ?.replace('[]{type:fire}', 'fire')
+          ?.replace('[]{type:ground}', 'ground')
+          ?.replace('[]{type:grass}', 'grass')
+          ?.replace('[]{type:fighting}', 'fighting')
+          ?.replace('[]{type:flying}', 'flying')
+          ?.replace('[]{type:ghost}', 'ghost')
+          ?.replace('[]{type:electric}', 'electric')
+          ?.replace('[]{type:normal}', 'normal')
+          ?.replace('[]{type:dragon}', 'dragon')}
       </div>
     );
   }
