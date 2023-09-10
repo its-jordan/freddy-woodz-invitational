@@ -207,19 +207,42 @@ export default async function PlayerTeam({
   const move = Moves;
 
   function mergeMoves(e: string) {
+    // const moveArray = [move];
+    // const effectArray = [Effects];
+    // const mergedArrays = [moveArray].map((m1: any) => ({
+    //   ...m1,
+    //   ...[effectArray].find(
+    //     (m2: any) =>
+    //       m2[moveArray]?.move_effect_id.toString() ===
+    //       m1[moveArray]?.effect_id.toString()
+    //   ),
+    // }));
+
     const moveArray = move[e];
     const effectArray = Effects[moveArray?.effect_id];
-    const mergedArrays = [moveArray].map((m1: any) => ({
-      ...m1,
-      ...[effectArray].find((m2: any) => m2?.move_effect_id === m1?.effect_id),
-    }));
-    console.log(mergedArrays);
+
+    let merge = (obj1, obj2) => ({ ...obj1, ...obj2 });
+
+    const mergedArrays = merge(moveArray, effectArray);
+
+    console.log(merge(moveArray, effectArray));
+
     return (
       <div className='move-effect'>
-        {mergedArrays[e]?.short_effect?.replace(
-          '$effect_chance%',
-          `${mergedArrays[e]?.effect_chance?.toString()}%`
-        )}
+        {mergedArrays?.short_effect
+          ?.replace(
+            '$effect_chance%',
+            `${mergedArrays?.effect_chance?.toString()}%`
+          )
+          ?.replace('[burn]{mechanic:burn}', 'burn')
+          ?.replace('[poison]{mechanic:poison}', 'poison')
+          ?.replace('[freeze]{mechanic:freeze}', 'freeze')
+          ?.replace('[paralyze]{mechanic:paralysis}', 'paralyze')
+          ?.replace('[Grass Pledge]{move:grass-pledge}', 'Grass Pledge')
+          ?.replace('[Water Pledge]{move:water-pledge}', 'Water Pledge')
+          ?.replace('[Fire Pledge]{move:fire-pledge}', 'Fire Pledge')
+          ?.replace('[Fusion Bolt]{move:fusion-bolt}', 'Fusion Bolt')
+          ?.replace('[Fusion Flare]{move:fusion-flare}', 'Fusion Flare')}
       </div>
     );
   }
