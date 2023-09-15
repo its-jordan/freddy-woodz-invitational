@@ -175,6 +175,20 @@ export default function Replays() {
       player1Id: '208943645',
       player2Id: '208943657',
     },
+    {
+      player1: 'ifurgat',
+      player2: 'resolamxxy',
+      game: '1',
+      player1Id: '208943635',
+      player2Id: '208943647',
+    },
+    {
+      player1: 'ifurgat',
+      player2: 'resolamxxy',
+      game: '2',
+      player1Id: '208943635',
+      player2Id: '208943647',
+    },
   ];
 
   return (
