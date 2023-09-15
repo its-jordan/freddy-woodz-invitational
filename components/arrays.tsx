@@ -849,6 +849,39 @@ export default async function PlayerTeam({
     }
   }
 
+  async function getStats(e: string) {
+    let pokemon = await api.getPokemonByName(e);
+    return (
+      <div className={`pokemon-stats ${pokemon}`} data-pokemon={e}>
+        <div className='pokemon-stats-header'>Base Stats</div>
+        <div className='pokemon-stats-values'>
+          {pokemon.stats.map((stat, index) => {
+            return (
+              <div
+                className={`stat-container ${stat.stat.name}`}
+                data-stat={stat.stat.name}
+                data-stat-value={stat.base_stat}
+                key={index}>
+                <div className='stat-header'>
+                  {stat.stat.name.charAt(0).toUpperCase() +
+                    stat.stat.name
+                      .slice(1)
+                      .replace('-', ' ')
+                      .replace('pecial attack', 'pa')
+                      .replace('pecial defense', 'pd')
+                      .replace('ack', '')
+                      .replace('ense', '')
+                      .replace('eed', 'e')}
+                </div>
+                <div className='stat-value'>{stat.base_stat}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className='team' id={playerId.toString()} data-player={playerId}>
       <div className='teamname'>{playerName}</div>
@@ -913,6 +946,7 @@ export default async function PlayerTeam({
                   })}
                 </div>
               </div>
+              {getStats(values.name)}
               <div className='damage-relations-container'>
                 <div className='damage-relations-header-container'>
                   <div className='damage-relations-header'>
