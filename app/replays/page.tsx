@@ -154,6 +154,27 @@ export default function Replays() {
       player1Id: '208943647',
       player2Id: '208943645',
     },
+    {
+      player1: 'seanboyq',
+      player2: 'tokotoro',
+      game: '1',
+      player1Id: '208943645',
+      player2Id: '208943657',
+    },
+    {
+      player1: 'seanboyq',
+      player2: 'tokotoro',
+      game: '2',
+      player1Id: '208943645',
+      player2Id: '208943657',
+    },
+    {
+      player1: 'seanboyq',
+      player2: 'tokotoro',
+      game: '3',
+      player1Id: '208943645',
+      player2Id: '208943657',
+    },
   ];
 
   return (
