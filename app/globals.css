@@ -358,8 +358,8 @@ nav > a:nth-child(10) {
   align-items: center;
   background-color: var(--base);
   color: var(--primary);
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
   border: 2px solid var(--primary);
 }
 
@@ -384,12 +384,12 @@ nav > a:nth-child(10) {
   align-items: center;
   background-color: var(--base);
   color: var(--primary);
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
   border: 2px solid var(--primary);
-  bottom: 10px;
-  margin-left: 10px;
-  box-shadow: 5px 5px var(--primary);
+  bottom: 2rem;
+  margin-left: 3rem;
+  box-shadow: 3px 3px var(--primary);
   text-wrap: balance;
   z-index: 11;
 }
@@ -1140,13 +1140,13 @@ main {
 /* Moves */
 
 .moves-wrapper {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   gap: 0.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 0.5rem;
-  z-index: 10;
 }
 
 .moves-header {
@@ -1194,14 +1194,16 @@ main {
   background-color: var(--base);
   border: 3px solid var(--primary);
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem 0.75rem;
   box-shadow: 3px 3px 0 var(--primary);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .move:hover .move-hover-box {
   display: flex;
   flex-flow: column nowrap;
+  position: absolute;
+  z-index: 1000;
 }
 
 .move-hover-upper-container {
@@ -1211,11 +1213,11 @@ main {
 }
 .move-hover-lower-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   gap: 0.25rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 0.25rem;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .move-hover-info {
@@ -1254,6 +1256,44 @@ main {
 .move-hover-info > div:not(:first-child) {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 0.5rem;
+}
+
+.damage-type-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+
+.damage-relation-hover {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.strengths,
+.weaknesses,
+.immunes {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+
+.type-hover-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.hover-relation-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--primary);
+  width: max-content;
 }
 
 .notice {
@@ -1305,4 +1345,21 @@ iframe {
   font-weight: 600;
   color: var(--primary);
   padding: 1rem 2rem 0;
+}
+
+.genera-text {
+  color: color-mix(in srgb, var(--primary) 70%, rgba(255, 255, 255, 0.1) 30%);
+  font-style: italic;
+}
+
+.pokedex-number {
+  position: absolute;
+  background-color: var(--base);
+  color: var(--primary);
+  padding: 1rem 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  border: 2px solid var(--primary);
+  border-top: none;
+  top: 0;
+  right: 1rem;
 }

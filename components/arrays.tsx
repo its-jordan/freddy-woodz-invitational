@@ -7,6 +7,8 @@ import Data from '../data/uber-stats.yaml';
 import Moves from '../data/moves.yaml';
 // @ts-ignore
 import Effects from '../data/moveEffects.yaml';
+// @ts-ignore
+import Types from '../data/typeRelations.yaml';
 import Link from 'next/link';
 
 interface Pokemon {
@@ -170,6 +172,325 @@ export default async function PlayerTeam({
     }
   }
 
+  function moveRelations(e: string) {
+    let typeArray = {
+      normal: {
+        immunes: ['ghost'],
+        weaknesses: ['rock', 'steel'],
+        strengths: [],
+      },
+      fire: {
+        immunes: [],
+        weaknesses: ['fire', 'water', 'rock', 'dragon'],
+        strengths: ['grass', 'ice', 'bug', 'steel'],
+      },
+      water: {
+        immunes: [],
+        weaknesses: ['water', 'grass', 'dragon'],
+        strengths: ['fire', 'ground', 'rock'],
+      },
+      electric: {
+        immunes: ['ground'],
+        weaknesses: ['electric', 'grass', 'dragon'],
+        strengths: ['water', 'flying'],
+      },
+      grass: {
+        immunes: [],
+        weaknesses: [
+          'fire',
+          'grass',
+          'poison',
+          'flying',
+          'bug',
+          'dragon',
+          'steel',
+        ],
+        strengths: ['water', 'ground', 'rock'],
+      },
+      ice: {
+        immunes: [],
+        weaknesses: ['fire', 'water', 'ice', 'steel'],
+        strengths: ['grass', 'ground', 'flying', 'dragon'],
+      },
+      fighting: {
+        immunes: ['ghost'],
+        weaknesses: ['poison', 'flying', 'psychic', 'bug', 'fairy'],
+        strengths: ['normal', 'ice', 'rock', 'dark', 'steel'],
+      },
+      poison: {
+        immunes: ['steel'],
+        weaknesses: ['poison', 'ground', 'rock', 'ghost'],
+        strengths: ['grass', 'fairy'],
+      },
+      ground: {
+        immunes: ['flying'],
+        weaknesses: ['grass', 'bug'],
+        strengths: ['fire', 'electric', 'poison', 'rock', 'steel'],
+      },
+      flying: {
+        immunes: [],
+        weaknesses: ['electric', 'rock', 'steel'],
+        strengths: ['grass', 'fighting', 'bug'],
+      },
+      psychic: {
+        immunes: ['dark'],
+        weaknesses: ['psychic', 'steel'],
+        strengths: ['fighting', 'poison'],
+      },
+      bug: {
+        immunes: [],
+        weaknesses: [
+          'fire',
+          'fighting',
+          'poison',
+          'flying',
+          'ghost',
+          'steel',
+          'fairy',
+        ],
+        strengths: ['grass', 'psychic', 'dark'],
+      },
+      rock: {
+        immunes: [],
+        weaknesses: ['fighting', 'ground', 'steel'],
+        strengths: ['fire', 'ice', 'flying', 'bug'],
+      },
+      ghost: {
+        immunes: ['normal'],
+        weaknesses: ['dark'],
+        strengths: ['psychic', 'ghost'],
+      },
+      dragon: {
+        immunes: ['fairy'],
+        weaknesses: ['steel'],
+        strengths: ['dragon'],
+      },
+      dark: {
+        immunes: [],
+        weaknesses: ['fighting', 'dark', 'fairy'],
+        strengths: ['psychic', 'ghost'],
+      },
+      steel: {
+        immunes: [],
+        weaknesses: ['fire', 'water', 'electric', 'steel'],
+        strengths: ['ice', 'rock', 'fairy'],
+      },
+      fairy: {
+        immunes: [],
+        weaknesses: ['fire', 'poison', 'steel'],
+        strengths: ['fighting', 'dragon', 'dark'],
+      },
+    };
+    const typeName = e;
+    let type = typeArray[typeName];
+
+    if (type !== undefined && type?.immunes.length === 0) {
+      return (
+        <div>
+          <div className='damage-type-container'>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Weak Against</div>
+              <div className='weaknesses'>
+                {type?.weaknesses.map((weaknesses) => {
+                  return (
+                    <div
+                      className={`type ${weaknesses} hover-relation-box`}
+                      key={weaknesses.index}>
+                      {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Strong Against</div>
+              <div className='strengths'>
+                {type?.strengths.map((strengths) => {
+                  return (
+                    <div
+                      className={`type ${strengths} hover-relation-box`}
+                      key={strengths.index}>
+                      {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (type !== undefined && type?.strengths.length === 0) {
+      return (
+        <div>
+          <div className='damage-type-container double-damage'>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>No Damage To</div>
+              <div className='immunes'>
+                {type?.immunes.map((immunes) => {
+                  return (
+                    <div
+                      className={`type ${immunes} hover-relation-box`}
+                      key={immunes.index}>
+                      {immunes.charAt(0).toUpperCase() + immunes.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Weak Against</div>
+              <div className='weaknesses'>
+                {type?.weaknesses.map((weaknesses) => {
+                  return (
+                    <div
+                      className={`type ${weaknesses} hover-relation-box`}
+                      key={weaknesses.index}>
+                      {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (type !== undefined && type?.weaknesses.length === 0) {
+      return (
+        <div>
+          <div className='damage-type-container double-damage'>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>No Damage To</div>
+              <div className='immunes'>
+                {type?.immunes.map((immunes) => {
+                  return (
+                    <div
+                      className={`type ${immunes} hover-relation-box`}
+                      key={immunes.index}>
+                      {immunes.charAt(0).toUpperCase() + immunes.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Strong Against</div>
+              <div className='strengths'>
+                {type?.strengths.map((strengths) => {
+                  return (
+                    <div
+                      className={`type ${strengths} hover-relation-box`}
+                      key={strengths.index}>
+                      {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (
+      type !== undefined &&
+      type?.weaknesses.length === 0 &&
+      type?.immunes.length === 0
+    ) {
+      return (
+        <div>
+          <div className='damage-type-container double-damage'>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Strong Against</div>
+              <div className='strengths'>
+                {type?.strengths.map((strengths) => {
+                  return (
+                    <div
+                      className={`type ${strengths} hover-relation-box`}
+                      key={strengths.index}>
+                      {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (
+      type !== undefined &&
+      type?.strengths.length === 0 &&
+      type?.immunes.length === 0
+    ) {
+      return (
+        <div>
+          <div className='damage-type-container double-damage'>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Weak Against</div>
+              <div className='weaknesses'>
+                {type?.weaknesses.map((weaknesses) => {
+                  return (
+                    <div
+                      className={`type ${weaknesses} hover-relation-box`}
+                      key={weaknesses.index}>
+                      {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (type !== undefined) {
+      return (
+        <div>
+          <div className='damage-type-container double-damage'>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>No Damage To</div>
+              <div className='immunes'>
+                {type?.immunes.map((immunes) => {
+                  return (
+                    <div
+                      className={`type ${immunes} hover-relation-box`}
+                      key={immunes.index}>
+                      {immunes.charAt(0).toUpperCase() + immunes.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Weak Against</div>
+              <div className='weaknesses'>
+                {type?.weaknesses.map((weaknesses) => {
+                  return (
+                    <div
+                      className={`type ${weaknesses} hover-relation-box`}
+                      key={weaknesses.index}>
+                      {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className='damage-relation-hover'>
+              <div className='type-hover-header'>Strong Against</div>
+              <div className='strengths'>
+                {type?.strengths.map((strengths) => {
+                  return (
+                    <div
+                      className={`type ${strengths} hover-relation-box`}
+                      key={strengths.index}>
+                      {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+
   function displayMoves(e: string) {
     const statsArray = Data;
     const pokemon = e;
@@ -204,28 +525,30 @@ export default async function PlayerTeam({
       );
   }
 
+  async function getGenera(e: string) {
+    let species = await api.getPokemonSpeciesByName(e);
+    return <div className={`genera-text ${e}`}>{species?.genera[7].genus}</div>;
+  }
+
+  async function getPokemonNumber(e: string) {
+    let species = await api.getPokemonSpeciesByName(e);
+    return (
+      <div
+        className={`pokedex-number ${e} ${species.pokedex_numbers[1]?.entry_number}`}>
+        &#x23;{species.pokedex_numbers[0]?.entry_number}
+      </div>
+    );
+  }
+
   const move = Moves;
 
   function mergeMoves(e: string) {
-    // const moveArray = [move];
-    // const effectArray = [Effects];
-    // const mergedArrays = [moveArray].map((m1: any) => ({
-    //   ...m1,
-    //   ...[effectArray].find(
-    //     (m2: any) =>
-    //       m2[moveArray]?.move_effect_id.toString() ===
-    //       m1[moveArray]?.effect_id.toString()
-    //   ),
-    // }));
-
     const moveArray = move[e];
     const effectArray = Effects[moveArray?.effect_id];
 
     let merge = (obj1, obj2) => ({ ...obj1, ...obj2 });
 
     const mergedArrays = merge(moveArray, effectArray);
-
-    console.log(merge(moveArray, effectArray));
 
     return (
       <div className='move-effect'>
@@ -289,6 +612,7 @@ export default async function PlayerTeam({
           </div>
           <div className='move-hover-lower-container'>
             {mergeMoves(ele.name)}
+            {moveRelations(ele?.type_id)}
           </div>
         </div>
       );
@@ -330,6 +654,7 @@ export default async function PlayerTeam({
                 `${ele?.effect_chance?.toString()}%`
               )}
               {mergeMoves(ele?.name)}
+              {moveRelations(ele?.type_id)}
             </div>
           </div>
         </div>
@@ -530,11 +855,16 @@ export default async function PlayerTeam({
       <div className='player-team'>
         {pokearray.map((values, index) => {
           return (
-            <div className={`pokemon-info`} key={index}>
+            <div
+              className={`pokemon-info`}
+              key={index}
+              data-species={values.species.name}
+              data-pokemon={values.name}>
               <div className='type-icon-container'>
                 {returnType(values.types[0]?.type.name)}
                 {returnType(values.types[1]?.type.name)}
               </div>
+              {getPokemonNumber(values.species.name)}
               <Link
                 href={`https://www.smogon.com/dex/sv/pokemon/${values.name
                   ?.replace('-mega', '')
@@ -550,6 +880,7 @@ export default async function PlayerTeam({
                 <div className='pokemon-data'>
                   <div className='name-container'>
                     <div className='pokemon-name'>{nameSplit(values.name)}</div>
+                    {getGenera(values.species.name)}
                     {weightCalculation(values.weight)}
                   </div>
                 </div>
@@ -570,12 +901,14 @@ export default async function PlayerTeam({
                 <div className='abilities'>
                   {values.abilities?.map((value, index) => {
                     return (
-                      <div
+                      <Link
+                        href={`https://www.smogon.com/dex/sv/abilities/${value.ability.name}`}
+                        target='_blank'
                         className={`ability-box ${value.ability.name}`}
                         key={index}>
                         <div className='ability-name'>{value.ability.name}</div>
                         {displayAbility(value.ability.name)}
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
