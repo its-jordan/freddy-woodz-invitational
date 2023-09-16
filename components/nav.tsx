@@ -1,10 +1,9 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 
 export const navLinks = [
-  {
-    name: 'Teams',
-    path: '/',
-  },
   {
     name: 'SeanBoyQ',
     path: './#208943645',
@@ -56,16 +55,24 @@ export const navLinks = [
 ];
 
 function Nav() {
+  const [clicked, setClicked] = useState(true);
   return (
-    <nav>
-      {navLinks.map((link, index) => {
-        return (
-          <Link href={link.path} key={index}>
-            <li key={index}>{link.name}</li>
-          </Link>
-        );
-      })}
-    </nav>
+    <div className='main-nav-container'>
+      <button
+        onClick={() => setClicked((current) => !current)}
+        className={clicked ? 'main-nav-button clicked' : 'main-nav-button'}>
+        Teams
+      </button>
+      <nav className={clicked ? 'main-nav display' : 'main-nav hide'}>
+        {navLinks.map((link, index) => {
+          return (
+            <Link href={link.path} key={index}>
+              <li key={index}>{link.name}</li>
+            </Link>
+          );
+        })}
+      </nav>
+    </div>
   );
 }
 

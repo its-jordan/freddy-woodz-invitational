@@ -1,11 +1,19 @@
+'use client';
+
+import './replays.css';
+import Link from 'next/link';
+import { useState } from 'react';
+
 export default function Replays() {
+  const [clicked, setClicked] = useState(false);
+
   const PlayerArray = [
     {
-      player1: 'castleflutes',
-      player2: 'its_jordan',
+      player1: 'its_jordan',
+      player2: 'castleflutes',
       game: '1',
-      player1Id: '208943656',
-      player2Id: '208943681',
+      player1Id: '208943681',
+      player2Id: '208943656',
     },
     {
       player1: 'castleflutes',
@@ -189,13 +197,70 @@ export default function Replays() {
       player1Id: '208943635',
       player2Id: '208943647',
     },
+    {
+      player1: 'dtbaggins',
+      player2: 'danknett',
+      game: '3',
+      player1Id: '208943648',
+      player2Id: '208943667',
+    },
+    {
+      player1: 'dtbaggins',
+      player2: 'danknett',
+      game: '1',
+      player1Id: '208943648',
+      player2Id: '208943667',
+    },
+    {
+      player1: 'dtbaggins',
+      player2: 'danknett',
+      game: '2',
+      player1Id: '208943648',
+      player2Id: '208943667',
+    },
   ];
 
+  function Nav() {
+    const PlayerLinks = PlayerArray.sort((a, b) =>
+      a.player1 > b.player1 ? 1 : b.player1 > a.player1 ? -1 : 0
+    ).map((player, index) => {
+      if (player.game !== '1') {
+        return <></>;
+      } else {
+        return (
+          <Link
+            href={`./replays/#${player.player1Id}-${player.player2Id}-1`}
+            data-player1={`${player.player1Id}`}>
+            <li key={index}>{`${player.player1} vs. ${player.player2}`}</li>
+          </Link>
+        );
+      }
+    });
+    return PlayerLinks;
+  }
+
   return (
-    <main className='mb-16'>
-      <div className='notice'>Games may not be in actual play order.</div>
+    <main className='mb-16 mt-0 replay-main'>
+      <button
+        onClick={() => setClicked((current) => !current)}
+        className={clicked ? 'nav-button clicked' : 'nav-button'}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <nav className={clicked ? 'replay-nav display' : 'replay-nav hide'}>
+        {Nav()}
+      </nav>
+      <div
+        className={
+          clicked ? 'notice replay-notice-clicked' : 'notice replay-notice'
+        }>
+        Games may not be in actual play order.
+      </div>
       <div className='replays-wrapper'>
-        {PlayerArray.map((element, index) => {
+        {PlayerArray.sort((a, b) =>
+          a.player1 > b.player1 ? 1 : b.player1 > a.player1 ? -1 : 0
+        ).map((element, index) => {
           return (
             <div
               id={`${element.player1Id}-${element.player2Id}-${element.game}`}
