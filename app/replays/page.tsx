@@ -230,7 +230,8 @@ export default function Replays() {
         return (
           <Link
             href={`./replays/#${player.player1Id}-${player.player2Id}-1`}
-            data-player1={`${player.player1Id}`}>
+            data-player1={`${player.player1Id}`}
+            key={index}>
             <li key={index}>{`${player.player1} vs. ${player.player2}`}</li>
           </Link>
         );
