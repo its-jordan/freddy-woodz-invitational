@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Replays() {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
 
   const PlayerArray = [
     {
@@ -37,18 +37,18 @@ export default function Replays() {
       player2Id: '208943645',
     },
     {
-      player1: 'danknett',
-      player2: 'its_jordan',
+      player1: 'its_jordan',
+      player2: 'danknett',
       game: '1',
-      player1Id: '208943667',
-      player2Id: '208943681',
+      player1Id: '208943681',
+      player2Id: '208943667',
     },
     {
-      player1: 'danknett',
-      player2: 'its_jordan',
+      player1: 'its_jordan',
+      player2: 'danknett',
       game: '2',
-      player1Id: '208943667',
-      player2Id: '208943681',
+      player1Id: '208943681',
+      player2Id: '208943667',
     },
     {
       player1: 'danknett',
@@ -79,88 +79,88 @@ export default function Replays() {
       player2Id: '208943656',
     },
     {
-      player1: 'dtbaggins',
-      player2: 'resolamxxy',
+      player1: 'resolamxxy',
+      player2: 'dtbaggins',
       game: '1',
-      player1Id: '208943648',
-      player2Id: '208943647',
+      player1Id: '208943647',
+      player2Id: '208943648',
     },
     {
-      player1: 'dtbaggins',
-      player2: 'resolamxxy',
+      player1: 'resolamxxy',
+      player2: 'dtbaggins',
       game: '2',
-      player1Id: '208943648',
-      player2Id: '208943647',
+      player1Id: '208943647',
+      player2Id: '208943648',
     },
     {
-      player1: 'dtbaggins',
-      player2: 'foxish',
+      player1: 'foxish',
+      player2: 'dtbaggins',
       game: '1',
-      player1Id: '208943648',
-      player2Id: '208943679',
+      player1Id: '208943679',
+      player2Id: '208943648',
     },
     {
-      player1: 'ifurgat',
-      player2: 'castleflutes',
+      player1: 'castleflutes',
+      player2: 'ifurgat',
       game: '1',
-      player1Id: '208943635',
-      player2Id: '208943656',
+      player1Id: '208943656',
+      player2Id: '208943635',
     },
     {
-      player1: 'ifurgat',
-      player2: 'castleflutes',
+      player1: 'castleflutes',
+      player2: 'ifurgat',
       game: '2',
-      player1Id: '208943635',
-      player2Id: '208943656',
+      player1Id: '208943656',
+      player2Id: '208943635',
     },
     {
-      player1: 'ifurgat',
-      player2: 'castleflutes',
+      player1: 'castleflutes',
+      player2: 'ifurgat',
       game: '3',
-      player1Id: '208943635',
-      player2Id: '208943656',
+      player1Id: '208943656',
+      player2Id: '208943635',
     },
     {
-      player1: 'ifurgat',
-      player2: 'dtbaggins',
+      player1: 'dtbaggins',
+      player2: 'ifurgat',
       game: '1',
-      player1Id: '208943635',
-      player2Id: '208943648',
+      player1Id: '208943648',
+      player2Id: '208943635',
     },
     {
-      player1: 'ifurgat',
-      player2: 'dtbaggins',
+      player1: 'dtbaggins',
+      player2: 'ifurgat',
       game: '2',
-      player1Id: '208943635',
-      player2Id: '208943648',
+      player1Id: '208943648',
+      player2Id: '208943635',
     },
     {
-      player1: 'its_jordan',
-      player2: 'tokotoro',
+      player1: 'tokotoro',
+      player2: 'its_jordan',
       game: '1',
-      player1Id: '208943681',
-      player2Id: '208943657',
+      player1Id: '208943657',
+      player2Id: '208943681',
     },
     {
-      player1: 'its_jordan',
-      player2: 'tokotoro',
+      player1: 'tokotoro',
+      player2: 'its_jordan',
       game: '2',
-      player1Id: '208943681',
-      player2Id: '208943657',
+      player1Id: '208943657',
+      player2Id: '208943681',
     },
     {
-      player1: 'resolamxxy',
-      player2: 'seanboyq',
+      player1: 'seanboyq',
+      player2: 'resolamxxy',
       game: '1',
-      player1Id: '208943647',
-      player2Id: '208943645',
+      player1Id: '208943645',
+      player2Id: '208943647',
     },
     {
-      player1: 'resolamxxy',
-      player2: 'seanboyq',
+      player1: 'seanboyq',
+      player2: 'resolamxxy',
       game: '2',
-      player1Id: '208943647',
-      player2Id: '208943645',
+      player1Id: '208943645',
+      player2Id: '208943647',
     },
     {
       player1: 'seanboyq',
@@ -271,13 +271,18 @@ export default function Replays() {
               data-player-2={element.player2}
               data-game={element.game}>
               <div className='replay-heading'>
-                {element.player1} vs. {element.player2} - Game {element.game}
+                {element.player1.charAt(0).toUpperCase().replace('I', 'i') +
+                  element.player1.slice(1).replace('q', 'Q')}{' '}
+                vs.{' '}
+                {element.player2.charAt(0).toUpperCase().replace('I', 'i') +
+                  element.player2.slice(1).replace('q', 'Q')}{' '}
+                - Game {element.game}
               </div>
-              <div>
+              <div className='showdown-iframe-container'>
                 <iframe
                   src={`./replays/${element.player1}-${element.player2}-${element.game}.html`}
-                  width='900px'
-                  height='900px'
+                  width='1100px'
+                  height='1100px'
                   loading='lazy'></iframe>
               </div>
             </div>

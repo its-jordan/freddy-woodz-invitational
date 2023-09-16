@@ -33,12 +33,26 @@
     --col-width: 100%;
     --content-width: 70%;
   }
+  .replay-container {
+    width: calc(50% - 2rem);
+    flex-grow: 1;
+  }
+  .showdown-iframe-container {
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 2005px) {
+@media only screen and (min-width: 2000.01px) {
   :root {
     --col-width: calc(50% - 2rem);
     --content-width: 80%;
+  }
+  .replay-container {
+    width: calc(33% - 3rem);
+    flex-grow: 1;
+  }
+  .showdown-iframe-container {
+    width: 100%;
   }
 }
 
@@ -46,8 +60,11 @@
   :root {
     --base: #ffffff;
     --primary: #121212;
-    --bg: #2b2a33;
+    --bg: rgb(43, 42, 51);
     --heading: var(--base);
+  }
+  .main-nav-container {
+    background-color: rgba(43, 42, 51, 0.75);
   }
 }
 
@@ -57,6 +74,9 @@
     --primary: #121212;
     --bg: var(--base);
     --heading: var(--primary);
+  }
+  .main-nav-container {
+    background-color: rgba(255, 255, 255, 0.75);
   }
 }
 
@@ -75,41 +95,48 @@ html,
   scroll-behavior: smooth !important;
 }
 
-main {
-  margin-top: 5rem;
+.team-main {
+  margin-top: 34px;
 }
 
 .main-nav a {
   color: var(--heading);
 }
 
-.main-nav {
+.main-nav-container {
   position: fixed;
-  left: 0;
-  top: 95px;
-  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  gap: 0.5rem;
+  left: 0px;
+  top: 0;
+  min-height: 100%;
+  padding: calc(1rem + 34px) 2rem 1rem;
+  border-right: 2px solid var(--primary);
+  backdrop-filter: blur(7px);
+  z-index: 1000;
+}
+
+.main-nav {
+  position: relative;
   list-style-type: none !important;
   display: flex;
   flex-flow: column nowrap;
+  align-items: start;
   flex-grow: 1;
   gap: 0.5rem;
 }
 
 .main-nav-button {
-  position: fixed;
+  position: relative;
+  width: max-content;
   font-size: 1.25rem;
-  left: 16px;
-  top: 0;
-  margin-top: 50px;
   padding: 0.5rem 1rem;
   border: 3px solid var(--primary);
   border-radius: 0.5rem;
   box-shadow: 5px 5px var(--primary);
   background-color: var(--base);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
   z-index: 100;
 }
@@ -1350,6 +1377,7 @@ iframe {
   align-items: start;
   gap: 1rem;
   margin-top: 1rem;
+  padding-right: 1rem;
 }
 
 .replay-container {

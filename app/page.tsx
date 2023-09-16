@@ -5,7 +5,7 @@ import Data from '../data/players.yaml';
 export default async function Home() {
   const Players = Data;
   return (
-    <main className='mb-16'>
+    <main className='mb-16 team-main'>
       <div className='teams-container'>
         {Players.map((player: any) => {
           return (
