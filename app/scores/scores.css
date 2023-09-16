@@ -1,0 +1,97 @@
+.standings-name {
+  font-size: 0;
+}
+
+.player-container .player-name {
+  font-size: 0;
+}
+
+[data-player='208943657'] .standings-name::before,
+.player-container .player-name[data-player='208943657']::before {
+  /* Toko */
+  content: 'Tokotoro';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943647'] .standings-name::before,
+.player-container .player-name[data-player='208943647']::before {
+  /* Max */
+  content: 'resolamxxy';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943681'] .standings-name::before,
+.player-container .player-name[data-player='208943681']::before {
+  /* Jordan */
+  content: 'its_jordan';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943656'] .standings-name::before,
+.player-container .player-name[data-player='208943656']::before {
+  /* Dom */
+  content: 'castleflutes';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943645'] .standings-name::before,
+.player-container .player-name[data-player='208943645']::before {
+  /* Sean */
+  content: 'SeanBoyQ';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943679'] .standings-name::before,
+.player-container .player-name[data-player='208943679']::before {
+  /* Ricky */
+  content: 'foxish';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943648'] .standings-name::before,
+.player-container .player-name[data-player='208943648']::before {
+  /* J Dougs */
+  content: 'dtbaggins';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943635'] .standings-name::before,
+.player-container .player-name[data-player='208943635']::before {
+  /* Furgat */
+  content: 'ifurgat';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
+
+[data-player='208943667'] .standings-name::before,
+.player-container .player-name[data-player='208943667']::before {
+  /* Dank */
+  content: 'danknett';
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  width: inherit;
+}
