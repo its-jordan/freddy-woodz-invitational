@@ -30,7 +30,7 @@
 
 @media only screen and (max-width: 2000px) {
   :root {
-    --col-width: 100%;
+    --col-width: 90%;
     --content-width: 80%;
   }
   .replay-container {
@@ -39,6 +39,9 @@
   }
   .showdown-iframe-container {
     width: 100%;
+  }
+  main {
+    padding-left: 4rem !important;
   }
 }
 
