@@ -7,23 +7,22 @@ import Data from '../data/uber-stats.yaml';
 import Moves from '../data/moves.yaml';
 // @ts-ignore
 import Effects from '../data/moveEffects.yaml';
-// @ts-ignore
-import Types from '../data/typeRelations.yaml';
 import Link from 'next/link';
 
 interface Pokemon {
   player: string;
   playerId: number;
-  p1: string;
-  p2: string;
-  p3: string;
-  p4: string;
-  p5: string;
-  p6: string;
-  p7: string;
-  p8: string;
-  p9: string;
-  p0: string;
+  p1?: string;
+  p2?: string;
+  p3?: string;
+  p4?: string;
+  p5?: string;
+  p6?: string;
+  p7?: string;
+  p8?: string;
+  p9?: string;
+  p0?: string;
+  visible?: string;
 }
 
 export default async function PlayerTeam({
@@ -39,6 +38,7 @@ export default async function PlayerTeam({
   p8,
   p9,
   p0,
+  visible,
 }: Pokemon) {
   const api = new PokemonClient();
   let playerName = player;
@@ -172,7 +172,7 @@ export default async function PlayerTeam({
     }
   }
 
-  function moveRelations(e: string) {
+  function moveRelations(e: string, move: string) {
     let typeArray = {
       normal: {
         immunes: ['ghost'],
@@ -284,7 +284,9 @@ export default async function PlayerTeam({
     const typeName = e;
     let type = typeArray[typeName];
 
-    if (type !== undefined && type?.immunes.length === 0) {
+    if (move === 'status') {
+      return <></>;
+    } else if (type !== undefined && type?.immunes.length === 0) {
       return (
         <div>
           <div className='damage-type-container'>
@@ -612,7 +614,7 @@ export default async function PlayerTeam({
           </div>
           <div className='move-hover-lower-container'>
             {mergeMoves(ele.name)}
-            {moveRelations(ele?.type_id)}
+            {moveRelations(ele?.type_id, ele?.damage_class)}
           </div>
         </div>
       );
@@ -654,7 +656,7 @@ export default async function PlayerTeam({
                 `${ele?.effect_chance?.toString()}%`
               )}
               {mergeMoves(ele?.name)}
-              {moveRelations(ele?.type_id)}
+              {moveRelations(ele?.type_id, ele?.damage_class)}
             </div>
           </div>
         </div>
@@ -883,7 +885,10 @@ export default async function PlayerTeam({
   }
 
   return (
-    <div className='team' id={playerId.toString()} data-player={playerId}>
+    <div
+      className={`team ${playerId.toString()} ${visible}`}
+      id={playerId.toString()}
+      data-player={playerId}>
       <div className='teamname'>{playerName}</div>
       <div className='player-team'>
         {pokearray.map((values, index) => {

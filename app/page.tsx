@@ -1,9 +1,15 @@
+'use client';
+
 import PlayerTeam from '@/components/arrays';
 //@ts-ignore
 import Data from '../data/players.yaml';
+import { useState } from 'react';
 
-export default async function Home() {
+export default function Home() {
+  const [value, setValue] = useState('SeanBoyQ');
+
   const Players = Data;
+
   return (
     <main className='mb-16 team-main'>
       <div className='teams-container'>
