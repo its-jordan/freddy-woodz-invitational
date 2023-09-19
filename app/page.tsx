@@ -3,11 +3,8 @@
 import PlayerTeam from '@/components/arrays';
 //@ts-ignore
 import Data from '../data/players.yaml';
-import { useState } from 'react';
 
 export default function Home() {
-  const [value, setValue] = useState('SeanBoyQ');
-
   const Players = Data;
 
   return (
