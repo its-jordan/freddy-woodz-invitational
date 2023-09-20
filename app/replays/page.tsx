@@ -62,7 +62,7 @@ export default function Replays() {
         {PlayerArray.sort((a: any, b: any) =>
           a.player1 > b.player1 ? 1 : b.player1 > a.player1 ? -1 : 0
         ).map((element: any, index: any) => {
-          return <Replay element={element} index={index} />;
+          return <Replay element={element} index={index} key={index} />;
         })}
       </div>
     </main>
