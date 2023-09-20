@@ -1,5 +1,3 @@
-'use client';
-
 import PlayerTeam from '@/components/arrays';
 //@ts-ignore
 import Data from '../data/players.yaml';
