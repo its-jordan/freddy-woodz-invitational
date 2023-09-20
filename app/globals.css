@@ -1639,3 +1639,32 @@ iframe {
   background-color: var(--primary);
   display: flex;
 }
+
+.loading {
+  display: flex;
+  padding: 1rem;
+  box-shadow: 5px 5px var(--primary);
+  border-radius: 0.5rem;
+  border: 3px solid var(--primary);
+  background-color: var(--base);
+  margin-bottom: -1.5rem;
+  width: max-content;
+}
+
+.loading p {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  font-size: 1.125rem;
+  animation: loadingAnimation 1s steps(11, end);
+}
+
+@keyframes loadingAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

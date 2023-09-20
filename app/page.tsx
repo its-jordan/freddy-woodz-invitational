@@ -1,6 +1,14 @@
-import PlayerTeam from '@/components/arrays';
+import dynamic from 'next/dynamic';
 //@ts-ignore
 import Data from '../data/players.yaml';
+
+const PlayerTeam = dynamic(() => import('@/components/arrays'), {
+  loading: () => (
+    <div className='loading'>
+      <p>Loading...</p>
+    </div>
+  ),
+});
 
 export default function Home() {
   const Players = Data;
