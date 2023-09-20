@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { PokemonClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
 // @ts-ignore
@@ -8,20 +7,21 @@ import Moves from '../data/moves.yaml';
 // @ts-ignore
 import Effects from '../data/moveEffects.yaml';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Pokemon {
   player: string;
   playerId: number;
-  p1?: string;
-  p2?: string;
-  p3?: string;
-  p4?: string;
-  p5?: string;
-  p6?: string;
-  p7?: string;
-  p8?: string;
-  p9?: string;
-  p0?: string;
+  p1: string;
+  p2: string;
+  p3: string;
+  p4: string;
+  p5: string;
+  p6: string;
+  p7: string;
+  p8: string;
+  p9: string;
+  p0: string;
   visible?: string;
 }
 
@@ -282,6 +282,7 @@ export default async function PlayerTeam({
       },
     };
     const typeName = e;
+    // @ts-ignore
     let type = typeArray[typeName];
 
     if (move === 'status') {
@@ -293,7 +294,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Weak Against</div>
               <div className='weaknesses'>
-                {type?.weaknesses.map((weaknesses) => {
+                {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
                       className={`type ${weaknesses} hover-relation-box`}
@@ -307,7 +308,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Strong Against</div>
               <div className='strengths'>
-                {type?.strengths.map((strengths) => {
+                {type?.strengths.map((strengths: any) => {
                   return (
                     <div
                       className={`type ${strengths} hover-relation-box`}
@@ -328,7 +329,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>No Damage To</div>
               <div className='immunes'>
-                {type?.immunes.map((immunes) => {
+                {type?.immunes.map((immunes: any) => {
                   return (
                     <div
                       className={`type ${immunes} hover-relation-box`}
@@ -342,7 +343,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Weak Against</div>
               <div className='weaknesses'>
-                {type?.weaknesses.map((weaknesses) => {
+                {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
                       className={`type ${weaknesses} hover-relation-box`}
@@ -363,7 +364,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>No Damage To</div>
               <div className='immunes'>
-                {type?.immunes.map((immunes) => {
+                {type?.immunes.map((immunes: any) => {
                   return (
                     <div
                       className={`type ${immunes} hover-relation-box`}
@@ -377,7 +378,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Strong Against</div>
               <div className='strengths'>
-                {type?.strengths.map((strengths) => {
+                {type?.strengths.map((strengths: any) => {
                   return (
                     <div
                       className={`type ${strengths} hover-relation-box`}
@@ -402,7 +403,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Strong Against</div>
               <div className='strengths'>
-                {type?.strengths.map((strengths) => {
+                {type?.strengths.map((strengths: any) => {
                   return (
                     <div
                       className={`type ${strengths} hover-relation-box`}
@@ -427,7 +428,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Weak Against</div>
               <div className='weaknesses'>
-                {type?.weaknesses.map((weaknesses) => {
+                {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
                       className={`type ${weaknesses} hover-relation-box`}
@@ -448,7 +449,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>No Damage To</div>
               <div className='immunes'>
-                {type?.immunes.map((immunes) => {
+                {type?.immunes.map((immunes: any) => {
                   return (
                     <div
                       className={`type ${immunes} hover-relation-box`}
@@ -462,7 +463,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Weak Against</div>
               <div className='weaknesses'>
-                {type?.weaknesses.map((weaknesses) => {
+                {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
                       className={`type ${weaknesses} hover-relation-box`}
@@ -476,7 +477,7 @@ export default async function PlayerTeam({
             <div className='damage-relation-hover'>
               <div className='type-hover-header'>Strong Against</div>
               <div className='strengths'>
-                {type?.strengths.map((strengths) => {
+                {type?.strengths.map((strengths: any) => {
                   return (
                     <div
                       className={`type ${strengths} hover-relation-box`}
@@ -546,9 +547,10 @@ export default async function PlayerTeam({
 
   function mergeMoves(e: string) {
     const moveArray = move[e];
+
     const effectArray = Effects[moveArray?.effect_id];
 
-    let merge = (obj1, obj2) => ({ ...obj1, ...obj2 });
+    let merge = (obj1: any, obj2: any) => ({ ...obj1, ...obj2 });
 
     const mergedArrays = merge(moveArray, effectArray);
 
@@ -824,10 +826,12 @@ export default async function PlayerTeam({
       return <></>;
     }
     return (
-      <img
+      <Image
         className={`type-icon ${e}-type`}
         src={`icons/${e}.svg`}
-        alt={`Type icon for ${e}.`}></img>
+        alt={`Type icon for ${e}.`}
+        height={450}
+        width={450}></Image>
     );
   }
 
@@ -910,10 +914,12 @@ export default async function PlayerTeam({
                   ?.replace('-50', '')}`}
                 target='_blank'
                 className='upper-container'>
-                <img
+                <Image
                   className={`${values.name}-img`}
                   src={values.sprite}
                   alt={`Default front sprite for ${values.name}`}
+                  width={100}
+                  height={100}
                 />
                 <div className='pokemon-data'>
                   <div className='name-container'>
