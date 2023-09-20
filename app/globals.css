@@ -8,31 +8,31 @@
   --primary: #121212;
   --bg: var(--base);
   /* Pokemon Type Colors */
-  --normal: #a8a77a;
-  --fire: #ee8130;
-  --water: #6390f0;
-  --electric: #f7d02c;
-  --grass: #7ac74c;
-  --ice: #96d9d6;
-  --fighting: #c22e28;
-  --poison: #a33ea1;
-  --ground: #e2bf65;
-  --flying: #a98ff3;
-  --psychic: #f95587;
-  --bug: #a6b91a;
-  --rock: #b6a136;
-  --ghost: #735797;
-  --dragon: #6f35fc;
-  --dark: #705746;
-  --steel: #b7b7ce;
-  --fairy: #d685ad;
+  --normal: hsl(59, 21%, 57%);
+  --fire: hsl(26, 85%, 56%);
+  --water: hsl(221, 82%, 66%);
+  --electric: hsl(48, 93%, 57%);
+  --grass: hsl(98, 52%, 54%);
+  --ice: hsl(177, 47%, 72%);
+  --fighting: hsl(2, 66%, 46%);
+  --poison: hsl(301, 45%, 44%);
+  --ground: hsl(43, 68%, 64%);
+  --flying: hsl(256, 81%, 76%);
+  --psychic: hsl(342, 93%, 65%);
+  --bug: hsl(67, 75%, 41%);
+  --rock: hsl(50, 54%, 46%);
+  --ghost: hsl(266, 27%, 47%);
+  --dragon: hsl(257, 97%, 60%);
+  --dark: hsl(24, 23%, 36%);
+  --steel: hsl(240, 19%, 76%);
+  --fairy: hsl(330, 50%, 68%);
   --col-width: calc(50% - 2rem);
 }
 
 @media only screen and (max-width: 2000px) {
   :root {
-    --col-width: 90%;
-    --content-width: 90%;
+    --col-width: calc(50% - 2rem);
+    --content-width: 95%;
   }
   .replay-container {
     width: calc(50% - 2rem);
@@ -42,6 +42,14 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 1750px) {
+  :root {
+    --col-width: 100%;
+    --content-width: 95%;
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .replay-container {
     width: 100%;
@@ -884,7 +892,7 @@ main {
 
 .discord-header-container {
   margin-bottom: 1rem;
-  margin-top: -2rem;
+  margin-top: calc(2rem + 2px);
 }
 
 .discord-header {
@@ -899,7 +907,7 @@ main {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: start;
-  width: calc(35% - 2rem);
+  width: calc(33% - 2rem);
   gap: 0.0125rem;
   text-transform: capitalize;
   background-color: color-mix(in srgb, var(--_border-clr) 50%, white);
@@ -938,28 +946,31 @@ main {
 }
 
 .ag {
-  --_border-clr: var(--bug);
+  --_border-clr: var(--steel);
 }
 .ubers {
-  --_border-clr: var(--fire);
+  --_border-clr: var(--ice);
 }
 .ou {
-  --_border-clr: var(--water);
+  --_border-clr: var(--ground);
 }
 .oubl {
-  --_border-clr: var(--ice);
+  --_border-clr: var(--normal);
+}
+.uubl {
+  --_border-clr: var(--electric);
 }
 .uu {
   --_border-clr: var(--grass);
 }
 .rubl {
-  --_border-clr: var(--dragon);
+  --_border-clr: var(--bug);
 }
 .ru {
-  --_border-clr: var(--ghost);
+  --_border-clr: var(--rock);
 }
 .nu {
-  --_border-clr: var(--electric);
+  --_border-clr: var(--fairy);
 }
 
 /* Temporary bug fix due to Webkit svg bug */
@@ -1069,7 +1080,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem 0.5rem;
-  margin-block-start: 74px;
+  margin-top: 74px;
 }
 
 .match-data {
@@ -1153,6 +1164,7 @@ main {
     gap: 3rem 0.5rem;
     padding-bottom: 2rem;
     margin-top: 80px;
+    width: 75%;
   }
   .player {
     display: flex;

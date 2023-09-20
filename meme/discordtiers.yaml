@@ -1,0 +1,55 @@
+players:
+  - name: Jonny Dougs
+    tier: AG
+  - name: John Shaw
+    tier: AG
+  - name: crookedcooker
+    tier: AG
+  - name: edjr
+    tier: Ubers
+  - name: kishilite
+    tier: Ubers
+  - name: Jmacattack
+    tier: Ubers
+  - name: Dank (Drunk Form)
+    tier: OU
+  - name: Antonz
+    tier: OU
+  - name: Max
+    tier: OU
+  - name: Jordan
+    tier: OU
+  - name: Gregg (Drunk Form)
+    tier: OU
+  - name: Lil Sis
+    tier: OUBL
+  - name: Gregg
+    tier: UUBL
+  - name: Tylo (Drunk Form)
+    tier: UUBL
+  - name: Dom (Drunk Form)
+    tier: UUBL
+  - name: Dank
+    tier: UUBL
+  - name: Gregg
+    tier: UU
+  - name: Furgat
+    tier: UU
+  - name: Dom
+    tier: UU
+  - name: Tylo
+    tier: UU
+  - name: Ricky
+    tier: RUBL
+  - name: Furgat (Kramer Debuff)
+    tier: RUBL
+  - name: Sam
+    tier: RU
+  - name: Balloony
+    tier: RU
+  - name: MikeyOG
+    tier: RU
+  - name: Sean
+    tier: NU
+  - name: Kramer
+    tier: NU

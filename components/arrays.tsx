@@ -890,7 +890,7 @@ export default async function PlayerTeam({
 
   return (
     <div
-      className={`team ${playerId.toString()} ${visible}`}
+      className={`team ${playerId.toString()}`}
       id={playerId.toString()}
       data-player={playerId}>
       <div className='teamname'>{playerName}</div>
