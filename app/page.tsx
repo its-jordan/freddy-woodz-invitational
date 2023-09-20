@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 //@ts-ignore
 import Data from '../data/players.yaml';

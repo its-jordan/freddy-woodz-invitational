@@ -914,12 +914,10 @@ export default async function PlayerTeam({
                   ?.replace('-50', '')}`}
                 target='_blank'
                 className='upper-container'>
-                <Image
+                <img
                   className={`${values.name}-img`}
                   src={values.sprite}
                   alt={`Default front sprite for ${values.name}`}
-                  width={100}
-                  height={100}
                 />
                 <div className='pokemon-data'>
                   <div className='name-container'>
