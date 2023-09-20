@@ -14,7 +14,7 @@ export default function Home() {
   const Players = Data;
 
   return (
-    <main className='mb-16 team-main'>
+    <main className='team-main'>
       <div className='teams-container'>
         {Players.map((player: any) => {
           return (

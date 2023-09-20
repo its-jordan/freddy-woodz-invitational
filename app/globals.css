@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --navwidth: 225px;
   --base: #ffffff;
   --primary: #121212;
   --bg: var(--base);
@@ -31,7 +32,7 @@
 @media only screen and (max-width: 2000px) {
   :root {
     --col-width: 90%;
-    --content-width: 80%;
+    --content-width: 90%;
   }
   .replay-container {
     width: calc(50% - 2rem);
@@ -40,15 +41,21 @@
   .showdown-iframe-container {
     width: 100%;
   }
-  main {
-    padding-left: 4rem !important;
+}
+@media only screen and (max-width: 1100px) {
+  .replay-container {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .showdown-iframe-container {
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 2000.01px) {
   :root {
     --col-width: calc(50% - 2rem);
-    --content-width: 80%;
+    --content-width: 90%;
   }
   .replay-container {
     width: calc(33% - 3rem);
@@ -91,11 +98,18 @@ svg {
 body {
   background-color: var(--bg);
   color: var(--primary);
+  min-height: 100dvh;
+  min-height: 100vh;
 }
 
 html,
 * {
   scroll-behavior: smooth !important;
+}
+
+main {
+  margin-left: var(--navwidth) !important;
+  width: 100%;
 }
 
 .team-main {
@@ -115,6 +129,7 @@ html,
   left: 0px;
   top: 0;
   min-height: 100%;
+  width: var(--navwidth);
   padding: calc(1rem + 34px) 2rem 1rem;
   border-right: 2px solid var(--primary);
   backdrop-filter: blur(7px);
@@ -206,6 +221,8 @@ html,
 
 .content-container {
   width: var(--content-width);
+  min-height: 100dvh;
+  min-height: 100vh;
   margin-inline: auto;
   display: flex;
   flex-flow: row wrap;
@@ -216,6 +233,7 @@ html,
   position: relative;
   display: flex;
   flex-flow: row wrap;
+  flex-grow: 1;
   gap: 1rem;
 }
 
@@ -233,6 +251,7 @@ html,
   border-radius: 0.5rem;
   padding: 1rem;
   transition: background-color 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  flex-grow: 1;
 }
 
 .upper-container {
@@ -981,10 +1000,6 @@ html,
 
 /* Standings */
 
-main {
-  width: 100%;
-}
-
 .score-container {
   display: flex;
   flex-flow: row wrap;
@@ -998,10 +1013,12 @@ main {
   gap: 1rem;
   min-width: 20%;
   max-width: 80%;
+  height: 100%;
   flex-grow: 1;
   padding-inline-end: 2rem;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 34px;
+  padding-top: 34px;
+  margin-top: 0;
 }
 
 .standings-record,
@@ -1052,7 +1069,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem 0.5rem;
-  margin-top: 74px;
+  margin-block-start: 74px;
 }
 
 .match-data {
@@ -1121,20 +1138,20 @@ main {
   .score-container {
     display: flex;
     flex-flow: row wrap;
+    height: 100%;
     gap: 2rem;
   }
   .match-data:nth-of-type(4n - 3)::before {
     top: -2.125rem;
   }
   .standings-container {
-    margin-top: 34px;
-    max-width: 40%;
-    margin-left: 4rem;
+    max-width: 25%;
   }
   .match-container {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 3rem 0.5rem;
+    padding-bottom: 2rem;
     margin-top: 80px;
   }
   .player {
@@ -1143,6 +1160,10 @@ main {
     align-items: start;
     gap: 0;
   }
+  .player-container {
+    height: 100%;
+    justify-content: center;
+  }
   .player-name::before {
     font-size: 0.75rem !important;
   }
@@ -1150,8 +1171,30 @@ main {
     display: none;
   }
   .score {
-    padding-inline-start: 0.25rem;
+    padding-inline-start: 0.5rem;
     padding-inline-end: 1rem;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .score-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
+  .match-data:nth-of-type(4n - 3)::before {
+    top: -2.125rem;
+  }
+  .standings-container {
+    max-width: 100%;
+    border-right: none;
+    padding-inline: 0 !important;
+    margin-left: 0;
+  }
+  .match-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 0.5rem;
+    margin-top: 80px;
   }
 }
 
