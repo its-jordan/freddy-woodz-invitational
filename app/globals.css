@@ -137,10 +137,7 @@ main {
   left: 0px;
   top: 0;
   min-height: 100%;
-  width: var(--navwidth);
   padding: calc(1rem + 34px) 2rem 1rem;
-  border-right: 2px solid var(--primary);
-  backdrop-filter: blur(7px);
   z-index: 1000;
 }
 
@@ -152,6 +149,18 @@ main {
   align-items: start;
   flex-grow: 1;
   gap: 0.5rem;
+}
+
+.main-nav-container:has(.main-nav.hide) {
+  border-right: none;
+  width: max-content;
+  backdrop-filter: none;
+}
+
+.main-nav-container:has(.main-nav.display) {
+  border-right: 2px solid var(--primary);
+  width: var(--navwidth);
+  backdrop-filter: blur(7px);
 }
 
 .main-nav-button {
