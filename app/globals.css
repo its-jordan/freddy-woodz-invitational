@@ -495,13 +495,12 @@ main {
 }
 
 .damage-relation-types > .relations-type {
-  padding: 0.25rem 0.375rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
   border-radius: 0.375rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: 0.375rem;
   border: 2px solid var(--primary);
 }
 
@@ -680,104 +679,87 @@ main {
   background-color: var(--fairy);
 }
 
-.relations-type::before {
-  content: var(--typeurl);
-  height: 20px;
-  width: 20px;
+.relations-type-icon {
+  height: 25px;
   display: flex;
-  background-color: var(--typecolor);
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  max-height: 20px;
-  max-width: 20px;
-  fill: black;
+  background-color: var(--typecolor) !important;
+  border-radius: 0.25rem !important;
+  border: none !important;
+  padding: 0.25rem !important;
+  width: 25px;
+  object-fit: cover !important;
+  max-height: 25px;
+  margin-right: 0.5rem;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.relations-type[data-type*='bug']::before {
-  --typeurl: url('../public/icons/bug.svg');
+.relations-type-icon.bug {
   --typecolor: var(--bug);
 }
 
-.relations-type[data-type*='dark']::before {
-  --typeurl: url('../public/icons/dark.svg');
+.relations-type-icon.dark {
   --typecolor: var(--dark);
 }
 
-.relations-type[data-type*='dragon']::before {
-  --typeurl: url('../public/icons/dragon.svg');
+.relations-type-icon.dragon {
   --typecolor: var(--dragon);
 }
 
-.relations-type[data-type*='electric']::before {
-  --typeurl: url('../public/icons/electric.svg');
+.relations-type-icon.electric {
   --typecolor: var(--electric);
 }
-.relations-type[data-type*='fairy']::before {
-  --typeurl: url('../public/icons/fairy.svg');
+.relations-type-icon.fairy {
   --typecolor: var(--fairy);
 }
 
-.relations-type[data-type*='fighting']::before {
-  --typeurl: url('../public/icons/fighting.svg');
+.relations-type-icon.fighting {
   --typecolor: var(--fighting);
 }
 
-.relations-type[data-type*='fire']::before {
-  --typeurl: url('../public/icons/fire.svg');
+.relations-type-icon.fire {
   --typecolor: var(--fire);
 }
 
-.relations-type[data-type*='flying']::before {
-  --typeurl: url('../public/icons/flying.svg');
+.relations-type-icon.flying {
   --typecolor: var(--flying);
 }
 
-.relations-type[data-type*='ghost']::before {
-  --typeurl: url('../public/icons/ghost.svg');
+.relations-type-icon.ghost {
   --typecolor: var(--ghost);
 }
 
-.relations-type[data-type*='grass']::before {
-  --typeurl: url('../public/icons/grass.svg');
+.relations-type-icon.grass {
   --typecolor: var(--grass);
 }
 
-.relations-type[data-type*='ground']::before {
-  --typeurl: url('../public/icons/ground.svg');
+.relations-type-icon.ground {
   --typecolor: var(--ground);
 }
 
-.relations-type[data-type*='ice']::before {
-  --typeurl: url('../public/icons/ice.svg');
+.relations-type-icon.ice {
   --typecolor: var(--ice);
 }
-.relations-type[data-type*='normal']::before {
-  --typeurl: url('../public/icons/normal.svg');
+.relations-type-icon.normal {
   --typecolor: var(--normal);
 }
 
-.relations-type[data-type*='poison']::before {
-  --typeurl: url('../public/icons/poison.svg');
+.relations-type-icon.poison {
   --typecolor: var(--poison);
 }
 
-.relations-type[data-type*='psychic']::before {
-  --typeurl: url('../public/icons/psychic.svg');
+.relations-type-icon.psychic {
   --typecolor: var(--psychic);
 }
 
-.relations-type[data-type*='rock']::before {
-  --typeurl: url('../public/icons/rock.svg');
+.relations-type-icon.rock {
   --typecolor: var(--rock);
 }
 
-.relations-type[data-type*='steel']::before {
-  --typeurl: url('../public/icons/steel.svg');
+.relations-type-icon.steel {
   --typecolor: var(--steel);
 }
 
-.relations-type[data-type*='water']::before {
-  --typeurl: url('../public/icons/water.svg');
+.relations-type-icon.water {
   --typecolor: var(--water);
 }
 

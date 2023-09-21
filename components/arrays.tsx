@@ -948,7 +948,12 @@ export default async function PlayerTeam({
                         target='_blank'
                         className={`ability-box ${value.ability.name}`}
                         key={index}>
-                        <div className='ability-name'>{value.ability.name}</div>
+                        <div className='ability-name'>
+                          {value.ability.name?.replace(
+                            'defiant',
+                            'competitive'
+                          )}
+                        </div>
                         {displayAbility(value.ability.name)}
                       </Link>
                     );
@@ -987,7 +992,17 @@ export default async function PlayerTeam({
                         key={index}
                         data-type={value}
                         className='relations-type'>
-                        {value.split(':')[0]}
+                        <div>
+                          <img
+                            className={`relations-type-icon ${
+                              value.split(':')[0]
+                            }`}
+                            src={`../icons/${value.split(':')[0]}.svg`}
+                            alt='Bug icon'
+                            height={30}
+                            width={30}></img>
+                        </div>
+                        <div>{value.split(':')[0]}</div>
                       </div>
                     );
                   })}
