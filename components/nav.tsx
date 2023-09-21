@@ -58,11 +58,6 @@ function Nav() {
   const [clicked, setClicked] = useState(true);
   return (
     <div className='main-nav-container'>
-      <button
-        onClick={() => setClicked((current) => !current)}
-        className={clicked ? 'main-nav-button clicked' : 'main-nav-button'}>
-        Teams
-      </button>
       <nav className={clicked ? 'main-nav display' : 'main-nav hide'}>
         {navLinks.map((link, index) => {
           return (

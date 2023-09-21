@@ -32,7 +32,7 @@
 @media only screen and (max-width: 2000px) {
   :root {
     --col-width: calc(50% - 2rem);
-    --content-width: 95%;
+    --content-width: 80%;
   }
   .replay-container {
     width: calc(50% - 2rem);
@@ -116,7 +116,6 @@ html,
 }
 
 main {
-  margin-left: var(--navwidth) !important;
   width: 100%;
 }
 
@@ -131,15 +130,14 @@ main {
 .main-nav-container {
   position: fixed;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   align-items: start;
   gap: 0.5rem;
   left: 0px;
   top: 0;
-  min-height: 100%;
-  width: var(--navwidth);
-  padding: calc(1rem + 34px) 2rem 1rem;
-  border-right: 2px solid var(--primary);
+  height: max-content;
+  width: 100%;
+  border-bottom: 2px solid var(--primary);
   backdrop-filter: blur(7px);
   z-index: 1000;
 }
@@ -148,8 +146,10 @@ main {
   position: relative;
   list-style-type: none !important;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: start;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
   flex-grow: 1;
   gap: 0.5rem;
 }
@@ -163,7 +163,6 @@ main {
   border-radius: 0.5rem;
   box-shadow: 5px 5px var(--primary);
   background-color: var(--base);
-  gap: 0.5rem;
   z-index: 100;
 }
 
@@ -171,20 +170,14 @@ main {
   position: relative;
   width: max-content;
   font-size: 1.25rem;
-  border: 3px solid var(--primary);
-  background-color: var(--base);
+  padding: 1rem;
+  height: 100%;
   color: var(--primary);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 5px 5px var(--primary);
-  transition: background-color 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95),
-    box-shadow 300ms ease;
   z-index: 100;
 }
 
 .main-nav a:hover {
   background-color: color-mix(in srgb, var(--_hover-clr, black) 50%, white);
-  box-shadow: 3px 3px var(--primary);
 }
 
 .main-nav > a:nth-child(0) {
