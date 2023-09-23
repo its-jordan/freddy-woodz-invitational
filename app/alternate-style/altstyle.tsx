@@ -421,16 +421,11 @@ export default async function AlternateStyle({
       );
   }
 
-  async function getGenera(e: string) {
-    let species = await api.getPokemonSpeciesByName(e);
-    return <div className={`genera-text ${e}`}>{species?.genera[7].genus}</div>;
-  }
-
   async function getPokemonNumber(e: string) {
     let species = await api.getPokemonSpeciesByName(e);
     return (
       <div
-        className={`pokedex-number ${e} ${species.pokedex_numbers[1]?.entry_number}`}>
+        className={`pokedex-number-alt ${e} ${species.pokedex_numbers[1]?.entry_number}`}>
         &#x23;{species.pokedex_numbers[0]?.entry_number}
       </div>
     );
@@ -700,17 +695,6 @@ export default async function AlternateStyle({
                     {weightCalculation(values.weight)}
                   </div>
                 </div>
-                <div className='pokemon-types-alt'>
-                  {values.types.map((value) => {
-                    return (
-                      <div
-                        className={`pokemon-type-alt ${value.type.name}`}
-                        key={value.slot}>
-                        {value.type.name}
-                      </div>
-                    );
-                  })}
-                </div>
                 {getStats(values.name)}
               </Link>
               <div className='abilities-container-alt'>
@@ -784,6 +768,17 @@ export default async function AlternateStyle({
                 </div>
               </div>
               {displayMoves(values.name)}
+              <div className='pokemon-types-alt'>
+                {values.types.map((value) => {
+                  return (
+                    <div
+                      className={`pokemon-type-alt ${value.type.name}`}
+                      key={value.slot}>
+                      {value.type.name}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           );
         })}
@@ -793,11 +788,11 @@ export default async function AlternateStyle({
 
   return (
     <div
-      className={twMerge(`team ${playerId.toString()}`, className)}
+      className={twMerge(`team-alt ${playerId.toString()}`, className)}
       id={playerId.toString()}
       data-player={playerId}>
       <div className='teamname'>{playerName}</div>
-      <div className='player-team'>
+      <div className='player-team-alt'>
         {getPokemonData(p1)}
         {getPokemonData(p2)}
         {getPokemonData(p3)}

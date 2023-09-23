@@ -1,30 +1,72 @@
-.team {
+.team-alt {
   display: flex;
   flex-flow: column nowrap;
 }
 
-.player-team {
+.player-team-alt {
   display: flex;
   flex-flow: column nowrap;
   padding: 0.5rem;
   border: 1px solid red;
 }
 
-.pokemon-info {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
+.pokemon-info-alt {
+  border-radius: 0.5rem;
+  border: 2px solid var(--bug);
+  padding: 0 1rem;
 }
 
 .upper-container-alt {
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
-  background-color: lightblue;
   padding: 0.25rem;
 }
 
+.pokemon-name-alt {
+  font-size: 1.5rem;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
 .upper-container-alt img {
-  height: 35px;
-  width: 35px;
+  height: 75px;
+  width: 75px;
+  border: 2px solid var(--bug);
+  border-radius: 0 0 0.5rem 0.5rem;
+  border-top: none;
+  background: var(--bg);
+  margin-top: -6px;
+  padding: 0.5rem;
+  object-fit: contain;
+  min-width: 75px;
+}
+
+.pokemon-types-alt {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: -2px;
+}
+
+.pokemon-type-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border: 2px solid var(--bug);
+  border-bottom: none;
+  text-transform: capitalize;
+}
+
+.pokedex-number-alt {
+  position: absolute;
+  background-color: var(--bg);
+  color: var(--bug);
+  padding: 1rem 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  border: 2px solid var(--bug);
+  border-top: none;
+  top: -2px;
+  right: 1rem;
 }
