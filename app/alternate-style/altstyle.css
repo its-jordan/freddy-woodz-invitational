@@ -6,6 +6,7 @@
 .player-team-alt {
   display: flex;
   flex-flow: column nowrap;
+  gap: 0.5rem;
   padding: 0.5rem;
   border: 1px solid red;
 }
@@ -55,6 +56,8 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
   border: 2px solid var(--bug);
+  color: var(--bug) !important;
+  background-color: var(--bg) !important;
   border-bottom: none;
   text-transform: capitalize;
 }
