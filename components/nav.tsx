@@ -61,7 +61,12 @@ function Nav() {
       <button
         onClick={() => setClicked((current) => !current)}
         className={clicked ? 'main-nav-button clicked' : 'main-nav-button'}>
-        Teams
+        <div className='hamburger-icon'>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>Teams</div>
       </button>
       <nav className={clicked ? 'main-nav display' : 'main-nav hide'}>
         {navLinks.map((link, index) => {

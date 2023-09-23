@@ -1,9 +1,10 @@
 import dynamic from 'next/dynamic';
 //@ts-ignore
-import Data from '../data/players.yaml';
+import PlayerData from '../../data/players.yaml';
+import './altstyle.css';
 
-export default function Home() {
-  const PlayerTeam = dynamic(() => import('@/components/arrays'), {
+export default function AltStyle() {
+  const AlternateStyle = dynamic(() => import('./altstyle'), {
     loading: () => (
       <div className='loading'>
         <p>Loading...</p>
@@ -11,14 +12,14 @@ export default function Home() {
     ),
   });
 
-  const Players = Data;
+  const Players = PlayerData;
 
   function loadPlayers() {
     return (
       <div className='teams-container'>
         {Players.map((player: any) => {
           return (
-            <PlayerTeam
+            <AlternateStyle
               key={player.index}
               player={player.player}
               playerId={player.playerId}

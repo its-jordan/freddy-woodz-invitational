@@ -1,0 +1,30 @@
+.team {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.player-team {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.5rem;
+  border: 1px solid red;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.upper-container-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  background-color: lightblue;
+  padding: 0.25rem;
+}
+
+.upper-container-alt img {
+  height: 35px;
+  width: 35px;
+}

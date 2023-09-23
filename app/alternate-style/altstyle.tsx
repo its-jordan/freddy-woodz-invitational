@@ -1,12 +1,13 @@
 import { PokemonClient } from 'pokenode-ts';
-import { getTypeWeaknesses } from '../pokemon-types/index';
+import { getTypeWeaknesses } from '../../pokemon-types/index';
 import { twMerge } from 'tailwind-merge';
+import './altstyle.css';
 // @ts-ignore
-import Data from '../data/uber-stats.yaml';
+import Data from '../../data/uber-stats.yaml';
 // @ts-ignore
-import Moves from '../data/moves.yaml';
+import Moves from '../../data/moves.yaml';
 // @ts-ignore
-import Effects from '../data/moveEffects.yaml';
+import Effects from '../../data/moveEffects.yaml';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -26,7 +27,7 @@ interface Pokemon {
   className?: string;
 }
 
-export default async function PlayerTeam({
+export default async function AlternateStyle({
   player,
   playerId,
   p1,
@@ -42,117 +43,8 @@ export default async function PlayerTeam({
   className,
 }: Pokemon) {
   const api = new PokemonClient();
+
   let playerName = player;
-  let pok1 = await api.getPokemonByName(p1);
-  let pok2 = await api.getPokemonByName(p2);
-  let pok3 = await api.getPokemonByName(p3);
-  let pok4 = await api.getPokemonByName(p4);
-  let pok5 = await api.getPokemonByName(p5);
-  let pok6 = await api.getPokemonByName(p6);
-  let pok7 = await api.getPokemonByName(p7);
-  let pok8 = await api.getPokemonByName(p8);
-  let pok9 = await api.getPokemonByName(p9);
-  let pok0 = await api.getPokemonByName(p0);
-
-  const pok1weakness = getTypeWeaknesses(
-    pok1.types[0].type.name,
-    pok1.types[1]?.type.name
-  );
-  const pok1Array = Object.entries(pok1weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok2weakness = getTypeWeaknesses(
-    pok2.types[0].type.name,
-    pok2.types[1]?.type.name
-  );
-  const pok2Array = Object.entries(pok2weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok3weakness = getTypeWeaknesses(
-    pok3.types[0].type.name,
-    pok3.types[1]?.type.name
-  );
-  const pok3Array = Object.entries(pok3weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok4weakness = getTypeWeaknesses(
-    pok4.types[0].type.name,
-    pok4.types[1]?.type.name
-  );
-  const pok4Array = Object.entries(pok4weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok5weakness = getTypeWeaknesses(
-    pok5.types[0].type.name,
-    pok5.types[1]?.type.name
-  );
-  const pok5Array = Object.entries(pok5weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok6weakness = getTypeWeaknesses(
-    pok6.types[0].type.name,
-    pok6.types[1]?.type.name
-  );
-  const pok6Array = Object.entries(pok6weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok7weakness = getTypeWeaknesses(
-    pok7.types[0].type.name,
-    pok7.types[1]?.type.name
-  );
-  const pok7Array = Object.entries(pok7weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok8weakness = getTypeWeaknesses(
-    pok8.types[0].type.name,
-    pok8.types[1]?.type.name
-  );
-  const pok8Array = Object.entries(pok8weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok9weakness = getTypeWeaknesses(
-    pok9.types[0].type.name,
-    pok9.types[1]?.type.name
-  );
-  const pok9Array = Object.entries(pok9weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
-
-  const pok0weakness = getTypeWeaknesses(
-    pok0.types[0].type.name,
-    pok0.types[1]?.type.name
-  );
-  const pok0Array = Object.entries(pok0weakness)
-    .map((a) => a.join(': '))
-    .filter((a) => !a.includes('1'))
-    .map((i) => i + 'x')
-    .sort();
 
   async function displayAbility(e: string) {
     const abilityInfo = await api.getAbilityByName(e);
@@ -667,148 +559,27 @@ export default async function PlayerTeam({
     }
   }
 
-  var pokearray = [
-    {
-      name: pok1.name,
-      abilities: pok1.abilities,
-      types: pok1.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok1.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok1.species,
-      weakness: pok1Array,
-      weight: pok1.weight,
-    },
-    {
-      name: pok2.name,
-      abilities: pok2.abilities,
-      types: pok2.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok2.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok2.species,
-      weakness: pok2Array,
-      weight: pok2.weight,
-    },
-    {
-      name: pok3.name,
-      abilities: pok3.abilities,
-      types: pok3.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok3.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok3.species,
-      weakness: pok3Array,
-      weight: pok3.weight,
-    },
-    {
-      name: pok4.name,
-      abilities: pok4.abilities,
-      types: pok4.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok4.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok4.species,
-      weakness: pok4Array,
-      weight: pok4.weight,
-    },
-    {
-      name: pok5.name,
-      abilities: pok5.abilities,
-      types: pok5.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok5.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok5.species,
-      weakness: pok5Array,
-      weight: pok5.weight,
-    },
-    {
-      name: pok6.name,
-      abilities: pok6.abilities,
-      types: pok6.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok6.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok6.species,
-      weakness: pok6Array,
-      weight: pok6.weight,
-    },
-    {
-      name: pok7.name,
-      abilities: pok7.abilities,
-      types: pok7.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok7.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok7.species,
-      weakness: pok7Array,
-      weight: pok7.weight,
-    },
-    {
-      name: pok8.name,
-      abilities: pok8.abilities,
-      types: pok8.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok8.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok8.species,
-      weakness: pok8Array,
-      weight: pok8.weight,
-    },
-    {
-      name: pok9.name,
-      abilities: pok9.abilities,
-      types: pok9.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok9.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok9.species,
-      weakness: pok9Array,
-      weight: pok9.weight,
-    },
-    {
-      name: pok0.name,
-      abilities: pok0.abilities,
-      types: pok0.types,
-      sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok0.name
-        ?.replace('-50', '')
-        ?.replace('-incarnate', '')}.gif`,
-      species: pok0.species,
-      weakness: pok0Array,
-      weight: pok0.weight,
-    },
-  ];
-
-  if (pok1.name === 'lilligant-hisui') {
-    var editedArray = {
-      name: pok1.name,
-      abilities: pok1.abilities,
-      types: pok1.types,
-      sprite: `https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/56ce70c8-7180-4823-ad03-5f29f2594215/dfptijp-3a860015-8842-4067-9126-711d52512397.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU2Y2U3MGM4LTcxODAtNDgyMy1hZDAzLTVmMjlmMjU5NDIxNVwvZGZwdGlqcC0zYTg2MDAxNS04ODQyLTQwNjctOTEyNi03MTFkNTI1MTIzOTcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.bQKwQwMio-YJACXsO411cdd2JRTh7PJDuXDtQ9rGxp4`,
-      species: pok1.species,
-      weakness: pok1Array,
-      weight: pok1.weight,
-    };
-
-    pokearray = pokearray.map((u) =>
-      u.name !== editedArray.name ? u : editedArray
-    );
-  }
-
   function nameSplit(e: string) {
     if (e.includes('galar') == true) {
-      return `${e.split('-')[1]?.concat('ian')} ${
+      return `${
+        e.split('-')[1].charAt(0).toUpperCase() +
+        e.split('-')[1].slice(1).concat('ian')
+      } ${
         ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
       }`;
     } else if (e.includes('50')) {
       return `${e.replace('-50', '')}`;
     } else if (e.includes('mega') == true) {
-      return `${e.split('-')[1]} ${
+      return `${
+        e.split('-')[1].charAt(0).toUpperCase() + e.split('-')[1].slice(1)
+      } ${
         ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
       }`;
     } else if (e.includes('alola') == true) {
-      return `${e.split('-')[1]?.concat('n')} ${
+      return `${
+        e.split('-')[1].charAt(0).toUpperCase() +
+        e.split('-')[0].slice(1)?.concat('n')
+      } ${
         ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
       }`;
     } else if (e.includes('hisui') == true) {
@@ -818,22 +589,8 @@ export default async function PlayerTeam({
     } else if (e.includes('blade') == true) {
       return `${e.split('-')[0]}`;
     } else {
-      return e;
+      return `${e.charAt(0).toUpperCase() + e.split('-')[0].slice(1)}`;
     }
-  }
-
-  function returnType(e: string) {
-    if (e == undefined) {
-      return <></>;
-    }
-    return (
-      <Image
-        className={`type-icon ${e}-type`}
-        src={`icons/${e}.svg`}
-        alt={`Type icon for ${e}.`}
-        height={450}
-        width={450}></Image>
-    );
   }
 
   function weightCalculation(e: number) {
@@ -889,24 +646,39 @@ export default async function PlayerTeam({
     );
   }
 
-  return (
-    <div
-      className={twMerge(`team ${playerId.toString()}`, className)}
-      id={playerId.toString()}
-      data-player={playerId}>
-      <div className='teamname'>{playerName}</div>
-      <div className='player-team'>
+  async function getPokemonData(e: string) {
+    let pok = await api.getPokemonByName(e);
+    const pokWeakness = getTypeWeaknesses(
+      pok.types[0].type.name,
+      pok.types[1]?.type.name
+    );
+    const pokArray = Object.entries(pokWeakness)
+      .map((a) => a.join(': '))
+      .filter((a) => !a.includes('1'))
+      .map((i) => i + 'x')
+      .sort();
+    var pokearray = [
+      {
+        name: pok.name,
+        abilities: pok.abilities,
+        types: pok.types,
+        sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok.name
+          ?.replace('-50', '')
+          ?.replace('-incarnate', '')}.gif`,
+        species: pok.species,
+        weakness: pokArray,
+        weight: pok.weight,
+      },
+    ];
+    return (
+      <>
         {pokearray.map((values, index) => {
           return (
             <div
-              className={`pokemon-info`}
+              className={`pokemon-info-alt`}
               key={index}
               data-species={values.species.name}
               data-pokemon={values.name}>
-              <div className='type-icon-container'>
-                {returnType(values.types[0]?.type.name)}
-                {returnType(values.types[1]?.type.name)}
-              </div>
               {getPokemonNumber(values.species.name)}
               <Link
                 href={`https://www.smogon.com/dex/sv/pokemon/${values.name
@@ -914,42 +686,44 @@ export default async function PlayerTeam({
                   ?.replace('-incarnate', '')
                   ?.replace('-50', '')}`}
                 target='_blank'
-                className='upper-container'>
+                className='upper-container-alt'>
                 <img
-                  className={`${values.name}-img`}
+                  className={`${values.name}-img-alt`}
                   src={values.sprite}
                   alt={`Default front sprite for ${values.name}`}
                 />
-                <div className='pokemon-data'>
-                  <div className='name-container'>
-                    <div className='pokemon-name'>{nameSplit(values.name)}</div>
-                    {getGenera(values.species.name)}
+                <div className='pokemon-data-alt'>
+                  <div className='name-container-alt'>
+                    <div className='pokemon-name-alt'>
+                      {nameSplit(values.name)}
+                    </div>
                     {weightCalculation(values.weight)}
                   </div>
                 </div>
-                <div className='pokemon-types'>
+                <div className='pokemon-types-alt'>
                   {values.types.map((value) => {
                     return (
                       <div
-                        className={`pokemon-type ${value.type.name}`}
+                        className={`pokemon-type-alt ${value.type.name}`}
                         key={value.slot}>
                         {value.type.name}
                       </div>
                     );
                   })}
                 </div>
+                {getStats(values.name)}
               </Link>
-              <div className='abilities-container'>
-                <div className='abilities-header'>Abilities</div>
-                <div className='abilities'>
+              <div className='abilities-container-alt'>
+                <div className='abilities-header-alt'>Abilities</div>
+                <div className='abilities-alt'>
                   {values.abilities?.map((value, index) => {
                     return (
                       <Link
                         href={`https://www.smogon.com/dex/sv/abilities/${value.ability.name}`}
                         target='_blank'
-                        className={`ability-box ${value.ability.name}`}
+                        className={`ability-box-alt ${value.ability.name}`}
                         key={index}>
-                        <div className='ability-name'>
+                        <div className='ability-nam-alt'>
                           {value.ability.name?.replace(
                             'defiant',
                             'competitive'
@@ -961,7 +735,7 @@ export default async function PlayerTeam({
                   })}
                 </div>
               </div>
-              {getStats(values.name)}
+
               <div className='damage-relations-container'>
                 <div className='damage-relations-header-container'>
                   <div className='damage-relations-header'>
@@ -1013,6 +787,27 @@ export default async function PlayerTeam({
             </div>
           );
         })}
+      </>
+    );
+  }
+
+  return (
+    <div
+      className={twMerge(`team ${playerId.toString()}`, className)}
+      id={playerId.toString()}
+      data-player={playerId}>
+      <div className='teamname'>{playerName}</div>
+      <div className='player-team'>
+        {getPokemonData(p1)}
+        {getPokemonData(p2)}
+        {getPokemonData(p3)}
+        {getPokemonData(p4)}
+        {getPokemonData(p5)}
+        {getPokemonData(p6)}
+        {getPokemonData(p7)}
+        {getPokemonData(p8)}
+        {getPokemonData(p9)}
+        {getPokemonData(p0)}
       </div>
     </div>
   );
