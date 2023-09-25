@@ -1,75 +1,180 @@
+:root {
+  --playernameheight: 5vh;
+}
+
+/* Type Colors */
+
+.normal {
+  --_type-color: var(--normal);
+}
+.fire {
+  --_type-color: var(--fire);
+}
+.water {
+  --_type-color: var(--water);
+}
+.electric {
+  --_type-color: var(--electric);
+}
+.grass {
+  --_type-color: var(--grass);
+}
+.ice {
+  --_type-color: var(--ice);
+}
+.fighting {
+  --_type-color: var(--fighting);
+}
+.poison {
+  --_type-color: var(--poison);
+}
+.ground {
+  --_type-color: var(--ground);
+}
+.flying {
+  --_type-color: var(--flying);
+}
+.psychic {
+  --_type-color: var(--psychic);
+}
+.bug {
+  --_type-color: var(--bug);
+}
+.rock {
+  --_type-color: var(--rock);
+}
+.ghost {
+  --_type-color: var(--ghost);
+}
+.dragon {
+  --_type-color: var(--dragon);
+}
+.dark {
+  --_type-color: var(--dark);
+}
+.steel {
+  --_type-color: var(--steel);
+}
+.fairy {
+  --_type-color: var(--fairy);
+}
+
+.content-container {
+  display: block;
+  width: calc(100% - var(--navwidth));
+  margin-inline: 0;
+  margin-left: 0;
+}
+
+html {
+  scroll-margin-top: 100vh !important;
+}
+
+main {
+  margin-top: 0 !important;
+}
+
+.teams-container-alt {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  font-size: 0.9rem !important;
+}
+
 .team-alt {
   display: flex;
   flex-flow: column nowrap;
+  max-height: 100vh;
+}
+
+.teamname-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 1.75rem;
+  font-weight: 600;
+  height: var(--playernameheight);
 }
 
 .player-team-alt {
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: calc(100vh - var(--playernameheight));
+  overflow-y: scroll;
   gap: 0.5rem;
   padding: 0.5rem;
   border: 1px solid red;
 }
 
 .pokemon-info-alt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: end;
+  background-color: color-mix(in srgb, var(--_type-color) 65%, black);
   border-radius: 0.5rem;
-  border: 2px solid var(--bug);
   padding: 0 1rem;
 }
 
-.upper-container-alt {
+.lower-container-alt {
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
   padding: 0.25rem;
 }
 
+.name-container-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 0.5rem;
+}
+
 .pokemon-name-alt {
   font-size: 1.5rem;
   width: max-content;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   font-weight: 600;
 }
 
-.upper-container-alt img {
-  height: 75px;
+.pokemon-img {
   width: 75px;
-  border: 2px solid var(--bug);
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-top: none;
-  background: var(--bg);
-  margin-top: -6px;
-  padding: 0.5rem;
+  max-width: 75px;
+  height: 75px;
+  max-height: 75px;
   object-fit: contain;
-  min-width: 75px;
+  object-position: top center;
 }
 
 .pokemon-types-alt {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: -2px;
+  flex-flow: row nowrap;
+  gap: 0.25rem;
 }
 
 .pokemon-type-alt {
   display: flex;
   flex-flow: row nowrap;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border: 2px solid var(--bug);
-  color: var(--bug) !important;
-  background-color: var(--bg) !important;
-  border-bottom: none;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  border-radius: 0.375rem;
+  background-color: var(--_type-color);
+}
+
+.type-text-alt {
   text-transform: capitalize;
+  color: white;
+}
+
+.pokemon-types-alt img {
+  object-fit: contain;
+}
+
+.pokemon-type-alt {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .pokedex-number-alt {
-  position: absolute;
-  background-color: var(--bg);
-  color: var(--bug);
-  padding: 1rem 0.5rem 0.5rem;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border: 2px solid var(--bug);
-  border-top: none;
-  top: -2px;
-  right: 1rem;
+  position: relative;
 }

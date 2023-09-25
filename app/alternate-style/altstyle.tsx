@@ -670,33 +670,11 @@ export default async function AlternateStyle({
         {pokearray.map((values, index) => {
           return (
             <div
-              className={`pokemon-info-alt`}
+              className={`pokemon-info-alt ${values.types[0].type.name}`}
               key={index}
               data-species={values.species.name}
               data-pokemon={values.name}>
               {getPokemonNumber(values.species.name)}
-              <Link
-                href={`https://www.smogon.com/dex/sv/pokemon/${values.name
-                  ?.replace('-mega', '')
-                  ?.replace('-incarnate', '')
-                  ?.replace('-50', '')}`}
-                target='_blank'
-                className='upper-container-alt'>
-                <img
-                  className={`${values.name}-img-alt`}
-                  src={values.sprite}
-                  alt={`Default front sprite for ${values.name}`}
-                />
-                <div className='pokemon-data-alt'>
-                  <div className='name-container-alt'>
-                    <div className='pokemon-name-alt'>
-                      {nameSplit(values.name)}
-                    </div>
-                    {weightCalculation(values.weight)}
-                  </div>
-                </div>
-                {getStats(values.name)}
-              </Link>
               <div className='abilities-container-alt'>
                 <div className='abilities-header-alt'>Abilities</div>
                 <div className='abilities-alt'>
@@ -719,7 +697,7 @@ export default async function AlternateStyle({
                   })}
                 </div>
               </div>
-
+              {getStats(values.name)}
               <div className='damage-relations-container'>
                 <div className='damage-relations-header-container'>
                   <div className='damage-relations-header'>
@@ -767,18 +745,44 @@ export default async function AlternateStyle({
                   })}
                 </div>
               </div>
-              {displayMoves(values.name)}
-              <div className='pokemon-types-alt'>
-                {values.types.map((value) => {
-                  return (
-                    <div
-                      className={`pokemon-type-alt ${value.type.name}`}
-                      key={value.slot}>
-                      {value.type.name}
+
+              {/* <img
+                className={`${values.name}-img-alt pokemon-img`}
+                src={values.sprite}
+                alt={`Default front sprite for ${values.name}`}
+              /> */}
+              <Link
+                href={`https://www.smogon.com/dex/sv/pokemon/${values.name
+                  ?.replace('-mega', '')
+                  ?.replace('-incarnate', '')
+                  ?.replace('-50', '')}`}
+                target='_blank'
+                className='lower-container-alt'>
+                <div className='pokemon-data-alt'>
+                  <div className='name-container-alt'>
+                    <div className='pokemon-name-alt'>
+                      {nameSplit(values.name)}
                     </div>
-                  );
-                })}
-              </div>
+                    <div className='pokemon-types-alt'>
+                      {values.types.map((value) => {
+                        return (
+                          <div
+                            className={`pokemon-type-alt ${value.type.name}`}
+                            key={value.slot}>
+                            <img
+                              src={`./icons/${value.type.name}.svg`}
+                              height={25}
+                              width={25}></img>
+                            <div className='type-text-alt'>
+                              {value.type.name}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           );
         })}
@@ -791,7 +795,6 @@ export default async function AlternateStyle({
       className={twMerge(`team-alt ${playerId.toString()}`, className)}
       id={playerId.toString()}
       data-player={playerId}>
-      <div className='teamname'>{playerName}</div>
       <div className='player-team-alt'>
         {getPokemonData(p1)}
         {getPokemonData(p2)}
@@ -804,6 +807,7 @@ export default async function AlternateStyle({
         {getPokemonData(p9)}
         {getPokemonData(p0)}
       </div>
+      <div className='teamname-alt'>{playerName}</div>
     </div>
   );
 }

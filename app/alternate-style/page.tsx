@@ -16,7 +16,7 @@ export default function AltStyle() {
 
   function loadPlayers() {
     return (
-      <div className='teams-container'>
+      <div className='teams-container-alt'>
         {Players.map((player: any) => {
           return (
             <AlternateStyle
