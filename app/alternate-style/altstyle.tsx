@@ -563,13 +563,12 @@ export default async function AlternateStyle({
 
   function nameSplit(e: string) {
     if (e.includes('galar') == true) {
-      return (
-        <>
-          {e.split('-')[1].charAt(0).toUpperCase() +
-            e.split('-')[1].slice(1).concat('ian')}{' '}
-          {e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)}
-        </>
-      );
+      return `${
+        e.split('-')[1].charAt(0).toUpperCase() +
+        e.split('-')[1].slice(1).concat('ian')
+      } ${' '} ${
+        e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
     } else if (e.includes('50')) {
       return `${e.replace('-50', '')}`;
     } else if (e.includes('mega') == true) {
@@ -725,7 +724,7 @@ export default async function AlternateStyle({
               className={`pokemon-info-alt ${values.types[0].type.name}`}
               key={index}
               data-species={values.species.name}
-              data-pokemon={values.name}
+              data-pokemon={nameSplit(values.name)}
               data-type-1={values.types[0].type.name}
               data-type-2={values.types[1]?.type.name}
               href={`https://www.smogon.com/dex/sv/pokemon/${values.name
@@ -733,6 +732,587 @@ export default async function AlternateStyle({
                 ?.replace('-incarnate', '')
                 ?.replace('-50', '')}`}
               target='_blank'>
+              <div className='holo-background-container'>
+                <div
+                  className='holo-background-text unselectable'
+                  aria-hidden='true'>
+                  {nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name) +
+                    ' ' +
+                    nameSplit(values.name)}
+                </div>
+              </div>
               <div className='name-container-alt'>
                 <div className='pokemon-name-alt'>{nameSplit(values.name)}</div>
                 <div className='pokemon-types-alt'>
@@ -785,7 +1365,7 @@ export default async function AlternateStyle({
                   </div>
                 </div>
 
-                <div className='damage-relation-types'>
+                <div className='damage-relation-types-alt'>
                   {values.weakness?.map((value, index) => {
                     return (
                       <div
@@ -822,8 +1402,8 @@ export default async function AlternateStyle({
       id={playerId.toString()}
       data-player={playerId}
       data-player-name={playerName}>
-      <div className='player-name-alt'>{playerName}</div>
       <div className='player-team-alt'>
+        <div className='player-name-alt'>{playerName}</div>
         {getPokemonData(p1)}
         {getPokemonData(p2)}
         {getPokemonData(p3)}
