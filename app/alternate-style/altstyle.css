@@ -2,6 +2,10 @@
   --playernameheight: 5vh;
 }
 
+.notice {
+  margin-top: 60px;
+}
+
 /* Type Colors */
 
 [data-type-1='normal'] {
