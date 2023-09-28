@@ -50,7 +50,7 @@ export default async function AlternateStyle({
     const abilityInfo = await api.getAbilityByName(e);
     if (abilityInfo.id == 261) {
       const abilityEffect = abilityInfo.flavor_text_entries[7]?.flavor_text;
-      return <div className='ability-effect'>{abilityEffect}</div>;
+      return <div className='ability-effect-alt'>{abilityEffect}</div>;
     } else if (
       abilityInfo.id == 202 ||
       abilityInfo.id == 65 ||
@@ -58,10 +58,10 @@ export default async function AlternateStyle({
       abilityInfo.id == 119
     ) {
       const abilityEffect = abilityInfo.effect_entries[0]?.short_effect;
-      return <div className='ability-effect'>{abilityEffect}</div>;
+      return <div className='ability-effect-alt'>{abilityEffect}</div>;
     } else {
       const abilityEffect = abilityInfo.effect_entries[1]?.short_effect;
-      return <div className='ability-effect'>{abilityEffect}</div>;
+      return <div className='ability-effect-alt'>{abilityEffect}</div>;
     }
   }
 
@@ -421,12 +421,19 @@ export default async function AlternateStyle({
       );
   }
 
+  async function getGenera(e: string) {
+    let species = await api.getPokemonSpeciesByName(e);
+    return (
+      <div className={`genera-text-alt ${e}`}>{species?.genera[7].genus}</div>
+    );
+  }
+
   async function getPokemonNumber(e: string) {
     let species = await api.getPokemonSpeciesByName(e);
     return (
       <div
         className={`pokedex-number-alt ${e} ${species.pokedex_numbers[1]?.entry_number}`}>
-        &#x23;{species.pokedex_numbers[0]?.entry_number}
+        No. {species.pokedex_numbers[0]?.entry_number}
       </div>
     );
   }
@@ -556,12 +563,13 @@ export default async function AlternateStyle({
 
   function nameSplit(e: string) {
     if (e.includes('galar') == true) {
-      return `${
-        e.split('-')[1].charAt(0).toUpperCase() +
-        e.split('-')[1].slice(1).concat('ian')
-      } ${
-        ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
-      }`;
+      return (
+        <>
+          {e.split('-')[1].charAt(0).toUpperCase() +
+            e.split('-')[1].slice(1).concat('ian')}{' '}
+          {e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)}
+        </>
+      );
     } else if (e.includes('50')) {
       return `${e.replace('-50', '')}`;
     } else if (e.includes('mega') == true) {
@@ -573,7 +581,7 @@ export default async function AlternateStyle({
     } else if (e.includes('alola') == true) {
       return `${
         e.split('-')[1].charAt(0).toUpperCase() +
-        e.split('-')[0].slice(1)?.concat('n')
+        e.split('-')[1].slice(1)?.concat('n')
       } ${
         ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
       }`;
@@ -583,8 +591,18 @@ export default async function AlternateStyle({
       }`;
     } else if (e.includes('blade') == true) {
       return `${e.split('-')[0]}`;
+    } else if (e.includes('rotom') == true) {
+      return `${
+        e.split('-')[1].charAt(0).toUpperCase() + e.split('-')[1].slice(1)
+      } ${
+        ' ' + e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
+    } else if (e.includes('incarnate') == true) {
+      return `${
+        e.split('-')[0].charAt(0).toUpperCase() + e.split('-')[0].slice(1)
+      }`;
     } else {
-      return `${e.charAt(0).toUpperCase() + e.split('-')[0].slice(1)}`;
+      return e;
     }
   }
 
@@ -595,14 +613,14 @@ export default async function AlternateStyle({
     var weight = Math.round(parseFloat(x));
     if (weight! <= 1) {
       return (
-        <div className='pokemon-weight' data-weight={`${x} kg`}>
-          Weight: {x}&nbsp;kg
+        <div className='pokemon-weight-alt' data-weight={`${x} kg`}>
+          {x}&nbsp;kg
         </div>
       );
     } else {
       return (
-        <div className='pokemon-weight' data-weight={`${weight} kg`}>
-          Weight: {weight}&nbsp;kg
+        <div className='pokemon-weight-alt' data-weight={`${weight} kg`}>
+          {weight}&nbsp;kg
         </div>
       );
     }
@@ -611,34 +629,67 @@ export default async function AlternateStyle({
   async function getStats(e: string) {
     let pokemon = await api.getPokemonByName(e);
     return (
-      <div className={`pokemon-stats ${pokemon}`} data-pokemon={e}>
-        <div className='pokemon-stats-header'>Base Stats</div>
-        <div className='pokemon-stats-values'>
-          {pokemon.stats.map((stat, index) => {
-            return (
-              <div
-                className={`stat-container ${stat.stat.name}`}
-                data-stat={stat.stat.name}
-                data-stat-value={stat.base_stat}
-                key={index}>
-                <div className='stat-header'>
-                  {stat.stat.name.charAt(0).toUpperCase() +
-                    stat.stat.name
-                      .slice(1)
-                      .replace('-', ' ')
-                      .replace('pecial attack', 'pa')
-                      .replace('pecial defense', 'pd')
-                      .replace('ack', '')
-                      .replace('ense', '')
-                      .replace('eed', 'e')}
-                </div>
-                <div className='stat-value'>{stat.base_stat}</div>
+      <div className={`pokemon-stats-alt ${pokemon}`} data-pokemon={e}>
+        {pokemon.stats.map((stat, index) => {
+          return (
+            <div
+              className={`stat-container-alt ${stat.stat.name}`}
+              data-stat={stat.stat.name}
+              data-stat-value={stat.base_stat}
+              key={index}>
+              <div className='stat-header-alt'>
+                {stat.stat.name.charAt(0).toUpperCase() +
+                  stat.stat.name
+                    .slice(1)
+                    .replace('-', ' ')
+                    .replace('pecial attack', 'pa')
+                    .replace('pecial defense', 'pd')
+                    .replace('ack', '')
+                    .replace('ense', '')
+                    .replace('eed', 'e')}
               </div>
-            );
-          })}
-        </div>
+              <div className='stat-value-alt'>{stat.base_stat}</div>
+            </div>
+          );
+        })}
       </div>
     );
+  }
+
+  function abilityNames(e: any) {
+    if (
+      e.ability.name
+        .slice(1)
+        .replace(/-[A-Za-z]/i, ' ')
+        .split(' ')[1] == undefined
+    ) {
+      return (
+        e.ability.name.charAt(0).toUpperCase() +
+        e.ability.name
+          .slice(1)
+          .replace(/-[A-Za-z]/i, ' ')
+          .split(' ')[0]
+      );
+    } else {
+      return (
+        e.ability.name.charAt(0).toUpperCase() +
+        e.ability.name
+          .slice(1)
+          .replace(/-[A-Za-z]/i, ' ')
+          .split(' ')[0] +
+        ' ' +
+        e.ability.name
+          ?.slice(1)
+          ?.replace(/-/i, ' ')
+          ?.split(' ')[1]
+          ?.charAt(0)
+          .toUpperCase() +
+        e.ability.name
+          .slice(1)
+          .replace(/-[A-Za-z]/i, ' ')
+          .split(' ')[1]
+      );
+    }
   }
 
   async function getPokemonData(e: string) {
@@ -657,9 +708,10 @@ export default async function AlternateStyle({
         name: pok.name,
         abilities: pok.abilities,
         types: pok.types,
-        sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok.name
-          ?.replace('-50', '')
-          ?.replace('-incarnate', '')}.gif`,
+        // sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok.name
+        //   ?.replace('-50', '')
+        //   ?.replace('-incarnate', '')}.gif`,
+        sprite: pok.sprites.other?.['official-artwork'].front_default,
         species: pok.species,
         weakness: pokArray,
         weight: pok.weight,
@@ -669,121 +721,95 @@ export default async function AlternateStyle({
       <>
         {pokearray.map((values, index) => {
           return (
-            <div
+            <Link
               className={`pokemon-info-alt ${values.types[0].type.name}`}
               key={index}
               data-species={values.species.name}
-              data-pokemon={values.name}>
-              {getPokemonNumber(values.species.name)}
-              <div className='abilities-container-alt'>
-                <div className='abilities-header-alt'>Abilities</div>
-                <div className='abilities-alt'>
-                  {values.abilities?.map((value, index) => {
+              data-pokemon={values.name}
+              data-type-1={values.types[0].type.name}
+              data-type-2={values.types[1]?.type.name}
+              href={`https://www.smogon.com/dex/sv/pokemon/${values.name
+                ?.replace('-mega', '')
+                ?.replace('-incarnate', '')
+                ?.replace('-50', '')}`}
+              target='_blank'>
+              <div className='name-container-alt'>
+                <div className='pokemon-name-alt'>{nameSplit(values.name)}</div>
+                <div className='pokemon-types-alt'>
+                  {values.types.map((value) => {
                     return (
-                      <Link
-                        href={`https://www.smogon.com/dex/sv/abilities/${value.ability.name}`}
-                        target='_blank'
-                        className={`ability-box-alt ${value.ability.name}`}
-                        key={index}>
-                        <div className='ability-nam-alt'>
-                          {value.ability.name?.replace(
-                            'defiant',
-                            'competitive'
-                          )}
-                        </div>
-                        {displayAbility(value.ability.name)}
-                      </Link>
+                      <div
+                        className={`pokemon-type-alt ${value.type.name}`}
+                        data-type-1={value.type.name}
+                        key={value.slot}>
+                        <img
+                          src={`./icons/${value.type.name}.svg`}
+                          height={25}
+                          width={25}></img>
+                      </div>
                     );
                   })}
                 </div>
               </div>
-              {getStats(values.name)}
-              <div className='damage-relations-container'>
-                <div className='damage-relations-header-container'>
-                  <div className='damage-relations-header'>
-                    Type Effectiveness
-                  </div>
-                  <div className='damage-relation-label'>
-                    {[
-                      'Immune to',
-                      'Very Resistant to',
-                      'Resistant to',
-                      'Weak to',
-                      'Very Weak to',
-                    ].map((value, index) => {
+              <div className='pokemon-img-container'>
+                <img
+                  className={`${values.name}-img-alt pokemon-img`}
+                  //@ts-ignore
+                  src={values.sprite}
+                  alt={`Default front sprite for ${values.name}`}
+                />
+              </div>
+              <div className='pokemon-mid-container-alt'>
+                {getPokemonNumber(values.species.name)}
+                {weightCalculation(values.weight)}
+                {getGenera(values.species.name)}
+              </div>
+              <div className='lower-container-alt'>
+                <div className='abilities-container-alt'>
+                  <div className='abilities-header-alt'>Abilities</div>
+                  <div className='abilities-alt'>
+                    {values.abilities?.map((value, index) => {
                       return (
-                        <div
-                          className='relation-label'
-                          key={index}
-                          data-label={value}>
-                          {value}
-                        </div>
+                        <Link
+                          href={`https://www.smogon.com/dex/sv/abilities/${value.ability.name}`}
+                          target='_blank'
+                          className={`ability-box-alt ${value.ability.name}`}
+                          key={index}>
+                          <div className='ability-name-alt'>
+                            <div>{abilityNames(value)}</div>
+                            {displayAbility(value.ability.name)}
+                          </div>
+                        </Link>
                       );
                     })}
                   </div>
                 </div>
+
                 <div className='damage-relation-types'>
                   {values.weakness?.map((value, index) => {
                     return (
                       <div
                         key={index}
                         data-type={value}
-                        className='relations-type'>
+                        className='relations-type-alt'>
                         <div>
                           <img
-                            className={`relations-type-icon ${
-                              value.split(':')[0]
-                            }`}
+                            className={`relations-type-icon-alt`}
                             src={`../icons/${value.split(':')[0]}.svg`}
-                            alt='Bug icon'
+                            alt={`${value.split(':')[0]}-type icon`}
                             height={30}
                             width={30}></img>
                         </div>
-                        <div>{value.split(':')[0]}</div>
+                        <div className='relation-type-name-hover'>
+                          {value.split(':')[0]}
+                        </div>
                       </div>
                     );
                   })}
                 </div>
+                {getStats(values.name)}
               </div>
-
-              {/* <img
-                className={`${values.name}-img-alt pokemon-img`}
-                src={values.sprite}
-                alt={`Default front sprite for ${values.name}`}
-              /> */}
-              <Link
-                href={`https://www.smogon.com/dex/sv/pokemon/${values.name
-                  ?.replace('-mega', '')
-                  ?.replace('-incarnate', '')
-                  ?.replace('-50', '')}`}
-                target='_blank'
-                className='lower-container-alt'>
-                <div className='pokemon-data-alt'>
-                  <div className='name-container-alt'>
-                    <div className='pokemon-name-alt'>
-                      {nameSplit(values.name)}
-                    </div>
-                    <div className='pokemon-types-alt'>
-                      {values.types.map((value) => {
-                        return (
-                          <div
-                            className={`pokemon-type-alt ${value.type.name}`}
-                            key={value.slot}>
-                            <img
-                              src={`./icons/${value.type.name}.svg`}
-                              height={25}
-                              width={25}></img>
-                            <div className='type-text-alt'>
-                              {value.type.name}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
+            </Link>
           );
         })}
       </>
@@ -794,7 +820,9 @@ export default async function AlternateStyle({
     <div
       className={twMerge(`team-alt ${playerId.toString()}`, className)}
       id={playerId.toString()}
-      data-player={playerId}>
+      data-player={playerId}
+      data-player-name={playerName}>
+      <div className='player-name-alt'>{playerName}</div>
       <div className='player-team-alt'>
         {getPokemonData(p1)}
         {getPokemonData(p2)}
@@ -807,7 +835,6 @@ export default async function AlternateStyle({
         {getPokemonData(p9)}
         {getPokemonData(p0)}
       </div>
-      <div className='teamname-alt'>{playerName}</div>
     </div>
   );
 }

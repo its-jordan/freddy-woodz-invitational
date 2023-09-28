@@ -4,87 +4,174 @@
 
 /* Type Colors */
 
-.normal {
+[data-type-1='normal'] {
   --_type-color: var(--normal);
 }
-.fire {
+[data-type-1='fire'] {
   --_type-color: var(--fire);
 }
-.water {
+[data-type-1='water'] {
   --_type-color: var(--water);
 }
-.electric {
+[data-type-1='electric'] {
   --_type-color: var(--electric);
 }
-.grass {
+[data-type-1='grass'] {
   --_type-color: var(--grass);
 }
-.ice {
+[data-type-1='ice'] {
   --_type-color: var(--ice);
 }
-.fighting {
+[data-type-1='fighting'] {
   --_type-color: var(--fighting);
 }
-.poison {
+[data-type-1='poison'] {
   --_type-color: var(--poison);
 }
-.ground {
+[data-type-1='ground'] {
   --_type-color: var(--ground);
 }
-.flying {
+[data-type-1='flying'] {
   --_type-color: var(--flying);
 }
-.psychic {
+[data-type-1='psychic'] {
   --_type-color: var(--psychic);
 }
-.bug {
+[data-type-1='bug'] {
   --_type-color: var(--bug);
 }
-.rock {
+[data-type-1='rock'] {
   --_type-color: var(--rock);
 }
-.ghost {
+[data-type-1='ghost'] {
   --_type-color: var(--ghost);
 }
-.dragon {
+[data-type-1='dragon'] {
   --_type-color: var(--dragon);
 }
-.dark {
+[data-type-1='dark'] {
   --_type-color: var(--dark);
 }
-.steel {
+[data-type-1='steel'] {
   --_type-color: var(--steel);
 }
-.fairy {
+[data-type-1='fairy'] {
   --_type-color: var(--fairy);
+}
+[data-type-2='normal'] {
+  --_type-color-2: var(--normal);
+}
+[data-type-2='fire'] {
+  --_type-color-2: var(--fire);
+}
+[data-type-2='water'] {
+  --_type-color-2: var(--water);
+}
+[data-type-2='electric'] {
+  --_type-color-2: var(--electric);
+}
+[data-type-2='grass'] {
+  --_type-color-2: var(--grass);
+}
+[data-type-2='ice'] {
+  --_type-color-2: var(--ice);
+}
+[data-type-2='fighting'] {
+  --_type-color-2: var(--fighting);
+}
+[data-type-2='poison'] {
+  --_type-color-2: var(--poison);
+}
+[data-type-2='ground'] {
+  --_type-color-2: var(--ground);
+}
+[data-type-2='flying'] {
+  --_type-color-2: var(--flying);
+}
+[data-type-2='psychic'] {
+  --_type-color-2: var(--psychic);
+}
+[data-type-2='bug'] {
+  --_type-color-2: var(--bug);
+}
+[data-type-2='rock'] {
+  --_type-color-2: var(--rock);
+}
+[data-type-2='ghost'] {
+  --_type-color-2: var(--ghost);
+}
+[data-type-2='dragon'] {
+  --_type-color-2: var(--dragon);
+}
+[data-type-2='dark'] {
+  --_type-color-2: var(--dark);
+}
+[data-type-2='steel'] {
+  --_type-color-2: var(--steel);
+}
+[data-type-2='fairy'] {
+  --_type-color-2: var(--fairy);
 }
 
 .content-container {
   display: block;
-  width: calc(100% - var(--navwidth));
-  margin-inline: 0;
-  margin-left: 0;
+  width: 90%;
+  margin-inline: auto !important;
 }
 
 html {
-  scroll-margin-top: 100vh !important;
+  scroll-padding-top: 56px !important;
 }
 
 main {
   margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+.main-nav-container {
+  display: none !important;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  height: 56px;
+  z-index: 1000;
+  text-transform: capitalize;
 }
 
 .teams-container-alt {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  gap: 1rem;
   font-size: 0.9rem !important;
+  margin-top: 56px;
 }
 
 .team-alt {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
-  max-height: 100vh;
+}
+
+.player-name-alt {
+  display: flex;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 .teamname-alt {
@@ -97,52 +184,205 @@ main {
 
 .player-team-alt {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: calc(100vh - var(--playernameheight));
-  overflow-y: scroll;
+  grid-template-columns: repeat(auto-fill, 335px);
+  justify-content: center;
+  align-items: start;
+  /* height: calc(100vh - var(--playernameheight)); */
   gap: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid red;
 }
 
 .pokemon-info-alt {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: end;
-  background-color: color-mix(in srgb, var(--_type-color) 65%, black);
+  justify-content: start;
+  gap: 0.25rem;
+  height: 500px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--_type-color, var(--_type-color-2)) 90%, white),
+    color-mix(in srgb, var(--_type-color-2, var(--_type-color)) 50%, black)
+  );
   border-radius: 0.5rem;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: inset 0 0 0px 7px
+    color-mix(
+      in srgb,
+      var(--_type-color, var(--_type-color-2)) 50%,
+      rgba(0, 0, 0, 0.5)
+    );
+}
+
+.pokemon-info-alt::before {
+  content: attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon) ' ' attr(data-pokemon) ' ' attr(data-pokemon) ' '
+    attr(data-pokemon);
+  text-transform: uppercase;
+  display: inline-block;
+  position: absolute;
+  width: 1100px;
+  height: max-content;
+  line-height: 1;
+  top: -15rem;
+  left: -10rem;
+  transform: rotate(-45deg);
+  font-size: 1.5rem;
+  color: color-mix(in srgb, var(--_type-color) 20%, rgba(255, 255, 255, 0.1));
+  font-weight: 900;
+  opacity: 0.25;
+  z-index: -1;
 }
 
 .lower-container-alt {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: start;
-  padding: 0.25rem;
+  flex-grow: 1;
+  gap: 0.25rem;
 }
 
 .name-container-alt {
   display: flex;
   flex-flow: row nowrap;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
   text-transform: capitalize;
   gap: 0.5rem;
 }
 
 .pokemon-name-alt {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   width: max-content;
   padding: 0.5rem 0;
-  font-weight: 600;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--_type-color-2, var(--_type-color)) 5%, white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.pokemon-img-container {
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(
+    180deg,
+    var(--_type-color-2, var(--_type-color)),
+    color-mix(in srgb, var(--_type-color-2, var(--_type-color)) 80%, black)
+  );
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.375rem 0.375rem 0 0;
+  box-shadow: inset 0px 0px 2px 4px rgba(0, 0, 0, 0.125);
+  transition: 300ms ease;
 }
 
 .pokemon-img {
-  width: 75px;
-  max-width: 75px;
-  height: 75px;
-  max-height: 75px;
-  object-fit: contain;
-  object-position: top center;
+  width: max-content;
+  max-width: 100%;
+  height: 150%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .pokemon-types-alt {
@@ -155,10 +395,18 @@ main {
   display: flex;
   flex-flow: row nowrap;
   gap: 0.25rem;
+  width: 33px;
+  height: 33px;
+  aspect-ratio: 1/1;
   align-items: center;
-  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  padding: 0.5rem;
   border-radius: 0.375rem;
-  background-color: var(--_type-color);
+  background: linear-gradient(
+    180deg,
+    var(--_type-color),
+    color-mix(in srgb, var(--_type-color) 80%, black)
+  );
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.125);
 }
 
 .type-text-alt {
@@ -170,11 +418,256 @@ main {
   object-fit: contain;
 }
 
-.pokemon-type-alt {
+.pokemon-mid-container-alt {
+  position: relative;
   display: flex;
-  flex-flow: row nowrap;
+  gap: 0.25rem;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  font-size: 0.75rem;
+  border-radius: 0 0 0.375rem 0.375rem;
+  background: color-mix(
+    in srgb,
+    var(--_type-color-2, var(--_type-color)) 80%,
+    black
+  );
+  box-shadow: inset 20px 0 10px 10px rgba(0, 0, 0, 0.125);
+  color: white !important;
+  font-style: italic;
 }
 
-.pokedex-number-alt {
-  position: relative;
+.abilities-header-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  text-transform: uppercase;
+  width: max-content;
+  font-size: 1rem;
+  font-weight: 900;
+  font-style: italic;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    var(--_type-color),
+    color-mix(in srgb, var(--_type-color) 80%, black)
+  );
+  border-radius: 100vw;
+  padding-inline: 0.5rem 0.75rem;
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.125);
 }
+
+.abilities-container-alt {
+  flex-grow: 1;
+}
+
+.abilities-alt,
+.abilities-container-alt,
+.ability-box-alt {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.relation-type-name-hover {
+  display: none;
+}
+
+.relations-type-alt {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.125);
+}
+
+.relations-type-alt:hover .relation-type-name-hover {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: var(--_type-color-2, var(--_type-color));
+  top: calc(-100% - 4px);
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.relations-type-alt[data-type*='0x'] {
+  order: 1;
+  background: linear-gradient(180deg, rgb(77, 77, 77), rgb(39, 39, 39));
+}
+.relations-type-alt[data-type*='2x'] {
+  order: 4;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, rgb(118, 189, 118) 85%, white),
+    rgb(118, 189, 118)
+  );
+}
+.relations-type-alt[data-type*='4x'] {
+  order: 5;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, rgb(0, 161, 16) 85%, white),
+    rgb(0, 161, 16)
+  );
+}
+.relations-type-alt[data-type*='.5x'] {
+  order: 3;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, rgb(255, 132, 132) 85%, white),
+    rgb(255, 132, 132)
+  );
+}
+.relations-type-alt[data-type*='.25x'] {
+  order: 2;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, rgb(255, 0, 0) 85%, white),
+    rgb(255, 0, 0)
+  );
+}
+
+.pokemon-stats-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 0.25rem;
+  font-size: 0.775rem;
+  color: color-mix(
+    in srgb,
+    var(--_type-color),
+    var(--_type-color-2, var(--_type-color))
+  );
+  transition: 300ms ease;
+}
+
+.stat-container-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.125rem;
+}
+
+.stat-header-alt {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.stat-value-alt {
+  font-weight: 600;
+}
+
+/* Hover Styling */
+
+.pokemon-info-alt:hover .pokemon-stats-alt {
+  color: white;
+}
+
+.pokemon-info-alt:hover .pokemon-img-container {
+  height: 25%;
+}
+
+/* Abilities Gradient */
+
+@property --gradient-color-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: color-mix(in srgb, var(--_type-color) 15%, rgba(0, 0, 0, 0.1));
+}
+
+@property --gradient-color-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: color-mix(
+    in srgb,
+    var(--_type-color-2, var(--_type-color)) 15%,
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+.ability-name-alt {
+  --gradient-color-1: color-mix(
+    in srgb,
+    var(--_type-color) 15%,
+    rgba(0, 0, 0, 0.1)
+  );
+  --gradient-color-2: color-mix(
+    in srgb,
+    var(--_type-color-2, var(--_type-color)) 15%,
+    rgba(0, 0, 0, 0.1)
+  );
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-weight: 600;
+  height: max-content;
+  color: color-mix(
+    in srgb,
+    var(--_type-color),
+    var(--_type-color-2, var(--_type-color))
+  );
+  /* background: linear-gradient(
+    90deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  ); */
+  background-color: color-mix(
+    in srgb,
+    var(--_type-color) 15%,
+    rgba(0, 0, 0, 0.15)
+  );
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  transition: 300ms ease;
+}
+
+.ability-name-alt:hover {
+  --gradient-color-1: color-mix(
+    in srgb,
+    var(--_type-color) 85%,
+    rgba(0, 0, 0, 0.5)
+  );
+  --gradient-color-2: color-mix(
+    in srgb,
+    var(--_type-color-2, var(--_type-color)) 85%,
+    rgba(0, 0, 0, 0.5)
+  );
+  color: white;
+  /* background: linear-gradient(
+    90deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  ); */
+  background-color: var(--_type-color);
+}
+
+.pokemon-info-alt:hover .ability-name-alt {
+  color: white;
+}
+
+.ability-effect-alt {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  transition: height 300ms ease;
+}
+
+.ability-name-alt:hover .ability-effect-alt {
+  height: max-content;
+  overflow: visible;
+  white-space: auto;
+}
+
+/* Other */

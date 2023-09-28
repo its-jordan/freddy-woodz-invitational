@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 //@ts-ignore
 import PlayerData from '../../data/players.yaml';
 import './altstyle.css';
+import Link from 'next/link';
 
 export default function AltStyle() {
   const AlternateStyle = dynamic(() => import('./altstyle'), {
@@ -11,6 +12,49 @@ export default function AltStyle() {
       </div>
     ),
   });
+
+  const navArray = [
+    {
+      name: 'Home',
+      path: './',
+    },
+    {
+      name: 'SeanBoyQ',
+      path: '#208943645',
+    },
+    {
+      name: 'resolamxxy',
+      path: '#208943647',
+    },
+    {
+      name: 'dtbaggins',
+      path: '#208943648',
+    },
+    {
+      name: 'castleflutes',
+      path: '#208943656',
+    },
+    {
+      name: 'Tokotoro',
+      path: '#208943657',
+    },
+    {
+      name: 'danknett',
+      path: '#208943667',
+    },
+    {
+      name: 'ifurgat',
+      path: '#208943635',
+    },
+    {
+      name: 'foxish',
+      path: '#208943679',
+    },
+    {
+      name: 'its_jordan',
+      path: '#208943681',
+    },
+  ];
 
   const Players = PlayerData;
 
@@ -40,5 +84,20 @@ export default function AltStyle() {
     );
   }
 
-  return <main className='team-main'>{loadPlayers()}</main>;
+  return (
+    <main className='team-main'>
+      <div>
+        <nav>
+          {navArray.map((link, index) => {
+            return (
+              <Link href={link.path} key={index}>
+                {link.name}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+      {loadPlayers()}
+    </main>
+  );
 }

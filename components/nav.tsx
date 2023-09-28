@@ -26,31 +26,36 @@ export const navLinks = [
   },
   {
     name: 'danknett',
-    path: '/#208943667',
+    path: './#208943667',
   },
   {
     name: 'ifurgat',
-    path: '/#208943635',
+    path: './#208943635',
   },
   {
     name: 'foxish',
-    path: '/#208943679',
+    path: './#208943679',
   },
   {
     name: 'its_jordan',
-    path: '/#208943681',
+    path: './#208943681',
   },
   {
     name: 'Scores',
-    path: '/scores',
+    path: './scores',
   },
   {
     name: 'Replays',
-    path: '/replays',
+    path: './replays',
   },
   {
     name: 'Discord Tiers',
-    path: '/meme',
+    path: './meme',
+  },
+  ,
+  {
+    name: 'New Look?',
+    path: './alternate-style',
   },
 ];
 
@@ -71,8 +76,9 @@ function Nav() {
       <nav className={clicked ? 'main-nav display' : 'main-nav hide'}>
         {navLinks.map((link, index) => {
           return (
-            <Link href={link.path} key={index}>
-              <li key={index}>{link.name}</li>
+            // @ts-ignore
+            <Link href={link?.path} key={index}>
+              <li key={index}>{link?.name}</li>
             </Link>
           );
         })}
