@@ -97,6 +97,10 @@ export default function AltStyle() {
           })}
         </nav>
       </div>
+      <div className='notice'>
+        There is currently a bug where if you click home at the top of the
+        screen you will have to refresh your page for the navigation to show up!
+      </div>
       {loadPlayers()}
     </main>
   );
