@@ -12,11 +12,11 @@ export const navLinks = [
     path: './#208943647',
   },
   {
-    name: 'dtbaggins',
+    name: 'DTBaggins',
     path: './#208943648',
   },
   {
-    name: 'castleflutes',
+    name: 'Castleflutes',
     path: './#208943656',
   },
   {
@@ -24,15 +24,15 @@ export const navLinks = [
     path: './#208943657',
   },
   {
-    name: 'danknett',
+    name: 'Danknett',
     path: './#208943667',
   },
   {
-    name: 'ifurgat',
+    name: 'iFurgat',
     path: './#208943635',
   },
   {
-    name: 'foxish',
+    name: 'Foxish',
     path: './#208943679',
   },
   {
