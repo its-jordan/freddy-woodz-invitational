@@ -2294,10 +2294,11 @@ nav > a:hover,
 .pokemon-name-alt {
   font-size: 1.25rem;
   width: max-content;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   font-weight: 700;
   color: color-mix(in srgb, var(--_type-color-2, var(--_type-color)) 5%, white);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 3px
+    color-mix(in srgb, var(--_type-color-2, var(--_type-color)) 70%, black);
 }
 
 .pokemon-img-container {
