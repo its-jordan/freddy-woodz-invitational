@@ -132,7 +132,7 @@
   --typenamecolor: var(--electric);
 }
 .fairy {
-  --typecolor: var(--fairy);
+  --typenamecolor: var(--fairy);
 }
 
 .fighting {
