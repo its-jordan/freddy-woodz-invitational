@@ -1033,12 +1033,6 @@ nav {
   align-items: start;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--water) 40%, var(--base)) 0%,
-    color-mix(in srgb, var(--water) 80%, black) 100%
-  );
-  box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.15);
 }
 
 .standings-container {
@@ -1050,9 +1044,16 @@ nav {
   align-items: end;
   justify-content: start;
   width: 30%;
-  height: 100%;
+  height: calc(100vh - 56px);
+  height: calc(100dvh - 56px);
   flex-grow: 1;
   padding-right: 4rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--water) 40%, var(--water)) 0%,
+    color-mix(in srgb, var(--water) 80%, black) 100%
+  );
+  box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.15);
 }
 
 .standings-record,
@@ -1072,7 +1073,7 @@ nav {
   margin-bottom: -1rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--water) 80%, black);
+  color: color-mix(in srgb, var(--water) 50%, black);
 }
 
 .standings-record {
@@ -1101,7 +1102,6 @@ nav {
 .standings-name,
 .standings-title,
 .standings-player {
-  flex-grow: 1;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
@@ -1109,12 +1109,17 @@ nav {
   padding: 1rem;
 }
 
+.standings-name,
+.standings-player {
+  flex-grow: 1;
+}
+
 .standings-title {
   font-size: 3rem;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--water) 80%, black);
+  color: color-mix(in srgb, var(--water) 60%, black);
 }
 
 /* Scores */
@@ -1124,8 +1129,15 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 200px);
   gap: 3rem 1rem;
-  margin-top: 16px;
+  padding-top: 16px;
   padding-bottom: 4rem;
+  padding-left: 4rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--grass) 40%, var(--grass)) 0%,
+    color-mix(in srgb, var(--grass) 80%, black) 100%
+  );
+  box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.15);
 }
 
 .score-container-header {
@@ -1134,7 +1146,7 @@ nav {
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--water) 80%, black);
+  color: color-mix(in srgb, var(--grass) 60%, black);
   margin-bottom: 27px;
 }
 
@@ -1150,7 +1162,7 @@ nav {
   content: 'Week ' attr(data-week);
   position: absolute;
   top: -2.15rem;
-  color: color-mix(in srgb, var(--water) 80%, black);
+  color: color-mix(in srgb, var(--grass) 60%, black);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -1953,24 +1965,32 @@ nav > a:hover,
     color: rgba(255, 255, 255, 0.5);
   }
   .score-container-header {
-    color: color-mix(in srgb, var(--dragon) 50%, white);
+    color: color-mix(in srgb, var(--fighting) 50%, white);
   }
-  .score-container {
+  .standings-title {
+    color: color-mix(in srgb, var(--fire) 50%, white);
+  }
+  .standings-header {
+    color: color-mix(in srgb, var(--fire) 30%, white);
+  }
+  .match-data:nth-of-type(4n - 3)::before {
+    color: color-mix(in srgb, var(--fighting) 30%, white);
+  }
+  .standings-container {
     background: linear-gradient(
       180deg,
-      color-mix(in srgb, var(--dragon) 60%, white) 0%,
-      color-mix(in srgb, var(--dragon) 50%, black)
+      color-mix(in srgb, var(--fire) 60%, white) 0%,
+      color-mix(in srgb, var(--fire) 50%, black)
     );
     box-shadow: inset 0 101px 0 0 rgba(0, 0, 0, 0.2);
   }
-  .standings-title {
-    color: color-mix(in srgb, var(--dragon) 50%, white);
-  }
-  .standings-header {
-    color: color-mix(in srgb, var(--dragon) 30%, white);
-  }
-  .match-data:nth-of-type(4n - 3)::before {
-    color: color-mix(in srgb, var(--dragon) 30%, white);
+  .match-container {
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--fighting) 60%, white) 0%,
+      color-mix(in srgb, var(--fighting) 50%, black)
+    );
+    box-shadow: inset 0 101px 0 0 rgba(0, 0, 0, 0.2);
   }
 }
 
