@@ -39,28 +39,17 @@ export const navLinks = [
     name: 'its_jordan',
     path: './#208943681',
   },
-  {
-    name: 'Scores',
-    path: './scores',
-  },
-  {
-    name: 'Discord Tiers',
-    path: './meme',
-  },
-  ,
-  {
-    name: 'Season 1 Archive',
-    path: './archive',
-  },
 ];
 
 function Nav() {
   const replayData = Data;
   return (
     <nav>
+      <Link className='nav-header' href='./'>
+        Teams
+      </Link>
       {navLinks.map((link, index) => {
         return (
-          // @ts-ignore
           <Link
             // @ts-ignore
             href={link?.path}
@@ -70,6 +59,7 @@ function Nav() {
           </Link>
         );
       })}
+      <div className='nav-divider'></div>
       <ul className='replays-dropdown-container'>
         <Link className='replays-dropdown-header' href='./replays'>
           Replays
@@ -92,6 +82,9 @@ function Nav() {
             })}
         </ul>
       </ul>
+      <Link href='./scores'>Scores</Link>
+      <Link href='./meme'>Discord Tiers</Link>
+      <Link href='./archive'>Season 1 Archive</Link>
     </nav>
   );
 }
