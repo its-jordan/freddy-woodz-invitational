@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 // @ts-ignore
 import PlayerData from '../data/players.yaml';
+import { PokemonClient } from 'pokenode-ts';
 
 export default function HomePage() {
   const AlternateStyle = dynamic(() => import('./altstyle'), {
@@ -12,6 +13,27 @@ export default function HomePage() {
   });
 
   const Players = PlayerData;
+
+  const api = new PokemonClient();
+
+  function getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
+  }
+
+  async function randomPokemonGenerator() {
+    const randomPokemon = await api.getPokemonById(getRandomInt(950));
+    console.log(randomPokemon.name);
+    return (
+      <div>
+        <div>{randomPokemon.name}</div>
+        <div>{randomPokemon?.types[0]?.type?.name}</div>
+        <div>{randomPokemon?.types[1]?.type?.name}</div>
+        <div>{randomPokemon?.abilities[0]?.ability.name}</div>
+        <div>{randomPokemon?.abilities[1]?.ability.name}</div>
+        <div>{randomPokemon?.abilities[2]?.ability.name}</div>
+      </div>
+    );
+  }
 
   function loadPlayers() {
     return (

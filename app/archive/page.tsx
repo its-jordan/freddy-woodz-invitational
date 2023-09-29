@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import './home.css';
 //@ts-ignore
 import Data from '../../data/players.yaml';
+import { PokemonClient } from 'pokenode-ts';
 
 export default function Archive() {
   const PlayerTeam = dynamic(() => import('@/components/arrays'), {
