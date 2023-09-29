@@ -44,10 +44,6 @@ export const navLinks = [
     path: './scores',
   },
   {
-    name: 'Replays',
-    path: './replays',
-  },
-  {
     name: 'Discord Tiers',
     path: './meme',
   },
@@ -75,7 +71,9 @@ function Nav() {
         );
       })}
       <ul className='replays-dropdown-container'>
-        <div className='replays-dropdown-header'>Replays</div>
+        <Link className='replays-dropdown-header' href='./replays'>
+          Replays
+        </Link>
         <ul className='replays-dropdown'>
           {replayData
             .sort((a: any, b: any) =>
