@@ -1,10 +1,11 @@
 import dynamic from 'next/dynamic';
-import './home.css';
-//@ts-ignore
-import Data from '../data/players.yaml';
+// @ts-ignore
+import PlayerData from '../data/players.yaml';
+import './altstyle.css';
+import Link from 'next/link';
 
-export default function Home() {
-  const PlayerTeam = dynamic(() => import('@/components/arrays'), {
+export default function HomePage() {
+  const AlternateStyle = dynamic(() => import('./altstyle'), {
     loading: () => (
       <div className='loading'>
         <p>Loading...</p>
@@ -12,14 +13,57 @@ export default function Home() {
     ),
   });
 
-  const Players = Data;
+  const navArray = [
+    {
+      name: 'Home',
+      path: './',
+    },
+    {
+      name: 'SeanBoyQ',
+      path: '#208943645',
+    },
+    {
+      name: 'resolamxxy',
+      path: '#208943647',
+    },
+    {
+      name: 'dtbaggins',
+      path: '#208943648',
+    },
+    {
+      name: 'castleflutes',
+      path: '#208943656',
+    },
+    {
+      name: 'Tokotoro',
+      path: '#208943657',
+    },
+    {
+      name: 'danknett',
+      path: '#208943667',
+    },
+    {
+      name: 'ifurgat',
+      path: '#208943635',
+    },
+    {
+      name: 'foxish',
+      path: '#208943679',
+    },
+    {
+      name: 'its_jordan',
+      path: '#208943681',
+    },
+  ];
+
+  const Players = PlayerData;
 
   function loadPlayers() {
     return (
-      <div className='teams-container'>
+      <div className='teams-container-alt'>
         {Players.map((player: any) => {
           return (
-            <PlayerTeam
+            <AlternateStyle
               key={player.index}
               player={player.player}
               playerId={player.playerId}

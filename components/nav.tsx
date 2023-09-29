@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { useState } from 'react';
 
 export const navLinks = [
   {
@@ -54,36 +51,23 @@ export const navLinks = [
   },
   ,
   {
-    name: 'New Look?',
-    path: './alternate-style',
+    name: 'Season 1 Archive',
+    path: './archive',
   },
 ];
 
 function Nav() {
-  const [clicked, setClicked] = useState(true);
   return (
-    <div className='main-nav-container'>
-      <button
-        onClick={() => setClicked((current) => !current)}
-        className={clicked ? 'main-nav-button clicked' : 'main-nav-button'}>
-        <div className='hamburger-icon'>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div>Teams</div>
-      </button>
-      <nav className={clicked ? 'main-nav display' : 'main-nav hide'}>
-        {navLinks.map((link, index) => {
-          return (
-            // @ts-ignore
-            <Link href={link?.path} key={index}>
-              <li key={index}>{link?.name}</li>
-            </Link>
-          );
-        })}
-      </nav>
-    </div>
+    <nav>
+      {navLinks.map((link, index) => {
+        return (
+          // @ts-ignore
+          <Link href={link?.path} key={index}>
+            {link?.name}
+          </Link>
+        );
+      })}
+    </nav>
   );
 }
 

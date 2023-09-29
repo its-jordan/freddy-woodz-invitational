@@ -201,10 +201,6 @@ main {
   margin-left: 0 !important;
 }
 
-.main-nav-container {
-  display: none !important;
-}
-
 nav {
   --_box-shadow: rgba(0, 0, 0, 0.2);
   --_nav-color: rgba(255, 255, 255, 0.8);
