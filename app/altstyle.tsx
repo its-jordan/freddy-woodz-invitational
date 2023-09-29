@@ -1,7 +1,6 @@
 import { PokemonClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
 import { twMerge } from 'tailwind-merge';
-import './altstyle.css';
 // @ts-ignore
 import Data from '../data/uber-stats.yaml';
 // @ts-ignore
@@ -9,7 +8,6 @@ import Moves from '../data/moves.yaml';
 // @ts-ignore
 import Effects from '../data/moveEffects.yaml';
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface Pokemon {
   player: string;

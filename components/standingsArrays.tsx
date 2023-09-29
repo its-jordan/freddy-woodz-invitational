@@ -168,8 +168,9 @@ export default async function Standings() {
 
     return (
       <div className='standings-container'>
+        <div className='standings-title'>Standings</div>
         <div className='standings-header'>
-          <div className='standings-title'>Standings</div>
+          <div className='standings-player'>Player</div>
           <div className='standings-wins'>W</div>
           <div className='standings-losses'>L</div>
         </div>
@@ -208,6 +209,7 @@ export default async function Standings() {
     <div className='score-container'>
       {DisplayWinners()}
       <div className='match-container'>
+        <div className='score-container-header'>Scores</div>
         {eachMatch.map((value) => {
           return (
             <Link

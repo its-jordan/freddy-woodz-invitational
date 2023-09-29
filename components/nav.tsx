@@ -72,11 +72,16 @@ function Nav() {
             .map((player: any, index: any) => {
               return (
                 <Link
-                  href={`./replays/#${player.player1Id}-${player.player2Id}-1`}
+                  href={`./replays/#${player.player1Id}-${player.player2Id}-${player.game}`}
                   data-player1={`${player.player1Id}`}
                   className='replay-dropdown-link'
                   key={index}>
-                  {player.player1} vs. {player.player2} - G{player.game}
+                  {player.player1.charAt(0).toUpperCase() +
+                    player.player1.slice(1)}{' '}
+                  vs.{' '}
+                  {player.player2.charAt(0).toUpperCase() +
+                    player.player2.slice(1)}{' '}
+                  - G{player.game}
                 </Link>
               );
             })}
