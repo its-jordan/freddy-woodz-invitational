@@ -16,7 +16,7 @@ export default function Archive() {
 
   function loadPlayers() {
     return (
-      <div className='teams-container'>
+      <div className='teams-container archive'>
         {Players.map((player: any) => {
           return (
             <PlayerTeam
