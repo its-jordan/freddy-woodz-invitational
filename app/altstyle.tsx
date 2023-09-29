@@ -183,14 +183,14 @@ export default async function AlternateStyle({
     } else if (type !== undefined && type?.immunes.length === 0) {
       return (
         <div>
-          <div className='damage-type-container'>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Weak Against</div>
-              <div className='weaknesses'>
+          <div className='damage-type-container-alt'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Weak Against</div>
+              <div className='weaknesses-alt'>
                 {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
-                      className={`type ${weaknesses} hover-relation-box`}
+                      className={`type ${weaknesses} hover-relation-box-alt`}
                       key={weaknesses.index}>
                       {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
                     </div>
@@ -198,13 +198,13 @@ export default async function AlternateStyle({
                 })}
               </div>
             </div>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Strong Against</div>
-              <div className='strengths'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Strong Against</div>
+              <div className='strengths-alt'>
                 {type?.strengths.map((strengths: any) => {
                   return (
                     <div
-                      className={`type ${strengths} hover-relation-box`}
+                      className={`type ${strengths} hover-relation-box-alt`}
                       key={strengths.index}>
                       {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
                     </div>
@@ -218,14 +218,14 @@ export default async function AlternateStyle({
     } else if (type !== undefined && type?.strengths.length === 0) {
       return (
         <div>
-          <div className='damage-type-container double-damage'>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>No Damage To</div>
+          <div className='damage-type-container-alt double-damage'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>No Damage To</div>
               <div className='immunes'>
                 {type?.immunes.map((immunes: any) => {
                   return (
                     <div
-                      className={`type ${immunes} hover-relation-box`}
+                      className={`type ${immunes} hover-relation-box-alt`}
                       key={immunes.index}>
                       {immunes.charAt(0).toUpperCase() + immunes.slice(1)}
                     </div>
@@ -233,13 +233,13 @@ export default async function AlternateStyle({
                 })}
               </div>
             </div>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Weak Against</div>
-              <div className='weaknesses'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Weak Against</div>
+              <div className='weaknesses-alt'>
                 {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
-                      className={`type ${weaknesses} hover-relation-box`}
+                      className={`type ${weaknesses} hover-relation-box-alt`}
                       key={weaknesses.index}>
                       {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
                     </div>
@@ -253,14 +253,14 @@ export default async function AlternateStyle({
     } else if (type !== undefined && type?.weaknesses.length === 0) {
       return (
         <div>
-          <div className='damage-type-container double-damage'>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>No Damage To</div>
-              <div className='immunes'>
+          <div className='damage-type-container-alt double-damage'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>No Damage To</div>
+              <div className='immunes-alt'>
                 {type?.immunes.map((immunes: any) => {
                   return (
                     <div
-                      className={`type ${immunes} hover-relation-box`}
+                      className={`type ${immunes} hover-relation-box-alt`}
                       key={immunes.index}>
                       {immunes.charAt(0).toUpperCase() + immunes.slice(1)}
                     </div>
@@ -268,13 +268,13 @@ export default async function AlternateStyle({
                 })}
               </div>
             </div>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Strong Against</div>
-              <div className='strengths'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Strong Against</div>
+              <div className='strengths-alt'>
                 {type?.strengths.map((strengths: any) => {
                   return (
                     <div
-                      className={`type ${strengths} hover-relation-box`}
+                      className={`type ${strengths} hover-relation-box-alt`}
                       key={strengths.index}>
                       {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
                     </div>
@@ -292,14 +292,14 @@ export default async function AlternateStyle({
     ) {
       return (
         <div>
-          <div className='damage-type-container double-damage'>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Strong Against</div>
-              <div className='strengths'>
+          <div className='damage-type-container-alt double-damage'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Strong Against</div>
+              <div className='strengths-alt'>
                 {type?.strengths.map((strengths: any) => {
                   return (
                     <div
-                      className={`type ${strengths} hover-relation-box`}
+                      className={`type ${strengths} hover-relation-box-alt`}
                       key={strengths.index}>
                       {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
                     </div>
@@ -317,14 +317,14 @@ export default async function AlternateStyle({
     ) {
       return (
         <div>
-          <div className='damage-type-container double-damage'>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Weak Against</div>
-              <div className='weaknesses'>
+          <div className='damage-type-container-alt double-damage'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Weak Against</div>
+              <div className='weaknesses-alt'>
                 {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
-                      className={`type ${weaknesses} hover-relation-box`}
+                      className={`type ${weaknesses} hover-relation-box-alt`}
                       key={weaknesses.index}>
                       {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
                     </div>
@@ -338,14 +338,14 @@ export default async function AlternateStyle({
     } else if (type !== undefined) {
       return (
         <div>
-          <div className='damage-type-container double-damage'>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>No Damage To</div>
-              <div className='immunes'>
+          <div className='damage-type-container-alt double-damage'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>No Damage To</div>
+              <div className='immunes-alt'>
                 {type?.immunes.map((immunes: any) => {
                   return (
                     <div
-                      className={`type ${immunes} hover-relation-box`}
+                      className={`type ${immunes} hover-relation-box-alt`}
                       key={immunes.index}>
                       {immunes.charAt(0).toUpperCase() + immunes.slice(1)}
                     </div>
@@ -353,13 +353,13 @@ export default async function AlternateStyle({
                 })}
               </div>
             </div>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Weak Against</div>
-              <div className='weaknesses'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Weak Against</div>
+              <div className='weaknesses-alt'>
                 {type?.weaknesses.map((weaknesses: any) => {
                   return (
                     <div
-                      className={`type ${weaknesses} hover-relation-box`}
+                      className={`type ${weaknesses} hover-relation-box-alt`}
                       key={weaknesses.index}>
                       {weaknesses.charAt(0).toUpperCase() + weaknesses.slice(1)}
                     </div>
@@ -367,13 +367,13 @@ export default async function AlternateStyle({
                 })}
               </div>
             </div>
-            <div className='damage-relation-hover'>
-              <div className='type-hover-header'>Strong Against</div>
-              <div className='strengths'>
+            <div className='damage-relation-hover-alt'>
+              <div className='type-hover-header-alt'>Strong Against</div>
+              <div className='strengths-alt'>
                 {type?.strengths.map((strengths: any) => {
                   return (
                     <div
-                      className={`type ${strengths} hover-relation-box`}
+                      className={`type ${strengths} hover-relation-box-alt`}
                       key={strengths.index}>
                       {strengths.charAt(0).toUpperCase() + strengths.slice(1)}
                     </div>
@@ -395,20 +395,18 @@ export default async function AlternateStyle({
 
     if (stats !== undefined)
       return (
-        <div className='moves-wrapper'>
-          <div className='moves-header'>Most Common Moves</div>
-          <div className='moves-container'>
+        <div className='moves-wrapper-alt'>
+          <div className='moves-container-alt'>
             {stats?.map((value: any) => {
               return (
                 <>
                   <Link
                     href={`https://www.smogon.com/dex/sv/moves/${value}`}
                     target='_blank'
-                    className='move'
+                    className='move-alt'
                     data-move={value}
-                    key={value.index}
-                    data-move-id={value}>
-                    <div className='move-name'>
+                    key={value.index}>
+                    <div className='move-name-alt'>
                       {value?.replace('-', ' ')?.replace('-', ' ')}
                     </div>
                     {moveTypes(value)}
@@ -450,7 +448,7 @@ export default async function AlternateStyle({
     const mergedArrays = merge(moveArray, effectArray);
 
     return (
-      <div className='move-effect'>
+      <div className='move-effect-alt'>
         {mergedArrays?.short_effect
           ?.replace(
             '$effect_chance%',
@@ -483,19 +481,21 @@ export default async function AlternateStyle({
     const ele = move[e];
     if (ele?.damage_class === 'status') {
       return (
-        <div className='move-hover-box' data-move-name={ele.name}>
-          <div className='move-hover-upper-container'>
-            <div className='move-name-container'>
-              <div className={`move-hover-name`} data-move={ele.name}>
+        <div className='move-hover-box-alt' data-move-name={ele.name}>
+          <div className='move-hover-upper-container-alt'>
+            <div className='move-name-container-alt'>
+              <div className={`move-hover-name-alt`} data-move={ele.name}>
                 {ele.name?.replace('-', ' ')?.replace('-', ' ')}
               </div>
-              <div className={`move-type ${ele.type_id}`}>{ele.type_id}</div>
+              <div className={`move-type-alt ${ele.type_id}`}>
+                {ele.type_id}
+              </div>
             </div>
-            <div className='move-hover-info'>
-              <div className={`move-damage-type`} data-damage-type='status'>
+            <div className='move-hover-info-alt'>
+              <div className={`move-damage-type-alt`} data-damage-type='status'>
                 Status
               </div>
-              <div className={`move-pp`} data-pp={ele.pp}>
+              <div className={`move-pp-alt`} data-pp={ele.pp}>
                 {ele.pp}pp
               </div>
               {/* <div
@@ -504,12 +504,12 @@ export default async function AlternateStyle({
                   {move.stat_changes[0]?.change}x{' '}
                   {move.stat_changes[0]?.stat.name}
                 </div> */}
-              <div className={`move-priority`} data-priority={ele.priority}>
+              <div className={`move-priority-alt`} data-priority={ele.priority}>
                 Priority: {ele.priority}
               </div>
             </div>
           </div>
-          <div className='move-hover-lower-container'>
+          <div className='move-hover-lower-container-alt'>
             {mergeMoves(ele.name)}
             {moveRelations(ele?.type_id, ele?.damage_class)}
           </div>
@@ -517,37 +517,43 @@ export default async function AlternateStyle({
       );
     } else {
       return (
-        <div className='move-hover-box'>
-          <div className='move-hover-upper-container'>
-            <div className='move-name-container'>
-              <div className={`move-hover-name`} data-move={ele?.name}>
+        <div className='move-hover-box-alt'>
+          <div className='move-hover-upper-container-alt'>
+            <div className='move-name-container-alt'>
+              <div className={`move-hover-name-alt`} data-move={ele?.name}>
                 {ele?.name?.replace('-', ' ')?.replace('-', ' ')}
               </div>
-              <div className={`move-type ${ele?.type_id}`}>{ele?.type_id}</div>
+              <div className={`move-type-alt ${ele?.type_id}`}>
+                {ele?.type_id}
+              </div>
             </div>
-            <div className='move-hover-info'>
+            <div className='move-hover-info-alt'>
               <div
-                className={`move-damage-type`}
+                className={`move-damage-type-alt`}
                 data-damage-type={ele?.damage_class}>
                 {ele?.damage_class}
               </div>
 
-              <div className={`move-accuracy`} data-accuracy={ele?.accuracy}>
+              <div
+                className={`move-accuracy-alt`}
+                data-accuracy={ele?.accuracy}>
                 {ele?.accuracy}% acc
               </div>
-              <div className={`move-pp`} data-pp={ele?.pp}>
+              <div className={`move-pp-alt`} data-pp={ele?.pp}>
                 {ele?.pp}pp
               </div>
-              <div className={`move-power`} data-power={ele?.power}>
+              <div className={`move-power-alt`} data-power={ele?.power}>
                 {ele?.power}bp
               </div>
-              <div className={`move-priority`} data-priority={ele?.priority}>
+              <div
+                className={`move-priority-alt`}
+                data-priority={ele?.priority}>
                 Priority: {ele?.priority}
               </div>
             </div>
           </div>
-          <div className='move-hover-lower-container'>
-            <div className='move-effect'>
+          <div className='move-hover-lower-container-alt'>
+            <div className='move-effect-alt'>
               {ele?.short_effect?.replace(
                 '$effect_chance%',
                 `${ele?.effect_chance?.toString()}%`
@@ -1347,7 +1353,10 @@ export default async function AlternateStyle({
               </div>
               <div className='lower-container-alt'>
                 <div className='abilities-container-alt'>
-                  <div className='abilities-header-alt'>Abilities</div>
+                  <div className='headers-container'>
+                    <div className='abilities-header-alt'>Abilities</div>
+                    <button className='moves-header-button'>Moves</button>
+                  </div>
                   <div className='abilities-alt'>
                     {values.abilities?.map((value, index) => {
                       return (
@@ -1365,7 +1374,6 @@ export default async function AlternateStyle({
                     })}
                   </div>
                 </div>
-
                 <div className='damage-relation-types-alt'>
                   {values.weakness?.map((value, index) => {
                     return (
@@ -1394,6 +1402,7 @@ export default async function AlternateStyle({
                 </div>
                 {getStats(values.name)}
               </div>
+              {displayMoves(values.name)}
             </Link>
           );
         })}

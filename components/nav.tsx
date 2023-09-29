@@ -1,4 +1,6 @@
 import Link from 'next/link';
+// @ts-ignore
+import Data from '../data/replays.yaml';
 
 export const navLinks = [
   {
@@ -57,16 +59,41 @@ export const navLinks = [
 ];
 
 function Nav() {
+  const replayData = Data;
   return (
     <nav>
       {navLinks.map((link, index) => {
         return (
           // @ts-ignore
-          <Link href={link?.path} key={index}>
+          <Link
+            // @ts-ignore
+            href={link?.path}
+            key={index}
+            data-player={link?.path.split('#')[1]}>
             {link?.name}
           </Link>
         );
       })}
+      <ul className='replays-dropdown-container'>
+        <div className='replays-dropdown-header'>Replays</div>
+        <ul className='replays-dropdown'>
+          {replayData
+            .sort((a: any, b: any) =>
+              a.player1 > b.player1 ? 1 : b.player1 > a.player1 ? -1 : 0
+            )
+            .map((player: any, index: any) => {
+              return (
+                <Link
+                  href={`./replays/#${player.player1Id}-${player.player2Id}-1`}
+                  data-player1={`${player.player1Id}`}
+                  className='replay-dropdown-link'
+                  key={index}>
+                  {player.player1} vs. {player.player2} - G{player.game}
+                </Link>
+              );
+            })}
+        </ul>
+      </ul>
     </nav>
   );
 }

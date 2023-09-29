@@ -13,12 +13,16 @@ export default function Replay({ element, index }: ReplayProps) {
       data-player-2={element.player2}
       data-game={element.game}>
       <div className='replay-heading'>
-        {element.player1.charAt(0).toUpperCase().replace('I', 'i') +
-          element.player1.slice(1).replace('q', 'Q')}{' '}
-        vs.{' '}
-        {element.player2.charAt(0).toUpperCase().replace('I', 'i') +
-          element.player2.slice(1).replace('q', 'Q')}{' '}
-        - Game {element.game}
+        <div>
+          {element.player1.charAt(0).toUpperCase().replace('I', 'i') +
+            element.player1.slice(1).replace('q', 'Q')}{' '}
+        </div>
+        <div>vs. </div>
+        <div>
+          {element.player2.charAt(0).toUpperCase().replace('I', 'i') +
+            element.player2.slice(1).replace('q', 'Q')}{' '}
+        </div>
+        <div>Game {element.game}</div>
       </div>
       <div className='showdown-iframe-container'>
         <iframe
