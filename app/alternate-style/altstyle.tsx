@@ -716,6 +716,7 @@ export default async function AlternateStyle({
         weight: pok.weight,
       },
     ];
+
     return (
       <>
         {pokearray.map((values, index) => {
@@ -1380,8 +1381,12 @@ export default async function AlternateStyle({
                             height={30}
                             width={30}></img>
                         </div>
-                        <div className='relation-type-name-hover'>
-                          {value.split(':')[0]}
+                        <div
+                          className={`relation-type-name-hover ${
+                            value.split(':')[0]
+                          }`}>
+                          {value.split(':')[0].charAt(0).toUpperCase() +
+                            value.split(':')[0].slice(1)}
                         </div>
                       </div>
                     );
