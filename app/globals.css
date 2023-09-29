@@ -2018,6 +2018,7 @@ nav > a:hover,
 }
 
 .replays-dropdown-header {
+  display: flex;
   padding: 1rem;
   height: 56px;
 }
