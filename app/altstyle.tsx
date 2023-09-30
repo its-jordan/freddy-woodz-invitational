@@ -8,6 +8,7 @@ import Moves from '../data/moves.yaml';
 // @ts-ignore
 import Effects from '../data/moveEffects.yaml';
 import Link from 'next/link';
+import PokemonButton from '@/components/pokemonbutton';
 
 interface Pokemon {
   player: string;
@@ -385,6 +386,13 @@ export default async function AlternateStyle({
     }
   }
 
+  function nameReplace(e: string) {
+    const moveName = e;
+    const moveNameFront =
+      moveName?.charAt(0).toUpperCase() + moveName.slice(1).replace('-', ' ');
+    return moveNameFront;
+  }
+
   function displayMoves(e: string) {
     const statsArray = Data;
     const pokemon = e;
@@ -405,7 +413,8 @@ export default async function AlternateStyle({
                     data-move={value}
                     key={value.index}>
                     <div className='move-name-alt'>
-                      {value?.replace('-', ' ')?.replace('-', ' ')}
+                      {nameReplace(value)}
+                      {/* {value?.replace('-', ' ')?.replace('-', ' ')} */}
                     </div>
                     {moveTypes(value)}
                   </Link>
@@ -725,13 +734,14 @@ export default async function AlternateStyle({
       <>
         {pokearray.map((values, index) => {
           return (
-            <Link
+            <div
               className={`pokemon-info-alt ${values.types[0].type.name}`}
               key={index}
               data-species={values.species.name}
               data-pokemon={nameSplit(values.name)}
               data-type-1={values.types[0].type.name}
               data-type-2={values.types[1]?.type.name}
+              // @ts-ignore
               href={`https://www.smogon.com/dex/sv/pokemon/${values.name
                 ?.replace('-mega', '')
                 ?.replace('-incarnate', '')
@@ -1349,12 +1359,9 @@ export default async function AlternateStyle({
                 {weightCalculation(values.weight)}
                 {getGenera(values.species.name)}
               </div>
+
               <div className='lower-container-alt'>
-                <div className='abilities-container-alt'>
-                  <div className='headers-container'>
-                    <div className='abilities-header-alt'>Abilities</div>
-                    <button className='moves-header-button'>Moves</button>
-                  </div>
+                <PokemonButton>
                   <div className='abilities-alt'>
                     {values.abilities?.map((value, index) => {
                       return (
@@ -1371,7 +1378,8 @@ export default async function AlternateStyle({
                       );
                     })}
                   </div>
-                </div>
+                  {displayMoves(values.name)}
+                </PokemonButton>
                 <div className='damage-relation-types-alt'>
                   {values.weakness?.map((value, index) => {
                     return (
@@ -1400,8 +1408,7 @@ export default async function AlternateStyle({
                 </div>
                 {getStats(values.name)}
               </div>
-              {displayMoves(values.name)}
-            </Link>
+            </div>
           );
         })}
       </>
