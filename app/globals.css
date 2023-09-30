@@ -2723,6 +2723,10 @@ nav > a:hover,
   font-weight: 600;
 }
 
+.pokemon-info-alt:hover .move-alt {
+  color: white;
+}
+
 .move-hover-box-alt {
   position: absolute;
   left: 0;
