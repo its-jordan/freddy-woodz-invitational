@@ -2824,6 +2824,7 @@ nav > a:hover,
 
 .move-alt:hover .move-hover-box-alt {
   display: flex;
+  animation: replayDropdown 300ms ease forwards;
 }
 
 .teams-container.archive {
