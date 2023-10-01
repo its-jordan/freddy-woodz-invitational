@@ -560,7 +560,7 @@ export default async function AlternateStyle({
             </div>
           </div>
           <div className='move-hover-lower-container-alt'>
-            <div className='move-effect-alt'>
+            <div className='move-effect-alt-container'>
               {ele?.short_effect?.replace(
                 '$effect_chance%',
                 `${ele?.effect_chance?.toString()}%`
