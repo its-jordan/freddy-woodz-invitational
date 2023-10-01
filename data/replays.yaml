@@ -173,3 +173,23 @@
   game: '2'
   player1Id: '208943681'
   player2Id: '208943645'
+- player1: ifurgat
+  player2: tokotoro
+  game: '1'
+  player1Id: '208943635'
+  player2Id: '208943657'
+- player1: ifurgat
+  player2: tokotoro
+  game: '2'
+  player1Id: '208943635'
+  player2Id: '208943657'
+- player1: foxish
+  player2: danknett
+  game: '1'
+  player1Id: '208943679'
+  player2Id: '208943667'
+- player1: foxish
+  player2: danknett
+  game: '2'
+  player1Id: '208943679'
+  player2Id: '208943667'
