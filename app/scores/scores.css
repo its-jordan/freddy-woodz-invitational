@@ -39,7 +39,7 @@
 [data-player='208943656'] .standings-name::before,
 .player-container .player-name[data-player='208943656']::before {
   /* Dom */
-  content: 'castleflutes';
+  content: 'Castleflutes';
   display: flex;
   position: relative;
   font-size: 1rem;
@@ -59,7 +59,7 @@
 [data-player='208943679'] .standings-name::before,
 .player-container .player-name[data-player='208943679']::before {
   /* Ricky */
-  content: 'foxish';
+  content: 'Foxish';
   display: flex;
   position: relative;
   font-size: 1rem;
@@ -69,7 +69,7 @@
 [data-player='208943648'] .standings-name::before,
 .player-container .player-name[data-player='208943648']::before {
   /* J Dougs */
-  content: 'dtbaggins';
+  content: 'DTBaggins';
   display: flex;
   position: relative;
   font-size: 1rem;
@@ -79,7 +79,7 @@
 [data-player='208943635'] .standings-name::before,
 .player-container .player-name[data-player='208943635']::before {
   /* Furgat */
-  content: 'ifurgat';
+  content: 'iFurgat';
   display: flex;
   position: relative;
   font-size: 1rem;
@@ -89,7 +89,7 @@
 [data-player='208943667'] .standings-name::before,
 .player-container .player-name[data-player='208943667']::before {
   /* Dank */
-  content: 'danknett';
+  content: 'Danknett';
   display: flex;
   position: relative;
   font-size: 1rem;

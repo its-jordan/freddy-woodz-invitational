@@ -155,16 +155,51 @@ export default async function Standings() {
     let nextId = 0;
     for (const element of currentStandings) {
       element.name = arrOfIds[nextId++];
+      element.points = calculatePoints(element);
+      // element.rd = element.points - element.losses * 2;
+      element.rd = calculatePoints(element) - calculatePointsAllowed(element);
     }
 
-    console.log(currentStandings);
+    // console.log(currentStandings);
 
     let sortedStandings = currentStandings.sort(
       (a, b) =>
         b.wins / (b.wins + b.losses) - a.wins / (a.wins + a.losses) ||
         b.wins - a.wins ||
+        b.points - a.points ||
         a.losses - b.losses
     );
+
+    function calculatePoints(e: any) {
+      let player = e;
+      if (
+        player.id === '208943679' ||
+        player.id === '208943656' ||
+        player.id === '208943635' ||
+        player.id === '208943657'
+      ) {
+        return player.wins * 2 + 1;
+      } else if (player.id === '208943648') {
+        return player.wins * 2 + 2;
+      } else {
+        return player.wins * 2;
+      }
+    }
+
+    function calculatePointsAllowed(e: any) {
+      let player = e;
+      if (player.id === '208943645') {
+        return player.losses * 2 + 3;
+      } else if (player.id === '208943656') {
+        return player.losses * 2 + 1;
+      } else if (player.id === '208943657') {
+        return player.losses * 2 + 1;
+      } else if (player.id === '208943667') {
+        return player.losses * 2 + 1;
+      } else {
+        return player.losses * 2 + 0;
+      }
+    }
 
     return (
       <div className='standings-container'>
@@ -173,6 +208,8 @@ export default async function Standings() {
           <div className='standings-player'>Player</div>
           <div className='standings-wins'>W</div>
           <div className='standings-losses'>L</div>
+          <div className='standings-points'>PS</div>
+          <div className='standings-differential'>PD</div>
         </div>
         {sortedStandings.map((player) => {
           return (
@@ -184,6 +221,8 @@ export default async function Standings() {
               <div className='standings-name'>{player.name.toString()}</div>
               <div className='standings-wins'>{player.wins.toString()}</div>
               <div className='standings-losses'>{player.losses.toString()}</div>
+              <div className='standings-points'>{player.points}</div>
+              <div className='standings-differential'>{player.rd}</div>
             </Link>
           );
         })}
@@ -191,7 +230,7 @@ export default async function Standings() {
     );
   }
 
-  async function displayName(e: string) {
+  async function displayName(e: any) {
     let participants = await ParticipantAdapter.show(
       'ojemCQBOix3jaZ8ALVKrxupf6f3gKdQTaGZ8h1kB',
       'freddywoodz',
