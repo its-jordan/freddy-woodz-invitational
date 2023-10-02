@@ -89,7 +89,7 @@ function Nav() {
       </ul>
       <Link href='./scores'>Scores</Link>
       <Link href='./meme'>Discord Tiers</Link>
-      <Link href='./archive'>Season 1 Archive</Link>
+      {/* <Link href='./archive'>Season 1 Archive</Link> */}
     </nav>
   );
 }
