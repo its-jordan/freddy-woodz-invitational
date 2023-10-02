@@ -1669,6 +1669,8 @@ iframe {
 .replay-heading {
   display: flex;
   flex-flow: row wrap;
+  justify-content: start;
+  width: 80%;
   gap: 1rem;
   padding: 1rem;
   line-height: 1;
