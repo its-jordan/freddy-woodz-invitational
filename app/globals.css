@@ -897,6 +897,26 @@ nav {
 
 /* Discord Meme */
 
+.meme-main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--psychic) 40%, var(--base)) 0%,
+    color-mix(in srgb, var(--psychic) 80%, black) 100%
+  );
+  box-shadow: inset 0px 150px 0px 0px rgba(255, 255, 255, 0.15);
+  padding-bottom: 4rem;
+  padding-inline: 2rem;
+  z-index: -2;
+}
+
+.discord-container,
+.discord-header-container {
+  width: 75%;
+}
+
 .discord-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -913,7 +933,7 @@ nav {
   display: flex;
   font-size: 3rem;
   font-weight: 900;
-  color: color-mix(in srgb, var(--fighting) 80%, black);
+  color: color-mix(in srgb, var(--psychic) 80%, black);
   text-transform: uppercase;
   font-style: italic;
 }
@@ -985,39 +1005,39 @@ nav {
 
 .ag {
   --_tier-name: 'ag';
-  --_tier-color: var(--steel);
+  --_tier-color: var(--fighting);
 }
 .ubers {
   --_tier-name: 'ubers';
-  --_tier-color: var(--ice);
+  --_tier-color: var(--fire);
 }
 .ou {
   --_tier-name: 'ou';
-  --_tier-color: var(--ground);
+  --_tier-color: var(--electric);
 }
 .oubl {
   --_tier-name: 'oubl';
-  --_tier-color: var(--normal);
+  --_tier-color: var(--grass);
 }
 .uubl {
   --_tier-name: 'uubl';
-  --_tier-color: var(--electric);
+  --_tier-color: var(--water);
 }
 .uu {
   --_tier-name: 'uu';
-  --_tier-color: var(--grass);
+  --_tier-color: var(--ghost);
 }
 .rubl {
   --_tier-name: 'rubl';
-  --_tier-color: var(--bug);
+  --_tier-color: var(--fairy);
 }
 .ru {
   --_tier-name: 'ru';
-  --_tier-color: var(--rock);
+  --_tier-color: var(--steel);
 }
 .nu {
   --_tier-name: 'nu';
-  --_tier-color: var(--fairy);
+  --_tier-color: var(--normal);
 }
 
 .ag {
@@ -2057,6 +2077,17 @@ nav > a:hover,
     );
     box-shadow: inset 0 101px 0 0 rgba(0, 0, 0, 0.2);
   }
+  .meme-main {
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ghost) 60%, white) 0%,
+      color-mix(in srgb, var(--ghost) 50%, black) 100%
+    );
+    box-shadow: inset 0 150px 0 0 rgba(0, 0, 0, 0.2);
+  }
+  .discord-header {
+    color: color-mix(in srgb, var(--ghost) 50%, white);
+  }
 }
 
 :root {
@@ -2898,26 +2929,6 @@ nav > a:hover,
   margin-top: 20px !important;
   margin-bottom: 4rem !important;
   margin-inline: auto;
-}
-
-.meme-main {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--fighting) 40%, var(--base)) 0%,
-    color-mix(in srgb, var(--fighting) 80%, black) 100%
-  );
-  box-shadow: inset 0px 150px 0px 0px rgba(255, 255, 255, 0.15);
-  padding-bottom: 4rem;
-  padding-inline: 2rem;
-  z-index: -2;
-}
-
-.discord-container,
-.discord-header-container {
-  width: 75%;
 }
 
 .lower-container-content.hide-first > div:first-child {
