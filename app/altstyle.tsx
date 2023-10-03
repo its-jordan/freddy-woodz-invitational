@@ -740,13 +740,7 @@ export default async function AlternateStyle({
               data-species={values.species.name}
               data-pokemon={nameSplit(values.name)}
               data-type-1={values.types[0].type.name}
-              data-type-2={values.types[1]?.type.name}
-              // @ts-ignore
-              href={`https://www.smogon.com/dex/sv/pokemon/${values.name
-                ?.replace('-mega', '')
-                ?.replace('-incarnate', '')
-                ?.replace('-50', '')}`}
-              target='_blank'>
+              data-type-2={values.types[1]?.type.name}>
               <div className='holo-background-container'>
                 <div
                   className='holo-background-text unselectable'
@@ -1329,7 +1323,15 @@ export default async function AlternateStyle({
                 </div>
               </div>
               <div className='name-container-alt'>
-                <div className='pokemon-name-alt'>{nameSplit(values.name)}</div>
+                <Link
+                  className='pokemon-name-alt'
+                  href={`https://www.smogon.com/dex/sv/pokemon/${values.name
+                    ?.replace('-mega', '')
+                    ?.replace('-incarnate', '')
+                    ?.replace('-50', '')}`}
+                  target='_blank'>
+                  {nameSplit(values.name)}
+                </Link>
                 <div className='pokemon-types-alt'>
                   {values.types.map((value) => {
                     return (
