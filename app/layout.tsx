@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Nav from '@/components/nav';
 import './globals.css';
 import type { Metadata } from 'next';
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Nav />
         <div className='content-container'>{children}</div>
+        <Analytics />
       </body>
     </html>
   );

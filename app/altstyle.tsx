@@ -1,6 +1,7 @@
 import { PokemonClient } from 'pokenode-ts';
 import { getTypeWeaknesses } from '../pokemon-types/index';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 // @ts-ignore
 import Data from '../data/uber-stats.yaml';
 // @ts-ignore
@@ -393,6 +394,8 @@ export default async function AlternateStyle({
     return moveNameFront;
   }
 
+  const move = Moves;
+
   function displayMoves(e: string) {
     const statsArray = Data;
     const pokemon = e;
@@ -411,11 +414,9 @@ export default async function AlternateStyle({
                     target='_blank'
                     className='move-alt'
                     data-move={value}
+                    data-move-type={move[value]?.type_id}
                     key={value.index}>
-                    <div className='move-name-alt'>
-                      {nameReplace(value)}
-                      {/* {value?.replace('-', ' ')?.replace('-', ' ')} */}
-                    </div>
+                    <div className='move-name-alt'>{nameReplace(value)}</div>
                     {moveTypes(value)}
                   </Link>
                 </>
@@ -429,7 +430,11 @@ export default async function AlternateStyle({
   async function getGenera(e: string) {
     let species = await api.getPokemonSpeciesByName(e);
     return (
-      <div className={`genera-text-alt ${e}`}>{species?.genera[7].genus}</div>
+      <div
+        className={`genera-text-alt`}
+        data-genera-text={`The ${species?.genera[7].genus}`}>
+        The {species?.genera[7].genus}
+      </div>
     );
   }
 
@@ -437,13 +442,12 @@ export default async function AlternateStyle({
     let species = await api.getPokemonSpeciesByName(e);
     return (
       <div
-        className={`pokedex-number-alt ${e} ${species.pokedex_numbers[1]?.entry_number}`}>
+        className={`pokedex-number-alt`}
+        data-pokedex-number={species.pokedex_numbers[1]?.entry_number}>
         No. {species.pokedex_numbers[0]?.entry_number}
       </div>
     );
   }
-
-  const move = Moves;
 
   function mergeMoves(e: string) {
     const moveArray = move[e];
@@ -505,14 +509,8 @@ export default async function AlternateStyle({
               <div className={`move-pp-alt`} data-pp={ele.pp}>
                 {ele.pp}pp
               </div>
-              {/* <div
-                  className='move-type-change'
-                  data-type-change={`${move.stat_changes[0]?.change}x ${move.stat_changes[0]?.stat.name}`}>
-                  {move.stat_changes[0]?.change}x{' '}
-                  {move.stat_changes[0]?.stat.name}
-                </div> */}
               <div className={`move-priority-alt`} data-priority={ele.priority}>
-                Priority: {ele.priority}
+                Prio: {ele?.priority}
               </div>
             </div>
           </div>
@@ -555,7 +553,7 @@ export default async function AlternateStyle({
               <div
                 className={`move-priority-alt`}
                 data-priority={ele?.priority}>
-                Priority: {ele?.priority}
+                Prio: {ele?.priority}
               </div>
             </div>
           </div>
@@ -720,9 +718,6 @@ export default async function AlternateStyle({
         name: pok.name,
         abilities: pok.abilities,
         types: pok.types,
-        // sprite: `https://www.smogon.com/dex/media/sprites/xy/${pok.name
-        //   ?.replace('-50', '')
-        //   ?.replace('-incarnate', '')}.gif`,
         sprite: pok.sprites.other?.['official-artwork'].front_default,
         species: pok.species,
         weakness: pokArray,
@@ -1339,21 +1334,28 @@ export default async function AlternateStyle({
                         className={`pokemon-type-alt ${value.type.name}`}
                         data-type-1={value.type.name}
                         key={value.slot}>
-                        <img
+                        <Image
                           src={`./icons/${value.type.name}.svg`}
                           height={25}
-                          width={25}></img>
+                          width={25}
+                          alt={`${
+                            value.type.name.charAt(0).toUpperCase() +
+                            value.type.name.slice(1)
+                          } type icon.`}></Image>
                       </div>
                     );
                   })}
                 </div>
               </div>
               <div className='pokemon-img-container'>
-                <img
+                <Image
                   className={`${values.name}-img-alt pokemon-img`}
                   //@ts-ignore
                   src={values.sprite}
-                  alt={`Default front sprite for ${values.name}`}
+                  width={305}
+                  height={305}
+                  alt={`Default front sprite for ${nameSplit(values.name)}.`}
+                  fetchPriority='high'
                 />
               </div>
               <div className='pokemon-mid-container-alt'>
@@ -1370,7 +1372,8 @@ export default async function AlternateStyle({
                         <Link
                           href={`https://www.smogon.com/dex/sv/abilities/${value.ability.name}`}
                           target='_blank'
-                          className={`ability-box-alt ${value.ability.name}`}
+                          className={`ability-box-alt`}
+                          data-ability={value.ability.name}
                           key={index}>
                           <div className='ability-name-alt'>
                             <div>{abilityNames(value)}</div>
@@ -1387,15 +1390,19 @@ export default async function AlternateStyle({
                     return (
                       <div
                         key={index}
-                        data-type={value}
+                        data-type={value.split(':')[0]}
+                        data-multiplier={value
+                          .split(':')[1]
+                          .replace(' ', '')
+                          .replace('x', '')}
                         className='relations-type-alt'>
                         <div>
-                          <img
+                          <Image
                             className={`relations-type-icon-alt`}
                             src={`../icons/${value.split(':')[0]}.svg`}
                             alt={`${value.split(':')[0]}-type icon`}
                             height={30}
-                            width={30}></img>
+                            width={30}></Image>
                         </div>
                         <div
                           className={`relation-type-name-hover ${

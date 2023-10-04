@@ -2383,7 +2383,7 @@ nav > a:hover,
         var(--_type-color, var(--_type-color-2)) 50%,
         rgba(0, 0, 0, 0.5)
       ),
-    0px 10px 5px 5px rgba(0, 0, 0, 0.1);
+    0px 0px 10px 0px var(--player-color);
 }
 
 .holo-background-container {
@@ -2624,23 +2624,6 @@ nav > a:hover,
   box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.125);
 }
 
-.relations-type-alt:hover .relation-type-name-hover {
-  display: block;
-  position: absolute;
-  z-index: 10;
-  background: linear-gradient(
-    180deg,
-    var(--typenamecolor),
-    color-mix(in srgb, var(--typenamecolor) 80%, black)
-  );
-  color: auto;
-  top: calc(-100% - 4px);
-  border-radius: 0.375rem;
-  padding: 0.25rem 0.5rem;
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-    0 3px 3px 0px rgba(0, 0, 0, 0.1);
-}
-
 .damage-relation-types-alt {
   display: flex;
   flex-flow: row wrap;
@@ -2650,11 +2633,11 @@ nav > a:hover,
   gap: 0.25rem;
 }
 
-.relations-type-alt[data-type*='0x'] {
+.relations-type-alt[data-multiplier='0'] {
   order: 1;
   background: linear-gradient(180deg, rgb(77, 77, 77), rgb(39, 39, 39));
 }
-.relations-type-alt[data-type*='2x'] {
+.relations-type-alt[data-multiplier='2'] {
   order: 4;
   background: linear-gradient(
     180deg,
@@ -2662,7 +2645,7 @@ nav > a:hover,
     rgb(118, 189, 118)
   );
 }
-.relations-type-alt[data-type*='4x'] {
+.relations-type-alt[data-multiplier='4'] {
   order: 5;
   background: linear-gradient(
     180deg,
@@ -2670,7 +2653,7 @@ nav > a:hover,
     rgb(0, 161, 16)
   );
 }
-.relations-type-alt[data-type*='.5x'] {
+.relations-type-alt[data-multiplier='0.5'] {
   order: 3;
   background: linear-gradient(
     180deg,
@@ -2678,7 +2661,7 @@ nav > a:hover,
     rgb(255, 132, 132)
   );
 }
-.relations-type-alt[data-type*='.25x'] {
+.relations-type-alt[data-multiplier='0.25'] {
   order: 2;
   background: linear-gradient(
     180deg,
@@ -2825,6 +2808,61 @@ nav > a:hover,
   gap: 0.25rem;
 }
 
+.move-alt[data-move-type='normal'] {
+  --move-type-color: var(--normal);
+}
+.move-alt[data-move-type='fire'] {
+  --move-type-color: var(--fire);
+}
+.move-alt[data-move-type='water'] {
+  --move-type-color: var(--water);
+}
+.move-alt[data-move-type='electric'] {
+  --move-type-color: var(--electric);
+}
+.move-alt[data-move-type='grass'] {
+  --move-type-color: var(--grass);
+}
+.move-alt[data-move-type='ice'] {
+  --move-type-color: var(--ice);
+}
+.move-alt[data-move-type='fighting'] {
+  --move-type-color: var(--fighting);
+}
+.move-alt[data-move-type='poison'] {
+  --move-type-color: var(--poison);
+}
+.move-alt[data-move-type='ground'] {
+  --move-type-color: var(--ground);
+}
+.move-alt[data-move-type='flying'] {
+  --move-type-color: var(--flying);
+}
+.move-alt[data-move-type='psychic'] {
+  --move-type-color: var(--psychic);
+}
+.move-alt[data-move-type='bug'] {
+  --move-type-color: var(--bug);
+}
+.move-alt[data-move-type='rock'] {
+  --move-type-color: var(--rock);
+}
+.move-alt[data-move-type='ghost'] {
+  --move-type-color: var(--ghost);
+}
+.move-alt[data-move-type='dragon'] {
+  --move-type-color: var(--dragon);
+}
+.move-alt[data-move-type='dark'] {
+  --move-type-color: var(--dark);
+}
+.move-alt[data-move-type='steel'] {
+  --move-type-color: var(--steel);
+}
+.move-alt[data-move-type='fairy'] {
+  --move-type-color: var(--fairy);
+}
+
 .move-alt {
   display: flex;
   padding: 0.5rem 1rem;
@@ -2832,10 +2870,10 @@ nav > a:hover,
   width: 100%;
   max-width: calc(50% - 0.125rem);
   color: color-mix(in srgb, var(--_type-color) 45%, white);
-  background-color: color-mix(
-    in srgb,
-    var(--_type-color) 35%,
-    rgba(0, 0, 0, 0.55)
+  background: linear-gradient(
+    -90deg,
+    color-mix(in srgb, var(--_type-color) 35%, rgba(0, 0, 0, 0.55)),
+    color-mix(in srgb, var(--move-type-color) 35%, rgba(0, 0, 0, 0.55))
   );
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   border-radius: 0.375rem;
@@ -2846,7 +2884,7 @@ nav > a:hover,
 }
 
 .pokemon-info-alt:hover .move-alt {
-  color: white;
+  color: color-mix(in srgb, var(--move-type-color) 30%, white);
 }
 
 .move-hover-box-alt {
@@ -2860,7 +2898,11 @@ nav > a:hover,
   width: inherit;
   border-radius: 0.375rem;
   padding: 0.5rem;
-  background-color: color-mix(in srgb, var(--_type-color) 60%, black);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--move-type-color) 60%, black),
+    color-mix(in srgb, var(--_type-color) 60%, black)
+  );
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -2884,13 +2926,6 @@ nav > a:hover,
   margin-top: 0.5rem;
   border-top: 1px solid
     color-mix(in srgb, var(--_type-color) 35%, rgba(255, 255, 255, 0.1));
-}
-
-.move-name-container-alt .move-type-alt {
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
-  color: black;
-  text-shadow: none;
 }
 
 .move-name-container-alt,
@@ -2924,6 +2959,14 @@ nav > a:hover,
 
 .move-hover-info-alt {
   padding-top: 0.25rem;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+}
+
+.move-hover-info-alt > div:not(:first-of-type) {
+  border-left: 1px solid
+    color-mix(in srgb, var(--_type-color) 35%, rgba(255, 255, 255, 0.1));
+  padding-inline-start: 0.5rem;
 }
 
 .move-hover-name-alt {
@@ -2931,11 +2974,42 @@ nav > a:hover,
   margin-right: 0.25rem;
 }
 
-.damage-relation-hover-alt .type {
+.damage-relation-hover-alt .type,
+.move-name-container-alt .move-type-alt {
   padding: 0.25rem 0.5rem;
   border-radius: 0.375rem;
-  text-shadow: none;
-  color: black;
+  text-shadow: 0 0 3px color-mix(in srgb, var(--typenamecolor) 80%, black),
+    0 0 5px color-mix(in srgb, var(--typenamecolor) 70%, black),
+    0 0 7px color-mix(in srgb, var(--typenamecolor) 60%, black),
+    0 0 9px color-mix(in srgb, var(--typenamecolor) 50%, black);
+  background: linear-gradient(
+    180deg,
+    var(--typenamecolor),
+    color-mix(in srgb, var(--typenamecolor) 80%, black)
+  );
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.125);
+  color: white !important;
+}
+
+.relations-type-alt:hover .relation-type-name-hover {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: calc(-100% - 4px);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  text-shadow: 0 0 3px color-mix(in srgb, var(--typenamecolor) 80%, black),
+    0 0 5px color-mix(in srgb, var(--typenamecolor) 70%, black),
+    0 0 7px color-mix(in srgb, var(--typenamecolor) 60%, black),
+    0 0 9px color-mix(in srgb, var(--typenamecolor) 50%, black);
+  background: linear-gradient(
+    180deg,
+    var(--typenamecolor),
+    color-mix(in srgb, var(--typenamecolor) 80%, black)
+  );
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.125);
+  color: white !important;
 }
 
 .damage-relation-hover-alt {
