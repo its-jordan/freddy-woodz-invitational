@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Nav />
         <div className='content-container'>{children}</div>
-        <Analytics />
+        <Analytics mode='production' />
       </body>
     </html>
   );
