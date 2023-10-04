@@ -57,9 +57,6 @@ function Nav() {
         }
         onClick={() => {
           setNav(true);
-        }}
-        onTouchStart={() => {
-          setNav(true);
         }}>
         Open Nav 🠞
       </button>
@@ -67,9 +64,6 @@ function Nav() {
         <button
           className='nav-button-mobile open'
           onClick={() => {
-            setNav(false);
-          }}
-          onTouchStart={() => {
             setNav(false);
           }}>
           🠜 Close Nav

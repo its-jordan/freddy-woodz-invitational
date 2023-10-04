@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default async function Standings() {
   let match = await MatchAdapter.index(
-    'ojemCQBOix3jaZ8ALVKrxupf6f3gKdQTaGZ8h1kB',
+    'b18tqb8TwU1SWQ1r6PsvTmPla83GaeOwuTcfz5X7',
     'freddywoodz'
   );
 
@@ -231,7 +231,7 @@ export default async function Standings() {
 
   async function displayName(e: any) {
     let participants = await ParticipantAdapter.show(
-      'ojemCQBOix3jaZ8ALVKrxupf6f3gKdQTaGZ8h1kB',
+      'b18tqb8TwU1SWQ1r6PsvTmPla83GaeOwuTcfz5X7',
       'freddywoodz',
       `${e}`
     );

@@ -2995,6 +2995,31 @@ nav > a:hover,
   main {
     margin-top: 0 !important;
   }
+  .score-container {
+    flex-flow: column nowrap;
+  }
+  .standings-title {
+    justify-content: start;
+  }
+  .standings-container {
+    top: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-items: start;
+    padding-bottom: 4rem;
+    padding-inline: 4rem;
+  }
+  .standings-title {
+    padding-inline: 0;
+  }
+  .standings-record,
+  .standings-header {
+    width: 100%;
+  }
+  .match-container {
+    width: 100%;
+  }
   nav {
     position: fixed;
     top: 0;
@@ -3043,6 +3068,9 @@ nav > a:hover,
   .navigation.visibile {
     display: flex;
   }
+  .navigation-botton-mobile {
+    cursor: pointer;
+  }
   .nav-button-mobile.closed {
     display: flex;
     position: fixed;
@@ -3051,6 +3079,7 @@ nav > a:hover,
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     padding: 0.5rem 1rem;
+    cursor: pointer;
     border-radius: 0.375rem;
   }
   .nav-button-mobile.open {
@@ -3060,6 +3089,7 @@ nav > a:hover,
     padding: 1rem;
     padding-inline: 2rem;
     height: 56px;
+    cursor: pointer;
     transition: 300ms ease;
   }
   .nav-button-mobile.open:hover {
@@ -3082,11 +3112,101 @@ nav > a:hover,
   .player-team-alt {
     grid-template-columns: repeat(2, 335px);
   }
+  .match-container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding-inline: 4rem;
+  }
 }
 
 @media only screen and (max-width: 680px) {
   .player-team-alt {
     grid-template-columns: repeat(1, 335px);
+  }
+  .match-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    padding-inline: 4rem;
+  }
+  nav {
+    display: flex;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      black,
+      color-mix(in srgb, rgba(0, 0, 0, 0.9) 90%, white)
+    );
+    box-shadow: inset 0 0 5px 0 var(--_box-shadow);
+    backdrop-filter: blur(5px);
+    height: 80px;
+    width: 100%;
+    min-width: auto;
+    z-index: 1000;
+  }
+  nav > a,
+  nav > ul,
+  .nav-header {
+    width: max-content;
+    padding-inline: 1rem;
+    justify-content: start;
+  }
+  .replays-dropdown-header {
+    padding-inline: 0;
+  }
+  .replays-dropdown-container:hover .replays-dropdown {
+    display: none;
+  }
+  .nav-divider {
+    display: none;
+  }
+  .nav-divider::before {
+    height: 1px;
+    width: inherit;
+    margin-inline: 0;
+    margin-block: 1rem;
+  }
+  .navigation.hidden {
+    display: flex;
+  }
+  .navigation.visibile {
+    display: flex;
+  }
+  .navigation a[data-player] {
+    display: none;
+  }
+  .nav-header {
+    color: white;
+  }
+  .navigation-botton-mobile {
+    cursor: pointer;
+  }
+  .nav-button-mobile.closed {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+  }
+  .nav-button-mobile.open {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    padding-inline: 2rem;
+    height: 56px;
+    cursor: pointer;
+    transition: 300ms ease;
   }
 }
 
