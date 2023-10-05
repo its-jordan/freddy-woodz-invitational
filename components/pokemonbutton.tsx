@@ -4,9 +4,13 @@ import { useState } from 'react';
 
 interface PokemonButtonProps {
   children?: React.ReactNode;
+  pokemon?: string;
 }
 
-export default function PokemonButton({ children }: PokemonButtonProps) {
+export default function PokemonButton({
+  children,
+  pokemon,
+}: PokemonButtonProps) {
   const [abilities, setAbilities] = useState(true);
   return (
     <div className='abilities-container-alt'>

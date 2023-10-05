@@ -95,7 +95,7 @@ function Nav() {
               .map((player: any, index: any) => {
                 return (
                   <Link
-                    href={`./replays/#${player.player1Id}-${player.player2Id}-${player.game}`}
+                    href={`./replays#${player.player1Id}-${player.player2Id}-${player.game}`}
                     data-player1={`${player.player1Id}`}
                     className='replay-dropdown-link'
                     key={index}>

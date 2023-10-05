@@ -1365,7 +1365,7 @@ export default async function AlternateStyle({
               </div>
 
               <div className='lower-container-alt'>
-                <PokemonButton>
+                <PokemonButton pokemon={values.name}>
                   <div className='abilities-alt'>
                     {values.abilities?.map((value, index) => {
                       return (
