@@ -6,7 +6,7 @@ interface ReplayProps {
 export default function Replay({ element, index }: ReplayProps) {
   return (
     <div
-      id={`${element.player1Id}-${element.player2Id}-${element.game}`}
+      id={`${element.player1}-${element.player2}-${element.game}`}
       key={index}
       className='replay-container'
       data-player-1={element.player1}

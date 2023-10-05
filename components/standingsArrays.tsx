@@ -140,15 +140,15 @@ export default async function Standings() {
     );
 
     const arrOfIds = [
-      'Furgat',
-      'Sean',
-      'Max',
-      'J Dougs',
-      'Dom',
-      'Toko',
-      'Dank',
-      'Ricky',
-      'Jordan',
+      'ifurgat',
+      'seanboyq',
+      'resolamxxy',
+      'dtbaggins',
+      'castleflutes',
+      'tokotoro',
+      'danknett',
+      'foxish',
+      'its_jordan',
     ];
 
     let nextId = 0;
@@ -159,7 +159,7 @@ export default async function Standings() {
       element.rd = calculatePoints(element) - calculatePointsAllowed(element);
     }
 
-    // console.log(currentStandings);
+    console.log(currentStandings);
 
     let sortedStandings = currentStandings.sort(
       (a, b) =>
@@ -243,6 +243,29 @@ export default async function Standings() {
     );
   }
 
+  function replaceId(e: any) {
+    let playerId = e;
+    if (playerId == '208943681') {
+      return 'its_jordan';
+    } else if (playerId == '208943656') {
+      return 'castleflutes';
+    } else if (playerId == '208943645') {
+      return 'seanboyq';
+    } else if (playerId == '208943667') {
+      return 'danknett';
+    } else if (playerId == '208943657') {
+      return 'tokotoro';
+    } else if (playerId == '208943647') {
+      return 'resolamxxy';
+    } else if (playerId == '208943648') {
+      return 'dtbaggins';
+    } else if (playerId == '208943679') {
+      return 'foxish';
+    } else if (playerId == '208943635') {
+      return 'ifurgat';
+    }
+  }
+
   return (
     <div className='score-container'>
       {DisplayWinners()}
@@ -251,7 +274,9 @@ export default async function Standings() {
         {eachMatch.map((value) => {
           return (
             <Link
-              href={`./replays#${value.match.player1_id}-${value.match.player2_id}-1`}
+              href={`./replays#${replaceId(value.match.player1_id)}-${replaceId(
+                value.match.player2_id
+              )}-1`}
               key={value.match.id}
               data-match={value.match.id}
               data-winner={value.match.winner_id}

@@ -8,39 +8,39 @@ import { useState } from 'react';
 export const navLinks = [
   {
     name: 'SeanBoyQ',
-    path: './#208943645',
+    path: './#seanboyq',
   },
   {
     name: 'resolamxxy',
-    path: './#208943647',
+    path: './#resolamxxy',
   },
   {
     name: 'DTBaggins',
-    path: './#208943648',
+    path: './#dtbaggins',
   },
   {
     name: 'Castleflutes',
-    path: './#208943656',
+    path: './#castleflutes',
   },
   {
     name: 'Tokotoro',
-    path: './#208943657',
+    path: './#tokotoro',
   },
   {
     name: 'Danknett',
-    path: './#208943667',
+    path: './#danknett',
   },
   {
     name: 'iFurgat',
-    path: './#208943635',
+    path: './#ifurgat',
   },
   {
     name: 'Foxish',
-    path: './#208943679',
+    path: './#foxish',
   },
   {
     name: 'its_jordan',
-    path: './#208943681',
+    path: './#its_jordan',
   },
 ];
 
@@ -95,7 +95,7 @@ function Nav() {
               .map((player: any, index: any) => {
                 return (
                   <Link
-                    href={`./replays#${player.player1Id}-${player.player2Id}-${player.game}`}
+                    href={`./replays#${player.player1}-${player.player2}-${player.game}`}
                     data-player1={`${player.player1Id}`}
                     className='replay-dropdown-link'
                     key={index}>
