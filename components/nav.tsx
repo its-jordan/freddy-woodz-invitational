@@ -4,6 +4,7 @@ import Link from 'next/link';
 // @ts-ignore
 import Data from '../data/replays.yaml';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const navLinks = [
   {
@@ -45,6 +46,8 @@ export const navLinks = [
 ];
 
 function Nav() {
+  const pathname = usePathname();
+
   const [nav, setNav] = useState(false);
   const replayData = Data;
   return (
@@ -68,7 +71,9 @@ function Nav() {
           }}>
           🠜 Close Nav
         </button>
-        <Link className='nav-header' href='./'>
+        <Link
+          href='./'
+          className={pathname == `/` ? 'nav-header active' : 'nav-header'}>
           Teams
         </Link>
         {navLinks.map((link, index) => {
@@ -84,7 +89,13 @@ function Nav() {
         })}
         <div className='nav-divider'></div>
         <ul className='replays-dropdown-container'>
-          <Link className='replays-dropdown-header' href='./replays'>
+          <Link
+            href='./replays'
+            className={
+              pathname == `/replays`
+                ? 'replays-dropdown-header active'
+                : 'replays-dropdown-header'
+            }>
             Replays
           </Link>
           <ul className='replays-dropdown'>
@@ -110,8 +121,12 @@ function Nav() {
               })}
           </ul>
         </ul>
-        <Link href='./scores'>Scores</Link>
-        <Link href='./meme'>Discord Tiers</Link>
+        <Link href='./scores' className={pathname == `/scores` ? 'active' : ''}>
+          Scores
+        </Link>
+        <Link href='./meme' className={pathname == `/meme` ? 'active' : ''}>
+          Discord Tiers
+        </Link>
         {/* <Link href='./archive'>Season 1 Archive</Link> */}
       </nav>
     </>
