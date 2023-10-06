@@ -3227,7 +3227,17 @@ nav > a:hover,
     width: max-content;
     padding-inline: 1rem;
     justify-content: start;
+    color: white;
+    transition: color 300ms ease, background 300ms ease,
+      background-color 300ms ease;
   }
+
+  nav > a:hover,
+  nav > ul:hover,
+  .nav-header:hover {
+    color: white;
+  }
+
   .replays-dropdown-header {
     padding-inline: 0;
   }
