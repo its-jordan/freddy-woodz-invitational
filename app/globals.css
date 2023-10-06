@@ -224,7 +224,6 @@ nav {
     var(--_nav-color),
     color-mix(in srgb, var(--_nav-color) 90%, black)
   );
-  box-shadow: inset 0 0 5px 0 var(--_box-shadow);
   backdrop-filter: blur(15px);
   height: 56px;
   z-index: 1000;
@@ -3107,7 +3106,6 @@ nav > a:hover,
       var(--_nav-color),
       color-mix(in srgb, var(--_nav-color) 90%, black)
     );
-    box-shadow: inset 0 0 5px 0 var(--_box-shadow);
     backdrop-filter: blur(15px);
     height: 100%;
     width: max-content;
@@ -3217,7 +3215,6 @@ nav > a:hover,
       black,
       color-mix(in srgb, rgba(0, 0, 0, 0.9) 90%, white)
     );
-    box-shadow: inset 0 0 5px 0 var(--_box-shadow);
     backdrop-filter: blur(5px);
     height: 80px;
     width: 100%;
