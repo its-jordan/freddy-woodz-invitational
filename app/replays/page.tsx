@@ -5,6 +5,7 @@ import Link from 'next/link';
 // @ts-ignore
 import Data from '@/data/replays.yaml';
 import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
 const Replay = dynamic(() => import('@/components/replay'), {
   loading: () => (
