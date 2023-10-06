@@ -639,11 +639,11 @@ export default async function AlternateStyle({
   async function getStats(e: string) {
     let pokemon = await api.getPokemonByName(e);
     return (
-      <div className={`pokemon-stats-alt ${pokemon}`} data-pokemon={e}>
+      <div className={`pokemon-stats-alt`} data-pokemon={e}>
         {pokemon.stats.map((stat, index) => {
           return (
             <div
-              className={`stat-container-alt ${stat.stat.name}`}
+              className={`stat-container-alt`}
               data-stat={stat.stat.name}
               data-stat-value={stat.base_stat}
               key={index}>
@@ -733,7 +733,10 @@ export default async function AlternateStyle({
               className={`pokemon-info-alt ${values.types[0].type.name}`}
               key={index}
               data-species={values.species.name}
-              data-pokemon={nameSplit(values.name)}
+              data-pokemon={
+                nameSplit(values.name).charAt(0).toUpperCase() +
+                nameSplit(values.name).slice(1)
+              }
               data-type-1={values.types[0].type.name}
               data-type-2={values.types[1]?.type.name}>
               <div className='holo-background-container'>

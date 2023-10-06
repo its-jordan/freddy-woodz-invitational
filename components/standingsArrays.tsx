@@ -56,7 +56,6 @@ export default async function Standings() {
       eachMatch[33]?.match.winner_id,
       eachMatch[34]?.match.winner_id,
       eachMatch[35]?.match.winner_id,
-      eachMatch[36]?.match.winner_id,
     ];
 
     winnerArray.forEach(function (x) {
@@ -120,7 +119,6 @@ export default async function Standings() {
       eachMatch[33]?.match.loser_id,
       eachMatch[34]?.match.loser_id,
       eachMatch[35]?.match.loser_id,
-      eachMatch[36]?.match.loser_id,
     ];
 
     loserArray.forEach(function (x) {
