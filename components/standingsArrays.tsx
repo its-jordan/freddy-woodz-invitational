@@ -211,13 +211,13 @@ export default async function Standings() {
         {sortedStandings.map((player) => {
           return (
             <Link
-              href={`./#${player.id}`}
+              href={`./#${player.name}`}
               data-player={player.id}
               className='standings-record'
               key={player.id}>
-              <div className='standings-name'>{player.name.toString()}</div>
-              <div className='standings-wins'>{player.wins.toString()}</div>
-              <div className='standings-losses'>{player.losses.toString()}</div>
+              <div className='standings-name'>{player.name}</div>
+              <div className='standings-wins'>{player.wins}</div>
+              <div className='standings-losses'>{player.losses}</div>
               <div className='standings-points'>{player.points}</div>
               <div className='standings-differential'>{player.rd}</div>
             </Link>

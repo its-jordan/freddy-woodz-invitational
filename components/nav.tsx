@@ -124,6 +124,11 @@ function Nav() {
         <Link href='./scores' className={pathname == `/scores` ? 'active' : ''}>
           Scores
         </Link>
+        <Link
+          href='./playoffs'
+          className={pathname == `/playoffs` ? 'active' : ''}>
+          Playoffs
+        </Link>
         <Link href='./meme' className={pathname == `/meme` ? 'active' : ''}>
           Discord Tiers
         </Link>
