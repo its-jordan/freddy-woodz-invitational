@@ -6,23 +6,17 @@ match 2:
   name: Seed 2, Seed 3
   seed: 2, 3
   score: 0-0
-match 3:
-  name: Seed 5
-  seed: 5
-match 4:
-  name: Seed 6
-  seed: 6
 match 5:
   name: Winner of 1v4, Winner of 2v3
   seed: ?, ?
   score: 0-0
 match 6:
-  name: ?, ?
-  seed: ?, ?
+  name: ?, Seed 5
+  seed: ?, 5
   score: 0-0
 match 7:
-  name: ?, ?
-  seed: ?, ?
+  name: ?, Seed 6
+  seed: ?, 6
   score: 0-0
 match 8:
   name: ?, ?
