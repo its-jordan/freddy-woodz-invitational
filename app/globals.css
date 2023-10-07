@@ -3329,3 +3329,126 @@ nav .active {
   text-transform: uppercase;
   font-style: italic;
 }
+
+.playoffs-main {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--fire) 40%, var(--base)) 0%,
+    color-mix(in srgb, var(--fire) 80%, black) 100%
+  );
+  box-shadow: inset 0px 150px 0px 0px rgba(255, 255, 255, 0.15);
+}
+
+.playoffs-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.playoffs-header {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: italic;
+  color: color-mix(in srgb, var(--fire) 80%, black);
+  height: 150px;
+  align-items: center;
+}
+
+.playoffs-bracket {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5rem;
+}
+
+.playoffs-round {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.playoffs-upper,
+.playoffs-lower {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 300px;
+}
+
+.playoffs-match-container {
+  width: 100%;
+}
+
+.playoffs-player-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--player-color-1, var(--steel)) 99%, black) 0%,
+    color-mix(in srgb, var(--player-color-1, var(--steel)) 70%, black) 100%
+  );
+  color: white;
+}
+
+.playoffs-player-container[data-player-1] {
+  padding: 0.5rem 1rem;
+}
+
+.playoffs-player-container[data-score='0'],
+.playoffs-player-container[data-score='1'] {
+  opacity: 0.5;
+}
+
+.playoffs-player-container:first-of-type {
+  border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--player-color-1, var(--steel)) 70%, black);
+}
+
+.playoffs-player-container:last-of-type {
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.playoffs-player-container:first-of-type:has(
+    ~ .playoffs-player-container:last-of-type[data-player-1]
+  ) {
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.playoff-score {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.playoff-player {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.playoffs-player-upper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playoff-seed {
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0.5;
+}
