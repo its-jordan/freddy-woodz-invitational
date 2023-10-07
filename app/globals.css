@@ -2465,7 +2465,6 @@ nav > a:hover,
   );
   object-fit: cover;
   object-position: center;
-  overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
