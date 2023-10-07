@@ -2357,6 +2357,7 @@ nav > a:hover,
   isolation: isolate;
   display: flex;
   flex-flow: column nowrap;
+  overflow: hidden;
   justify-content: start;
   gap: 0.25rem;
   height: 550px;
