@@ -161,8 +161,8 @@ export default async function Standings() {
 
     let sortedStandings = currentStandings.sort(
       (a, b) =>
-        b.wins / (b.wins + b.losses) - a.wins / (a.wins + a.losses) ||
         b.wins - a.wins ||
+        b.rd - a.rd ||
         b.points - a.points ||
         a.losses - b.losses
     );
