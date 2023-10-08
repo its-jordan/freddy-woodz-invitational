@@ -175,10 +175,12 @@ export default async function Standings() {
         player.id === '208943657'
       ) {
         return player.wins * 2 + 1;
+      } else if (player.id === '208943667') {
+        return player.wins * 2 + 1;
       } else if (player.id === '208943679') {
         return player.wins * 2 + 2;
       } else if (player.id === '208943648') {
-        return player.wins * 2 + 2;
+        return player.wins * 2 + 3;
       } else {
         return player.wins * 2;
       }
@@ -187,7 +189,7 @@ export default async function Standings() {
     function calculatePointsAllowed(e: any) {
       let player = e;
       if (player.id === '208943645') {
-        return player.losses * 2 + 3;
+        return player.losses * 2 + 4;
       } else if (player.id === '208943656') {
         return player.losses * 2 + 2;
       } else if (player.id === '208943657') {
