@@ -107,7 +107,7 @@ function Nav() {
                 return (
                   <Link
                     href={`./replays#${player.player1}-${player.player2}-${player.game}`}
-                    data-player1={`${player.player1Id}`}
+                    data-player1={`${player.player1}`}
                     className='replay-dropdown-link'
                     key={index}>
                     {player.player1.charAt(0).toUpperCase() +

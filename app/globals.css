@@ -1375,47 +1375,56 @@ nav {
   --player-color: var(--ghost);
 }
 
-[data-player1='208943657'] {
+[data-player1='208943657'],
+[data-player1='tokotoro'] {
   /* Toko */
   --player-color-1: var(--psychic);
 }
 
-[data-player1='208943647'] {
+[data-player1='208943647'],
+[data-player1='resolamxxy'] {
   /* Max */
   --player-color-1: var(--grass);
 }
 
-[data-player1='208943681'] {
+[data-player1='208943681'],
+[data-player1='its_jordan'] {
   /* Jordan */
   --player-color-1: var(--dragon);
 }
 
-[data-player1='208943656'] {
+[data-player1='208943656'],
+[data-player1='castleflutes'] {
   /* Dom */
   --player-color-1: var(--electric);
 }
 
-[data-player1='208943645'] {
+[data-player1='208943645'],
+[data-player1='seanboyq'] {
   /* Sean */
   --player-color-1: var(--water);
 }
 
-[data-player1='208943679'] {
+[data-player1='208943679'],
+[data-player1='foxish'] {
   /* Ricky */
   --player-color-1: var(--fairy);
 }
 
-[data-player1='208943648'] {
+[data-player1='208943648'],
+[data-player1='dtbaggins'] {
   /* J Dougs */
   --player-color-1: var(--fire);
 }
 
-[data-player1='208943635'] {
+[data-player1='208943635'],
+[data-player1='ifurgat'] {
   /* Furgat */
   --player-color-1: var(--ice);
 }
 
-[data-player1='208943667'] {
+[data-player1='208943667'],
+[data-player1='danknett'] {
   /* Dank */
   --player-color-1: var(--ghost);
 }
