@@ -170,12 +170,12 @@ export default async function Standings() {
     function calculatePoints(e: any) {
       let player = e;
       if (
-        player.id === '208943679' ||
         player.id === '208943656' ||
         player.id === '208943635' ||
         player.id === '208943657'
       ) {
         return player.wins * 2 + 1;
+      } else if (player.id === '208943679') {
       } else if (player.id === '208943648') {
         return player.wins * 2 + 2;
       } else {
@@ -188,9 +188,9 @@ export default async function Standings() {
       if (player.id === '208943645') {
         return player.losses * 2 + 3;
       } else if (player.id === '208943656') {
-        return player.losses * 2 + 1;
+        return player.losses * 2 + 2;
       } else if (player.id === '208943657') {
-        return player.losses * 2 + 1;
+        return player.losses * 2 + 2;
       } else if (player.id === '208943667') {
         return player.losses * 2 + 1;
       } else {
