@@ -176,6 +176,7 @@ export default async function Standings() {
       ) {
         return player.wins * 2 + 1;
       } else if (player.id === '208943679') {
+        return player.wins * 2 + 2;
       } else if (player.id === '208943648') {
         return player.wins * 2 + 2;
       } else {
