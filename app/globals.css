@@ -1149,6 +1149,7 @@ nav {
     color-mix(in srgb, var(--water) 40%, var(--water)) 0%,
     color-mix(in srgb, var(--water) 80%, black) 100%
   );
+  background-attachment: fixed;
   box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.15);
 }
 
@@ -1184,6 +1185,15 @@ nav {
     color-mix(in srgb, var(--player-color) 50%, rgba(0, 0, 0, 0.5));
   border-radius: 0.375rem;
   transition: color 300ms ease;
+}
+
+.standings-record[data-playoffs='no'] {
+  opacity: 0.5;
+  transition: opacity 300ms ease-in;
+}
+
+.standings-record[data-playoffs='no']:hover {
+  opacity: 1;
 }
 
 .standings-record:hover {
@@ -1235,9 +1245,10 @@ nav {
   padding-left: 4rem;
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--grass) 40%, var(--grass)) 0%,
-    color-mix(in srgb, var(--grass) 80%, black) 100%
+    color-mix(in srgb, var(--water) 40%, var(--water)) 0%,
+    color-mix(in srgb, var(--water) 80%, black) 100%
   );
+  background-attachment: fixed;
   box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.15);
 }
 
@@ -1247,7 +1258,7 @@ nav {
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--grass) 60%, black);
+  color: color-mix(in srgb, var(--water) 60%, black);
   margin-bottom: 27px;
 }
 
@@ -1263,7 +1274,7 @@ nav {
   content: 'Week ' attr(data-week);
   position: absolute;
   top: -2.15rem;
-  color: color-mix(in srgb, var(--grass) 60%, black);
+  color: color-mix(in srgb, var(--water) 60%, black);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -1330,47 +1341,56 @@ nav {
 
 /* Player Colors */
 
-[data-player='208943657'] {
+[data-player='208943657'],
+[data-player='tokotoro'] {
   /* Toko */
   --player-color: var(--psychic);
 }
 
-[data-player='208943647'] {
+[data-player='208943647'],
+[data-player='resolamxxy'] {
   /* Max */
   --player-color: var(--grass);
 }
 
-[data-player='208943681'] {
+[data-player='208943681'],
+[data-player='its_jordan'] {
   /* Jordan */
   --player-color: var(--dragon);
 }
 
-[data-player='208943656'] {
+[data-player='208943656'],
+[data-player='castleflutes'] {
   /* Dom */
   --player-color: var(--electric);
 }
 
-[data-player='208943645'] {
+[data-player='208943645'],
+[data-player='seanboyq'] {
   /* Sean */
   --player-color: var(--water);
 }
 
-[data-player='208943679'] {
+[data-player='208943679'],
+[data-player='foxish'] {
   /* Ricky */
   --player-color: var(--fairy);
 }
 
-[data-player='208943648'] {
+[data-player='208943648'],
+[data-player='dtbaggins'] {
   /* J Dougs */
   --player-color: var(--fire);
 }
 
-[data-player='208943635'] {
+[data-player='208943635'],
+[data-player='ifurgat'] {
   /* Furgat */
   --player-color: var(--ice);
 }
 
-[data-player='208943667'] {
+[data-player='208943667'],
+[data-player='danknett'] {
   /* Dank */
   --player-color: var(--ghost);
 }
@@ -1963,7 +1983,7 @@ iframe {
 }
 
 .replays-dropdown-container {
-  position: relative;
+  position: static;
 }
 
 .replays-dropdown-container:hover .replays-dropdown {
@@ -1975,16 +1995,24 @@ iframe {
   display: none;
   position: absolute;
   top: 56px;
-  width: max-content;
+  width: 100vw;
   right: 0;
-  padding: 0.5rem;
-  background-color: rgb(235, 235, 235);
-  grid-template-columns: repeat(2, 1fr);
+  left: 0;
+  padding: 1rem;
+  padding-inline: 4rem;
+  background: linear-gradient(
+    180deg,
+    var(--_nav-color),
+    color-mix(in srgb, var(--_nav-color) 90%, black)
+  );
+  grid-template-columns: repeat(5, 280px);
+  justify-content: center;
   gap: 0.25rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0;
 }
 
 .replay-dropdown-link {
+  width: 100%;
   padding: 0.5rem 1rem;
   min-width: max-content;
   border-radius: 0.375rem;
@@ -2087,10 +2115,10 @@ nav > a:hover,
     color: color-mix(in srgb, var(--fighting) 50%, white);
   }
   .standings-title {
-    color: color-mix(in srgb, var(--fire) 50%, white);
+    color: color-mix(in srgb, var(--fighting) 50%, white);
   }
   .standings-header {
-    color: color-mix(in srgb, var(--fire) 30%, white);
+    color: color-mix(in srgb, var(--fighting) 30%, white);
   }
   .match-data:nth-of-type(4n - 3)::before {
     color: color-mix(in srgb, var(--fighting) 30%, white);
@@ -2098,9 +2126,10 @@ nav > a:hover,
   .standings-container {
     background: linear-gradient(
       180deg,
-      color-mix(in srgb, var(--fire) 60%, white) 0%,
-      color-mix(in srgb, var(--fire) 50%, black)
+      color-mix(in srgb, var(--fighting) 60%, white) 0%,
+      color-mix(in srgb, var(--fighting) 50%, black)
     );
+    background-attachment: fixed;
     box-shadow: inset 0 101px 0 0 rgba(0, 0, 0, 0.2);
   }
   .match-container {
@@ -2109,6 +2138,7 @@ nav > a:hover,
       color-mix(in srgb, var(--fighting) 60%, white) 0%,
       color-mix(in srgb, var(--fighting) 50%, black)
     );
+    background-attachment: fixed;
     box-shadow: inset 0 101px 0 0 rgba(0, 0, 0, 0.2);
   }
   .meme-main {
@@ -3342,16 +3372,17 @@ nav .active {
 }
 
 .playoffs-main {
+  --_playoffs-color: var(--steel, gray);
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--fire) 40%, var(--base)) 0%,
-    color-mix(in srgb, var(--fire) 80%, black) 100%
+    color-mix(in srgb, var(--_playoffs-color) 40%, var(--base)) 0%,
+    color-mix(in srgb, var(--_playoffs-color) 80%, black) 100%
   );
   box-shadow: inset 0px 150px 0px 0px rgba(255, 255, 255, 0.15);
 }
 
 .playoffs-container {
-  --_playoffs-line: color-mix(in srgb, var(--fire, red) 70%, black);
+  --_playoffs-line: color-mix(in srgb, var(--_playoffs-color) 70%, black);
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -3364,7 +3395,7 @@ nav .active {
   font-weight: 900;
   text-transform: uppercase;
   font-style: italic;
-  color: color-mix(in srgb, var(--fire) 80%, black);
+  color: color-mix(in srgb, var(--_playoffs-color) 80%, black);
   height: 150px;
   align-items: center;
 }
@@ -3404,6 +3435,9 @@ nav .active {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  outline: 3px solid var(--_playoffs-line);
+  border-radius: 0.375rem;
+  background-color: var(--_playoffs-color);
 }
 
 .playoffs-player-container {
@@ -3417,12 +3451,23 @@ nav .active {
   align-items: center;
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--player-color-1, var(--steel)) 99%, black) 0%,
-    color-mix(in srgb, var(--player-color-1, var(--steel)) 70%, black) 100%
+    color-mix(in srgb, var(--player-color-1, var(--_playoffs-color)) 99%, black)
+      0%,
+    color-mix(in srgb, var(--player-color-1, var(--_playoffs-color)) 70%, black)
+      100%
   );
   text-shadow: 0 0 5px
-      color-mix(in srgb, var(--player-color-1, var(--steel)) 70%, black),
-    0 0 10px color-mix(in srgb, var(--player-color-1, var(--steel)) 70%, black);
+      color-mix(
+        in srgb,
+        var(--player-color-1, var(--_playoffs-color)) 70%,
+        black
+      ),
+    0 0 10px
+      color-mix(
+        in srgb,
+        var(--player-color-1, var(--_playoffs-color)) 70%,
+        black
+      );
   color: white;
 }
 
@@ -3438,20 +3483,20 @@ nav .active {
     180deg,
     color-mix(
         in srgb,
-        var(--player-color-1, var(--steel)) 50%,
+        var(--player-color-1, var(--_playoffs-color)) 50%,
         rgba(0, 0, 0, 0.1)
       )
       0%,
     color-mix(
         in srgb,
-        var(--player-color-1, var(--steel)) 30%,
+        var(--player-color-1, var(--_playoffs-color)) 30%,
         rgba(0, 0, 0, 0.1)
       )
       100%
   );
   color: color-mix(
     in srgb,
-    var(--player-color-1, var(--steel)) 30%,
+    var(--player-color-1, var(--_playoffs-color)) 30%,
     rgba(255, 255, 255, 0.5)
   );
   text-shadow: none;
@@ -3460,7 +3505,7 @@ nav .active {
 .playoffs-player-container:first-of-type {
   border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
   border-bottom: 1px solid
-    color-mix(in srgb, var(--player-color-1, var(--steel)) 70%, black);
+    color-mix(in srgb, var(--player-color-1, var(--_playoffs-color)) 70%, black);
 }
 
 .playoffs-player-container:last-of-type {
@@ -3498,15 +3543,16 @@ nav .active {
 
 @media (prefers-color-scheme: dark) {
   .playoffs-main {
+    --_playoffs-color: var(--poison, purple);
     background: linear-gradient(
       180deg,
-      color-mix(in srgb, var(--fire) 60%, white) 0%,
-      color-mix(in srgb, var(--fire) 50%, black) 100%
+      color-mix(in srgb, var(--_playoffs-color) 60%, white) 0%,
+      color-mix(in srgb, var(--_playoffs-color) 50%, black) 100%
     );
     box-shadow: inset 0 150px 0 0 rgba(0, 0, 0, 0.2);
   }
   .playoffs-header {
-    color: color-mix(in srgb, var(--fire) 50%, white);
+    color: color-mix(in srgb, var(--_playoffs-color) 50%, white);
   }
 }
 

@@ -51,7 +51,7 @@ function Nav() {
   const [nav, setNav] = useState(false);
   const replayData = Data;
   return (
-    <>
+    <div className='nav-links-container'>
       <button
         className={
           nav
@@ -134,7 +134,7 @@ function Nav() {
         </Link>
         {/* <Link href='./archive'>Season 1 Archive</Link> */}
       </nav>
-    </>
+    </div>
   );
 }
 

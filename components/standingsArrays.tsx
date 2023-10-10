@@ -58,6 +58,45 @@ export default async function Standings() {
       eachMatch[35]?.match.winner_id,
     ];
 
+    let winnerPointsArray = [
+      eachMatch[0]?.match.winner_id,
+      eachMatch[1]?.match.winner_id,
+      eachMatch[2]?.match.winner_id,
+      eachMatch[3]?.match.winner_id,
+      eachMatch[4]?.match.winner_id,
+      eachMatch[5]?.match.winner_id,
+      eachMatch[6]?.match.winner_id,
+      eachMatch[7]?.match.winner_id,
+      eachMatch[8]?.match.winner_id,
+      eachMatch[9]?.match.winner_id,
+      eachMatch[10]?.match.winner_id,
+      eachMatch[11]?.match.winner_id,
+      eachMatch[12]?.match.winner_id,
+      eachMatch[13]?.match.winner_id,
+      eachMatch[14]?.match.winner_id,
+      eachMatch[15]?.match.winner_id,
+      eachMatch[16]?.match.winner_id,
+      eachMatch[17]?.match.winner_id,
+      eachMatch[18]?.match.winner_id,
+      eachMatch[19]?.match.winner_id,
+      eachMatch[20]?.match.winner_id,
+      eachMatch[21]?.match.winner_id,
+      eachMatch[22]?.match.winner_id,
+      eachMatch[23]?.match.winner_id,
+      eachMatch[24]?.match.winner_id,
+      eachMatch[25]?.match.winner_id,
+      eachMatch[26]?.match.winner_id,
+      eachMatch[27]?.match.winner_id,
+      eachMatch[28]?.match.winner_id,
+      eachMatch[29]?.match.winner_id,
+      eachMatch[30]?.match.winner_id,
+      eachMatch[31]?.match.winner_id,
+      eachMatch[32]?.match.winner_id,
+      eachMatch[33]?.match.winner_id,
+      eachMatch[34]?.match.winner_id,
+      eachMatch[35]?.match.winner_id,
+    ];
+
     winnerArray.forEach(function (x) {
       winners[x] = (winners[x] || 0) + 1;
     });
@@ -121,6 +160,49 @@ export default async function Standings() {
       eachMatch[35]?.match.loser_id,
     ];
 
+    const loserScores = {};
+
+    let loserScore = [
+      eachMatch[0]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[1]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[2]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[3]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[4]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[5]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[6]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[7]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[8]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[9]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[10]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[11]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[12]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[13]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[14]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[15]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[16]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[17]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[18]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[19]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[20]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[21]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[22]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[23]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[24]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[25]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[26]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[27]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[28]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[29]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[30]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[31]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[32]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[33]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[34]?.match.scores_csv.replace('2', '').replace('-', ''),
+      eachMatch[35]?.match.scores_csv.replace('2', '').replace('-', ''),
+    ];
+
+    console.log(loserScore);
+
     loserArray.forEach(function (x) {
       losers[x] = (losers[x] || 0) + 1;
     });
@@ -137,6 +219,8 @@ export default async function Standings() {
       Object.assign({}, item, loserValues[i])
     );
 
+    console.log(currentStandings);
+
     const arrOfIds = [
       'ifurgat',
       'seanboyq',
@@ -152,6 +236,7 @@ export default async function Standings() {
     let nextId = 0;
     for (const element of currentStandings) {
       element.name = arrOfIds[nextId++];
+      element.winpoints = element.wins * 2;
       element.points = calculatePoints(element);
       // element.rd = element.points - element.losses * 2;
       element.rd = calculatePoints(element) - calculatePointsAllowed(element);
@@ -162,9 +247,9 @@ export default async function Standings() {
     let sortedStandings = currentStandings.sort(
       (a, b) =>
         b.wins - a.wins ||
+        a.losses - b.losses ||
         b.rd - a.rd ||
-        b.points - a.points ||
-        a.losses - b.losses
+        b.points - a.points
     );
 
     function calculatePoints(e: any) {
@@ -217,6 +302,7 @@ export default async function Standings() {
               href={`./#${player.name}`}
               data-player={player.id}
               className='standings-record'
+              data-playoffs={player.wins < 2 ? 'no' : 'yes'}
               key={player.id}>
               <div className='standings-name'>{player.name}</div>
               <div className='standings-wins'>{player.wins}</div>

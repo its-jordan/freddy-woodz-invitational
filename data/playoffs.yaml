@@ -11,11 +11,11 @@ match 5:
   seed: ?, ?
   score: 0-0
 match 6:
-  name: ?, Seed 5
+  name: Lowest Seed Loser, Seed 5
   seed: ?, 5
   score: 0-0
 match 7:
-  name: ?, Seed 6
+  name: Highest Seed Loser, Seed 6
   seed: ?, 6
   score: 0-0
 match 8:
