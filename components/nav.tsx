@@ -177,7 +177,7 @@ function Nav() {
           className={pathname == `/meme` ? 'active' : ''}>
           Discord Tiers
         </Link>
-        <div>
+        {/* <div>
           <div>Season 1</div>
           <div>
             <Link
@@ -225,7 +225,7 @@ function Nav() {
               Playoffs
             </Link>
           </div>
-        </div>
+        </div> */}
       </nav>
     </div>
   );
