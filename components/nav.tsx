@@ -3,47 +3,35 @@
 import Link from 'next/link';
 // @ts-ignore
 import Data from '../data/replays.yaml';
+// @ts-ignore
+import Players from '../data/players.yaml';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-export const navLinks = [
-  {
-    name: 'SeanBoyQ',
-    path: './#seanboyq',
-  },
-  {
-    name: 'resolamxxy',
-    path: './#resolamxxy',
-  },
-  {
-    name: 'DTBaggins',
-    path: './#dtbaggins',
-  },
-  {
-    name: 'Castleflutes',
-    path: './#castleflutes',
-  },
-  {
-    name: 'Tokotoro',
-    path: './#tokotoro',
-  },
-  {
-    name: 'Danknett',
-    path: './#danknett',
-  },
-  {
-    name: 'iFurgat',
-    path: './#ifurgat',
-  },
-  {
-    name: 'Foxish',
-    path: './#foxish',
-  },
-  {
-    name: 'its_jordan',
-    path: './#its_jordan',
-  },
-];
+function NameSplit(e: string) {
+  const player = e;
+  if (player === 'ifurgat') {
+    return 'iFurgat';
+  } else if (player === 'resolamxxy') {
+    return 'resolamxxy';
+  } else if (player === 'seanboyq') {
+    return 'SeanBoyQ';
+  } else if (player === 'tokotoro') {
+    return 'Tokotoro';
+  } else if (player === 'castleflutes') {
+    return 'Castleflutes';
+  } else if (player === 'danknett') {
+    return 'Danknett';
+  } else if (player === 'its_jordan') {
+    return 'its_jordan';
+  } else if (player === 'foxish') {
+    return 'Foxish';
+  } else if (player === 'dtbaggins') {
+    return 'DTBaggins';
+  } else {
+    return player;
+  }
+}
 
 function Nav() {
   const pathname = usePathname();
@@ -76,14 +64,14 @@ function Nav() {
           className={pathname == `/` ? 'nav-header active' : 'nav-header'}>
           Teams
         </Link>
-        {navLinks.map((link, index) => {
+        {Players.map((player: any, index: any) => {
           return (
             <Link
               // @ts-ignore
-              href={link?.path}
+              href={`./#${player.player}`}
               key={index}
-              data-player={link?.path.split('#')[1]}>
-              {link?.name}
+              data-player={player.player}>
+              {NameSplit(player.player)}
             </Link>
           );
         })}
@@ -132,7 +120,7 @@ function Nav() {
         <Link href='./meme' className={pathname == `/meme` ? 'active' : ''}>
           Discord Tiers
         </Link>
-        {/* <Link href='./archive'>Season 1 Archive</Link> */}
+        {/* <Link href='./season-1'>Season 1</Link> */}
       </nav>
     </div>
   );

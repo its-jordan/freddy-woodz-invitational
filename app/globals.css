@@ -2522,6 +2522,7 @@ nav > a:hover,
   object-position: 0 50px;
   bottom: 0;
   position: absolute;
+  pointer-events: none;
 }
 
 .pokemon-types-alt {
