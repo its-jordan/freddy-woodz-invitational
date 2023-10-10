@@ -1,6 +1,5 @@
 // @ts-nocheck
 
-import '../app/scores/scores.css';
 import { MatchAdapter } from '../challonge';
 import { ParticipantAdapter } from '../challonge';
 import Link from 'next/link';

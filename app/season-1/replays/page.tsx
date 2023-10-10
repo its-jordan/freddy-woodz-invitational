@@ -1,5 +1,4 @@
 'use client';
-
 // @ts-ignore
 import Data from '@/data/replays.yaml';
 import dynamic from 'next/dynamic';

@@ -60,7 +60,14 @@ function Nav() {
           🠜 Close Nav
         </button>
         <Link
-          href='./'
+          href={
+            pathname == `/season-1/teams` ||
+            `/season-1/scores` ||
+            `/season-1/replays` ||
+            `/season-1/playoffs`
+              ? '../'
+              : './'
+          }
           className={pathname == `/` ? 'nav-header active' : 'nav-header'}>
           Teams
         </Link>
@@ -68,9 +75,24 @@ function Nav() {
           return (
             <Link
               // @ts-ignore
-              href={`./#${player.player}`}
+              href={
+                pathname == `/season-1/teams` ||
+                `/season-1/scores` ||
+                `/season-1/replays` ||
+                `/season-1/playoffs`
+                  ? `../#${
+                      player.player.charAt(0).toLowerCase() +
+                      player.player.slice(1)
+                    }`
+                  : `./#${
+                      player.player.charAt(0).toLowerCase() +
+                      player.player.slice(1)
+                    }`
+              }
               key={index}
-              data-player={player.player}>
+              data-player={
+                player.player.charAt(0).toLowerCase() + player.player.slice(1)
+              }>
               {NameSplit(player.player)}
             </Link>
           );
@@ -78,7 +100,14 @@ function Nav() {
         <div className='nav-divider'></div>
         <ul className='replays-dropdown-container'>
           <Link
-            href='./replays'
+            href={
+              pathname == `/season-1/teams` ||
+              `/season-1/scores` ||
+              `/season-1/replays` ||
+              `/season-1/playoffs`
+                ? '../replays'
+                : './replays'
+            }
             className={
               pathname == `/replays`
                 ? 'replays-dropdown-header active'
@@ -94,33 +123,109 @@ function Nav() {
               .map((player: any, index: any) => {
                 return (
                   <Link
-                    href={`./replays#${player.player1}-${player.player2}-${player.game}`}
+                    href={
+                      pathname == `/season-1/teams` ||
+                      `/season-1/scores` ||
+                      `/season-1/replays` ||
+                      `/season-1/playoffs`
+                        ? `../replays#${player.player1}-${player.player2}-${player.game}`
+                        : `./replays#${player.player1}-${player.player2}-${player.game}`
+                    }
                     data-player1={`${player.player1}`}
                     className='replay-dropdown-link'
                     key={index}>
-                    {player.player1.charAt(0).toUpperCase() +
-                      player.player1.slice(1)}{' '}
-                    vs.{' '}
-                    {player.player2.charAt(0).toUpperCase() +
-                      player.player2.slice(1)}{' '}
+                    {NameSplit(player.player1)} vs. {NameSplit(player.player2)}{' '}
                     - G{player.game}
                   </Link>
                 );
               })}
           </ul>
         </ul>
-        <Link href='./scores' className={pathname == `/scores` ? 'active' : ''}>
+        <Link
+          href={
+            pathname == `/season-1/teams` ||
+            `/season-1/scores` ||
+            `/season-1/replays` ||
+            `/season-1/playoffs`
+              ? '../scores'
+              : './scores'
+          }
+          className={pathname == `/scores` ? 'active' : ''}>
           Scores
         </Link>
         <Link
-          href='./playoffs'
+          href={
+            pathname == `/season-1/teams` ||
+            `/season-1/scores` ||
+            `/season-1/replays` ||
+            `/season-1/playoffs`
+              ? '../playoffs'
+              : './playoffs'
+          }
           className={pathname == `/playoffs` ? 'active' : ''}>
           Playoffs
         </Link>
-        <Link href='./meme' className={pathname == `/meme` ? 'active' : ''}>
+        <Link
+          href={
+            pathname == `/season-1/teams` ||
+            `/season-1/scores` ||
+            `/season-1/replays` ||
+            `/season-1/playoffs`
+              ? '../meme'
+              : './meme'
+          }
+          className={pathname == `/meme` ? 'active' : ''}>
           Discord Tiers
         </Link>
-        {/* <Link href='./season-1'>Season 1</Link> */}
+        <div>
+          <div>Season 1</div>
+          <div>
+            <Link
+              href={
+                pathname !== `season-1/teams` ||
+                `season-1/scores` ||
+                `season-1/replays` ||
+                `season-1/playoffs`
+                  ? '/season-1/teams'
+                  : '/season-1/teams'
+              }>
+              Teams
+            </Link>
+            <Link
+              href={
+                pathname !== `season-1/teams` ||
+                `season-1/scores` ||
+                `season-1/replays` ||
+                `season-1/playoffs`
+                  ? '/season-1/scores'
+                  : '/season-1/scores'
+              }>
+              Scores
+            </Link>
+            <Link
+              href={
+                pathname !== `season-1/teams` ||
+                `season-1/scores` ||
+                `season-1/replays` ||
+                `season-1/playoffs`
+                  ? '/season-1/replays'
+                  : '/season-1/replays'
+              }>
+              Replays
+            </Link>
+            <Link
+              href={
+                pathname !== `season-1/teams` ||
+                `season-1/scores` ||
+                `season-1/replays` ||
+                `season-1/playoffs`
+                  ? '/season-1/playoffs'
+                  : '/season-1/playoffs'
+              }>
+              Playoffs
+            </Link>
+          </div>
+        </div>
       </nav>
     </div>
   );
