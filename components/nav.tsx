@@ -80,19 +80,11 @@ function Nav() {
                 `/season-1/scores` ||
                 `/season-1/replays` ||
                 `/season-1/playoffs`
-                  ? `../#${
-                      player.player.charAt(0).toLowerCase() +
-                      player.player.slice(1)
-                    }`
-                  : `./#${
-                      player.player.charAt(0).toLowerCase() +
-                      player.player.slice(1)
-                    }`
+                  ? `../#${player.player.toLowerCase()}`
+                  : `./#${player.player.toLowerCase()}`
               }
               key={index}
-              data-player={
-                player.player.charAt(0).toLowerCase() + player.player.slice(1)
-              }>
+              data-player={player.player.charAt(0).toLowerCase()}>
               {NameSplit(player.player)}
             </Link>
           );
