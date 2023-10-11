@@ -351,7 +351,8 @@ body {
 @media only screen and (max-width: 680px) {
   html,
   body {
-    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
     position: relative !important;
     height: 100% !important;
   }
