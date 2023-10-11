@@ -544,7 +544,7 @@ export default async function Standings() {
           return (
             <Link
               href={`./#${player.name}`}
-              data-player={player.id}
+              data-player={player.name.toLowerCase()}
               className='standings-record'
               data-playoffs={player.wins < 2 ? 'no' : 'yes'}
               key={player.id}>
@@ -679,7 +679,7 @@ export default async function Standings() {
               class={`match-data`}>
               <div
                 className='player player-1'
-                data-player={value.match.player1_id}
+                data-player={replaceID(value.match.player1_id)}
                 data-score={value.match.scores_csv.charAt(0)}>
                 <div className='player-container'>
                   {displayName(value.match.player1_id)}
@@ -692,7 +692,7 @@ export default async function Standings() {
               </div>
               <div
                 className='player player-2'
-                data-player={value.match.player2_id}
+                data-player={replaceID(value.match.player2_id)}
                 data-score={value.match.scores_csv.charAt(2)}>
                 <div className='player-container'>
                   {displayName(value.match.player2_id)}

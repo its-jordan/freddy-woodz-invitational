@@ -3,6 +3,29 @@ interface ReplayProps {
   index: number;
 }
 
+function replaceName(e: any) {
+  let playerId = e;
+  if (playerId == 'its_jordan') {
+    return 'its_jordan';
+  } else if (playerId == 'castleflutes') {
+    return 'Castleflutes';
+  } else if (playerId == 'seanboyq') {
+    return 'SeanBoyQ';
+  } else if (playerId == 'danknett') {
+    return 'Danknett';
+  } else if (playerId == 'tokotoro') {
+    return 'Tokotoro';
+  } else if (playerId == 'resolamxxy') {
+    return 'resolamxxy';
+  } else if (playerId == 'dtbaggins') {
+    return 'DTBaggins';
+  } else if (playerId == 'foxish') {
+    return 'Foxish';
+  } else if (playerId == 'ifurgat') {
+    return 'iFurgat';
+  }
+}
+
 export default function Replay({ element, index }: ReplayProps) {
   return (
     <div
@@ -13,15 +36,9 @@ export default function Replay({ element, index }: ReplayProps) {
       data-player-2={element.player2}
       data-game={element.game}>
       <div className='replay-heading'>
-        <div>
-          {element.player1.charAt(0).toUpperCase().replace('I', 'i') +
-            element.player1.slice(1).replace('q', 'Q')}{' '}
-        </div>
+        <div>{replaceName(element.player1)}</div>
         <div>vs. </div>
-        <div>
-          {element.player2.charAt(0).toUpperCase().replace('I', 'i') +
-            element.player2.slice(1).replace('q', 'Q')}{' '}
-        </div>
+        <div>{replaceName(element.player2)}</div>
         <div>Game {element.game}</div>
       </div>
       <div className='showdown-iframe-container'>

@@ -1429,10 +1429,9 @@ export default async function AlternateStyle({
 
   return (
     <div
-      className={twMerge(`team-alt ${playerId.toString()}`, className)}
+      className={twMerge(`team-alt`, className)}
       id={playerName.toLowerCase()}
-      data-player={playerId}
-      data-player-name={playerName}>
+      data-player={playerName.toLowerCase()}>
       <div className='player-team-alt'>
         <div className='player-name-alt'>{playerName}</div>
         {getPokemonData(p1)}

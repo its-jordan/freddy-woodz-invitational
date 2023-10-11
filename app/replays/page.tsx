@@ -17,7 +17,6 @@ export default function Replays() {
 
   return (
     <main className='mb-16 mt-0 replay-main'>
-      {/* <nav className={'replay-nav display'}>{Nav()}</nav> */}
       <div className='replays-wrapper'>
         {PlayerArray.sort((a: any, b: any) =>
           a.player1 > b.player1 ? 1 : b.player1 > a.player1 ? -1 : 0

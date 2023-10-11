@@ -74,7 +74,6 @@ function Nav() {
         {Players.map((player: any, index: any) => {
           return (
             <Link
-              // @ts-ignore
               href={
                 pathname == `/season-1/teams` ||
                 `/season-1/scores` ||
