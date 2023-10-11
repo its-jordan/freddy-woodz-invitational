@@ -347,3 +347,49 @@ body {
     color: #f3f3f3 !important;
   }
 }
+
+@media only screen and (max-width: 680px) {
+  .statbar strong {
+    margin: 0 -15px 0 -115px;
+  }
+  .innerbattle > div:nth-child(5) img {
+    margin-left: -125px;
+  }
+  .statbar {
+    margin-left: -125px;
+  }
+  .trainer div.teamicons {
+    display: none;
+  }
+
+  .messagebar {
+    margin-left: -90px;
+  }
+
+  .trainer-near {
+    bottom: 95px !important;
+  }
+
+  .rightbar,
+  .leftbar {
+    background-color: transparent !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .trainer strong {
+    color: white;
+    text-shadow: 0 0 3px black;
+  }
+
+  .trainer-far {
+    bottom: 342px !important;
+  }
+
+  body,
+  .replay-wrapper,
+  .battle,
+  .innerbattle {
+    width: 100% !important;
+  }
+}

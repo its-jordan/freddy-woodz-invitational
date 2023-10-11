@@ -162,7 +162,11 @@ function Nav() {
               ? '../playoffs'
               : './playoffs'
           }
-          className={pathname == `/playoffs` ? 'active' : ''}>
+          className={
+            pathname == `/playoffs`
+              ? 'active playoffs-nav-link'
+              : 'playoffs-nav-link'
+          }>
           Playoffs
         </Link>
         <Link
@@ -174,7 +178,9 @@ function Nav() {
               ? '../meme'
               : './meme'
           }
-          className={pathname == `/meme` ? 'active' : ''}>
+          className={
+            pathname == `/meme` ? 'active discord-nav-link' : 'discord-nav-link'
+          }>
           Discord Tiers
         </Link>
         {/* <div>

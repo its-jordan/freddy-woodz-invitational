@@ -3176,6 +3176,9 @@ nav > a:hover,
   .standings-header {
     width: 100%;
   }
+  .standings-guide {
+    align-items: start;
+  }
   .match-container {
     width: 100%;
   }
@@ -3281,10 +3284,33 @@ nav > a:hover,
   .player-team-alt {
     grid-template-columns: repeat(1, 335px);
   }
+  .standings-container {
+    padding-inline: 2rem;
+  }
   .match-container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    padding-inline: 4rem;
+    padding-inline: 2rem;
+  }
+  .replay-container {
+    padding: 0.5rem;
+  }
+  .replay-heading {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    line-height: 0.68;
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  .discord-nav-link,
+  .playoffs-nav-link {
+    display: none;
   }
   nav {
     display: flex;
@@ -3311,7 +3337,7 @@ nav > a:hover,
   nav > ul,
   .nav-header {
     width: max-content;
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
     justify-content: start;
     color: white;
     transition: color 300ms ease, background 300ms ease,
@@ -3383,7 +3409,7 @@ nav > a:hover,
     flex-grow: 1;
   }
   .showdown-iframe-container {
-    width: 80%;
+    width: 100%;
   }
 }
 
