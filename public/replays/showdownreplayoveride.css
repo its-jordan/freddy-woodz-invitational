@@ -349,6 +349,12 @@ body {
 }
 
 @media only screen and (max-width: 680px) {
+  html,
+  body {
+    overflow: hidden !important;
+    position: relative !important;
+    height: 100% !important;
+  }
   .statbar strong {
     margin: 0 -15px 0 -115px;
   }
