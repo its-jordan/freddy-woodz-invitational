@@ -84,7 +84,7 @@ function Nav() {
                   : `./#${player.player.toLowerCase()}`
               }
               key={index}
-              data-player={player.player.charAt(0).toLowerCase()}>
+              data-player={player.player.toLowerCase()}>
               {NameSplit(player.player)}
             </Link>
           );
