@@ -3306,8 +3306,8 @@ nav > a:hover,
     align-items: center;
     background: linear-gradient(
       180deg,
-      black,
-      color-mix(in srgb, rgba(0, 0, 0, 0.9) 90%, white)
+      var(--bg),
+      color-mix(in srgb, var(--bg) 90%, black)
     );
     backdrop-filter: blur(5px);
     height: 80px;
@@ -3321,20 +3321,22 @@ nav > a:hover,
     width: max-content;
     padding-inline: 1.5rem;
     justify-content: start;
-    color: white;
+    color: var(--heading);
     transition: color 300ms ease, background 300ms ease,
       background-color 300ms ease;
   }
 
   nav > a:hover,
   nav > ul:hover,
-  .nav-header:hover {
-    color: white;
+  .nav-header:hover,
+  .replays-dropdown-container:hover {
+    color: var(--heading);
   }
 
   .replays-dropdown-header {
     padding-inline: 0;
   }
+
   .replays-dropdown-container:hover .replays-dropdown {
     display: none;
   }
@@ -3356,9 +3358,7 @@ nav > a:hover,
   .navigation a[data-player] {
     display: none;
   }
-  .nav-header {
-    color: white;
-  }
+
   .navigation-botton-mobile {
     cursor: pointer;
   }

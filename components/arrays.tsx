@@ -1,5 +1,5 @@
 import { PokemonClient } from 'pokenode-ts';
-import { getTypeWeaknesses } from '../pokemon-types/index';
+import { getTypeWeaknesses } from '../data/pokemon-types/index';
 import { twMerge } from 'tailwind-merge';
 // @ts-ignore
 import Data from '../data/uber-stats.yaml';
