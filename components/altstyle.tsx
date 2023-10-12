@@ -10,6 +10,7 @@ import Moves from '../data/moves.yaml';
 import Effects from '../data/moveEffects.yaml';
 import Link from 'next/link';
 import PokemonButton from '@/components/pokemonbutton';
+import LCStats from '@/data/lcStats.json';
 
 interface Pokemon {
   player: string;
@@ -395,6 +396,101 @@ export default async function AlternateStyle({
   }
 
   const move = Moves;
+
+  const lcUsageStats = LCStats;
+
+  function replaceMoveName(e: any) {
+    const moveName = e;
+    return moveName.replaceAll(' ', '-').toLowerCase();
+  }
+
+  function returnLCMoves(e: string) {
+    const pokemonName = e;
+    // @ts-ignore
+    const lcMove = json2array(lcUsageStats.pokemon[pokemonName].moves);
+
+    if (lcMove !== undefined) {
+      return (
+        <div className='moves-wrapper-alt'>
+          <div className='moves-container-alt'>
+            <Link
+              href={`https://www.smogon.com/dex/sv/moves/${replaceMoveName(
+                lcMove[0]
+              )}`}
+              target='_blank'
+              className='move-alt'
+              data-move={replaceMoveName(lcMove[0])}
+              data-move-type={move[replaceMoveName(lcMove[0])]?.type_id}>
+              <div className='move-name-alt'>{lcMove[0]}</div>
+              {moveTypes(replaceMoveName(lcMove[0]))}
+            </Link>
+            <Link
+              href={`https://www.smogon.com/dex/sv/moves/${lcMove[1]}`}
+              target='_blank'
+              className='move-alt'
+              data-move={replaceMoveName(lcMove[1])}
+              data-move-type={move[replaceMoveName(lcMove[1])]?.type_id}>
+              <div className='move-name-alt'>{lcMove[1]}</div>
+              {moveTypes(replaceMoveName(lcMove[1]))}
+            </Link>
+            <Link
+              href={`https://www.smogon.com/dex/sv/moves/${replaceMoveName(
+                lcMove[2]
+              )}`}
+              target='_blank'
+              className='move-alt'
+              data-move={lcMove[2]}
+              data-move-type={move[replaceMoveName(lcMove[2])]?.type_id}>
+              <div className='move-name-alt'>{replaceMoveName(lcMove[2])}</div>
+              {moveTypes(replaceMoveName(lcMove[2]))}
+            </Link>
+            <Link
+              href={`https://www.smogon.com/dex/sv/moves/${replaceMoveName(
+                lcMove[3]
+              )}`}
+              target='_blank'
+              className='move-alt'
+              data-move={replaceMoveName(lcMove[3])}
+              data-move-type={move[replaceMoveName(lcMove[3])]?.type_id}>
+              <div className='move-name-alt'>{lcMove[3]}</div>
+              {moveTypes(replaceMoveName(lcMove[3]))}
+            </Link>
+            <Link
+              href={`https://www.smogon.com/dex/sv/moves/${replaceMoveName(
+                lcMove[4]
+              )}`}
+              target='_blank'
+              className='move-alt'
+              data-move={replaceMoveName(lcMove[4])}
+              data-move-type={move[replaceMoveName(lcMove[4])]?.type_id}>
+              <div className='move-name-alt'>{lcMove[4]}</div>
+              {moveTypes(replaceMoveName(lcMove[4]))}
+            </Link>
+            <Link
+              href={`https://www.smogon.com/dex/sv/moves/${replaceMoveName(
+                lcMove[5]
+              )}`}
+              target='_blank'
+              className='move-alt'
+              data-move={replaceMoveName(lcMove[5])}
+              data-move-type={move[replaceMoveName(lcMove[5])]?.type_id}>
+              <div className='move-name-alt'>{lcMove[5]}</div>
+              {moveTypes(replaceMoveName(lcMove[5]))}
+            </Link>
+          </div>
+        </div>
+      );
+    }
+  }
+
+  function json2array(json: any) {
+    var result: any = [];
+    var keys = Object.keys(json);
+    keys.forEach(function (key) {
+      result.push(key);
+    });
+    return result;
+  }
 
   function displayMoves(e: string) {
     const statsArray = Data;
