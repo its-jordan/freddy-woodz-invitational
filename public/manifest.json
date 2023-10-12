@@ -1,5 +1,6 @@
 {
   "theme_color": "#000000",
+  "apple-mobile-web-app-status-bar-style": "black-translucent",
   "background_color": "#000000",
   "display": "standalone",
   "scope": "/",
