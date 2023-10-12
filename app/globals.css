@@ -3300,6 +3300,7 @@ nav > a:hover,
     top: auto;
     bottom: -2px;
     left: 0;
+    margin-left: -1px;
     flex-flow: row nowrap;
     list-style-type: none;
     justify-content: center;
@@ -3312,7 +3313,7 @@ nav > a:hover,
     backdrop-filter: blur(5px);
     height: 102px;
     padding-bottom: 22px;
-    width: 100%;
+    width: calc(100% + 2px);
     min-width: auto;
     z-index: 1000;
   }
