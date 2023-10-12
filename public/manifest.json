@@ -1,7 +1,6 @@
 {
   "theme_color": "#000000",
-  "apple-mobile-web-app-status-bar-style": "black-translucent",
-  "background_color": "#000000",
+  "background_color": "#121212",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
@@ -9,6 +8,21 @@
   "name": "Freddy Woodz Invitational",
   "short_name": "FWI",
   "orientation": "portrait",
+  "shortcuts": [
+    {
+      "name": "View Replays",
+      "short_name": "Replays",
+      "description": "View the league's replays",
+      "url": "/replays?source=pwa"
+    },
+    {
+      "name": "View Scores",
+      "short_name": "Scores",
+      "description": "View the league's scores",
+      "url": "/scores?source=pwa"
+    }
+  ],
+
   "icons": [
     {
       "src": "/icon-152x152.png",

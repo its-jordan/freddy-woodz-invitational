@@ -13,6 +13,7 @@ const APP_DESCRIPTION =
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  themeColor: '#121212',
   applicationName: APP_NAME,
   title: {
     default: APP_DEFAULT_TITLE,
@@ -20,10 +21,9 @@ export const metadata: Metadata = {
   },
   description: APP_DESCRIPTION,
   manifest: '/manifest.json',
-  themeColor: '#FFFFFF',
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: 'black-translucent',
     title: APP_DEFAULT_TITLE,
     // startUpImage: [],
   },
