@@ -28,9 +28,11 @@ export function DarkMode() {
   const [colorTheme, setTheme] = useDarkMode();
   return (
     <div className='theme-selector'>
+      {/* @ts-ignore */}
       <button className='theme-button' onClick={() => setTheme('dark-mode')}>
         {colorTheme === 'dark-mode' ? <BiMoon /> : <BiSolidMoon />}
       </button>
+      {/* @ts-ignore */}
       <button className='theme-button' onClick={() => setTheme('light-mode')}>
         {colorTheme === 'light-mode' ? <BsSun /> : <BsSunFill />}
       </button>
