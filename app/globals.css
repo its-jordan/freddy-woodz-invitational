@@ -3835,6 +3835,10 @@ nav .active {
   .playoffs-header {
     color: color-mix(in srgb, var(--_playoffs-color) 50%, white);
   }
+  .theme-selector {
+    /* Hide theme selector when in system dark mode for now */
+    display: none;
+  }
 }
 
 /* Dark Mode */
