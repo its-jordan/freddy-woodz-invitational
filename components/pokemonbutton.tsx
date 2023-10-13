@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ImArrowLeft, ImArrowRight } from 'react-icons/im';
 
 interface PokemonButtonProps {
   children?: React.ReactNode;
@@ -12,6 +13,29 @@ export default function PokemonButton({
   pokemon,
 }: PokemonButtonProps) {
   const [abilities, setAbilities] = useState(true);
+
+  function returnText(e: string) {
+    if (abilities == true && e === 'Abilities') {
+      return <>Abilities</>;
+    } else if (abilities == false && e === 'Abilities') {
+      return (
+        <>
+          <ImArrowLeft className='arrow left' />
+          Abilities
+        </>
+      );
+    } else if (abilities == true && e === 'Moves') {
+      return (
+        <>
+          Moves
+          <ImArrowRight className='arrow right' />
+        </>
+      );
+    } else if (abilities == false && e === 'Moves') {
+      return <>Moves</>;
+    }
+  }
+
   return (
     <div className='abilities-container-alt'>
       <div className='headers-container'>
@@ -20,14 +44,14 @@ export default function PokemonButton({
           onClick={() => {
             setAbilities(true);
           }}>
-          {abilities ? 'Abilities' : '🠜 Abilities'}
+          {returnText('Abilities')}
         </button>
         <button
           className='moves-header-button'
           onClick={() => {
             setAbilities(false);
           }}>
-          {abilities ? 'Moves 🠞' : 'Moves'}
+          {returnText('Moves')}
         </button>
       </div>
       <div

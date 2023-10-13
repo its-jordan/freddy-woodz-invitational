@@ -7,6 +7,7 @@ import Data from '../data/replays.yaml';
 import Players from '../data/players.yaml';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { MdGroups2, MdScoreboard, MdVideoLibrary } from 'react-icons/md';
 
 function NameSplit(e: string) {
   const player = e;
@@ -69,7 +70,7 @@ function Nav() {
               : './'
           }
           className={pathname == `/` ? 'nav-header active' : 'nav-header'}>
-          Teams
+          <MdGroups2 className='nav-icons' /> Teams
         </Link>
         {Players.map((player: any, index: any) => {
           return (
@@ -104,7 +105,7 @@ function Nav() {
                 ? 'replays-dropdown-header active'
                 : 'replays-dropdown-header'
             }>
-            Replays
+            <MdVideoLibrary className='nav-icons' /> Replays
           </Link>
           <ul className='replays-dropdown'>
             {replayData
@@ -141,8 +142,10 @@ function Nav() {
               ? '../scores'
               : './scores'
           }
-          className={pathname == `/scores` ? 'active' : ''}>
-          Scores
+          className={
+            pathname == `/scores` ? 'nav-scores active' : 'nav-scores'
+          }>
+          <MdScoreboard className='nav-icons' /> Scores
         </Link>
         <Link
           href={

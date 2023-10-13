@@ -2,7 +2,13 @@ import { Analytics } from '@vercel/analytics/react';
 import Nav from '@/components/nav';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import {
+  Be_Vietnam_Pro,
+  Advent_Pro,
+  Saira,
+  Exo,
+  Titillium_Web,
+} from 'next/font/google';
 
 const APP_NAME = 'Freddy Woodz Invitational';
 const APP_DEFAULT_TITLE = 'Freddy Woodz Invitational';
@@ -10,7 +16,10 @@ const APP_TITLE_TEMPLATE = '%s - Freddy Woodz Invitational';
 const APP_DESCRIPTION =
   'Team information for Freddy Woodz Invitational Pokemon Showdown Tournament';
 
-const inter = Inter({ subsets: ['latin'] });
+const font = Exo({
+  weight: ['100', '200', '300', '400', '600', '700', '900'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   themeColor: '#121212',
@@ -56,7 +65,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={font.className}>
         <Nav />
         <div className='content-container'>{children}</div>
         <Analytics mode='production' />

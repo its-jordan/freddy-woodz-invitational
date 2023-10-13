@@ -1261,10 +1261,12 @@ nav {
 /* Scores */
 
 .match-container {
+  position: relative;
   width: 60%;
   display: grid;
   grid-template-columns: repeat(4, 200px);
-  gap: 3rem 1rem;
+  align-items: end;
+  gap: 1rem;
   padding-top: 16px;
   padding-bottom: 4rem;
   padding-left: 4rem;
@@ -1293,6 +1295,11 @@ nav {
   flex-flow: column nowrap;
   border-radius: 0.375rem;
   outline: 2px solid rgba(0, 0, 0, 0.1);
+  justify-content: end;
+}
+
+.match-data:nth-of-type(4n - 3) {
+  margin-top: 2rem;
 }
 
 .match-data:nth-of-type(4n - 3)::before {
@@ -1483,6 +1490,11 @@ nav {
 .player[data-score='0'] {
   font-weight: 400;
   color: color-mix(in srgb, var(--player-color) 70%, white);
+}
+
+.player[data-score='1'],
+.player[data-score='0'] {
+  opacity: 0.75;
 }
 
 .player[data-score='2'] .player-name {
@@ -2619,6 +2631,7 @@ nav > a:hover,
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   width: max-content;
   font-size: 1rem;
@@ -2631,7 +2644,7 @@ nav > a:hover,
     color-mix(in srgb, var(--_type-color) 80%, black)
   );
   border-radius: 100vw;
-  padding-inline: 0.5rem 0.75rem;
+  padding-inline: 0.85rem 1rem;
   box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.125);
 }
 
@@ -2641,6 +2654,7 @@ nav > a:hover,
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   width: max-content;
   font-size: 1rem;
@@ -2653,7 +2667,7 @@ nav > a:hover,
     color-mix(in srgb, var(--_type-color) 80%, black)
   );
   border-radius: 100vw;
-  padding-inline: 0.5rem 0.75rem;
+  padding-inline: 0.85rem 1rem;
   box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.125);
 }
 
@@ -3321,7 +3335,7 @@ nav > a:hover,
   nav > ul,
   .nav-header {
     width: max-content;
-    padding-inline: 1.5rem;
+    padding-inline: 3rem;
     justify-content: start;
     color: var(--heading);
     transition: color 300ms ease, background 300ms ease,
@@ -3333,6 +3347,8 @@ nav > a:hover,
   .nav-header:hover,
   .replays-dropdown-container:hover {
     color: var(--heading);
+    background-color: transparent;
+    box-shadow: none;
   }
 
   .replays-dropdown-header {
@@ -3384,6 +3400,9 @@ nav > a:hover,
     height: 56px;
     cursor: pointer;
     transition: 300ms ease;
+  }
+  .score-container {
+    margin-bottom: 4rem;
   }
 }
 
@@ -3690,4 +3709,75 @@ nav .active {
 
 .playoffs-connector-container.last .playoffs-line {
   margin-top: calc(-20rem - 11px);
+}
+
+/* Color fixes */
+
+[data-type-1='electric'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='electric'] .ability-name-alt:hover,
+[data-type-1='bug'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='bug'] .ability-name-alt:hover,
+[data-type-1='grass'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='grass'] .ability-name-alt:hover,
+[data-type-1='steel'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='steel'] .ability-name-alt:hover,
+[data-type-1='normal'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='normal'] .ability-name-alt:hover,
+[data-type-1='rock'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='rock'] .ability-name-alt:hover,
+[data-type-1='ice'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='ice'] .ability-name-alt:hover,
+[data-type-1='fairy'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='fairy'] .ability-name-alt:hover,
+[data-type-1='ground'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='ground'] .ability-name-alt:hover,
+[data-type-1='fire'] .ability-name-alt:hover .ability-effect-alt,
+[data-type-1='fire'] .ability-name-alt:hover {
+  color: black;
+  text-shadow: none;
+}
+
+/* Arrows */
+
+.arrow {
+  width: 14px;
+  transform: skewX(-12deg);
+}
+
+.arrow.left {
+  margin-right: 3px;
+}
+
+.arrow.right {
+  margin-left: 3px;
+}
+
+.nav-icons {
+  display: none;
+}
+
+@media only screen and (max-width: 680px) {
+  svg.nav-icons {
+    display: block;
+    width: 30px;
+    height: 30px;
+    max-width: 30px !important;
+    opacity: 0.5;
+    transition: opacity 300ms ease-in;
+  }
+  .active svg.nav-icons,
+  nav > a:hover svg.nav-icons,
+  nav > a:active svg.nav-icons,
+  nav > ul:hover svg.nav-icons,
+  nav > ul:active svg.nav-icons {
+    opacity: 1;
+  }
+  .nav-scores,
+  .replays-dropdown-header,
+  .nav-header {
+    display: flex;
+    font-size: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
