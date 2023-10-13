@@ -161,7 +161,6 @@ kangaskhan-mega:
   - seismic-toss
   - body-slam
   - earthquake
-  - return
 sableye-mega:
   - recover
   - foul-play
@@ -309,7 +308,6 @@ togekiss:
   - roost
   - nasty-plot
   - aura-sphere
-  - trick
 goodra-hisui:
   - flash-cannon
   - draco-meteor
@@ -813,3 +811,17 @@ mantine:
   - defog
   - haze
   - ice-beam
+clefable:
+  - moonblast
+  - wish
+  - cosmic-power
+  - protect
+  - soft-boiled
+  - teleport
+thundurus-incarnate:
+  - thunderbolt
+  - dark-pulse
+  - nasty-plot
+  - volt-switch
+  - thunder
+  - grass-knot

@@ -183,7 +183,7 @@ export default async function AlternateStyle({
       return <></>;
     } else if (type !== undefined && type?.immunes.length === 0) {
       return (
-        <div>
+        <div className='damage-types'>
           <div className='damage-type-container-alt'>
             <div className='damage-relation-hover-alt'>
               <div className='type-hover-header-alt'>Weak Against</div>
@@ -218,7 +218,7 @@ export default async function AlternateStyle({
       );
     } else if (type !== undefined && type?.strengths.length === 0) {
       return (
-        <div>
+        <div className='damage-types'>
           <div className='damage-type-container-alt double-damage'>
             <div className='damage-relation-hover-alt'>
               <div className='type-hover-header-alt'>No Damage To</div>
@@ -253,7 +253,7 @@ export default async function AlternateStyle({
       );
     } else if (type !== undefined && type?.weaknesses.length === 0) {
       return (
-        <div>
+        <div className='damage-types'>
           <div className='damage-type-container-alt double-damage'>
             <div className='damage-relation-hover-alt'>
               <div className='type-hover-header-alt'>No Damage To</div>
@@ -292,7 +292,7 @@ export default async function AlternateStyle({
       type?.immunes.length === 0
     ) {
       return (
-        <div>
+        <div className='damage-types'>
           <div className='damage-type-container-alt double-damage'>
             <div className='damage-relation-hover-alt'>
               <div className='type-hover-header-alt'>Strong Against</div>
@@ -317,7 +317,7 @@ export default async function AlternateStyle({
       type?.immunes.length === 0
     ) {
       return (
-        <div>
+        <div className='damage-types'>
           <div className='damage-type-container-alt double-damage'>
             <div className='damage-relation-hover-alt'>
               <div className='type-hover-header-alt'>Weak Against</div>
@@ -338,7 +338,7 @@ export default async function AlternateStyle({
       );
     } else if (type !== undefined) {
       return (
-        <div>
+        <div className='damage-types'>
           <div className='damage-type-container-alt double-damage'>
             <div className='damage-relation-hover-alt'>
               <div className='type-hover-header-alt'>No Damage To</div>
@@ -460,7 +460,12 @@ export default async function AlternateStyle({
     const mergedArrays = merge(moveArray, effectArray);
 
     return (
-      <div className='move-effect-alt'>
+      <div
+        className={
+          mergedArrays.short_effect === ''
+            ? 'move-effect-alt hidden'
+            : 'move-effect-alt'
+        }>
         {mergedArrays?.short_effect
           ?.replace(
             '$effect_chance%',
@@ -493,13 +498,17 @@ export default async function AlternateStyle({
     const ele = move[e];
     if (ele?.damage_class === 'status') {
       return (
-        <div className='move-hover-box-alt' data-move-name={ele.name}>
+        <div
+          className='move-hover-box-alt move-status'
+          data-move-name={ele.name}>
           <div className='move-hover-upper-container-alt'>
             <div className='move-name-container-alt'>
               <div className={`move-hover-name-alt`} data-move={ele.name}>
                 {ele.name?.replace('-', ' ')?.replace('-', ' ')}
               </div>
-              <div className={`move-type-alt ${ele.type_id}`}>
+              <div
+                className={`move-type-alt  ${ele?.type_id}`}
+                data-type-id={ele.type_id}>
                 {ele.type_id}
               </div>
             </div>
@@ -529,7 +538,9 @@ export default async function AlternateStyle({
               <div className={`move-hover-name-alt`} data-move={ele?.name}>
                 {ele?.name?.replace('-', ' ')?.replace('-', ' ')}
               </div>
-              <div className={`move-type-alt ${ele?.type_id}`}>
+              <div
+                className={`move-type-alt ${ele?.type_id}`}
+                data-type-id={ele.type_id}>
                 {ele?.type_id}
               </div>
             </div>

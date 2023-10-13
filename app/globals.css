@@ -3009,6 +3009,16 @@ nav > a:hover,
     color-mix(in srgb, var(--_type-color) 35%, rgba(255, 255, 255, 0.1));
 }
 
+.move-hover-box-alt.move-status .move-effect-alt {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.move-effect-alt.hidden {
+  display: none;
+}
+
 .move-name-container-alt,
 .move-hover-info-alt,
 .weaknesses-alt,

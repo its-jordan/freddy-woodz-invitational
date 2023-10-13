@@ -695,7 +695,7 @@ bitter-malice:
   accuracy: 100
   damage_class: special
   effect_chance: ''
-  effect_id: ''
+  effect_id: 447
   id: 841
   name: bitter-malice
   power: 75
@@ -4227,7 +4227,7 @@ ice-spinner:
   accuracy: 100
   damage_class: physical
   effect_chance: ''
-  effect_id: ''
+  effect_id: 444
   id: 861
   name: ice-spinner
   power: 80
@@ -6670,7 +6670,7 @@ rage-fist:
   accuracy: 100
   damage_class: physical
   effect_chance: ''
-  effect_id: ''
+  effect_id: 449
   id: 889
   name: rage-fist
   power: 50
@@ -7737,7 +7737,7 @@ shelter:
   accuracy: ''
   damage_class: status
   effect_chance: ''
-  effect_id: ''
+  effect_id: 450
   id: 842
   name: shelter
   power: 0
@@ -9145,7 +9145,7 @@ tera-blast:
   accuracy: 100
   damage_class: special
   effect_chance: ''
-  effect_id: ''
+  effect_id: 445
   id: 851
   name: tera-blast
   power: 80
@@ -9673,7 +9673,7 @@ victory-dance:
   accuracy: ''
   damage_class: status
   effect_chance: ''
-  effect_id: ''
+  effect_id: 446
   id: 837
   name: victory-dance
   power: 0

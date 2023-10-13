@@ -1449,8 +1449,32 @@
   short_effect:
     Hits twice in one turn, with a $effect_chance% chance to make the
     target flinch.
+441:
+  effect_id: 441
+  short_effect: Each Pokemon on the user's side restores 1/4 of its maximum HP, rounded half up.
 443:
   effect_id: 443
   short_effect:
     Boosts the user's Speed and lowers their Defense by one stage after
     inflicting damage two to five times in a row.
+444:
+  effect_id: 444
+  short_effect: Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.
+445:
+  effect_id: 445
+  short_effect: If the user is Terastallized, this move becomes a physical attack. If the user's Attack is greater than its Special Attack, including stat stage changes, then this move's type becomes the same as the user's Tera Type.
+446:
+  effect_id: 446
+  short_effect: Raises the user's Attack, Defense, and Speed by 1 stage.
+447:
+  effect_id: 447
+  short_effect: Has a 100% chance to lower the target's Attack by 1 stage.
+448:
+  effect_id: 448
+  short_effect: Damage is calculated using the user's Defense stat as its Attack, including stat stage changes. Other effects that modify the Attack stat are used as normal.
+449:
+  effect_id: 449
+  short_effect: Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack.
+450:
+  effect_id: 450
+  short_effect: Raises the user's Defense by 2 stages.
