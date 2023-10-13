@@ -3820,27 +3820,6 @@ nav .active {
   }
 }
 
-/* Media Queries */
-
-@media (prefers-color-scheme: dark) {
-  .playoffs-main {
-    --_playoffs-color: var(--poison, purple);
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--_playoffs-color) 60%, white) 0%,
-      color-mix(in srgb, var(--_playoffs-color) 50%, black) 100%
-    );
-    box-shadow: inset 0 150px 0 0 rgba(0, 0, 0, 0.2);
-  }
-  .playoffs-header {
-    color: color-mix(in srgb, var(--_playoffs-color) 50%, white);
-  }
-  .theme-selector {
-    /* Hide theme selector when in system dark mode for now */
-    display: none;
-  }
-}
-
 /* Dark Mode */
 
 body.dark-mode {
@@ -3997,6 +3976,27 @@ body.dark-mode .discord-header {
 
 @media only screen and (max-width: 680px) {
   .theme-selector {
+    display: none;
+  }
+}
+
+/* Media Queries */
+
+@media (prefers-color-scheme: dark) {
+  .playoffs-main {
+    --_playoffs-color: var(--poison, purple);
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--_playoffs-color) 60%, white) 0%,
+      color-mix(in srgb, var(--_playoffs-color) 50%, black) 100%
+    );
+    box-shadow: inset 0 150px 0 0 rgba(0, 0, 0, 0.2);
+  }
+  .playoffs-header {
+    color: color-mix(in srgb, var(--_playoffs-color) 50%, white);
+  }
+  .theme-selector {
+    /* Hide theme selector when in system dark mode for now */
     display: none;
   }
 }
