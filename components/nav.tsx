@@ -8,6 +8,8 @@ import Players from '../data/players.yaml';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { MdGroups2, MdScoreboard, MdVideoLibrary } from 'react-icons/md';
+import { MdMenu, MdMenuOpen } from 'react-icons/md';
+import { DarkMode } from './darkMode';
 
 function NameSplit(e: string) {
   const player = e;
@@ -50,7 +52,7 @@ function Nav() {
         onClick={() => {
           setNav(true);
         }}>
-        Open Nav 🠞
+        <MdMenu className='menu-icon' />
       </button>
       <nav className={nav ? 'navigation visible' : 'navigation hidden'}>
         <button
@@ -58,7 +60,7 @@ function Nav() {
           onClick={() => {
             setNav(false);
           }}>
-          🠜 Close Nav
+          <MdMenuOpen className='menu-icon' />
         </button>
         <Link
           href={
@@ -226,6 +228,7 @@ function Nav() {
             </Link>
           </div>
         </div> */}
+        <DarkMode />
       </nav>
     </div>
   );

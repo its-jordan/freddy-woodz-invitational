@@ -2,13 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Nav from '@/components/nav';
 import './globals.css';
 import type { Metadata } from 'next';
-import {
-  Be_Vietnam_Pro,
-  Advent_Pro,
-  Saira,
-  Exo,
-  Titillium_Web,
-} from 'next/font/google';
+import { Exo } from 'next/font/google';
 
 const APP_NAME = 'Freddy Woodz Invitational';
 const APP_DEFAULT_TITLE = 'Freddy Woodz Invitational';
@@ -65,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={font.className}>
+      <body className={`${font.className} light-mode`}>
         <Nav />
         <div className='content-container'>{children}</div>
         <Analytics mode='production' />

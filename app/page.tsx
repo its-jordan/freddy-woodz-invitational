@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 // @ts-ignore
 import PlayerData from '../data/players.yaml';
 import LCStats from '@/data/lcStats.json';
+import { DarkMode } from '@/components/darkMode';
 
 export default function HomePage() {
   const AlternateStyle = dynamic(() => import('../components/altstyle'), {
