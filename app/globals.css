@@ -3345,136 +3345,6 @@ nav > a:hover,
   }
 }
 
-@media only screen and (max-width: 680px) {
-  .player-team-alt {
-    grid-template-columns: repeat(1, 335px);
-  }
-  .standings-container {
-    padding-inline: 2rem;
-  }
-  .match-container {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    padding-inline: 2rem;
-  }
-  .replay-container {
-    padding: 0.5rem;
-  }
-  .replay-heading {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: start;
-    width: 100%;
-    gap: 1rem;
-    padding: 1rem 0.5rem 2rem 0.5rem;
-    line-height: 0.68;
-    font-size: 1.75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-style: italic;
-  }
-  .discord-nav-link,
-  .playoffs-nav-link {
-    display: none;
-  }
-  nav {
-    display: flex;
-    position: fixed;
-    top: auto;
-    bottom: -2px;
-    left: 0;
-    margin-left: -1px;
-    flex-flow: row nowrap;
-    list-style-type: none;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-      180deg,
-      var(--bg),
-      color-mix(in srgb, var(--bg) 90%, black)
-    );
-    backdrop-filter: blur(5px);
-    height: 102px;
-    padding-bottom: 22px;
-    width: calc(100% + 2px);
-    min-width: auto;
-    z-index: 1000;
-  }
-  nav > a,
-  nav > ul,
-  .nav-header {
-    width: max-content;
-    padding-inline: 3rem;
-    justify-content: start;
-    color: var(--heading);
-    transition: color 300ms ease, background 300ms ease,
-      background-color 300ms ease;
-  }
-
-  nav > a:hover,
-  nav > ul:hover,
-  .nav-header:hover,
-  .replays-dropdown-container:hover {
-    color: var(--heading);
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  .replays-dropdown-header {
-    padding-inline: 0;
-  }
-
-  .replays-dropdown-container:hover .replays-dropdown {
-    display: none;
-  }
-  .nav-divider {
-    display: none;
-  }
-  .nav-divider::before {
-    height: 1px;
-    width: inherit;
-    margin-inline: 0;
-    margin-block: 1rem;
-  }
-  .navigation.hidden {
-    display: flex;
-  }
-  .navigation.visibile {
-    display: flex;
-  }
-  .navigation a[data-player] {
-    display: none;
-  }
-
-  .navigation-botton-mobile {
-    cursor: pointer;
-  }
-  .nav-button-mobile.closed {
-    display: none;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 0.375rem;
-  }
-  .nav-button-mobile.open {
-    display: none;
-    position: relative;
-    width: 100%;
-    padding: 1rem;
-    padding-inline: 2rem;
-    height: 56px;
-    cursor: pointer;
-    transition: 300ms ease;
-  }
-  .score-container {
-    margin-bottom: 4rem;
-  }
-}
-
 @media only screen and (max-width: 700px) {
   .replay-container {
     width: 100%;
@@ -4033,5 +3903,141 @@ body.dark-mode .discord-header {
   .theme-selector {
     /* Hide theme selector when in system dark mode for now */
     display: none;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .player-team-alt {
+    grid-template-columns: repeat(1, 335px);
+  }
+  .standings-container {
+    padding-inline: 2rem;
+  }
+  .match-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    padding-inline: 2rem;
+  }
+  .replay-container {
+    padding: 0.5rem;
+  }
+  .replay-heading {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    line-height: 0.68;
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  .discord-nav-link,
+  .playoffs-nav-link {
+    display: none;
+  }
+  nav {
+    display: flex;
+    position: fixed;
+    top: auto;
+    bottom: -2px;
+    gap: 1rem;
+    left: 0;
+    margin-left: -1px;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      var(--bg),
+      color-mix(in srgb, var(--bg) 90%, black)
+    );
+    backdrop-filter: blur(5px);
+    height: 102px;
+    padding-bottom: 22px;
+    width: calc(100% + 2px);
+    min-width: auto;
+    z-index: 1000;
+  }
+  nav > a,
+  nav > ul,
+  .nav-header {
+    width: max-content;
+    padding-inline: 3rem;
+    justify-content: start;
+    color: var(--heading);
+    transition: color 300ms ease, background 300ms ease,
+      background-color 300ms ease;
+  }
+
+  nav > a:hover,
+  nav > ul:hover,
+  .nav-header:hover,
+  .replays-dropdown-container:hover {
+    color: var(--heading);
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .replays-dropdown-header {
+    padding-inline: 0;
+  }
+
+  .replays-dropdown-container:hover .replays-dropdown {
+    display: none;
+  }
+  .nav-divider {
+    display: none;
+  }
+
+  .replays-dropdown-container {
+    width: auto;
+  }
+
+  .nav-divider::before {
+    height: 1px;
+    width: inherit;
+    margin-inline: 0;
+    margin-block: 1rem;
+  }
+  .navigation.hidden {
+    display: flex;
+  }
+  .navigation.visibile {
+    display: flex;
+  }
+  .navigation a[data-player] {
+    display: none;
+  }
+
+  .navigation-botton-mobile {
+    cursor: pointer;
+  }
+  .nav-button-mobile.closed {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+  }
+  .nav-button-mobile.open {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    padding-inline: 2rem;
+    height: 56px;
+    cursor: pointer;
+    transition: 300ms ease;
+  }
+  .score-container {
+    margin-bottom: 4rem;
   }
 }
