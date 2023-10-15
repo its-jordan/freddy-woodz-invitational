@@ -3215,6 +3215,13 @@ nav > a:hover,
     padding: 1rem 2rem !important;
   }
 
+  nav .active,
+  nav .active:hover {
+    --_border-width: 6px;
+    padding: 0.75rem 2rem 0.75rem calc(2rem - var(--_border-width)) !important;
+    border-left: var(--_border-width) solid currentColor;
+  }
+
   .replays-dropdown-container:hover .replays-dropdown {
     display: none;
   }
