@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Data from '../data/replays.yaml';
 // @ts-ignore
 import Players from '../data/players.yaml';
+// @ts-ignore
+import LCPlayers from '../data/lcPlayers.yaml';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { MdGroups2, MdScoreboard, MdVideoLibrary } from 'react-icons/md';
@@ -74,23 +76,34 @@ function Nav() {
           className={pathname == `/` ? 'nav-header active' : 'nav-header'}>
           <MdGroups2 className='nav-icons' /> Teams
         </Link>
-        {Players.map((player: any, index: any) => {
-          return (
-            <Link
-              href={
-                pathname == `/season-1/teams` ||
-                `/season-1/scores` ||
-                `/season-1/replays` ||
-                `/season-1/playoffs`
-                  ? `../#${player.player.toLowerCase()}`
-                  : `./#${player.player.toLowerCase()}`
-              }
-              key={index}
-              data-player={player.player.toLowerCase()}>
-              {NameSplit(player.player)}
-            </Link>
-          );
-        })}
+        {pathname == `/little-cup`
+          ? LCPlayers.map((player: any, index: any) => {
+              return (
+                <Link
+                  href={`./#${player.player.toLowerCase()}`}
+                  key={index}
+                  data-player={player.player.toLowerCase()}>
+                  {NameSplit(player.player)}
+                </Link>
+              );
+            })
+          : Players.map((player: any, index: any) => {
+              return (
+                <Link
+                  href={
+                    pathname == `/season-1/teams` ||
+                    `/season-1/scores` ||
+                    `/season-1/replays` ||
+                    `/season-1/playoffs`
+                      ? `../#${player.player.toLowerCase()}`
+                      : `./#${player.player.toLowerCase()}`
+                  }
+                  key={index}
+                  data-player={player.player.toLowerCase()}>
+                  {NameSplit(player.player)}
+                </Link>
+              );
+            })}
         <div className='nav-divider'></div>
         <ul className='replays-dropdown-container'>
           <Link
@@ -179,9 +192,21 @@ function Nav() {
           }>
           Discord Tiers
         </Link>
-        {/* <div>
-          <div>Season 1</div>
-          <div>
+        <div className='nav-divider'></div>
+        <ul className='previous-season-container'>
+          <Link
+            className='previous-season-header'
+            href={
+              pathname !== `season-1/teams` ||
+              `season-1/scores` ||
+              `season-1/replays` ||
+              `season-1/playoffs`
+                ? '/season-1/teams'
+                : '/season-1/teams'
+            }>
+            Season 1
+          </Link>
+          <div className='previous-season-dropdown'>
             <Link
               href={
                 pathname !== `season-1/teams` ||
@@ -227,7 +252,7 @@ function Nav() {
               Playoffs
             </Link>
           </div>
-        </div> */}
+        </ul>
         <DarkMode />
       </nav>
     </div>

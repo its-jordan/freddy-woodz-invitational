@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import LCStats from '@/data/lcStats.json';
 // @ts-ignore
-import Moves from '../data/moves.yaml';
+import Moves from '../../data/moves.yaml';
 // @ts-ignore
-import Effects from '../data/moveEffects.yaml';
+import Effects from '../../data/moveEffects.yaml';
 
 const move = Moves;
 
@@ -446,14 +446,14 @@ function moveTypes(e: string) {
   }
 }
 
-function json2array(json: any) {
-  var result: any = [];
-  var keys = Object.keys(json);
-  keys.forEach(function (key) {
-    result.push(key);
-  });
-  return result;
-}
+// function json2array(json: any) {
+//   var result: any = [];
+//   var keys = Object.keys(json);
+//   keys.forEach(function (key) {
+//     result.push(key);
+//   });
+//   return result;
+// }
 
 export function returnLCMoves(e: string) {
   const lcUsageStats = LCStats;
@@ -465,7 +465,8 @@ export function returnLCMoves(e: string) {
   }
 
   // @ts-ignore
-  const lcMove = json2array(lcUsageStats.pokemon[pokemonName].moves);
+  const lcMove = lcUsageStats?.pokemon[pokemonName]?.moves;
+  console.log(lcMove);
 
   if (lcMove !== undefined) {
     return (

@@ -27,98 +27,236 @@
   --steel: hsl(240, 19%, 76%);
   --fairy: hsl(330, 50%, 68%);
   --col-width: calc(50% - 2rem);
+
+  /* Team Colors */
+  --seanboyq: var(--ice);
+  --resolamxxy: var(--grass);
+  --dtbaggins: var(--steel);
+  --castleflutes: var(--electric);
+  --tokotoro: var(--fire);
+  --danknett: var(--bug);
+  --ifurgat: var(--ghost);
+  --foxish: var(--fairy);
+  --its_jordan: var(--dragon);
+  --frosty: var(--water);
 }
 
 /* Player Colors */
 
+[data-player='tokotoro'] {
+  /* Toko */
+  --player-color: var(--tokotoro);
+}
+
+[data-player='frosty'] {
+  /* Toko */
+  --player-color: var(--frosty);
+}
+
+[data-player='resolamxxy'] {
+  /* Max */
+  --player-color: var(--resolamxxy);
+}
+
+[data-player='its_jordan'] {
+  /* Jordan */
+  --player-color: var(--its_jordan);
+}
+
+[data-player='castleflutes'] {
+  /* Dom */
+  --player-color: var(--castleflutes);
+}
+
+[data-player='seanboyq'] {
+  /* Sean */
+  --player-color: var(--seanboyq);
+}
+
+[data-player='foxish'] {
+  /* Ricky */
+  --player-color: var(--foxish);
+}
+
+[data-player='dtbaggins'] {
+  /* J Dougs */
+  --player-color: var(--dtbaggins);
+}
+
+[data-player='ifurgat'] {
+  /* Furgat */
+  --player-color: var(--ifurgat);
+}
+
+[data-player='danknett'] {
+  /* Dank */
+  --player-color: var(--danknett);
+}
+
+[data-player1='tokotoro'] {
+  /* Toko */
+  --player-color-1: var(--tokotoro);
+}
+
+[data-player1='frosty'] {
+  /* Toko */
+  --player-color-1: var(--frosty);
+}
+
+[data-player1='resolamxxy'] {
+  /* Max */
+  --player-color-1: var(--resolamxxy);
+}
+
+[data-player1='its_jordan'] {
+  /* Jordan */
+  --player-color-1: var(--its_jordan);
+}
+
+[data-player1='castleflutes'] {
+  /* Dom */
+  --player-color-1: var(--castleflutes);
+}
+
+[data-player1='seanboyq'] {
+  /* Sean */
+  --player-color-1: var(--seanboyq);
+}
+
+[data-player1='foxish'] {
+  /* Ricky */
+  --player-color-1: var(--foxish);
+}
+
+[data-player1='dtbaggins'] {
+  /* J Dougs */
+  --player-color-1: var(--dtbaggins);
+}
+
+[data-player1='ifurgat'] {
+  /* Furgat */
+  --player-color-1: var(--ifurgat);
+}
+
+[data-player1='danknett'] {
+  /* Dank */
+  --player-color-1: var(--danknett);
+}
+
 [data-player-1='tokotoro'] {
   /* Toko */
-  --player-color-1: var(--psychic);
+  --player-color-1: var(--tokotoro);
+}
+
+[data-player-1='frosty'] {
+  /* Toko */
+  --player-color-1: var(--frosty);
 }
 
 [data-player-1='resolamxxy'] {
   /* Max */
-  --player-color-1: var(--grass);
+  --player-color-1: var(--resolamxxy);
 }
 
 [data-player-1='its_jordan'] {
   /* Jordan */
-  --player-color-1: var(--dragon);
+  --player-color-1: var(--its_jordan);
 }
 
 [data-player-1='castleflutes'] {
   /* Dom */
-  --player-color-1: var(--electric);
+  --player-color-1: var(--castleflutes);
 }
 
 [data-player-1='seanboyq'] {
   /* Sean */
-  --player-color-1: var(--water);
+  --player-color-1: var(--seanboyq);
 }
 
 [data-player-1='foxish'] {
   /* Ricky */
-  --player-color-1: var(--fairy);
+  --player-color-1: var(--foxish);
 }
 
 [data-player-1='dtbaggins'] {
   /* J Dougs */
-  --player-color-1: var(--fire);
+  --player-color-1: var(--dtbaggins);
 }
 
 [data-player-1='ifurgat'] {
   /* Furgat */
-  --player-color-1: var(--ice);
+  --player-color-1: var(--ifurgat);
 }
 
 [data-player-1='danknett'] {
   /* Dank */
-  --player-color-1: var(--ghost);
+  --player-color-1: var(--danknett);
 }
 
 [data-player-2='tokotoro'] {
   /* Toko */
-  --player-color-2: var(--psychic);
+  --player-color-2: var(--tokotoro);
+}
+
+[data-player-2='frosty'] {
+  /* Toko */
+  --player-color-2: var(--frosty);
 }
 
 [data-player-2='resolamxxy'] {
   /* Max */
-  --player-color-2: var(--grass);
+  --player-color-2: var(--resolamxxy);
 }
 
 [data-player-2='its_jordan'] {
   /* Jordan */
-  --player-color-2: var(--dragon);
+  --player-color-2: var(--its_jordan);
 }
 
 [data-player-2='castleflutes'] {
   /* Dom */
-  --player-color-2: var(--electric);
+  --player-color-2: var(--castleflutes);
 }
 
 [data-player-2='seanboyq'] {
   /* Sean */
-  --player-color-2: var(--water);
+  --player-color-2: var(--seanboyq);
 }
 
 [data-player-2='foxish'] {
   /* Ricky */
-  --player-color-2: var(--fairy);
+  --player-color-2: var(--foxish);
 }
 
 [data-player-2='dtbaggins'] {
   /* J Dougs */
-  --player-color-2: var(--fire);
+  --player-color-2: var(--dtbaggins);
 }
 
 [data-player-2='ifurgat'] {
   /* Furgat */
-  --player-color-2: var(--ice);
+  --player-color-2: var(--ifurgat);
 }
 
 [data-player-2='danknett'] {
   /* Dank */
-  --player-color-2: var(--ghost);
+  --player-color-2: var(--danknett);
+}
+
+nav > a[data-player='dtbaggins']:hover,
+nav > a[data-player='resolamxxy']:hover,
+nav > a[data-player='castleflutes']:hover,
+nav > a[data-player='seanboyq']:hover,
+nav > a[data-player='tokotoro']:hover,
+nav > a[data-player='foxish']:hover,
+nav > a[data-player='danknett']:hover {
+  color: black !important;
+}
+
+nav > a[data-player='ifurgat']:hover,
+nav > a[data-player='its_jordan']:hover,
+nav > a[data-player='frosty']:hover {
+  color: white !important;
 }
 
 @media only screen and (max-width: 2000px) {
@@ -1351,98 +1489,6 @@ nav {
     color-mix(in srgb, var(--player-color) 70%, black) 100%
   );
   border-radius: 0 0 0.375rem 0.375rem;
-}
-
-/* Player Colors */
-
-[data-player='tokotoro'] {
-  /* Toko */
-  --player-color: var(--psychic);
-}
-
-[data-player='resolamxxy'] {
-  /* Max */
-  --player-color: var(--grass);
-}
-
-[data-player='its_jordan'] {
-  /* Jordan */
-  --player-color: var(--dragon);
-}
-
-[data-player='castleflutes'] {
-  /* Dom */
-  --player-color: var(--electric);
-}
-
-[data-player='seanboyq'] {
-  /* Sean */
-  --player-color: var(--water);
-}
-
-[data-player='foxish'] {
-  /* Ricky */
-  --player-color: var(--fairy);
-}
-
-[data-player='dtbaggins'] {
-  /* J Dougs */
-  --player-color: var(--fire);
-}
-
-[data-player='ifurgat'] {
-  /* Furgat */
-  --player-color: var(--ice);
-}
-
-[data-player='danknett'] {
-  /* Dank */
-  --player-color: var(--ghost);
-}
-
-[data-player1='tokotoro'] {
-  /* Toko */
-  --player-color-1: var(--psychic);
-}
-
-[data-player1='resolamxxy'] {
-  /* Max */
-  --player-color-1: var(--grass);
-}
-
-[data-player1='its_jordan'] {
-  /* Jordan */
-  --player-color-1: var(--dragon);
-}
-
-[data-player1='castleflutes'] {
-  /* Dom */
-  --player-color-1: var(--electric);
-}
-
-[data-player1='seanboyq'] {
-  /* Sean */
-  --player-color-1: var(--water);
-}
-
-[data-player1='foxish'] {
-  /* Ricky */
-  --player-color-1: var(--fairy);
-}
-
-[data-player1='dtbaggins'] {
-  /* J Dougs */
-  --player-color-1: var(--fire);
-}
-
-[data-player1='ifurgat'] {
-  /* Furgat */
-  --player-color-1: var(--ice);
-}
-
-[data-player1='danknett'] {
-  /* Dank */
-  --player-color-1: var(--ghost);
 }
 
 .player[data-score='2'] .score {
@@ -3717,21 +3763,6 @@ nav .active {
   }
 }
 
-nav > a[data-player='dtbaggins']:hover,
-nav > a[data-player='resolamxxy']:hover,
-nav > a[data-player='castleflutes']:hover,
-nav > a[data-player='ifurgat']:hover,
-nav > a[data-player='foxish']:hover {
-  color: black !important;
-}
-
-nav > a[data-player='seanboyq']:hover,
-nav > a[data-player='tokotoro']:hover,
-nav > a[data-player='danknett']:hover,
-nav > a[data-player='its_jordan']:hover {
-  color: white !important;
-}
-
 /* Dark Mode */
 
 body.dark-mode {
@@ -3889,6 +3920,128 @@ body.dark-mode .discord-header {
 @media only screen and (max-width: 680px) {
   .theme-selector {
     display: none;
+  }
+}
+
+.previous-season-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.previous-season-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-inline: 1rem;
+  height: 100%;
+}
+
+.previous-season-header:hover {
+  background-color: black;
+  color: white;
+}
+
+.previous-season-dropdown {
+  position: absolute;
+  background-color: var(--_nav-color);
+  backdrop-filter: blur(15px);
+  color: var(--primary);
+  width: 100%;
+  top: 56px;
+  left: 0;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: start;
+  padding: 1rem 0;
+}
+
+body.dark-mode .previous-season-dropdown {
+  color: var(--base);
+}
+
+@media (prefers-color-scheme: dark) {
+  .previous-season-dropdown {
+    color: var(--base);
+  }
+}
+
+.previous-season-dropdown > a {
+  padding: 0.5rem 1rem;
+}
+
+.previous-season-container:hover .previous-season-dropdown {
+  display: flex;
+  animation: replayDropdown 300ms ease forwards;
+}
+
+@media only screen and (max-width: 1520px) {
+  .previous-season-dropdown {
+    position: absolute;
+    background-color: var(--_nav-color);
+    backdrop-filter: blur(15px);
+    color: var(--primary);
+    width: max-content;
+    min-width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 100%;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: bottom;
+    align-items: start;
+    padding: 1rem 0;
+  }
+  .previous-season-dropdown a {
+    width: 100%;
+    padding: 1rem 2rem;
+    transition: background-color 300ms ease, box-shadow 300ms ease,
+      padding 300ms ease, height 300ms ease !important;
+  }
+  .previous-season-dropdown a:hover {
+    width: 100%;
+    padding: 1rem 2rem;
+    color: color-mix(in srgb, var(--player-color, #181818) 40%, black);
+    background-color: var(--player-color, rgba(197, 197, 197, 0.75));
+    box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, 0.1),
+      inset 0 -25px 20px 0px rgba(255, 255, 255, 0.2);
+  }
+  .previous-season-header {
+    width: 100%;
+    padding-inline: 0;
+    padding-block: 0;
+    padding: 0.75rem 2rem !important;
+    justify-content: start;
+    height: max-content;
+    align-items: center;
+    transition: background-color 300ms ease, box-shadow 300ms ease,
+      padding 300ms ease, height 300ms ease !important;
+  }
+
+  .previous-season-header:hover {
+    color: color-mix(in srgb, var(--player-color, #181818) 40%, black);
+    background-color: var(--player-color, rgba(197, 197, 197, 0.75));
+    box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, 0.1),
+      inset 0 -25px 20px 0px rgba(255, 255, 255, 0.2);
+    padding-block: 0;
+    padding-inline: 0;
+    padding: 1rem 2rem !important;
+  }
+
+  .previous-season-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+  }
+  .previous-season-container:hover .previous-season-header {
+    color: color-mix(in srgb, var(--player-color, #181818) 40%, black);
+    background-color: var(--player-color, rgba(197, 197, 197, 0.75));
+    box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, 0.1),
+      inset 0 -25px 20px 0px rgba(255, 255, 255, 0.2);
   }
 }
 

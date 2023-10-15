@@ -1,9 +1,10 @@
 import dynamic from 'next/dynamic';
 // @ts-ignore
-import PlayerData from '../data/players.yaml';
+import PlayerData from '../../data/lcPlayers.yaml';
+import LCStats from '@/data/lcStats.json';
 
 export default function HomePage() {
-  const AlternateStyle = dynamic(() => import('../components/altstyle'), {
+  const AlternateStyle = dynamic(() => import('../../components/littlecup'), {
     loading: () => (
       <div className='loading'>
         <p>Loading...</p>
