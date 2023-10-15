@@ -192,7 +192,7 @@ function Nav() {
           }>
           Discord Tiers
         </Link>
-        <div className='nav-divider'></div>
+        {/* <div className='nav-divider'></div>
         <ul className='previous-season-container'>
           <Link
             className='previous-season-header'
@@ -252,7 +252,7 @@ function Nav() {
               Playoffs
             </Link>
           </div>
-        </ul>
+        </ul> */}
         <DarkMode />
       </nav>
     </div>
