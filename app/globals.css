@@ -2850,18 +2850,20 @@ nav > a:hover,
 
 .ability-effect-alt {
   display: flex;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   font-size: 0.75rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
-  transition: height 300ms ease;
+  color: hsla(0, 0%, 100%, 0.75);
+  transition: max-height 500ms ease, opacity 500ms 100ms ease;
+  opacity: 0;
 }
 
 .ability-name-alt:hover .ability-effect-alt {
-  height: max-content;
   overflow: visible;
   white-space: auto;
+  max-height: 140px;
+  opacity: 1;
 }
 
 /* Other */
