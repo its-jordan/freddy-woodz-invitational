@@ -9,9 +9,15 @@ import Players from '../data/players.yaml';
 import LCPlayers from '../data/lcPlayers.yaml';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { MdGroups2, MdScoreboard, MdVideoLibrary } from 'react-icons/md';
+import {
+  MdArrowLeft,
+  MdGroups2,
+  MdScoreboard,
+  MdVideoLibrary,
+} from 'react-icons/md';
 import { MdMenu, MdMenuOpen } from 'react-icons/md';
 import { DarkMode } from './darkMode';
+import { useRouter } from 'next/navigation';
 
 function NameSplit(e: string) {
   const player = e;
@@ -38,7 +44,8 @@ function NameSplit(e: string) {
   }
 }
 
-function Nav() {
+export default function Nav() {
+  const router = useRouter();
   const pathname = usePathname();
 
   const [nav, setNav] = useState(false);
@@ -64,6 +71,11 @@ function Nav() {
           }}>
           <MdMenuOpen className='menu-icon' />
         </button>
+        {pathname == `/little-cup` && (
+          <button className='back-button-nav' onClick={router.back}>
+            <MdArrowLeft className='nav-back' /> Back
+          </button>
+        )}
         <Link
           href={
             pathname == `/season-1/teams` ||
@@ -76,6 +88,7 @@ function Nav() {
           className={pathname == `/` ? 'nav-header active' : 'nav-header'}>
           <MdGroups2 className='nav-icons' /> Teams
         </Link>
+
         {pathname == `/little-cup`
           ? LCPlayers.map((player: any, index: any) => {
               return (
@@ -258,5 +271,3 @@ function Nav() {
     </div>
   );
 }
-
-export default Nav;

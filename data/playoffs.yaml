@@ -1,9 +1,9 @@
 match 1:
-  name: ifurgat, Seed 4
+  name: ifurgat, tokotoro
   seed: 1, 4
   score: 0-0
 match 2:
-  name: Seed 2, Seed 3
+  name: seanboyq, castleflutes
   seed: 2, 3
   score: 0-0
 match 5:
@@ -11,11 +11,11 @@ match 5:
   seed: ?, ?
   score: 0-0
 match 6:
-  name: Lowest Seed Loser, Seed 5
+  name: Lowest Seed Loser, danknett
   seed: ?, 5
   score: 0-0
 match 7:
-  name: Highest Seed Loser, Seed 6
+  name: Highest Seed Loser, resolamxxy
   seed: ?, 6
   score: 0-0
 match 8:
