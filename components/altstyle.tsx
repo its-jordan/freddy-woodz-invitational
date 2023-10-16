@@ -1422,7 +1422,8 @@ export default async function AlternateStyle({
                         <div
                           className={`relation-type-name-hover ${
                             value.split(':')[0]
-                          }`}>
+                          }`}
+                          aria-hidden='true'>
                           {value.split(':')[0].charAt(0).toUpperCase() +
                             value.split(':')[0].slice(1)}
                         </div>
