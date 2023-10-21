@@ -3779,7 +3779,7 @@ body.dark-mode {
 }
 
 body.dark-mode .playoffs-main {
-  --_playoffs-color: var(--poison, purple);
+  --_playoffs-color: var(--dark, gray);
   background: linear-gradient(
     180deg,
     color-mix(in srgb, var(--_playoffs-color) 60%, white) 0%,
@@ -4068,7 +4068,7 @@ svg.nav-back {
 
 @media (prefers-color-scheme: dark) {
   .playoffs-main {
-    --_playoffs-color: var(--poison, purple);
+    --_playoffs-color: var(--dark, gray);
     background: linear-gradient(
       180deg,
       color-mix(in srgb, var(--_playoffs-color) 60%, white) 0%,
