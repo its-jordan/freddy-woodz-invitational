@@ -3443,7 +3443,7 @@ nav .active {
 }
 
 .playoffs-main {
-  --_playoffs-color: var(--steel, gray);
+  --_playoffs-color: var(--flying, lavender);
   background: linear-gradient(
     180deg,
     color-mix(in srgb, var(--_playoffs-color) 40%, var(--base)) 0%,
@@ -3545,10 +3545,10 @@ nav .active {
   padding: 0.5rem 1rem;
 }
 
-/* .playoffs-player-container[data-score='0'],
-.playoffs-player-container[data-score='1'],
-.playoffs-match-container[data-match='Match 10']
-  .playoffs-player-container[data-score='2'] {
+.playoffs-match-container:has(> [data-score='2'])
+  .playoffs-player-container[data-score='1'],
+.playoffs-match-container:has(> [data-score='2'])
+  .playoffs-player-container[data-score='0'] {
   background: linear-gradient(
     180deg,
     color-mix(
@@ -3570,8 +3570,7 @@ nav .active {
     rgba(255, 255, 255, 0.5)
   );
   text-shadow: none;
-} */
-
+}
 .playoffs-player-container:first-of-type {
   border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
   border-bottom: 1px solid
