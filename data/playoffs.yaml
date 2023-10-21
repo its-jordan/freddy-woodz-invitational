@@ -8,7 +8,7 @@ match 2:
   score: 0-0
 match 5:
   name: ifurgat, 2/3 Winner
-  seed: 1, 2/3
+  seed: 1, ?
   score: 0-0
 match 6:
   name: tokotoro, danknett
@@ -16,7 +16,7 @@ match 6:
   score: 0-0
 match 7:
   name: 2/3 Loser, resolamxxy
-  seed: 2/3, 6
+  seed: ?, 6
   score: 0-0
 match 8:
   name: ?, ?
