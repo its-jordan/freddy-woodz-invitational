@@ -5,18 +5,18 @@ match 1:
 match 2:
   name: seanboyq, castleflutes
   seed: 2, 3
-  score: 0-0
+  score: 2-0
 match 5:
-  name: ifurgat, 2/3 Winner
-  seed: 1, ?
+  name: ifurgat, seanboyq
+  seed: 1, 2
   score: 0-0
 match 6:
   name: tokotoro, danknett
   seed: 4, 5
   score: 0-0
 match 7:
-  name: 2/3 Loser, resolamxxy
-  seed: ?, 6
+  name: castleflutes, resolamxxy
+  seed: 3, 6
   score: 0-0
 match 8:
   name: ?, ?
