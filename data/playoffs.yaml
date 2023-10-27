@@ -9,7 +9,7 @@ match 2:
 match 5:
   name: ifurgat, seanboyq
   seed: 1, 2
-  score: 0-0
+  score: 2-0
 match 6:
   name: tokotoro, danknett
   seed: 4, 5
@@ -23,10 +23,10 @@ match 8:
   seed: ?, ?
   score: 0-0
 match 9:
-  name: ?, ?
-  seed: ?, ?
+  name: seanboyq, ?
+  seed: 2, ?
   score: 0-0
 match 10:
-  name: ?, ?
-  seed: ?, ?
+  name: ifurgat, ?
+  seed: 1, ?
   score: 0-0
