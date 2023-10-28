@@ -13,14 +13,14 @@ match 5:
 match 6:
   name: tokotoro, danknett
   seed: 4, 5
-  score: 0-0
+  score: 2-1
 match 7:
   name: castleflutes, resolamxxy
   seed: 3, 6
   score: 0-0
 match 8:
-  name: ?, ?
-  seed: ?, ?
+  name: tokotoro, ?
+  seed: 4, ?
   score: 0-0
 match 9:
   name: seanboyq, ?
